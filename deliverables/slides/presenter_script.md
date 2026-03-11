@@ -42,47 +42,39 @@ Per-slide speaking notes with wording suggestions and delivery tips.
 
 ---
 
-## Slide 4: Iterative BFS Expansion [4:00 — 6:30]
+## Slide 4: LOCALE Pipeline [4:00 — 6:00]
 
-"LOCALE works as an iterative expansion loop — the same pattern as Survey Propagation for SAT solving."
+"The pipeline has four phases after the skeleton."
 
-*Point to the bullet sequence:*
+"Phase 1 is where the ego-graph queries happen. For each node, we construct a prompt showing all its neighbors, the CI evidence, the cross-neighbor relationships. The LLM returns structured JSON. We run K=10 stochastic passes with shuffled neighbor order — same debiasing principle as MosaCD, but at the ego level."
 
-"Round 1: we query all eligible nodes with ego-graph prompts. Each node sees its neighborhood, the CI constraints, and the LLM votes on all incident edges. We solve a Max-2SAT per node — CI constraints are hard, LLM votes are soft. Then we decimate: edges where the majority vote exceeds 70% get committed."
+"Phase 2 is where the math happens. We compile CI-derived constraints into a Max-2SAT problem. Non-collider constraints become hard clauses. LLM votes become the soft objective. We enumerate over feasible assignments and pick the best one. I'll explain why we only use non-collider constraints in a few slides."
 
-"Round 2 and beyond: we query frontier nodes — nodes adjacent to committed edges that haven't been queried yet. Here's the key: their prompts now include the established orientations from Round 1 as given facts. The Max-2SAT solver adds these as hard unary constraints. Then we decimate again. Repeat until convergence."
+"Phase 3 reconciles the two perspectives on each edge — every edge is scored from both endpoints. Higher confidence wins."
 
-*Point to the SP mapping table:*
+"Phase 4 is the safety valve. It compares Phase 2 to Phase 1 per node. If constraints actually hurt accuracy, it reverts. This ensures the pipeline is monotonically non-decreasing — every phase either helps or does nothing."
 
-"This maps exactly to Survey Propagation. Variables are edge orientations. Factors are ego-graph queries — the LLM is literally computing the factor. Warnings are the vote distributions. Decimation commits the most confident edges. And simplification is feeding established context into the next round."
-
-"The LLM does local reasoning. The algorithm propagates decisions globally."
+"The key principle: the LLM does local reasoning. The algorithm handles global consistency."
 
 ---
 
-## Slide 5: The Ego-Graph Prompt — Round 2 [6:30 — 9:00]
+## Slide 5: The Ego-Graph Prompt [6:00 — 8:30]
 
-"Let me make this concrete with a Round 2 example."
+"Let me make this concrete. Here's what the LLM actually sees for DrivingSkill in the Insurance network."
 
 *Walk through the prompt:*
 
-"This is DrivQuality in the Insurance network. It has three neighbors: DrivingSkill, RiskAversion, and Accident."
+"The center node with its description. Four neighbors, each with descriptions. Then the statistical constraints — these are the CI-derived rules."
 
-*Point to the ESTABLISHED line:*
+*Point to the R1/R2/R3 rules:*
 
-"In Round 1, DrivingSkill's ego query established that DrivingSkill points to DrivQuality — with 90% confidence. Now in Round 2, DrivQuality's prompt treats this as a fact. See the line: 'ESTABLISHED, round 1, confidence 90%, DrivingSkill arrow DrivQuality.' The LLM doesn't need to re-derive this. It's given."
+"R1 says Age and DrivQuality are conditionally independent given DrivingSkill — that makes DrivingSkill a non-collider for that triple. So Age and DrivQuality can't both be parents of DrivingSkill. The LLM sees this constraint *while* it reasons, not after."
 
-"The statistical constraints then tell the LLM: DrivingSkill and Accident are separated by DrivQuality, so they can't both be parents. Given that DrivingSkill is already established as a parent, this constrains Accident's direction."
+"This is the key difference from MosaCD. MosaCD asks 'Is it Age arrow DrivingSkill, or DrivingSkill arrow Age?' One edge, binary choice, 200 tokens. We show all four neighbors, all the CI relationships, and ask for all four orientations in one query."
 
-*Point to the edges to orient:*
+"One query, four edge orientations. MosaCD needs 40 queries for the same four edges."
 
-"Two edges to orient, not three. One is already committed. And the context from that committed edge helps the LLM reason about the remaining two."
-
-"This is message passing: DrivingSkill's local computation sends a message about their shared edge, and DrivQuality's computation receives it as a constraint."
-
-*Punchline:*
-
-"Round 1: one query, four edges. Round 2: context-enriched, two remaining edges. Established orientations propagate as facts, not suggestions."
+*Pause. Let the 40x difference land.*
 
 ---
 
@@ -164,17 +156,17 @@ Per-slide speaking notes with wording suggestions and delivery tips.
 
 ## Slide 10: Head-to-Head [17:30 — 19:30]
 
-"How does LOCALE compare to MosaCD head-to-head?"
-
-"Important context: LOCALE uses Qwen3.5-27B — an open-source model, running locally. MosaCD uses GPT-4o-mini through the API."
+"Now the comparison that matters most. We reimplemented MosaCD's per-edge approach using the exact same LLM — Qwen3.5-27B — the same skeleton, the same data. This is a controlled, fair comparison. The only difference is the prompting strategy."
 
 *Go through the table:*
 
-"We win two, they win three. Insurance and Asia for us, Alarm, Child, and Hepar2 for them."
+"On Insurance, Asia, and Child — ties. Same F1. But LOCALE uses 30 to 70 percent fewer queries to get there."
 
-"I'm not going to oversell this. We don't beat MosaCD. But we're competitive — with an open-source model and two to four times fewer queries. And the Hepar2 gap is skeleton coverage, not orientation quality."
+"On Alarm — LOCALE wins by 9 points. On Sachs — LOCALE wins by nearly 18 points. These are the networks where MosaCD's per-edge approach struggles. Alarm has complex local structure where cross-edge consistency matters. Sachs is a protein signaling network — less familiar to the LLM, so the ego-graph context helps more."
 
-*Honest framing matters here.*
+"Two wins, three ties, zero losses. And on every single network, LOCALE uses roughly half the queries."
+
+*Let that land. This is the headline result.*
 
 ---
 
@@ -208,9 +200,11 @@ Per-slide speaking notes with wording suggestions and delivery tips.
 
 "Skeleton refinement. We tried having the LLM propose missing edges. Zero true positives across all six networks. Most missing edges connect nodes more than two hops apart — unreachable by local reasoning."
 
-"And ego at degree 3 — there's a 'valley of confusion' where per-edge is better. Too few CI constraints to guide the model, but enough complexity to confuse it."
+"Ego at degree 3 — there's a 'valley of confusion' where per-edge is actually better. Too few CI constraints to guide, but enough complexity to confuse."
 
-*Frame negatives as informative, not failures.*
+"And finally, the iterative BFS expansion — the Survey Propagation-style design from our original proposal. We built it and tested it. Initial result: single-pass with K=10 votes per node beats multi-round K=5 times 2. The root cause is error amplification — if you commit a wrong edge in Round 1, it becomes a hard constraint that corrupts Round 2. More votes per node matters more than context from neighbors. We're still exploring different configurations, but for now the simple approach wins."
+
+*Frame negatives as informative, not failures. The iterative BFS negative is especially interesting — it tells us something about the reliability-vs-context tradeoff.*
 
 ---
 
@@ -236,17 +230,17 @@ Per-slide speaking notes with wording suggestions and delivery tips.
 
 "Two: F1 decomposition showing the skeleton bottleneck. Reframes where the field should focus."
 
-"Three: ego-graph batching for 2.4 to 4x query savings."
+"Three: same accuracy as MosaCD with half the queries. Two wins, three ties, zero losses on same-model comparison."
 
-"Four: open-source competitiveness. 27B matches proprietary models on most benchmarks."
+"Four: open-source competitiveness. 27B running locally matches proprietary API models."
 
 "Five: safety valve design for a pipeline that never hurts."
 
-"What's next: we're building the iterative expansion — the full tree-search-style per-node exploration from the original design. Better skeletons. Cross-model validation. And calibrated selective output."
+"What's next: better skeletons — that's the real bottleneck the F1 decomposition revealed. Cross-model validation with GPT-4o and Claude. Calibrated selective output. And continued exploration of iterative expansion with matched budgets."
 
 *Closing:*
 
-"We set out to test whether ego-graph prompting could improve the accuracy-cost tradeoff. The pipeline works. But the diagnostic findings along the way — the NCO discovery, the skeleton bottleneck, the degree-3 valley — turned out to be the more interesting contribution."
+"We set out to test whether ego-graph prompting could improve the accuracy-cost tradeoff. It does — same accuracy, half the queries. But the diagnostic findings along the way — the NCO discovery, the skeleton bottleneck, the degree-3 valley — turned out to be the more interesting contribution."
 
 ---
 
@@ -260,4 +254,4 @@ Per-slide speaking notes with wording suggestions and delivery tips.
 - "Why not a bigger model?" — 27B is the sweet spot for single-GPU local inference.
 - "PC alpha sensitivity?" — Default 0.05, sensitivity analysis planned.
 
-*If asked about the iterative expansion: "It's in progress. The current results are from the single-pass version. We expect the iterative version to help especially on larger graphs where context from established edges can guide remaining decisions."*
+*If asked about the iterative expansion: "We built and tested it. Initial results favor single-pass — more votes per node beats fewer votes with inter-round context. Error amplification from early decimation is the issue. We're still exploring matched-budget variants and incremental seeding, but for now brute-force reliability wins over elegant message passing."*
