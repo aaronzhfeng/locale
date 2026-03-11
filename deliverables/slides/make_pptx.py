@@ -171,7 +171,7 @@ def parse_body(md):
 
 
 def parse_slides(src):
-    raw = src.read_text()
+    raw = src.read_text(encoding="utf-8")
     raw = re.sub(r"^---\n.*?^---\n", "", raw, count=1, flags=re.DOTALL | re.MULTILINE)
     raw = re.sub(r"<style>.*?</style>\s*", "", raw, flags=re.DOTALL)
 

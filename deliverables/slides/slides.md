@@ -2,74 +2,232 @@
 marp: true
 theme: default
 paginate: true
-footer: "LOCALE | DSC 190 | Prof. Biwei Huang"
-style: |
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap');
-  section {
-    background-color: #0d1117;
-    color: #c9d1d9;
-    font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    padding: 40px 60px;
-  }
-  h1, h2, h3 {
-    font-family: 'Fira Code', monospace;
-    color: #58a6ff;
-  }
-  h1 { font-size: 42px; }
-  h2 { font-size: 36px; }
-  h3 { font-size: 30px; }
-  strong { color: #7ee787; }
-  em { color: #d2a8ff; font-style: normal; }
-  a { color: #58a6ff; }
-  code {
-    background-color: #161b22;
-    color: #7ee787;
-    font-family: 'Fira Code', monospace;
-    padding: 2px 6px;
-    border-radius: 4px;
-  }
-  table {
-    font-size: 22px;
-    border-collapse: collapse;
-    width: 100%;
-    margin: 10px 0;
-  }
-  th {
-    background-color: #161b22;
-    color: #58a6ff;
-    padding: 8px 12px;
-    border: 1px solid #30363d;
-  }
-  td {
-    padding: 8px 12px;
-    border: 1px solid #30363d;
-  }
-  tr:nth-child(even) { background-color: #161b22; }
-  footer {
-    color: #484f58;
-    font-size: 14px;
-  }
-  section.title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  section.title h1 { font-size: 48px; margin-bottom: 10px; }
-  section.title h3 { color: #8b949e; font-weight: 400; }
-  .highlight { color: #7ee787; font-weight: 700; }
-  .dim { color: #484f58; }
-  .warn { color: #f85149; }
-  .small { font-size: 20px; color: #8b949e; }
-  blockquote {
-    border-left: 4px solid #58a6ff;
-    padding-left: 16px;
-    color: #8b949e;
-    font-size: 24px;
-  }
+size: 16:9
+footer: 'LOCALE | DSC 190 | Prof. Biwei Huang'
 ---
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code:wght@400;500;700&display=swap');
+
+:root {
+  --color-background: #0d1117;
+  --color-foreground: #c9d1d9;
+  --color-heading: #58a6ff;
+  --color-accent: #7ee787;
+  --color-code-bg: #161b22;
+  --color-border: #30363d;
+  --font-default: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-code: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+section {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-default);
+  font-weight: 400;
+  box-sizing: border-box;
+  border-left: 4px solid var(--color-accent);
+  position: relative;
+  line-height: 1.6;
+  font-size: 20px;
+  padding: 56px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-code);
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+h1::before {
+  content: '# ';
+  color: var(--color-accent);
+}
+
+h2 {
+  font-size: 38px;
+  margin-bottom: 40px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+h2::before {
+  content: '## ';
+  color: var(--color-accent);
+}
+
+h3 {
+  color: var(--color-foreground);
+  font-size: 26px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+h3::before {
+  content: '### ';
+  color: var(--color-accent);
+}
+
+ul, ol {
+  padding-left: 32px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li::marker {
+  color: var(--color-accent);
+}
+
+pre {
+  background-color: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: var(--font-code);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+code {
+  background-color: var(--color-code-bg);
+  color: var(--color-accent);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--font-code);
+  font-size: 0.9em;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: var(--color-foreground);
+}
+
+footer {
+  font-size: 14px;
+  color: #8b949e;
+  font-family: var(--font-code);
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  bottom: 40px;
+  text-align: right;
+}
+
+footer::before {
+  content: '// ';
+  color: var(--color-accent);
+}
+
+section.title {
+  border-left: 4px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.title h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+section.title h1::before {
+  content: '';
+}
+
+section.title h3 {
+  color: #8b949e;
+  font-weight: 400;
+}
+
+section.section-break {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section.section-break h2 {
+  font-size: 44px;
+  text-align: center;
+  border-bottom: none;
+}
+
+section.section-break h2::before {
+  content: '';
+}
+
+section.section-break p {
+  font-size: 22px;
+  color: #8b949e;
+  margin-top: 16px;
+  font-family: var(--font-code);
+}
+
+strong {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+em {
+  color: #ffa657;
+  font-style: normal;
+}
+
+a {
+  color: var(--color-heading);
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 18px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+th {
+  background-color: var(--color-code-bg);
+  color: var(--color-heading);
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 2px solid var(--color-border);
+}
+
+td {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--color-border);
+  color: #8b949e;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-code-bg);
+}
+
+.highlight { color: var(--color-accent); font-weight: 700; }
+.dim { color: #484f58; }
+.warn { color: #f85149; }
+.small { font-size: 20px; color: #8b949e; }
+
+blockquote {
+  border-left: 4px solid var(--color-heading);
+  padding-left: 16px;
+  color: #8b949e;
+  font-size: 24px;
+}
+</style>
 
 <!-- _class: title -->
 
@@ -122,24 +280,16 @@ reasons about local mechanism consistency.
 
 Survey Propagation-style decimation: **compute marginals → fix most confident → simplify → repeat**
 
-**Round 1**: Query all eligible nodes with ego-graph prompts.
-Solve Max-2SAT per node (NCO constraints + LLM soft scores).
-**Decimate**: commit edges where majority vote > 70%.
-
-**Round 2+**: Query **frontier nodes** — those adjacent to established edges
-but not yet queried. Prompts now include established orientations as context.
-Max-2SAT adds established edges as **hard unary constraints**.
-Decimate new high-confidence edges. Repeat.
-
-**Convergence**: stop when no new edges are decimated, or all edges resolved.
+- **Round 1**: Query all eligible nodes with ego-graph prompts. Solve Max-2SAT per node. **Decimate** edges where majority vote > 70%.
+- **Round 2+**: Query **frontier nodes** adjacent to established edges. Established orientations become **hard constraints**. Decimate and repeat.
+- **Convergence**: stop when no new edges decimated or all resolved.
 
 | SP Concept | LOCALE Mapping |
 |------------|----------------|
 | Variables | Edge orientations x_e ∈ {+1, -1} |
-| Factors | Ego-graph queries f_v(x_{e1},...,x_{ed}) |
-| Warnings | LLM vote distributions per edge |
+| Factors | Ego-graph queries f_v(x_{e1}, …, x_{ed}) |
 | Decimation | Commit edges with majority > threshold |
-| Simplify | Feed established edges as context into next round |
+| Simplify | Established edges as context into next round |
 
 ---
 
