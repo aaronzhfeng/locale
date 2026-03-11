@@ -1,0 +1,355 @@
+{
+  "method": "iterative_bfs",
+  "network": "alarm",
+  "n_samples": 10000,
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "enable_thinking": false,
+  "max_rounds": 5,
+  "threshold": 0.7,
+  "k_passes": 5,
+  "n_rounds_completed": 2,
+  "skeleton": {
+    "n_nodes": 37,
+    "n_edges": 43,
+    "coverage": 0.9347826086956522
+  },
+  "final_metrics": {
+    "n_established": 43,
+    "n_total_edges": 43,
+    "coverage": 1.0,
+    "accuracy": 0.9302325581395349,
+    "f1": 0.898876404494382,
+    "precision": 0.9302325581395349,
+    "recall": 0.8695652173913043,
+    "tp": 40,
+    "fp": 3,
+    "fn": 6
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "nodes_queried": 26,
+      "queries": 130,
+      "edges_decimated": 69,
+      "total_established": 42,
+      "accuracy_established": 0.9285714285714286,
+      "accuracy_all": 0.9302325581395349,
+      "elapsed": 340.1600179672241
+    },
+    {
+      "round": 2,
+      "nodes_queried": 26,
+      "queries": 130,
+      "edges_decimated": 1,
+      "total_established": 43,
+      "accuracy_established": 0.9302325581395349,
+      "accuracy_all": 0.9302325581395349,
+      "elapsed": 164.47438621520996
+    }
+  ],
+  "total_queries": 260,
+  "total_elapsed": 504.6369550228119,
+  "established_edges": {
+    "INTUBATION->MINVOL": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "INTUBATION",
+      "votes": "5/5",
+      "correct": true
+    },
+    "INTUBATION->SHUNT": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "INTUBATION",
+      "votes": "5/5",
+      "correct": true
+    },
+    "INTUBATION->PRESS": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "INTUBATION",
+      "votes": "5/5",
+      "correct": true
+    },
+    "INTUBATION->VENTLUNG": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "INTUBATION",
+      "votes": "5/5",
+      "correct": true
+    },
+    "INTUBATION->VENTALV": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "INTUBATION",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VENTLUNG->EXPCO2": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTLUNG",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VENTLUNG->MINVOL": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "VENTLUNG",
+      "votes": "4/5",
+      "correct": true
+    },
+    "VENTTUBE->VENTLUNG": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTTUBE",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VENTALV->VENTLUNG": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTALV",
+      "votes": "5/5",
+      "correct": false
+    },
+    "HR->HRBP": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "HRBP",
+      "votes": "5/5",
+      "correct": true
+    },
+    "HR->HREKG": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "HREKG",
+      "votes": "5/5",
+      "correct": true
+    },
+    "HR->HRSAT": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "HRSAT",
+      "votes": "5/5",
+      "correct": true
+    },
+    "CATECHOL->HR": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "HR",
+      "votes": "4/5",
+      "correct": true
+    },
+    "HR->CO": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "HR",
+      "votes": "5/5",
+      "correct": true
+    },
+    "LVEDVOLUME->CVP": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "LVEDVOLUME",
+      "votes": "5/5",
+      "correct": true
+    },
+    "LVEDVOLUME->PCWP": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "LVEDVOLUME",
+      "votes": "4/5",
+      "correct": true
+    },
+    "HYPOVOLEMIA->LVEDVOLUME": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "HYPOVOLEMIA",
+      "votes": "5/5",
+      "correct": true
+    },
+    "LVFAILURE->LVEDVOLUME": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "LVEDVOLUME",
+      "votes": "4/5",
+      "correct": true
+    },
+    "VENTTUBE->PRESS": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTTUBE",
+      "votes": "5/5",
+      "correct": true
+    },
+    "DISCONNECT->VENTTUBE": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTTUBE",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VENTMACH->VENTTUBE": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTTUBE",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VENTALV->PVSAT": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTALV",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VENTALV->ARTCO2": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTALV",
+      "votes": "5/5",
+      "correct": true
+    },
+    "HISTORY->LVFAILURE": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "LVFAILURE",
+      "votes": "5/5",
+      "correct": false
+    },
+    "HYPOVOLEMIA->STROKEVOLUME": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "STROKEVOLUME",
+      "votes": "5/5",
+      "correct": true
+    },
+    "LVFAILURE->STROKEVOLUME": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "STROKEVOLUME",
+      "votes": "5/5",
+      "correct": true
+    },
+    "STROKEVOLUME->CO": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "STROKEVOLUME",
+      "votes": "5/5",
+      "correct": true
+    },
+    "ANAPHYLAXIS->TPR": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "TPR",
+      "votes": "5/5",
+      "correct": true
+    },
+    "CATECHOL->TPR": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "TPR",
+      "votes": "5/5",
+      "correct": false
+    },
+    "TPR->BP": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "TPR",
+      "votes": "5/5",
+      "correct": true
+    },
+    "PULMEMBOLUS->SHUNT": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "SHUNT",
+      "votes": "5/5",
+      "correct": true
+    },
+    "KINKEDTUBE->PRESS": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "PRESS",
+      "votes": "5/5",
+      "correct": true
+    },
+    "ARTCO2->EXPCO2": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "ARTCO2",
+      "votes": "5/5",
+      "correct": true
+    },
+    "ARTCO2->CATECHOL": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "CATECHOL",
+      "votes": "5/5",
+      "correct": true
+    },
+    "CO->BP": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "BP",
+      "votes": "5/5",
+      "correct": true
+    },
+    "ERRLOWOUTPUT->HRBP": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "HRBP",
+      "votes": "5/5",
+      "correct": true
+    },
+    "ERRCAUTER->HREKG": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "HREKG",
+      "votes": "5/5",
+      "correct": true
+    },
+    "ERRCAUTER->HRSAT": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "ERRCAUTER",
+      "votes": "5/5",
+      "correct": true
+    },
+    "PVSAT->SAO2": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "SAO2",
+      "votes": "5/5",
+      "correct": true
+    },
+    "SHUNT->SAO2": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "SAO2",
+      "votes": "5/5",
+      "correct": true
+    },
+    "PULMEMBOLUS->PAP": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "PULMEMBOLUS",
+      "votes": "5/5",
+      "correct": true
+    },
+    "MINVOLSET->VENTMACH": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VENTMACH",
+      "votes": "5/5",
+      "correct": true
+    },
+    "FIO2->PVSAT": {
+      "confidence": 0.9,
+      "round": 2,
+      "source_node": "PVSAT",
+      "votes": "5/5",
+      "correct": true
+    }
+  }
+}
