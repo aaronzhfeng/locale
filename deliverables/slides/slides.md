@@ -253,16 +253,16 @@ blockquote {
 
 Three paradigms for LLM-assisted causal discovery:
 
-| Paradigm | Example | Context/Query | Queries |
-|----------|---------|---------------|---------|
-| **Per-edge** | MosaCD, chatPC | ~200 tokens (one edge) | O(E × K) |
-| **Ego-graph** | *LOCALE (ours)* | ~500-1000 tokens (neighborhood) | O(N × K) |
-| **Whole-graph** | CausalFusion | O(V²) tokens (full DAG) | O(rounds) |
+| Paradigm | Example | Context/Query | Queries | Insurance (52 edges, 27 nodes) |
+|----------|---------|---------------|---------|-------------------------------|
+| **Per-edge** | MosaCD, chatPC | ~200 tokens (one edge) | O(**E** × K) | 52 × 10 = **520** |
+| **Ego-graph** | *LOCALE (ours)* | ~500-1000 tokens (neighborhood) | O(**N** × K) | 23 × 10 = **230** |
+| **Whole-graph** | CausalFusion | O(V²) tokens (full DAG) | O(rounds) | ~10-50 |
+
+Edges grow faster than nodes. Denser graphs = bigger savings.
 
 MosaCD: shuffled queries + non-collider-first propagation. Best F1 in 9/10 benchmarks.
-
-But each query uses the LLM as a **binary classifier**.
-128K context window. ~200 tokens used.
+But each query uses the LLM as a **binary classifier** — 128K context window, ~200 tokens used.
 
 ---
 
