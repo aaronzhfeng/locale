@@ -243,7 +243,7 @@ blockquote {
 
 **L**ocal **O**racle for **C**ausal **A**lignment via **L**earnable **E**go-graphs
 
-### Aaron Feng · DSC 190 · Prof. Biwei Huang
+### Aaron Feng · Zhongyan Luo · DSC 190 · Prof. Biwei Huang
 
 <span class="small">March 2026</span>
 
