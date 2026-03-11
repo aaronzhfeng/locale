@@ -586,3 +586,17 @@ Smoketested: imports, skeleton estimation, prompt generation (both rounds), Max-
 
 → DAG: E02
 → Evidence: XN-010, XN-015, XN-016
+
+<a id="LOG-2026-03-11-30"></a>
+### 2026-03-11 — MosaCD same-model comparison complete: LOCALE wins or ties on all 5 networks
+
+Ran the MosaCD re-implementation (E01) and iterative BFS (E02) with the 27B endpoint. Both experiments complete across multiple networks.
+
+**MosaCD comparison (XN-024)**: LOCALE ties MosaCD on Insurance (F1=0.863), Asia (0.933), Child (0.880). LOCALE wins on Alarm (0.899 vs 0.809, +9.0pp) and Sachs (0.765 vs 0.588, +17.7pp). MosaCD never beats LOCALE. LOCALE uses ~50% fewer queries across all networks. MosaCD's seed accuracy on Sachs collapsed to 57.1% — per-edge prompts on small networks with non-standard domains (protein signaling) are unreliable. MosaCD hit context overflow on Alarm (3597 tokens > 4096 limit in "full" template).
+
+**Iterative BFS (XN-025)**: Negative result. BFS requery (K=5×2=230 queries) gets F1=0.800 on Insurance vs LOCALE's F1=0.863 (same budget). On Alarm, they tie at F1=0.899. Root cause: error amplification from early decimation + fewer votes per round. More independent votes > context-enriched re-queries.
+
+**Memory correction**: Previously recorded Insurance LOCALE F1 as 88.4% — actual is 86.3%. The Phase 3 accuracy (95.3%) is correct; the F1 computation was wrong in prior notes due to incorrect GT edge count.
+
+→ DAG: E01 (→ good), E02 (→ negative)
+→ Evidence: XN-024, XN-025

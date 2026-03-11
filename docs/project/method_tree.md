@@ -1,7 +1,6 @@
 # Method Evolution DAG
 
-**Status**: 2 exploring, 1 vetoed
-**Current focus**: E01 (mosacd-same-model-comparison), E02 (iterative-bfs-decimation)
+**Status**: 1 good, 1 vetoed
 
 ## DAG
 
@@ -19,10 +18,12 @@
 
 ## Evidence from Notes
 
-  I02 ← XN-001, XN-002, XN-003, XN-004, XN-005, XN-006, XN-007, XN-008, XN-009, XN-010, XN-011, XN-012, XN-013, XN-016, XN-021, XN-023
-  I03 ← XN-005, XN-006, XN-008, XN-010, XN-011, XN-012, XN-013, XN-014, XN-015, XN-016, XN-017, XN-022
+  E01 ← XN-024
+  E02 ← XN-025
+  I02 ← XN-001, XN-002, XN-003, XN-004, XN-005, XN-006, XN-007, XN-008, XN-009, XN-010, XN-011, XN-012, XN-013, XN-016, XN-021, XN-023, XN-024, XN-025
+  I03 ← XN-005, XN-006, XN-008, XN-010, XN-011, XN-012, XN-013, XN-014, XN-015, XN-016, XN-017, XN-022, XN-024, XN-025
   I04 ← XN-010, XN-011, XN-012, XN-013, XN-018
-  I05 ← XN-011, XN-012, XN-013, XN-015, XN-019, XN-020
+  I05 ← XN-011, XN-012, XN-013, XN-015, XN-019, XN-020, XN-025
   I07 ← XN-020
   I09 ← XN-001, XN-002, XN-003, XN-004
   I10 ← D-I10
