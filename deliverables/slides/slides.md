@@ -245,7 +245,7 @@ blockquote {
 
 ### Aaron Feng · DSC 190 · Prof. Biwei Huang
 
-<span class="small">From course presentation to research prototype</span>
+<span class="small">March 2026</span>
 
 ---
 
