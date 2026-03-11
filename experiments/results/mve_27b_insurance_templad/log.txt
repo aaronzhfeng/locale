@@ -1,0 +1,215 @@
+============================================================
+LOCALE MVE: Ego-graph vs Per-edge on Insurance
+============================================================
+
+[Step 0] Loading Insurance network...
+  Ground truth: 27 nodes, 52 edges
+
+[Step 0] Sampling 5000 observations (seed=42)...
+  0%|          | 0/27 [00:00<?, ?it/s]Generating for node: Age:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: Mileage:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: SocioEcon:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: GoodStudent:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: RiskAversion:   0%|          | 0/27 [00:00<?, ?it/s]WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: OtherCar:   0%|          | 0/27 [00:00<?, ?it/s]    Generating for node: VehicleYear:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: MakeModel:   0%|          | 0/27 [00:00<?, ?it/s]  Generating for node: SeniorTrain:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: HomeBase:   0%|          | 0/27 [00:00<?, ?it/s]   WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: 2.220446049250313e-16. Adjusting values.
+WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: AntiTheft:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: RuggedAuto:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: Antilock:   0%|          | 0/27 [00:00<?, ?it/s]  Generating for node: CarValue:   0%|          | 0/27 [00:00<?, ?it/s]WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: Airbag:   0%|          | 0/27 [00:00<?, ?it/s]  Generating for node: DrivingSkill:   0%|          | 0/27 [00:00<?, ?it/s]WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: Theft:   0%|          | 0/27 [00:00<?, ?it/s]       Generating for node: Cushioning:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: DrivQuality:   0%|          | 0/27 [00:00<?, ?it/s]Generating for node: DrivHist:   0%|          | 0/27 [00:00<?, ?it/s]   WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: DrivHist:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]Generating for node: Accident:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: ThisCarDam:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]Generating for node: OtherCarCost:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: 1.1102230246251565e-16. Adjusting values.
+Generating for node: MedCost:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]     WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: ILiCost:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]Generating for node: ThisCarCost:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]Generating for node: PropCost:  74%|███████▍  | 20/27 [00:00<00:00, 192.73it/s]   Generating for node: PropCost: 100%|██████████| 27/27 [00:00<00:00, 191.94it/s]
+
+[Step 0] Estimating PC skeleton...
+INFO:pgmpy: Datatype (N=numerical, C=Categorical Unordered, O=Categorical Ordered) inferred from data: 
+ {'GoodStudent': 'C', 'Age': 'C', 'SocioEcon': 'C', 'RiskAversion': 'C', 'VehicleYear': 'C', 'ThisCarDam': 'C', 'RuggedAuto': 'C', 'Accident': 'C', 'MakeModel': 'C', 'DrivQuality': 'C', 'Mileage': 'C', 'Antilock': 'C', 'DrivingSkill': 'C', 'SeniorTrain': 'C', 'ThisCarCost': 'C', 'Theft': 'C', 'CarValue': 'C', 'HomeBase': 'C', 'AntiTheft': 'C', 'PropCost': 'C', 'OtherCarCost': 'C', 'OtherCar': 'C', 'MedCost': 'C', 'Cushioning': 'C', 'Airbag': 'C', 'ILiCost': 'C', 'DrivHist': 'C'}
+INFO:pgmpy:Reached maximum number of allowed conditional variables. Exiting
+  Skeleton: 27 nodes, 37 undirected edges
+
+[Step 1] Test nodes: ['DrivingSkill', 'DrivQuality', 'Accident', 'CarValue', 'SocioEcon']
+  DrivingSkill: degree=3, neighbors=['Age', 'DrivQuality', 'DrivHist']
+  DrivQuality: degree=3, neighbors=['RiskAversion', 'Accident', 'DrivingSkill']
+  Accident: degree=4, neighbors=['ThisCarDam', 'DrivQuality', 'OtherCarCost', 'MedCost']
+  CarValue: degree=4, neighbors=['VehicleYear', 'MakeModel', 'Mileage', 'ThisCarCost']
+  SocioEcon: degree=5, neighbors=['Age', 'VehicleYear', 'MakeModel', 'HomeBase', 'AntiTheft']
+  Total unique edges across test nodes: 17
+
+[Step 2] Building prompts...
+
+[Step 3] Querying LLM (Qwen/Qwen3.5-27B-FP8, non-thinking, disguised) with K=5 passes...
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+  Endpoint verified: ready
+
+  Building query jobs...
+  95 per-edge + 25 ego-graph = 120 total queries
+  Concurrency: 32
+
+  Firing per-edge queries...
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    20/120 done (4.0s)INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    40/120 done (7.8s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    60/120 done (8.1s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    80/120 done (11.7s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+  Firing ego-graph queries...
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    100/120 done (22.7s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    105/120 done (23.0s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    110/120 done (23.5s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    115/120 done (23.7s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    120/120 done (24.3s)
+
+  All queries complete in 24.3s (4.9 queries/s)
+  DrivingSkill: PE 15/15 (100.0%), EGO 15/15 (100.0%)
+  DrivQuality: PE 14/15 (93.3%), EGO 15/15 (100.0%)
+  Accident: PE 20/20 (100.0%), EGO 20/20 (100.0%)
+  CarValue: PE 18/20 (90.0%), EGO 20/20 (100.0%)
+  SocioEcon: PE 23/25 (92.0%), EGO 21/25 (84.0%)
+
+============================================================
+RESULTS
+============================================================
+
+Condition A (per-edge):  94.7% accuracy, 0.0% uncertain
+Condition B (ego-graph): 95.8% accuracy, 0.0% uncertain
+Delta (B - A):           +1.1%
+
+Queries: A=95, B=25 (ratio: 3.8x)
+
+Per-node breakdown:
+Node              Per-edge  Ego-graph      Delta
+------------------------------------------------
+DrivingSkill       100.0%    100.0%     +0.0%
+DrivQuality         93.3%    100.0%     +6.7%
+Accident           100.0%    100.0%     +0.0%
+CarValue            90.0%    100.0%    +10.0%
+SocioEcon           92.0%     84.0%     -8.0%
+
+Majority-vote accuracy (across K passes):
+  per_edge: 19/19 edges correct by majority vote (100.0%)
+  ego_graph: 18/19 edges correct by majority vote (94.7%)
+
+CI consistency check (non-collider violations):
+  per_edge: 4/105 violations (3.8%)
+  ego_graph: 0/105 violations (0.0%)
+
+============================================================
+Delta = +1.1 pp
+Verdict: WEAK GO — Value may be in cost savings, not accuracy.
+============================================================
+
+Results saved to projects/locale/experiments/results/mve_27b_insurance_templad/mve_results.json

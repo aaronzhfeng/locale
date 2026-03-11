@@ -1,0 +1,1026 @@
+{
+  "threshold": 0.5,
+  "n_total": 43,
+  "n_output": 43,
+  "n_abstained": 0,
+  "coverage": 1.0,
+  "precision_output": 0.9534883720930233,
+  "false_orient_rate": 0.046511627906976744,
+  "recall_oriented": 1.0,
+  "full_accuracy": 0.9534883720930233,
+  "selective_results": [
+    {
+      "edge_key": "('Age', 'SocioEcon')",
+      "direction": "Age->SocioEcon",
+      "gt": "Age->SocioEcon",
+      "raw_confidence": 0.5900000000000001,
+      "calibrated_confidence": 0.7834576344727431,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('RiskAversion', 'SocioEcon')",
+      "direction": "SocioEcon->RiskAversion",
+      "gt": "SocioEcon->RiskAversion",
+      "raw_confidence": 0.6000000000000001,
+      "calibrated_confidence": 0.7834576344727431,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('SocioEcon', 'VehicleYear')",
+      "direction": "SocioEcon->VehicleYear",
+      "gt": "SocioEcon->VehicleYear",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('MakeModel', 'SocioEcon')",
+      "direction": "SocioEcon->MakeModel",
+      "gt": "SocioEcon->MakeModel",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('HomeBase', 'SocioEcon')",
+      "direction": "SocioEcon->HomeBase",
+      "gt": "SocioEcon->HomeBase",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('AntiTheft', 'SocioEcon')",
+      "direction": "SocioEcon->AntiTheft",
+      "gt": "SocioEcon->AntiTheft",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('OtherCar', 'SocioEcon')",
+      "direction": "SocioEcon->OtherCar",
+      "gt": "SocioEcon->OtherCar",
+      "raw_confidence": 0.57,
+      "calibrated_confidence": 0.7834576344727431,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Age', 'RiskAversion')",
+      "direction": "Age->RiskAversion",
+      "gt": "Age->RiskAversion",
+      "raw_confidence": 0.85,
+      "calibrated_confidence": 0.9711133219624181,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('DrivQuality', 'RiskAversion')",
+      "direction": "RiskAversion->DrivQuality",
+      "gt": "RiskAversion->DrivQuality",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('RiskAversion', 'SeniorTrain')",
+      "direction": "RiskAversion->SeniorTrain",
+      "gt": "RiskAversion->SeniorTrain",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('HomeBase', 'RiskAversion')",
+      "direction": "RiskAversion->HomeBase",
+      "gt": "RiskAversion->HomeBase",
+      "raw_confidence": 0.85,
+      "calibrated_confidence": 0.9711133219624181,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('AntiTheft', 'RiskAversion')",
+      "direction": "RiskAversion->AntiTheft",
+      "gt": "RiskAversion->AntiTheft",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('DrivHist', 'RiskAversion')",
+      "direction": "RiskAversion->DrivHist",
+      "gt": "RiskAversion->DrivHist",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Age', 'GoodStudent')",
+      "direction": "Age->GoodStudent",
+      "gt": "Age->GoodStudent",
+      "raw_confidence": 0.8699999999999999,
+      "calibrated_confidence": 0.9711133219624183,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Age', 'DrivingSkill')",
+      "direction": "Age->DrivingSkill",
+      "gt": "Age->DrivingSkill",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Age', 'SeniorTrain')",
+      "direction": "Age->SeniorTrain",
+      "gt": "Age->SeniorTrain",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Age', 'MedCost')",
+      "direction": "Age->MedCost",
+      "gt": "Age->MedCost",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('RuggedAuto', 'VehicleYear')",
+      "direction": "VehicleYear->RuggedAuto",
+      "gt": "VehicleYear->RuggedAuto",
+      "raw_confidence": 0.84,
+      "calibrated_confidence": 0.9576594731130565,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Antilock', 'VehicleYear')",
+      "direction": "VehicleYear->Antilock",
+      "gt": "VehicleYear->Antilock",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CarValue', 'VehicleYear')",
+      "direction": "VehicleYear->CarValue",
+      "gt": "VehicleYear->CarValue",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Airbag', 'VehicleYear')",
+      "direction": "VehicleYear->Airbag",
+      "gt": "VehicleYear->Airbag",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Accident', 'ThisCarDam')",
+      "direction": "Accident->ThisCarDam",
+      "gt": "Accident->ThisCarDam",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Accident', 'DrivQuality')",
+      "direction": "DrivQuality->Accident",
+      "gt": "DrivQuality->Accident",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Accident', 'OtherCarCost')",
+      "direction": "Accident->OtherCarCost",
+      "gt": "Accident->OtherCarCost",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Accident', 'MedCost')",
+      "direction": "Accident->MedCost",
+      "gt": "Accident->MedCost",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Accident', 'ILiCost')",
+      "direction": "Accident->ILiCost",
+      "gt": "Accident->ILiCost",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9576594731130564,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('MakeModel', 'RuggedAuto')",
+      "direction": "MakeModel->RuggedAuto",
+      "gt": "MakeModel->RuggedAuto",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Antilock', 'MakeModel')",
+      "direction": "MakeModel->Antilock",
+      "gt": "MakeModel->Antilock",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CarValue', 'MakeModel')",
+      "direction": "MakeModel->CarValue",
+      "gt": "MakeModel->CarValue",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Airbag', 'MakeModel')",
+      "direction": "MakeModel->Airbag",
+      "gt": "MakeModel->Airbag",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('DrivQuality', 'DrivingSkill')",
+      "direction": "DrivingSkill->DrivQuality",
+      "gt": "DrivingSkill->DrivQuality",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('DrivingSkill', 'SeniorTrain')",
+      "direction": "SeniorTrain->DrivingSkill",
+      "gt": "SeniorTrain->DrivingSkill",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('DrivHist', 'DrivingSkill')",
+      "direction": "DrivingSkill->DrivHist",
+      "gt": "DrivingSkill->DrivHist",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('GoodStudent', 'SeniorTrain')",
+      "direction": "SeniorTrain->GoodStudent",
+      "gt": "GoodStudent->SeniorTrain",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.9576594731130565,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('ThisCarCost', 'ThisCarDam')",
+      "direction": "ThisCarDam->ThisCarCost",
+      "gt": "ThisCarDam->ThisCarCost",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Theft', 'ThisCarCost')",
+      "direction": "ThisCarCost->Theft",
+      "gt": "Theft->ThisCarCost",
+      "raw_confidence": 0.43,
+      "calibrated_confidence": 0.6180339887498949,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('CarValue', 'ThisCarCost')",
+      "direction": "CarValue->ThisCarCost",
+      "gt": "CarValue->ThisCarCost",
+      "raw_confidence": 0.83,
+      "calibrated_confidence": 0.9576594731130565,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PropCost', 'ThisCarCost')",
+      "direction": "ThisCarCost->PropCost",
+      "gt": "ThisCarCost->PropCost",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.9576594731130565,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CarValue', 'Mileage')",
+      "direction": "Mileage->CarValue",
+      "gt": "Mileage->CarValue",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9576594731130564,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cushioning', 'RuggedAuto')",
+      "direction": "RuggedAuto->Cushioning",
+      "gt": "RuggedAuto->Cushioning",
+      "raw_confidence": 0.83,
+      "calibrated_confidence": 0.9576594731130565,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cushioning', 'MedCost')",
+      "direction": "Cushioning->MedCost",
+      "gt": "Cushioning->MedCost",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Airbag', 'Cushioning')",
+      "direction": "Airbag->Cushioning",
+      "gt": "Airbag->Cushioning",
+      "raw_confidence": 0.7799999999999999,
+      "calibrated_confidence": 0.9576594731130565,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('OtherCarCost', 'PropCost')",
+      "direction": "OtherCarCost->PropCost",
+      "gt": "OtherCarCost->PropCost",
+      "raw_confidence": 0.7899999999999999,
+      "calibrated_confidence": 0.9576594731130565,
+      "output": "True",
+      "correct": true
+    }
+  ],
+  "calibration_points": [
+    [
+      0.18000000000000002,
+      0.3819660109649509
+    ],
+    [
+      0.26,
+      0.3819660109649509
+    ],
+    [
+      0.26,
+      0.3819660109649509
+    ],
+    [
+      0.26,
+      0.3819660109649509
+    ],
+    [
+      0.29000000000000004,
+      0.3819660109649509
+    ],
+    [
+      0.41000000000000003,
+      0.3819660109649509
+    ],
+    [
+      0.42000000000000004,
+      0.3819660109649509
+    ],
+    [
+      0.43,
+      0.6180339887498949
+    ],
+    [
+      0.43,
+      0.6180339887498949
+    ],
+    [
+      0.43,
+      0.6180339887498949
+    ],
+    [
+      0.43,
+      0.783457634472743
+    ],
+    [
+      0.43,
+      0.783457634472743
+    ],
+    [
+      0.43,
+      0.783457634472743
+    ],
+    [
+      0.4622222222222222,
+      0.7834576344727431
+    ],
+    [
+      0.5,
+      0.7834576344727431
+    ],
+    [
+      0.53,
+      0.7834576344727431
+    ],
+    [
+      0.54,
+      0.7834576344727431
+    ],
+    [
+      0.57,
+      0.7834576344727431
+    ],
+    [
+      0.5900000000000001,
+      0.7834576344727431
+    ],
+    [
+      0.5900000000000001,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.9576594731130564
+    ],
+    [
+      0.61,
+      0.9576594731130564
+    ],
+    [
+      0.63,
+      0.9576594731130564
+    ],
+    [
+      0.63,
+      0.9576594731130564
+    ],
+    [
+      0.63,
+      0.9576594731130564
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.63,
+      0.9576594731130565
+    ],
+    [
+      0.64,
+      0.9576594731130565
+    ],
+    [
+      0.65,
+      0.9576594731130565
+    ],
+    [
+      0.66,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.6799999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.7000000000000001,
+      0.9576594731130565
+    ],
+    [
+      0.7899999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.8099999999999999,
+      0.9576594731130565
+    ],
+    [
+      0.82,
+      0.9576594731130565
+    ],
+    [
+      0.83,
+      0.9576594731130565
+    ],
+    [
+      0.83,
+      0.9576594731130565
+    ],
+    [
+      0.83,
+      0.9576594731130565
+    ],
+    [
+      0.84,
+      0.9576594731130565
+    ],
+    [
+      0.84,
+      0.9576594731130565
+    ],
+    [
+      0.84,
+      0.9576594731130565
+    ],
+    [
+      0.85,
+      0.9711133219624181
+    ],
+    [
+      0.85,
+      0.9711133219624181
+    ],
+    [
+      0.86,
+      0.9711133219624182
+    ],
+    [
+      0.86,
+      0.9711133219624183
+    ],
+    [
+      0.86,
+      0.9711133219624183
+    ],
+    [
+      0.86,
+      0.9711133219624183
+    ],
+    [
+      0.8699999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8699999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      0.9711133219624183
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ]
+  ]
+}

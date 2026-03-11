@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "network": "asia",
+    "n_samples": 10000,
+    "alpha": 0.05,
+    "k_passes": 5,
+    "add_threshold": 0.6,
+    "enable_thinking": false,
+    "n_candidates": 10,
+    "n_queries": 50,
+    "elapsed_seconds": 84.7909607887268
+  },
+  "original_skeleton": {
+    "n_edges": 7,
+    "coverage": 0.875,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "refinement": {
+    "n_candidates_queried": 10,
+    "n_gt_missing": 1,
+    "n_added": 0,
+    "tp_added": 0,
+    "fp_added": 0,
+    "recall_missing": 0.0,
+    "add_precision": 0.0
+  },
+  "refined_skeleton": {
+    "n_edges": 7,
+    "coverage": 0.875,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "improvement": {
+    "coverage_delta": 0.0,
+    "precision_delta": 0.0,
+    "fp_delta": 0
+  },
+  "edge_details": {
+    "tub--xray": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "lung--tub": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "dysp--smoke": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "lung--xray": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bronc--lung": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "dysp--xray": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "dysp--tub": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "dysp--lung": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "either--smoke": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bronc--either": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "projects/locale/experiments/results/mve_27b_sachs_full/mve_results.json",
+    "network": "sachs",
+    "soft_score_source": "ego"
+  },
+  "per_node": {
+    "PKA": {
+      "degree": 7,
+      "n_feasible": 1,
+      "n_total": 128,
+      "hard_flips": [
+        [
+          "Akt",
+          0,
+          1
+        ],
+        [
+          "Raf",
+          0,
+          1
+        ]
+      ],
+      "p1_correct": 6,
+      "p2_correct": 4,
+      "n_edges": 7,
+      "directions": {
+        "Akt": "Akt->PKA",
+        "Erk": "PKA->Erk",
+        "Jnk": "PKA->Jnk",
+        "Mek": "PKA->Mek",
+        "P38": "PKA->P38",
+        "PKC": "PKA->PKC",
+        "Raf": "Raf->PKA"
+      }
+    },
+    "PKC": {
+      "degree": 5,
+      "n_feasible": 12,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "Jnk": "PKC->Jnk",
+        "Mek": "PKC->Mek",
+        "P38": "PKC->P38",
+        "PKA": "PKA->PKC",
+        "Raf": "PKC->Raf"
+      }
+    },
+    "Mek": {
+      "degree": 4,
+      "n_feasible": 10,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "Erk": "Mek->Erk",
+        "PKA": "PKA->Mek",
+        "PKC": "PKC->Mek",
+        "Raf": "Raf->Mek"
+      }
+    },
+    "Erk": {
+      "degree": 3,
+      "n_feasible": 6,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "Akt": "Erk->Akt",
+        "Mek": "Mek->Erk",
+        "PKA": "Erk->PKA"
+      }
+    },
+    "Raf": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "Mek": "Raf->Mek",
+        "PKA": "Raf->PKA",
+        "PKC": "Raf->PKC"
+      }
+    },
+    "Akt": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "Erk": "Akt->Erk",
+        "PKA": "Akt->PKA"
+      }
+    },
+    "PIP3": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "PIP2": "PIP2->PIP3",
+        "Plcg": "Plcg->PIP3"
+      }
+    },
+    "PIP2": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "PIP3": "PIP2->PIP3",
+        "Plcg": "Plcg->PIP2"
+      }
+    },
+    "Jnk": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "PKA": "PKA->Jnk",
+        "PKC": "PKC->Jnk"
+      }
+    },
+    "P38": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "PKA": "PKA->P38",
+        "PKC": "PKC->P38"
+      }
+    },
+    "Plcg": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "PIP2": "PIP2->Plcg",
+        "PIP3": "Plcg->PIP3"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 34,
+    "phase1_correct": 24,
+    "phase2_correct": 22,
+    "phase1_accuracy": 70.6,
+    "phase2_accuracy": 64.7,
+    "delta_pp": -5.9,
+    "hard_flips": 2,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 2,
+    "infeasible_nodes": 0
+  }
+}

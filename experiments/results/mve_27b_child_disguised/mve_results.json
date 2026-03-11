@@ -1,0 +1,2369 @@
+{
+  "metadata": {
+    "network": "child",
+    "model": "Qwen/Qwen3.5-27B-FP8",
+    "temperature": 0.7,
+    "k_passes": 5,
+    "n_samples": 5000,
+    "seed": 42,
+    "test_nodes": [
+      "Disease",
+      "LungParench",
+      "HypoxiaInO2",
+      "CardiacMixing",
+      "Sick"
+    ],
+    "n_test_edges": 18,
+    "n_skeleton_edges": 25,
+    "n_gt_edges": 25,
+    "timestamp": "2026-03-10 18:14:23",
+    "disguised_names": true,
+    "enable_thinking": false,
+    "ego_prompt_version": "v1",
+    "contrastive_pe": false,
+    "temp_ladder": false,
+    "enriched": false
+  },
+  "summary": {
+    "acc_per_edge": 0.8782608695652174,
+    "acc_ego_graph": 0.8521739130434782,
+    "delta": -0.026086956521739202,
+    "delta_pp": -2.60869565217392,
+    "uncertain_per_edge": 0.0,
+    "uncertain_ego_graph": 0.0,
+    "queries_per_edge": 115,
+    "queries_ego_graph": 25,
+    "verdict": "MARGINAL \u2014 Re-examine approach. Consider cost angle."
+  },
+  "per_node": {
+    "Disease": {
+      "degree": 8,
+      "acc_per_edge": 0.875,
+      "acc_ego_graph": 0.85
+    },
+    "LungParench": {
+      "degree": 5,
+      "acc_per_edge": 0.92,
+      "acc_ego_graph": 0.96
+    },
+    "HypoxiaInO2": {
+      "degree": 4,
+      "acc_per_edge": 0.95,
+      "acc_ego_graph": 1.0
+    },
+    "CardiacMixing": {
+      "degree": 3,
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "Sick": {
+      "degree": 3,
+      "acc_per_edge": 0.6,
+      "acc_ego_graph": 0.3333333333333333
+    }
+  },
+  "raw_results_a": [
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "BirthAsphyxia->Disease",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Disease->Age",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "Disease->BirthAsphyxia",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Disease->Age",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "BirthAsphyxia->Disease",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Disease->Age",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Age->Disease",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "Disease->BirthAsphyxia",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "Disease->BirthAsphyxia",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Age->Disease",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "ChestXray->LungParench",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "ChestXray->LungParench",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "LowerBodyO2->HypoxiaInO2",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Sick->Grunting",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Sick->Grunting",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Sick->Grunting",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Grunting->Sick",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Sick->Grunting",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Sick"
+    }
+  ],
+  "raw_results_b": [
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Grunting->Sick",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Grunting->Sick",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypDistrib"
+      ],
+      "predicted": "CardiacMixing->HypDistrib",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CardiacMixing"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Grunting->Sick",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Grunting->Sick",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Grunting"
+      ],
+      "predicted": "Grunting->Sick",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "Sick",
+        "Age"
+      ],
+      "predicted": "Age->Sick",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "Sick"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "LowerBodyO2"
+      ],
+      "predicted": "HypoxiaInO2->LowerBodyO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "HypoxiaInO2",
+        "RUQO2"
+      ],
+      "predicted": "HypoxiaInO2->RUQO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "CardiacMixing",
+        "HypoxiaInO2"
+      ],
+      "predicted": "CardiacMixing->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HypoxiaInO2"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "LungParench->Disease",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "HypoxiaInO2"
+      ],
+      "predicted": "LungParench->HypoxiaInO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "CO2"
+      ],
+      "predicted": "LungParench->CO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "ChestXray"
+      ],
+      "predicted": "LungParench->ChestXray",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "LungParench",
+        "Grunting"
+      ],
+      "predicted": "LungParench->Grunting",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LungParench"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "BirthAsphyxia->Disease",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Age->Disease",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "Disease->BirthAsphyxia",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Disease->Age",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "Disease->BirthAsphyxia",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Disease->Age",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "Disease->BirthAsphyxia",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Disease->Age",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "BirthAsphyxia",
+        "Disease"
+      ],
+      "predicted": "Disease->BirthAsphyxia",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Age"
+      ],
+      "predicted": "Age->Disease",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LVH"
+      ],
+      "predicted": "Disease->LVH",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "DuctFlow"
+      ],
+      "predicted": "Disease->DuctFlow",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "CardiacMixing"
+      ],
+      "predicted": "Disease->CardiacMixing",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungParench"
+      ],
+      "predicted": "Disease->LungParench",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "LungFlow"
+      ],
+      "predicted": "Disease->LungFlow",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    },
+    {
+      "edge": [
+        "Disease",
+        "Sick"
+      ],
+      "predicted": "Disease->Sick",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Disease"
+    }
+  ]
+}

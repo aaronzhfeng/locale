@@ -1,0 +1,306 @@
+============================================================
+LOCALE MVE: Ego-graph vs Per-edge on Alarm
+============================================================
+
+[Step 0] Loading Alarm network...
+  Ground truth: 37 nodes, 46 edges
+
+[Step 0] Sampling 5000 observations (seed=42)...
+  0%|          | 0/37 [00:00<?, ?it/s]Generating for node: HYPOVOLEMIA:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: LVFAILURE:   0%|          | 0/37 [00:00<?, ?it/s]  Generating for node: ERRLOWOUTPUT:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: ERRCAUTER:   0%|          | 0/37 [00:00<?, ?it/s]   Generating for node: INSUFFANESTH:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: ANAPHYLAXIS:   0%|          | 0/37 [00:00<?, ?it/s] Generating for node: KINKEDTUBE:   0%|          | 0/37 [00:00<?, ?it/s] Generating for node: FIO2:   0%|          | 0/37 [00:00<?, ?it/s]      Generating for node: PULMEMBOLUS:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: INTUBATION:   0%|          | 0/37 [00:00<?, ?it/s] Generating for node: DISCONNECT:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: MINVOLSET:   0%|          | 0/37 [00:00<?, ?it/s] Generating for node: HISTORY:   0%|          | 0/37 [00:00<?, ?it/s]  Generating for node: LVEDVOLUME:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: STROKEVOLUME:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: TPR:   0%|          | 0/37 [00:00<?, ?it/s]         Generating for node: PAP:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: SHUNT:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: VENTMACH:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: CVP:   0%|          | 0/37 [00:00<?, ?it/s]     Generating for node: PCWP:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: VENTTUBE:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: PRESS:   0%|          | 0/37 [00:00<?, ?it/s]   Generating for node: VENTLUNG:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: MINVOL:   0%|          | 0/37 [00:00<?, ?it/s]  Generating for node: VENTALV:   0%|          | 0/37 [00:00<?, ?it/s]Generating for node: PVSAT:   0%|          | 0/37 [00:00<?, ?it/s]  Generating for node: PVSAT:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]Generating for node: ARTCO2:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]Generating for node: SAO2:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]  Generating for node: EXPCO2:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]Generating for node: CATECHOL:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]Generating for node: HR:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]      Generating for node: HRBP:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]Generating for node: HREKG:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]Generating for node: HRSAT:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]Generating for node: CO:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]   Generating for node: BP:  73%|███████▎  | 27/37 [00:00<00:00, 247.92it/s]WARNING:pgmpy:Probability values don't exactly sum to 1. Differ by: -2.220446049250313e-16. Adjusting values.
+Generating for node: BP: 100%|██████████| 37/37 [00:00<00:00, 150.50it/s]
+
+[Step 0] Estimating PC skeleton...
+INFO:pgmpy: Datatype (N=numerical, C=Categorical Unordered, O=Categorical Ordered) inferred from data: 
+ {'HISTORY': 'C', 'CVP': 'C', 'PCWP': 'C', 'HYPOVOLEMIA': 'C', 'LVEDVOLUME': 'C', 'LVFAILURE': 'C', 'STROKEVOLUME': 'C', 'ERRLOWOUTPUT': 'C', 'HRBP': 'C', 'HREKG': 'C', 'ERRCAUTER': 'C', 'HRSAT': 'C', 'INSUFFANESTH': 'C', 'ANAPHYLAXIS': 'C', 'TPR': 'C', 'EXPCO2': 'C', 'KINKEDTUBE': 'C', 'MINVOL': 'C', 'FIO2': 'C', 'PVSAT': 'C', 'SAO2': 'C', 'PAP': 'C', 'PULMEMBOLUS': 'C', 'SHUNT': 'C', 'INTUBATION': 'C', 'PRESS': 'C', 'DISCONNECT': 'C', 'MINVOLSET': 'C', 'VENTMACH': 'C', 'VENTTUBE': 'C', 'VENTLUNG': 'C', 'VENTALV': 'C', 'ARTCO2': 'C', 'CATECHOL': 'C', 'HR': 'C', 'CO': 'C', 'BP': 'C'}
+INFO:pgmpy:Reached maximum number of allowed conditional variables. Exiting
+  Skeleton: 37 nodes, 43 undirected edges
+
+[Step 1] Test nodes: ['VENTLUNG', 'CATECHOL', 'HR', 'LVEDVOLUME', 'VENTALV']
+  VENTLUNG: degree=5, neighbors=['EXPCO2', 'MINVOL', 'INTUBATION', 'VENTTUBE', 'VENTALV']
+  CATECHOL: degree=2, neighbors=['TPR', 'ARTCO2']
+  HR: degree=4, neighbors=['HRBP', 'HREKG', 'HRSAT', 'CO']
+  LVEDVOLUME: degree=4, neighbors=['CVP', 'PCWP', 'HYPOVOLEMIA', 'LVFAILURE']
+  VENTALV: degree=5, neighbors=['PVSAT', 'INTUBATION', 'VENTTUBE', 'VENTLUNG', 'ARTCO2']
+  Total unique edges across test nodes: 19
+
+[Step 2] Building prompts...
+
+[Step 3] Querying LLM (Qwen/Qwen3.5-27B-FP8, non-thinking, disguised) with K=5 passes...
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+  Endpoint verified: ready
+
+  Building query jobs...
+  100 per-edge + 25 ego-graph = 125 total queries
+  Concurrency: 4
+
+  Firing per-edge queries...
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    20/125 done (6.2s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+    40/125 done (7.2s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+    60/125 done (8.0s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+    80/125 done (8.8s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    100/125 done (9.7s)
+  Firing ego-graph queries...
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+    105/125 done (9.9s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+    110/125 done (10.1s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+    115/125 done (10.4s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+    120/125 done (10.6s)
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 404 Not Found"
+  [LLM error: Error code: 404]
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1/chat/completions "HTTP/1.1 200 OK"
+    125/125 done (14.3s)
+
+  All queries complete in 14.3s (8.7 queries/s)
+  VENTLUNG: PE 23/25 (92.0%), EGO 12/25 (48.0%)
+  CATECHOL: PE 0/10 (0.0%), EGO 0/10 (0.0%)
+  HR: PE 2/20 (10.0%), EGO 0/20 (0.0%)
+  LVEDVOLUME: PE 1/20 (5.0%), EGO 0/20 (0.0%)
+  VENTALV: PE 2/25 (8.0%), EGO 0/25 (0.0%)
+
+============================================================
+RESULTS
+============================================================
+
+Condition A (per-edge):  28.0% accuracy, 71.0% uncertain
+Condition B (ego-graph): 12.0% accuracy, 85.0% uncertain
+Delta (B - A):           -16.0%
+
+Queries: A=100, B=25 (ratio: 4.0x)
+
+Per-node breakdown:
+Node              Per-edge  Ego-graph      Delta
+------------------------------------------------
+VENTLUNG            92.0%     48.0%    -44.0%
+CATECHOL             0.0%      0.0%     +0.0%
+HR                  10.0%      0.0%    -10.0%
+LVEDVOLUME           5.0%      0.0%     -5.0%
+VENTALV              8.0%      0.0%     -8.0%
+
+Majority-vote accuracy (across K passes):
+  per_edge: 5/20 edges correct by majority vote (25.0%)
+  ego_graph: 2/20 edges correct by majority vote (10.0%)
+
+CI consistency check (non-collider violations):
+  per_edge: 0/120 violations (0.0%)
+  ego_graph: 0/120 violations (0.0%)
+
+============================================================
+Delta = -16.0 pp
+Verdict: NO-GO — Kill this angle.
+============================================================
+
+Results saved to projects/locale/experiments/results/mve_27b_alarm_v2/mve_results.json

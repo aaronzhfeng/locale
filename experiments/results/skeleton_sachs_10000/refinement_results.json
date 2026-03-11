@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "network": "sachs",
+    "n_samples": 10000,
+    "alpha": 0.05,
+    "k_passes": 5,
+    "add_threshold": 0.6,
+    "enable_thinking": false,
+    "n_candidates": 14,
+    "n_queries": 70,
+    "elapsed_seconds": 133.73674511909485
+  },
+  "original_skeleton": {
+    "n_edges": 17,
+    "coverage": 1.0,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "refinement": {
+    "n_candidates_queried": 14,
+    "n_gt_missing": 0,
+    "n_added": 0,
+    "tp_added": 0,
+    "fp_added": 0,
+    "recall_missing": 0.0,
+    "add_precision": 0.0
+  },
+  "refined_skeleton": {
+    "n_edges": 17,
+    "coverage": 1.0,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "improvement": {
+    "coverage_delta": 0.0,
+    "precision_delta": 0.0,
+    "fp_delta": 0
+  },
+  "edge_details": {
+    "Erk--Raf": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Akt--Mek": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Erk--PKC": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Mek--P38": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Jnk--Raf": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Akt--PKC": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Akt--Jnk": {
+      "votes": {
+        "yes": 2,
+        "no": 2,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Akt--P38": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "P38--Raf": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Jnk--Mek": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Erk--Jnk": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Jnk--P38": {
+      "votes": {
+        "yes": 2,
+        "no": 2,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Akt--Raf": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Erk--P38": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    }
+  }
+}

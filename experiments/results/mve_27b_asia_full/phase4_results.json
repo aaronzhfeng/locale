@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "phase": 4,
+    "network": "asia"
+  },
+  "safety_valve": {
+    "fallback_recommended": true,
+    "net_delta_pp": -16.700000000000003,
+    "damaged_nodes": [
+      {
+        "node": "smoke",
+        "p1_correct": 2,
+        "p2_correct": 0,
+        "n_edges": 2,
+        "hard_flips": [
+          [
+            "lung",
+            0,
+            1
+          ],
+          [
+            "bronc",
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "helped_nodes": [],
+    "n_damaged": 1,
+    "n_helped": 0
+  },
+  "reverted_nodes": [
+    "smoke"
+  ],
+  "cycle_breaking": {
+    "had_cycles_before": false,
+    "is_acyclic_after": true,
+    "n_flipped": 0,
+    "flipped_edges": []
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.7142857142857143,
+    "phase3_correct": 5,
+    "phase4_accuracy": 1.0,
+    "phase4_correct": 7,
+    "adaptive_accuracy": 1.0,
+    "adaptive_correct": 7,
+    "best_method": "standard",
+    "best_accuracy": 1.0,
+    "best_correct": 7,
+    "total_edges": 7,
+    "delta_pp": 28.6
+  },
+  "best_alt_reconciliation": {
+    "strategy": "degree",
+    "accuracy": 0.7142857142857143
+  },
+  "reconciled": {
+    "('either', 'tub')": {
+      "direction": "tub->either",
+      "method": "single_endpoint",
+      "endpoint": "either"
+    },
+    "('either', 'lung')": {
+      "direction": "lung->either",
+      "method": "agreement"
+    },
+    "('either', 'xray')": {
+      "direction": "either->xray",
+      "method": "single_endpoint",
+      "endpoint": "either"
+    },
+    "('dysp', 'either')": {
+      "direction": "either->dysp",
+      "method": "agreement"
+    },
+    "('lung', 'smoke')": {
+      "direction": "smoke->lung",
+      "method": "agreement"
+    },
+    "('bronc', 'smoke')": {
+      "direction": "smoke->bronc",
+      "method": "agreement"
+    },
+    "('bronc', 'dysp')": {
+      "direction": "bronc->dysp",
+      "method": "agreement"
+    }
+  }
+}

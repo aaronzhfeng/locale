@@ -1,0 +1,891 @@
+{
+  "metadata": {
+    "network": "insurance",
+    "n_samples": 10000,
+    "alpha": 0.05,
+    "k_passes": 5,
+    "add_threshold": 0.6,
+    "enable_thinking": false,
+    "n_candidates": 85,
+    "n_queries": 425,
+    "elapsed_seconds": 617.9537761211395
+  },
+  "original_skeleton": {
+    "n_edges": 43,
+    "coverage": 0.8076923076923077,
+    "precision": 0.9767441860465116,
+    "false_positives": 1
+  },
+  "refinement": {
+    "n_candidates_queried": 85,
+    "n_gt_missing": 10,
+    "n_added": 0,
+    "tp_added": 0,
+    "fp_added": 0,
+    "recall_missing": 0.0,
+    "add_precision": 0.0
+  },
+  "refined_skeleton": {
+    "n_edges": 43,
+    "coverage": 0.8076923076923077,
+    "precision": 0.9767441860465116,
+    "false_positives": 1
+  },
+  "improvement": {
+    "coverage_delta": 0.0,
+    "precision_delta": 0.0,
+    "fp_delta": 0
+  },
+  "edge_details": {
+    "AntiTheft--VehicleYear": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HomeBase--SeniorTrain": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivHist--DrivQuality": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MakeModel--Mileage": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "GoodStudent--RiskAversion": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Antilock--RuggedAuto": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CarValue--ThisCarDam": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "SeniorTrain--SocioEcon": {
+      "votes": {
+        "yes": 2,
+        "no": 2,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "AntiTheft--DrivQuality": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CarValue--RuggedAuto": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Accident--Age": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--Cushioning": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PropCost--Theft": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MedCost--SeniorTrain": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "AntiTheft--OtherCar": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "OtherCarCost--ThisCarDam": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivQuality--SocioEcon": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CarValue--PropCost": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Cushioning--MakeModel": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Airbag--RuggedAuto": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Cushioning--VehicleYear": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Accident--ThisCarCost": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivingSkill--MedCost": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MakeModel--RiskAversion": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "Accident--RiskAversion": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MedCost--RiskAversion": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Mileage--VehicleYear": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--AntiTheft": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Accident--DrivingSkill": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivHist--SocioEcon": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "AntiTheft--MakeModel": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MedCost--OtherCarCost": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HomeBase--MakeModel": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--MakeModel": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ILiCost--ThisCarDam": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MakeModel--VehicleYear": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "GoodStudent--SocioEcon": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "HomeBase--OtherCar": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivingSkill--SocioEcon": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "AntiTheft--HomeBase": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PropCost--ThisCarDam": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MakeModel--OtherCar": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Airbag--MedCost": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "GoodStudent--MedCost": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "AntiTheft--DrivHist": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--DrivHist": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CarValue--SocioEcon": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "RiskAversion--VehicleYear": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "ILiCost--MedCost": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MedCost--ThisCarDam": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MedCost--RuggedAuto": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivQuality--MedCost": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CarValue--Theft": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "ILiCost--OtherCarCost": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--HomeBase": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--OtherCar": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Antilock--CarValue": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivingSkill--RiskAversion": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Airbag--CarValue": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivQuality--ThisCarDam": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "OtherCar--RiskAversion": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--VehicleYear": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Antilock--SocioEcon": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivHist--SeniorTrain": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "OtherCar--VehicleYear": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HomeBase--VehicleYear": {
+      "votes": {
+        "yes": 2,
+        "no": 2,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivingSkill--GoodStudent": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MakeModel--ThisCarCost": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Accident--Cushioning": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Accident--PropCost": {
+      "votes": {
+        "yes": 1,
+        "no": 4,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ThisCarCost--VehicleYear": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Theft--ThisCarDam": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "AntiTheft--SeniorTrain": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivHist--HomeBase": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivQuality--ILiCost": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivQuality--SeniorTrain": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivQuality--HomeBase": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DrivQuality--OtherCarCost": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "RuggedAuto--SocioEcon": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Airbag--SocioEcon": {
+      "votes": {
+        "yes": 2,
+        "no": 2,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Mileage--ThisCarCost": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--DrivQuality": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MedCost--SocioEcon": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Airbag--Antilock": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "OtherCarCost--ThisCarCost": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    }
+  }
+}

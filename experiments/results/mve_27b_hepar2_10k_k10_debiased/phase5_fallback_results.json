@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "phase": 5,
+    "method": "pe_fallback",
+    "budget_fraction": 0.15
+  },
+  "hard_tail": {
+    "n_identified": 31,
+    "n_queried": 9,
+    "max_budget": 9,
+    "by_reason": {
+      "disagreement": 6,
+      "single_endpoint": 25
+    }
+  },
+  "fallback": {
+    "n_changes": 0,
+    "n_improved": 0,
+    "n_worsened": 0,
+    "net_gain": 0,
+    "changes": []
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.875,
+    "phase3_correct": 56,
+    "phase5_accuracy": 0.875,
+    "phase5_correct": 56,
+    "total_edges": 64,
+    "delta_pp": 0.0
+  },
+  "final_orientations": {
+    "('Cirrhosis', 'fibrosis')": {
+      "direction": "fibrosis->Cirrhosis",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Cirrhosis', 'Steatosis')": {
+      "direction": "Steatosis->Cirrhosis",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Cirrhosis', 'edema')": {
+      "direction": "Cirrhosis->edema",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Cirrhosis', 'inr')": {
+      "direction": "Cirrhosis->inr",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Cirrhosis', 'alcohol')": {
+      "direction": "Cirrhosis->alcohol",
+      "source": "ego_kept_single",
+      "changed": false
+    },
+    "('Cirrhosis', 'spleen')": {
+      "direction": "Cirrhosis->spleen",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Cirrhosis', 'spiders')": {
+      "direction": "Cirrhosis->spiders",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Cirrhosis', 'edge')": {
+      "direction": "Cirrhosis->edge",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Cirrhosis', 'irregular_liver')": {
+      "direction": "Cirrhosis->irregular_liver",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('Cirrhosis', 'palms')": {
+      "direction": "Cirrhosis->palms",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('Cirrhosis', 'carcinoma')": {
+      "direction": "Cirrhosis->carcinoma",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('ChHepatitis', 'vh_amn')": {
+      "direction": "ChHepatitis->vh_amn",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChHepatitis', 'injections')": {
+      "direction": "injections->ChHepatitis",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChHepatitis', 'fibrosis')": {
+      "direction": "ChHepatitis->fibrosis",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChHepatitis', 'phosphatase')": {
+      "direction": "ChHepatitis->phosphatase",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChHepatitis', 'alt')": {
+      "direction": "ChHepatitis->alt",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChHepatitis', 'ast')": {
+      "direction": "ChHepatitis->ast",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChHepatitis', 'hbsag')": {
+      "direction": "ChHepatitis->hbsag",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChHepatitis', 'hbeag')": {
+      "direction": "ChHepatitis->hbeag",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('PBC', 'sex')": {
+      "direction": "sex->PBC",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('PBC', 'age')": {
+      "direction": "age->PBC",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PBC', 'bilirubin')": {
+      "direction": "PBC->bilirubin",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PBC', 'ama')": {
+      "direction": "PBC->ama",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('ESR', 'PBC')": {
+      "direction": "PBC->ESR",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('PBC', 'ggtp')": {
+      "direction": "PBC->ggtp",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PBC', 'cholesterol')": {
+      "direction": "PBC->cholesterol",
+      "source": "agreement",
+      "changed": false
+    },
+    "('bilirubin', 'gallstones')": {
+      "direction": "gallstones->bilirubin",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Hyperbilirubinemia', 'bilirubin')": {
+      "direction": "bilirubin->Hyperbilirubinemia",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('bilirubin', 'itching')": {
+      "direction": "bilirubin->itching",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('bilirubin', 'skin')": {
+      "direction": "bilirubin->skin",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('bilirubin', 'jaundice')": {
+      "direction": "bilirubin->jaundice",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('Steatosis', 'alcoholism')": {
+      "direction": "alcoholism->Steatosis",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Steatosis', 'triglycerides')": {
+      "direction": "Steatosis->triglycerides",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('Steatosis', 'ast')": {
+      "direction": "Steatosis->ast",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Steatosis', 'cholesterol')": {
+      "direction": "Steatosis->cholesterol",
+      "source": "disagreement_confidence",
+      "changed": false
+    },
+    "('hbsag', 'vh_amn')": {
+      "direction": "vh_amn->hbsag",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('hbsag_anti', 'vh_amn')": {
+      "direction": "hbsag_anti->vh_amn",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('hbc_anti', 'vh_amn')": {
+      "direction": "vh_amn->hbc_anti",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('THepatitis', 'alcoholism')": {
+      "direction": "alcoholism->THepatitis",
+      "source": "agreement",
+      "changed": false
+    },
+    "('THepatitis', 'phosphatase')": {
+      "direction": "THepatitis->phosphatase",
+      "source": "agreement",
+      "changed": false
+    },
+    "('THepatitis', 'alt')": {
+      "direction": "THepatitis->alt",
+      "source": "agreement",
+      "changed": false
+    },
+    "('THepatitis', 'ast')": {
+      "direction": "THepatitis->ast",
+      "source": "agreement",
+      "changed": false
+    },
+    "('choledocholithotomy', 'gallstones')": {
+      "direction": "gallstones->choledocholithotomy",
+      "source": "agreement",
+      "changed": false
+    },
+    "('fat', 'gallstones')": {
+      "direction": "gallstones->fat",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('gallstones', 'pressure_ruq')": {
+      "direction": "gallstones->pressure_ruq",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('hospital', 'injections')": {
+      "direction": "injections->hospital",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('injections', 'surgery')": {
+      "direction": "injections->surgery",
+      "source": "agreement",
+      "changed": false
+    },
+    "('choledocholithotomy', 'injections')": {
+      "direction": "injections->choledocholithotomy",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Hyperbilirubinemia', 'age')": {
+      "direction": "age->Hyperbilirubinemia",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Hyperbilirubinemia', 'hepatomegaly')": {
+      "direction": "hepatomegaly->Hyperbilirubinemia",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Hyperbilirubinemia', 'ggtp')": {
+      "direction": "Hyperbilirubinemia->ggtp",
+      "source": "agreement",
+      "changed": false
+    },
+    "('RHepatitis', 'ast')": {
+      "direction": "RHepatitis->ast",
+      "source": "agreement",
+      "changed": false
+    },
+    "('age', 'spleen')": {
+      "direction": "age->spleen",
+      "source": "agreement",
+      "changed": false
+    },
+    "('RHepatitis', 'fatigue')": {
+      "direction": "RHepatitis->fatigue",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('RHepatitis', 'phosphatase')": {
+      "direction": "RHepatitis->phosphatase",
+      "source": "agreement",
+      "changed": false
+    },
+    "('encephalopathy', 'urea')": {
+      "direction": "urea->encephalopathy",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('density', 'encephalopathy')": {
+      "direction": "encephalopathy->density",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('consciousness', 'encephalopathy')": {
+      "direction": "encephalopathy->consciousness",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('cholesterol', 'ggtp')": {
+      "direction": "cholesterol->ggtp",
+      "source": "agreement",
+      "changed": false
+    },
+    "('hospital', 'transfusion')": {
+      "direction": "hospital->transfusion",
+      "source": "agreement",
+      "changed": false
+    },
+    "('surgery', 'transfusion')": {
+      "direction": "surgery->transfusion",
+      "source": "agreement",
+      "changed": false
+    },
+    "('bleeding', 'inr')": {
+      "direction": "inr->bleeding",
+      "source": "agreement",
+      "changed": false
+    },
+    "('bleeding', 'platelet')": {
+      "direction": "platelet->bleeding",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('hepatalgia', 'hepatomegaly')": {
+      "direction": "hepatomegaly->hepatalgia",
+      "source": "single_endpoint",
+      "changed": false
+    }
+  }
+}

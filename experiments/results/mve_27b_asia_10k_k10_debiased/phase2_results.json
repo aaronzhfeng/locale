@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "results/mve_27b_asia_10k_k10_debiased/mve_results.json",
+    "network": "asia",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "either": {
+      "degree": 4,
+      "n_feasible": 6,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "tub": "tub->either",
+        "lung": "lung->either",
+        "xray": "either->xray",
+        "dysp": "either->dysp"
+      }
+    },
+    "smoke": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "lung": "smoke->lung",
+        "bronc": "smoke->bronc"
+      }
+    },
+    "lung": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "smoke": "smoke->lung",
+        "either": "lung->either"
+      }
+    },
+    "bronc": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "smoke": "smoke->bronc",
+        "dysp": "bronc->dysp"
+      }
+    },
+    "dysp": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "bronc": "bronc->dysp",
+        "either": "either->dysp"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 12,
+    "phase1_correct": 12,
+    "phase2_correct": 12,
+    "phase1_accuracy": 100.0,
+    "phase2_accuracy": 100.0,
+    "delta_pp": 0.0,
+    "hard_flips": 0,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

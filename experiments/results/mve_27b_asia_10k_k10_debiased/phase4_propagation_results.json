@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "phase": 4,
+    "method": "conservative_propagation",
+    "network": "asia",
+    "commit_threshold": 0.3,
+    "batch_size": 5
+  },
+  "safety_valve": {
+    "fallback_recommended": false,
+    "net_delta_pp": 0.0,
+    "damaged_nodes": [],
+    "helped_nodes": [],
+    "n_damaged": 0,
+    "n_helped": 0
+  },
+  "propagation": {
+    "n_committed": 6,
+    "n_meek_compelled": 1,
+    "n_residual": 0,
+    "n_cycle_flips": 0,
+    "n_meek_overrides": 0,
+    "n_rounds": 1
+  },
+  "evaluation": {
+    "phase3_accuracy": 1.0,
+    "phase3_correct": 7,
+    "phase4_accuracy": 1.0,
+    "phase4_correct": 7,
+    "total_edges": 7,
+    "delta_pp": 0.0,
+    "by_source": {
+      "committed": {
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1.0
+      },
+      "meek_R1": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "propagation_log": [
+    {
+      "round": 1,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    },
+    {
+      "round": 1,
+      "event": "meek_propagation",
+      "n_proposed": 2,
+      "n_accepted": 1,
+      "n_rejected": 1,
+      "overrides": [
+        {
+          "edge": "frozenset({'tub', 'either'})",
+          "meek": "either->tub",
+          "llm": "tub->either",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        }
+      ]
+    }
+  ],
+  "final_orientations": {
+    "frozenset({'lung', 'either'})": {
+      "direction": "lung->either",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'dysp', 'either'})": {
+      "direction": "either->dysp",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'smoke', 'lung'})": {
+      "direction": "smoke->lung",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'smoke', 'bronc'})": {
+      "direction": "smoke->bronc",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'dysp', 'bronc'})": {
+      "direction": "bronc->dysp",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'tub', 'either'})": {
+      "direction": "tub->either",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'xray', 'either'})": {
+      "direction": "either->xray",
+      "source": "meek_R1",
+      "confidence": null
+    }
+  }
+}

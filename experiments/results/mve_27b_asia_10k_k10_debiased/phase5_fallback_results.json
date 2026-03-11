@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "phase": 5,
+    "method": "pe_fallback",
+    "budget_fraction": 0.15
+  },
+  "hard_tail": {
+    "n_identified": 2,
+    "n_queried": 1,
+    "max_budget": 1,
+    "by_reason": {
+      "single_endpoint": 2
+    }
+  },
+  "fallback": {
+    "n_changes": 0,
+    "n_improved": 0,
+    "n_worsened": 0,
+    "net_gain": 0,
+    "changes": []
+  },
+  "evaluation": {
+    "phase3_accuracy": 1.0,
+    "phase3_correct": 7,
+    "phase5_accuracy": 1.0,
+    "phase5_correct": 7,
+    "total_edges": 7,
+    "delta_pp": 0.0
+  },
+  "final_orientations": {
+    "('either', 'tub')": {
+      "direction": "tub->either",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('either', 'lung')": {
+      "direction": "lung->either",
+      "source": "agreement",
+      "changed": false
+    },
+    "('either', 'xray')": {
+      "direction": "either->xray",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('dysp', 'either')": {
+      "direction": "either->dysp",
+      "source": "agreement",
+      "changed": false
+    },
+    "('lung', 'smoke')": {
+      "direction": "smoke->lung",
+      "source": "agreement",
+      "changed": false
+    },
+    "('bronc', 'smoke')": {
+      "direction": "smoke->bronc",
+      "source": "agreement",
+      "changed": false
+    },
+    "('bronc', 'dysp')": {
+      "direction": "bronc->dysp",
+      "source": "agreement",
+      "changed": false
+    }
+  }
+}

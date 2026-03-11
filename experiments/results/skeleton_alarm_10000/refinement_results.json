@@ -1,0 +1,751 @@
+{
+  "metadata": {
+    "network": "alarm",
+    "n_samples": 10000,
+    "alpha": 0.05,
+    "k_passes": 5,
+    "add_threshold": 0.6,
+    "enable_thinking": false,
+    "n_candidates": 71,
+    "n_queries": 355,
+    "elapsed_seconds": 216.60551357269287
+  },
+  "original_skeleton": {
+    "n_edges": 43,
+    "coverage": 0.9347826086956522,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "refinement": {
+    "n_candidates_queried": 71,
+    "n_gt_missing": 3,
+    "n_added": 0,
+    "tp_added": 0,
+    "fp_added": 0,
+    "recall_missing": 0.0,
+    "add_precision": 0.0
+  },
+  "refined_skeleton": {
+    "n_edges": 43,
+    "coverage": 0.9347826086956522,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "improvement": {
+    "coverage_delta": 0.0,
+    "precision_delta": 0.0,
+    "fp_delta": 0
+  },
+  "edge_details": {
+    "CATECHOL--EXPCO2": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "SHUNT--VENTALV": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "SHUNT--VENTLUNG": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "EXPCO2--MINVOL": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO--HREKG": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PRESS--VENTALV": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PVSAT--SHUNT": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PRESS--VENTLUNG": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CATECHOL--CO": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LVFAILURE--PCWP": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "EXPCO2--VENTTUBE": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "VENTLUNG--VENTMACH": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ANAPHYLAXIS--CATECHOL": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ARTCO2--PVSAT": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HYPOVOLEMIA--LVFAILURE": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MINVOL--VENTTUBE": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PAP--SHUNT": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HISTORY--STROKEVOLUME": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ARTCO2--TPR": {
+      "votes": {
+        "yes": 2,
+        "no": 0,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CATECHOL--VENTALV": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HRBP--HREKG": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO--HRBP": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO--HRSAT": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "FIO2--VENTALV": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ARTCO2--INTUBATION": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MINVOLSET--VENTTUBE": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HYPOVOLEMIA--PCWP": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO--LVFAILURE": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CVP--LVFAILURE": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "EXPCO2--VENTALV": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DISCONNECT--PRESS": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "KINKEDTUBE--VENTTUBE": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "FIO2--SAO2": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "INTUBATION--PVSAT": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CATECHOL--HRBP": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "INTUBATION--VENTTUBE": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "INTUBATION--SAO2": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CVP--PCWP": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MINVOL--SHUNT": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MINVOL--VENTALV": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HISTORY--LVEDVOLUME": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "EXPCO2--INTUBATION": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PRESS--VENTMACH": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DISCONNECT--VENTMACH": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CATECHOL--HRSAT": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "INTUBATION--PULMEMBOLUS": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BP--HR": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HR--STROKEVOLUME": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CVP--HYPOVOLEMIA": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ANAPHYLAXIS--BP": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PRESS--SHUNT": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HRBP--HRSAT": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HREKG--HRSAT": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PVSAT--VENTLUNG": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ERRLOWOUTPUT--HR": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BP--CATECHOL": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PULMEMBOLUS--SAO2": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LVEDVOLUME--STROKEVOLUME": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ARTCO2--HR": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DISCONNECT--VENTLUNG": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO--HYPOVOLEMIA": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HR--TPR": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "VENTALV--VENTTUBE": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ARTCO2--VENTLUNG": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO--TPR": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "SAO2--VENTALV": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BP--STROKEVOLUME": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "INTUBATION--KINKEDTUBE": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ERRCAUTER--HR": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "MINVOL--PRESS": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CATECHOL--HREKG": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    }
+  }
+}

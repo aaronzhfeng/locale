@@ -1,0 +1,237 @@
+{
+  "reconciled": {
+    "('BirthAsphyxia', 'Disease')": {
+      "direction": "Disease->BirthAsphyxia",
+      "method": "single_endpoint",
+      "endpoint": "Disease"
+    },
+    "('Age', 'Disease')": {
+      "direction": "Disease->Age",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Disease->Age",
+        "degree": "Disease->Age",
+        "constraints": "Disease->Age",
+        "hard_flip": "Disease->Age"
+      },
+      "endpoints": [
+        {
+          "node": "Disease",
+          "dir": "Disease->Age",
+          "margin": 0.5555555555555556,
+          "degree": 8
+        },
+        {
+          "node": "Age",
+          "dir": "Age->Disease",
+          "margin": 0.5555555555555556,
+          "degree": 2
+        }
+      ]
+    },
+    "('Disease', 'LVH')": {
+      "direction": "Disease->LVH",
+      "method": "agreement"
+    },
+    "('Disease', 'DuctFlow')": {
+      "direction": "Disease->DuctFlow",
+      "method": "agreement"
+    },
+    "('CardiacMixing', 'Disease')": {
+      "direction": "Disease->CardiacMixing",
+      "method": "agreement"
+    },
+    "('Disease', 'LungParench')": {
+      "direction": "Disease->LungParench",
+      "method": "agreement"
+    },
+    "('Disease', 'LungFlow')": {
+      "direction": "Disease->LungFlow",
+      "method": "agreement"
+    },
+    "('Disease', 'Sick')": {
+      "direction": "Disease->Sick",
+      "method": "agreement"
+    },
+    "('HypoxiaInO2', 'LungParench')": {
+      "direction": "LungParench->HypoxiaInO2",
+      "method": "agreement"
+    },
+    "('CO2', 'LungParench')": {
+      "direction": "LungParench->CO2",
+      "method": "agreement"
+    },
+    "('ChestXray', 'LungParench')": {
+      "direction": "LungParench->ChestXray",
+      "method": "agreement"
+    },
+    "('Grunting', 'LungParench')": {
+      "direction": "LungParench->Grunting",
+      "method": "agreement"
+    },
+    "('HypoxiaInO2', 'LowerBodyO2')": {
+      "direction": "HypoxiaInO2->LowerBodyO2",
+      "method": "agreement"
+    },
+    "('HypoxiaInO2', 'RUQO2')": {
+      "direction": "HypoxiaInO2->RUQO2",
+      "method": "single_endpoint",
+      "endpoint": "HypoxiaInO2"
+    },
+    "('CardiacMixing', 'HypoxiaInO2')": {
+      "direction": "CardiacMixing->HypoxiaInO2",
+      "method": "agreement"
+    },
+    "('HypDistrib', 'LowerBodyO2')": {
+      "direction": "HypDistrib->LowerBodyO2",
+      "method": "agreement"
+    },
+    "('DuctFlow', 'HypDistrib')": {
+      "direction": "DuctFlow->HypDistrib",
+      "method": "agreement"
+    },
+    "('CardiacMixing', 'HypDistrib')": {
+      "direction": "CardiacMixing->HypDistrib",
+      "method": "agreement"
+    },
+    "('ChestXray', 'XrayReport')": {
+      "direction": "ChestXray->XrayReport",
+      "method": "single_endpoint",
+      "endpoint": "ChestXray"
+    },
+    "('ChestXray', 'LungFlow')": {
+      "direction": "LungFlow->ChestXray",
+      "method": "agreement"
+    },
+    "('Grunting', 'GruntingReport')": {
+      "direction": "Grunting->GruntingReport",
+      "method": "single_endpoint",
+      "endpoint": "Grunting"
+    },
+    "('Grunting', 'Sick')": {
+      "direction": "Grunting->Sick",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Grunting->Sick",
+        "degree": "Grunting->Sick",
+        "constraints": "Grunting->Sick",
+        "hard_flip": "Sick->Grunting"
+      },
+      "endpoints": [
+        {
+          "node": "Grunting",
+          "dir": "Grunting->Sick",
+          "margin": 0.4,
+          "degree": 3
+        },
+        {
+          "node": "Sick",
+          "dir": "Sick->Grunting",
+          "margin": 0.4,
+          "degree": 3
+        }
+      ]
+    },
+    "('Age', 'Sick')": {
+      "direction": "Age->Sick",
+      "method": "agreement"
+    },
+    "('CO2', 'CO2Report')": {
+      "direction": "CO2->CO2Report",
+      "method": "single_endpoint",
+      "endpoint": "CO2"
+    },
+    "('LVH', 'LVHreport')": {
+      "direction": "LVH->LVHreport",
+      "method": "single_endpoint",
+      "endpoint": "LVH"
+    }
+  },
+  "evaluation": {
+    "correct": 22,
+    "total": 25,
+    "accuracy": 0.88,
+    "agreements": 17,
+    "disagreements": 2,
+    "by_method": {
+      "single_endpoint": {
+        "correct": 5,
+        "total": 6
+      },
+      "disagreement_confidence": {
+        "correct": 1,
+        "total": 2
+      },
+      "agreement": {
+        "correct": 16,
+        "total": 17
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 22,
+      "total": 25,
+      "accuracy": 0.88,
+      "agreements": 17,
+      "disagreements": 2,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 5,
+          "total": 6
+        },
+        "disagreement_confidence": {
+          "correct": 1,
+          "total": 2
+        },
+        "agreement": {
+          "correct": 16,
+          "total": 17
+        }
+      }
+    },
+    "constraints": {
+      "correct": 22,
+      "total": 25,
+      "accuracy": 0.88,
+      "agreements": 17,
+      "disagreements": 2,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 5,
+          "total": 6
+        },
+        "disagreement_confidence": {
+          "correct": 1,
+          "total": 2
+        },
+        "agreement": {
+          "correct": 16,
+          "total": 17
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 23,
+      "total": 25,
+      "accuracy": 0.92,
+      "agreements": 17,
+      "disagreements": 2,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 5,
+          "total": 6
+        },
+        "disagreement_confidence": {
+          "correct": 2,
+          "total": 2
+        },
+        "agreement": {
+          "correct": 16,
+          "total": 17
+        }
+      }
+    }
+  },
+  "n_unique_edges": 25
+}

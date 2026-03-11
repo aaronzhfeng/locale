@@ -1,0 +1,9050 @@
+{
+  "metadata": {
+    "network": "alarm",
+    "model": "Qwen/Qwen3.5-27B-FP8",
+    "temperature": 0.7,
+    "k_passes": 5,
+    "n_samples": 10000,
+    "seed": 42,
+    "test_nodes": [
+      "INTUBATION",
+      "VENTLUNG",
+      "HR",
+      "LVEDVOLUME",
+      "VENTTUBE",
+      "VENTALV",
+      "LVFAILURE",
+      "STROKEVOLUME",
+      "TPR",
+      "PVSAT",
+      "SHUNT",
+      "PRESS",
+      "ARTCO2",
+      "CATECHOL",
+      "CO",
+      "HYPOVOLEMIA",
+      "HRBP",
+      "HREKG",
+      "ERRCAUTER",
+      "HRSAT",
+      "EXPCO2",
+      "MINVOL",
+      "SAO2",
+      "PULMEMBOLUS",
+      "VENTMACH",
+      "BP"
+    ],
+    "n_test_edges": 43,
+    "n_skeleton_edges": 43,
+    "n_gt_edges": 46,
+    "timestamp": "2026-03-11 04:32:16",
+    "disguised_names": true,
+    "enable_thinking": false,
+    "ego_prompt_version": "v1",
+    "contrastive_pe": false,
+    "temp_ladder": false,
+    "enriched": false
+  },
+  "summary": {
+    "acc_per_edge": 0.8157894736842105,
+    "acc_ego_graph": 0.8578947368421053,
+    "delta": 0.04210526315789476,
+    "delta_pp": 4.210526315789476,
+    "uncertain_per_edge": 0.002631578947368421,
+    "uncertain_ego_graph": 0.0,
+    "queries_per_edge": 380,
+    "queries_ego_graph": 130,
+    "verdict": "WEAK GO \u2014 Value may be in cost savings, not accuracy."
+  },
+  "per_node": {
+    "INTUBATION": {
+      "degree": 5,
+      "neighbors": [
+        "MINVOL",
+        "SHUNT",
+        "PRESS",
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "MINVOL",
+            "SHUNT"
+          ],
+          "separated_by": "INTUBATION",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "MINVOL",
+            "PRESS"
+          ],
+          "separated_by": "INTUBATION, KINKEDTUBE, VENTTUBE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "MINVOL",
+            "VENTALV"
+          ],
+          "separated_by": "INTUBATION, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "SHUNT",
+            "PRESS"
+          ],
+          "separated_by": "INTUBATION",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "SHUNT",
+            "VENTLUNG"
+          ],
+          "separated_by": "INTUBATION",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "SHUNT",
+            "VENTALV"
+          ],
+          "separated_by": "INTUBATION",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PRESS",
+            "VENTLUNG"
+          ],
+          "separated_by": "INTUBATION, KINKEDTUBE, VENTTUBE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PRESS",
+            "VENTALV"
+          ],
+          "separated_by": "INTUBATION, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "INTUBATION",
+          "MINVOL"
+        ],
+        [
+          "INTUBATION",
+          "SHUNT"
+        ],
+        [
+          "INTUBATION",
+          "PRESS"
+        ],
+        [
+          "INTUBATION",
+          "VENTLUNG"
+        ],
+        [
+          "INTUBATION",
+          "VENTALV"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "VENTLUNG": {
+      "degree": 5,
+      "neighbors": [
+        "EXPCO2",
+        "MINVOL",
+        "INTUBATION",
+        "VENTTUBE",
+        "VENTALV"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "EXPCO2",
+            "MINVOL"
+          ],
+          "separated_by": "ARTCO2, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "EXPCO2",
+            "INTUBATION"
+          ],
+          "separated_by": "ARTCO2, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "EXPCO2",
+            "VENTTUBE"
+          ],
+          "separated_by": "ARTCO2, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "EXPCO2",
+            "VENTALV"
+          ],
+          "separated_by": "ARTCO2, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "MINVOL",
+            "VENTTUBE"
+          ],
+          "separated_by": "INTUBATION, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "MINVOL",
+            "VENTALV"
+          ],
+          "separated_by": "INTUBATION, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "INTUBATION",
+            "VENTTUBE"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "VENTTUBE",
+            "VENTALV"
+          ],
+          "separated_by": "INTUBATION, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "VENTLUNG",
+          "EXPCO2"
+        ],
+        [
+          "VENTLUNG",
+          "MINVOL"
+        ],
+        [
+          "INTUBATION",
+          "VENTLUNG"
+        ],
+        [
+          "VENTTUBE",
+          "VENTLUNG"
+        ],
+        [
+          "VENTLUNG",
+          "VENTALV"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 0.8
+    },
+    "HR": {
+      "degree": 5,
+      "neighbors": [
+        "HRBP",
+        "HREKG",
+        "HRSAT",
+        "CATECHOL",
+        "CO"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "HRBP",
+            "HREKG"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HRBP",
+            "HRSAT"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HRBP",
+            "CATECHOL"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HRBP",
+            "CO"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HREKG",
+            "HRSAT"
+          ],
+          "separated_by": "ERRCAUTER, HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HREKG",
+            "CATECHOL"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HREKG",
+            "CO"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HRSAT",
+            "CATECHOL"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HRSAT",
+            "CO"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "CATECHOL",
+            "CO"
+          ],
+          "separated_by": "HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "HR",
+          "HRBP"
+        ],
+        [
+          "HR",
+          "HREKG"
+        ],
+        [
+          "HR",
+          "HRSAT"
+        ],
+        [
+          "CATECHOL",
+          "HR"
+        ],
+        [
+          "HR",
+          "CO"
+        ]
+      ],
+      "acc_per_edge": 0.84,
+      "acc_ego_graph": 0.88
+    },
+    "LVEDVOLUME": {
+      "degree": 4,
+      "neighbors": [
+        "CVP",
+        "PCWP",
+        "HYPOVOLEMIA",
+        "LVFAILURE"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "CVP",
+            "PCWP"
+          ],
+          "separated_by": "LVEDVOLUME",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "CVP",
+            "HYPOVOLEMIA"
+          ],
+          "separated_by": "LVEDVOLUME",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "CVP",
+            "LVFAILURE"
+          ],
+          "separated_by": "LVEDVOLUME",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PCWP",
+            "HYPOVOLEMIA"
+          ],
+          "separated_by": "LVEDVOLUME, STROKEVOLUME",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PCWP",
+            "LVFAILURE"
+          ],
+          "separated_by": "LVEDVOLUME",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HYPOVOLEMIA",
+            "LVFAILURE"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "LVEDVOLUME",
+          "CVP"
+        ],
+        [
+          "LVEDVOLUME",
+          "PCWP"
+        ],
+        [
+          "HYPOVOLEMIA",
+          "LVEDVOLUME"
+        ],
+        [
+          "LVFAILURE",
+          "LVEDVOLUME"
+        ]
+      ],
+      "acc_per_edge": 0.75,
+      "acc_ego_graph": 0.8
+    },
+    "VENTTUBE": {
+      "degree": 4,
+      "neighbors": [
+        "PRESS",
+        "DISCONNECT",
+        "VENTMACH",
+        "VENTLUNG"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "PRESS",
+            "DISCONNECT"
+          ],
+          "separated_by": "VENTTUBE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PRESS",
+            "VENTMACH"
+          ],
+          "separated_by": "VENTTUBE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PRESS",
+            "VENTLUNG"
+          ],
+          "separated_by": "INTUBATION, KINKEDTUBE, VENTTUBE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "DISCONNECT",
+            "VENTMACH"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "DISCONNECT",
+            "VENTLUNG"
+          ],
+          "separated_by": "VENTTUBE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "VENTMACH",
+            "VENTLUNG"
+          ],
+          "separated_by": "VENTTUBE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "VENTTUBE",
+          "PRESS"
+        ],
+        [
+          "DISCONNECT",
+          "VENTTUBE"
+        ],
+        [
+          "VENTMACH",
+          "VENTTUBE"
+        ],
+        [
+          "VENTTUBE",
+          "VENTLUNG"
+        ]
+      ],
+      "acc_per_edge": 0.8,
+      "acc_ego_graph": 0.85
+    },
+    "VENTALV": {
+      "degree": 4,
+      "neighbors": [
+        "PVSAT",
+        "INTUBATION",
+        "VENTLUNG",
+        "ARTCO2"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "PVSAT",
+            "INTUBATION"
+          ],
+          "separated_by": "VENTALV",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PVSAT",
+            "VENTLUNG"
+          ],
+          "separated_by": "VENTALV",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "PVSAT",
+            "ARTCO2"
+          ],
+          "separated_by": "SAO2, VENTALV",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "INTUBATION",
+            "ARTCO2"
+          ],
+          "separated_by": "MINVOL, VENTALV, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "VENTLUNG",
+            "ARTCO2"
+          ],
+          "separated_by": "VENTALV",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "VENTALV",
+          "PVSAT"
+        ],
+        [
+          "INTUBATION",
+          "VENTALV"
+        ],
+        [
+          "VENTLUNG",
+          "VENTALV"
+        ],
+        [
+          "VENTALV",
+          "ARTCO2"
+        ]
+      ],
+      "acc_per_edge": 0.85,
+      "acc_ego_graph": 0.8
+    },
+    "LVFAILURE": {
+      "degree": 3,
+      "neighbors": [
+        "HISTORY",
+        "LVEDVOLUME",
+        "STROKEVOLUME"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "HISTORY",
+            "LVEDVOLUME"
+          ],
+          "separated_by": "LVFAILURE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HISTORY",
+            "STROKEVOLUME"
+          ],
+          "separated_by": "LVFAILURE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "LVEDVOLUME",
+            "STROKEVOLUME"
+          ],
+          "separated_by": "HYPOVOLEMIA, LVFAILURE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "LVFAILURE",
+          "HISTORY"
+        ],
+        [
+          "LVFAILURE",
+          "LVEDVOLUME"
+        ],
+        [
+          "LVFAILURE",
+          "STROKEVOLUME"
+        ]
+      ],
+      "acc_per_edge": 0.5333333333333333,
+      "acc_ego_graph": 0.6
+    },
+    "STROKEVOLUME": {
+      "degree": 3,
+      "neighbors": [
+        "HYPOVOLEMIA",
+        "LVFAILURE",
+        "CO"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "HYPOVOLEMIA",
+            "LVFAILURE"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "HYPOVOLEMIA",
+            "CO"
+          ],
+          "separated_by": "BP, HR, STROKEVOLUME",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "LVFAILURE",
+            "CO"
+          ],
+          "separated_by": "STROKEVOLUME",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "HYPOVOLEMIA",
+          "STROKEVOLUME"
+        ],
+        [
+          "LVFAILURE",
+          "STROKEVOLUME"
+        ],
+        [
+          "STROKEVOLUME",
+          "CO"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 0.8666666666666667
+    },
+    "TPR": {
+      "degree": 3,
+      "neighbors": [
+        "ANAPHYLAXIS",
+        "CATECHOL",
+        "BP"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "ANAPHYLAXIS",
+            "CATECHOL"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "ANAPHYLAXIS",
+            "BP"
+          ],
+          "separated_by": "TPR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "CATECHOL",
+            "BP"
+          ],
+          "separated_by": "HR, TPR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "ANAPHYLAXIS",
+          "TPR"
+        ],
+        [
+          "TPR",
+          "CATECHOL"
+        ],
+        [
+          "TPR",
+          "BP"
+        ]
+      ],
+      "acc_per_edge": 0.6666666666666666,
+      "acc_ego_graph": 0.8
+    },
+    "PVSAT": {
+      "degree": 3,
+      "neighbors": [
+        "FIO2",
+        "SAO2",
+        "VENTALV"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "FIO2",
+            "SAO2"
+          ],
+          "separated_by": "PVSAT",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "FIO2",
+            "VENTALV"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "SAO2",
+            "VENTALV"
+          ],
+          "separated_by": "PVSAT, SHUNT",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "FIO2",
+          "PVSAT"
+        ],
+        [
+          "PVSAT",
+          "SAO2"
+        ],
+        [
+          "VENTALV",
+          "PVSAT"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 0.9333333333333333
+    },
+    "SHUNT": {
+      "degree": 3,
+      "neighbors": [
+        "SAO2",
+        "PULMEMBOLUS",
+        "INTUBATION"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "SAO2",
+            "PULMEMBOLUS"
+          ],
+          "separated_by": "SHUNT",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "SAO2",
+            "INTUBATION"
+          ],
+          "separated_by": "MINVOL, VENTALV, VENTLUNG",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "PULMEMBOLUS",
+            "INTUBATION"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "SHUNT",
+          "SAO2"
+        ],
+        [
+          "PULMEMBOLUS",
+          "SHUNT"
+        ],
+        [
+          "INTUBATION",
+          "SHUNT"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 0.9333333333333333
+    },
+    "PRESS": {
+      "degree": 3,
+      "neighbors": [
+        "KINKEDTUBE",
+        "INTUBATION",
+        "VENTTUBE"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "KINKEDTUBE",
+            "INTUBATION"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "KINKEDTUBE",
+            "VENTTUBE"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "INTUBATION",
+            "VENTTUBE"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "KINKEDTUBE",
+          "PRESS"
+        ],
+        [
+          "INTUBATION",
+          "PRESS"
+        ],
+        [
+          "VENTTUBE",
+          "PRESS"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "ARTCO2": {
+      "degree": 3,
+      "neighbors": [
+        "EXPCO2",
+        "VENTALV",
+        "CATECHOL"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "EXPCO2",
+            "VENTALV"
+          ],
+          "separated_by": "ARTCO2, VENTLUNG",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "EXPCO2",
+            "CATECHOL"
+          ],
+          "separated_by": "ARTCO2",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "VENTALV",
+            "CATECHOL"
+          ],
+          "separated_by": "ARTCO2",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "ARTCO2",
+          "EXPCO2"
+        ],
+        [
+          "VENTALV",
+          "ARTCO2"
+        ],
+        [
+          "ARTCO2",
+          "CATECHOL"
+        ]
+      ],
+      "acc_per_edge": 0.8,
+      "acc_ego_graph": 0.8
+    },
+    "CATECHOL": {
+      "degree": 3,
+      "neighbors": [
+        "TPR",
+        "ARTCO2",
+        "HR"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "TPR",
+            "ARTCO2"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "TPR",
+            "HR"
+          ],
+          "separated_by": "CATECHOL",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "ARTCO2",
+            "HR"
+          ],
+          "separated_by": "CATECHOL",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "TPR",
+          "CATECHOL"
+        ],
+        [
+          "ARTCO2",
+          "CATECHOL"
+        ],
+        [
+          "CATECHOL",
+          "HR"
+        ]
+      ],
+      "acc_per_edge": 0.4,
+      "acc_ego_graph": 0.3333333333333333
+    },
+    "CO": {
+      "degree": 3,
+      "neighbors": [
+        "STROKEVOLUME",
+        "HR",
+        "BP"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "STROKEVOLUME",
+            "HR"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "STROKEVOLUME",
+            "BP"
+          ],
+          "separated_by": "CATECHOL, CO",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "HR",
+            "BP"
+          ],
+          "separated_by": "CATECHOL, CO",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "STROKEVOLUME",
+          "CO"
+        ],
+        [
+          "HR",
+          "CO"
+        ],
+        [
+          "CO",
+          "BP"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "HYPOVOLEMIA": {
+      "degree": 2,
+      "neighbors": [
+        "LVEDVOLUME",
+        "STROKEVOLUME"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "LVEDVOLUME",
+            "STROKEVOLUME"
+          ],
+          "separated_by": "HYPOVOLEMIA, LVFAILURE",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "HYPOVOLEMIA",
+          "LVEDVOLUME"
+        ],
+        [
+          "HYPOVOLEMIA",
+          "STROKEVOLUME"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 0.9
+    },
+    "HRBP": {
+      "degree": 2,
+      "neighbors": [
+        "ERRLOWOUTPUT",
+        "HR"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "ERRLOWOUTPUT",
+            "HR"
+          ],
+          "separated_by": "KINKEDTUBE",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "ERRLOWOUTPUT",
+          "HRBP"
+        ],
+        [
+          "HR",
+          "HRBP"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 1.0
+    },
+    "HREKG": {
+      "degree": 2,
+      "neighbors": [
+        "ERRCAUTER",
+        "HR"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "ERRCAUTER",
+            "HR"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "ERRCAUTER",
+          "HREKG"
+        ],
+        [
+          "HR",
+          "HREKG"
+        ]
+      ],
+      "acc_per_edge": 0.4,
+      "acc_ego_graph": 0.8
+    },
+    "ERRCAUTER": {
+      "degree": 2,
+      "neighbors": [
+        "HREKG",
+        "HRSAT"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "HREKG",
+            "HRSAT"
+          ],
+          "separated_by": "ERRCAUTER, HR",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "ERRCAUTER",
+          "HREKG"
+        ],
+        [
+          "ERRCAUTER",
+          "HRSAT"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "HRSAT": {
+      "degree": 2,
+      "neighbors": [
+        "ERRCAUTER",
+        "HR"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "ERRCAUTER",
+            "HR"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "ERRCAUTER",
+          "HRSAT"
+        ],
+        [
+          "HR",
+          "HRSAT"
+        ]
+      ],
+      "acc_per_edge": 0.5,
+      "acc_ego_graph": 1.0
+    },
+    "EXPCO2": {
+      "degree": 2,
+      "neighbors": [
+        "VENTLUNG",
+        "ARTCO2"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "VENTLUNG",
+            "ARTCO2"
+          ],
+          "separated_by": "VENTALV",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "VENTLUNG",
+          "EXPCO2"
+        ],
+        [
+          "ARTCO2",
+          "EXPCO2"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 0.9
+    },
+    "MINVOL": {
+      "degree": 2,
+      "neighbors": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "ci_facts": [],
+      "gt_edges": [
+        [
+          "INTUBATION",
+          "MINVOL"
+        ],
+        [
+          "VENTLUNG",
+          "MINVOL"
+        ]
+      ],
+      "acc_per_edge": 0.7,
+      "acc_ego_graph": 0.8
+    },
+    "SAO2": {
+      "degree": 2,
+      "neighbors": [
+        "PVSAT",
+        "SHUNT"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "PVSAT",
+            "SHUNT"
+          ],
+          "separated_by": "VENTALV",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "PVSAT",
+          "SAO2"
+        ],
+        [
+          "SHUNT",
+          "SAO2"
+        ]
+      ],
+      "acc_per_edge": 0.7,
+      "acc_ego_graph": 0.7
+    },
+    "PULMEMBOLUS": {
+      "degree": 2,
+      "neighbors": [
+        "PAP",
+        "SHUNT"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "PAP",
+            "SHUNT"
+          ],
+          "separated_by": "PULMEMBOLUS",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "PULMEMBOLUS",
+          "PAP"
+        ],
+        [
+          "PULMEMBOLUS",
+          "SHUNT"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "VENTMACH": {
+      "degree": 2,
+      "neighbors": [
+        "MINVOLSET",
+        "VENTTUBE"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "MINVOLSET",
+            "VENTTUBE"
+          ],
+          "separated_by": "VENTMACH",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "MINVOLSET",
+          "VENTMACH"
+        ],
+        [
+          "VENTMACH",
+          "VENTTUBE"
+        ]
+      ],
+      "acc_per_edge": 0.8,
+      "acc_ego_graph": 1.0
+    },
+    "BP": {
+      "degree": 2,
+      "neighbors": [
+        "TPR",
+        "CO"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "TPR",
+            "CO"
+          ],
+          "separated_by": "CATECHOL",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "TPR",
+          "BP"
+        ],
+        [
+          "CO",
+          "BP"
+        ]
+      ],
+      "acc_per_edge": 0.9,
+      "acc_ego_graph": 1.0
+    }
+  },
+  "raw_results_a": [
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "CVP->LVEDVOLUME",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "ARTCO2->CATECHOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "ARTCO2->CATECHOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "ARTCO2->CATECHOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "HRBP->ERRLOWOUTPUT",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "HRBP->ERRLOWOUTPUT",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HRBP->HR",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HRBP->HR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HRBP->HR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "HRBP->ERRLOWOUTPUT",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "HRBP->ERRLOWOUTPUT",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "HRBP->ERRLOWOUTPUT",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HRBP->HR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HRBP->HR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "HREKG->ERRCAUTER",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HRSAT->HR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HRSAT->HR",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HRSAT->HR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HRSAT->HR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HRSAT->HR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "MINVOL->VENTLUNG",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "MINVOL->VENTLUNG",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "MINVOL->VENTLUNG",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "SAO2->PVSAT",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "SAO2->PVSAT",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "SAO2->PVSAT",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "BP->CO",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "BP"
+    }
+  ],
+  "raw_results_b": [
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTTUBE->VENTMACH",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTLUNG->VENTTUBE",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "DISCONNECT",
+        "VENTTUBE"
+      ],
+      "predicted": "DISCONNECT->VENTTUBE",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTTUBE"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "LVEDVOLUME->CVP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "INTUBATION"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "MINVOL->VENTLUNG",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "MINVOL->VENTLUNG",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "CO->HR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "CO->HR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "CO->HR",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "HISTORY"
+      ],
+      "predicted": "HISTORY->LVFAILURE",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVFAILURE->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVFAILURE"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "STROKEVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "STROKEVOLUME->LVFAILURE",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "STROKEVOLUME"
+      ],
+      "predicted": "LVFAILURE->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "STROKEVOLUME"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "TPR->CATECHOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "TPR->CATECHOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "PVSAT->VENTALV",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "ANAPHYLAXIS",
+        "TPR"
+      ],
+      "predicted": "ANAPHYLAXIS->TPR",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "TPR"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "FIO2",
+        "PVSAT"
+      ],
+      "predicted": "FIO2->PVSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PVSAT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "INTUBATION->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "SHUNT"
+      ],
+      "predicted": "SHUNT->INTUBATION",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "SHUNT"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "KINKEDTUBE",
+        "PRESS"
+      ],
+      "predicted": "KINKEDTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "PRESS"
+      ],
+      "predicted": "INTUBATION->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "PRESS"
+      ],
+      "predicted": "VENTTUBE->PRESS",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PRESS"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "ARTCO2->CATECHOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "ARTCO2->CATECHOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "VENTALV->ARTCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "LVEDVOLUME->HYPOVOLEMIA",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->LVEDVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "STROKEVOLUME"
+      ],
+      "predicted": "HYPOVOLEMIA->STROKEVOLUME",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HYPOVOLEMIA"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "ERRLOWOUTPUT->HRBP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "ERRLOWOUTPUT->HRBP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "ERRLOWOUTPUT->HRBP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "ERRLOWOUTPUT->HRBP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRLOWOUTPUT",
+        "HRBP"
+      ],
+      "predicted": "ERRLOWOUTPUT->HRBP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HRBP"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "HREKG->ERRCAUTER",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HR->HREKG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HREKG"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HREKG"
+      ],
+      "predicted": "ERRCAUTER->HREKG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "ERRCAUTER"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->TPR",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "CATECHOL->ARTCO2",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "CATECHOL",
+        "HR"
+      ],
+      "predicted": "CATECHOL->HR",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "STROKEVOLUME",
+        "CO"
+      ],
+      "predicted": "STROKEVOLUME->CO",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "HR->CO",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CO"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "EXPCO2->ARTCO2",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "EXPCO2"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "MINVOL->VENTLUNG",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "ERRCAUTER",
+        "HRSAT"
+      ],
+      "predicted": "ERRCAUTER->HRSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HRSAT"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "MINVOL"
+      ],
+      "predicted": "INTUBATION->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "MINVOL->VENTLUNG",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "MINVOL"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "SAO2->PVSAT",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SAO2->SHUNT",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SHUNT->SAO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PVSAT",
+        "SAO2"
+      ],
+      "predicted": "PVSAT->SAO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "SHUNT",
+        "SAO2"
+      ],
+      "predicted": "SAO2->SHUNT",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "SAO2"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "PAP"
+      ],
+      "predicted": "PULMEMBOLUS->PAP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "PULMEMBOLUS",
+        "SHUNT"
+      ],
+      "predicted": "PULMEMBOLUS->SHUNT",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PULMEMBOLUS"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "MINVOLSET",
+        "VENTMACH"
+      ],
+      "predicted": "MINVOLSET->VENTMACH",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "VENTMACH",
+        "VENTTUBE"
+      ],
+      "predicted": "VENTMACH->VENTTUBE",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTMACH"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "TPR",
+        "BP"
+      ],
+      "predicted": "TPR->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "CO",
+        "BP"
+      ],
+      "predicted": "CO->BP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "BP"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "EXPCO2"
+      ],
+      "predicted": "ARTCO2->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "ARTCO2->VENTALV",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "ARTCO2"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "ARTCO2->CATECHOL",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "ARTCO2"
+    }
+  ]
+}

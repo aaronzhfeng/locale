@@ -1,0 +1,1069 @@
+{
+  "metadata": {
+    "phase": 3,
+    "method": "dawid_skene",
+    "source": "ego",
+    "network": "alarm",
+    "n_edges": 43,
+    "n_annotators": 26,
+    "n_em_classes": 3
+  },
+  "evaluation": {
+    "ds_accuracy": 0.7906976744186046,
+    "ds_correct": 34,
+    "mv_accuracy": 0.9069767441860465,
+    "mv_correct": 39,
+    "total": 43,
+    "delta_pp": -11.6,
+    "by_confidence": {
+      "high": {
+        "correct": 29,
+        "total": 33,
+        "accuracy": 0.8787878787878788
+      },
+      "medium": {
+        "correct": 5,
+        "total": 10,
+        "accuracy": 0.5
+      },
+      "low": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "class_priors": [
+    0.6483471034263636,
+    0.35165289657363635
+  ],
+  "top_annotators": [
+    {
+      "annotator": "VENTALV",
+      "accuracy_per_class": [
+        0.999999376027956,
+        0.9999992345635416
+      ],
+      "mean_accuracy": 0.9999993052957488
+    },
+    {
+      "annotator": "VENTTUBE",
+      "accuracy_per_class": [
+        0.9999994633764265,
+        0.9999988747226842
+      ],
+      "mean_accuracy": 0.9999991690495553
+    },
+    {
+      "annotator": "SAO2",
+      "accuracy_per_class": [
+        0.9999990000010858,
+        0.9999990000007503
+      ],
+      "mean_accuracy": 0.999999000000918
+    },
+    {
+      "annotator": "SHUNT",
+      "accuracy_per_class": [
+        0.9999994999997305,
+        0.9999977503356876
+      ],
+      "mean_accuracy": 0.9999986251677091
+    },
+    {
+      "annotator": "PVSAT",
+      "accuracy_per_class": [
+        0.9999994999999043,
+        0.9999977503348372
+      ],
+      "mean_accuracy": 0.9999986251673707
+    },
+    {
+      "annotator": "STROKEVOLUME",
+      "accuracy_per_class": [
+        0.9999961443607838,
+        0.9977787150445032
+      ],
+      "mean_accuracy": 0.9988874297026435
+    },
+    {
+      "annotator": "PRESS",
+      "accuracy_per_class": [
+        0.9999994993765996,
+        0.9975137171592651
+      ],
+      "mean_accuracy": 0.9987566082679323
+    },
+    {
+      "annotator": "TPR",
+      "accuracy_per_class": [
+        0.9999961385562244,
+        0.9974951892290775
+      ],
+      "mean_accuracy": 0.998745663892651
+    },
+    {
+      "annotator": "ARTCO2",
+      "accuracy_per_class": [
+        0.7777446136346502,
+        0.9999994166474069
+      ],
+      "mean_accuracy": 0.8888720151410285
+    },
+    {
+      "annotator": "PULMEMBOLUS",
+      "accuracy_per_class": [
+        0.7777448978697884,
+        0.9999985998956655
+      ],
+      "mean_accuracy": 0.8888717488827269
+    }
+  ],
+  "worst_annotators": [
+    {
+      "annotator": "INTUBATION",
+      "accuracy_per_class": [
+        0.999999756920853,
+        1.1285183969820954e-06
+      ],
+      "mean_accuracy": 0.500000442719625
+    },
+    {
+      "annotator": "BP",
+      "accuracy_per_class": [
+        1.5469650811393882e-06,
+        0.9999992612167601
+      ],
+      "mean_accuracy": 0.5000004040909206
+    },
+    {
+      "annotator": "ERRCAUTER",
+      "accuracy_per_class": [
+        0.9999992265092384,
+        1.414099660934521e-06
+      ],
+      "mean_accuracy": 0.5000003203044497
+    },
+    {
+      "annotator": "CATECHOL",
+      "accuracy_per_class": [
+        0.9999995215286654,
+        1.0988834248778226e-06
+      ],
+      "mean_accuracy": 0.5000003102060452
+    },
+    {
+      "annotator": "VENTLUNG",
+      "accuracy_per_class": [
+        0.044173104557546784,
+        0.20023705576017786
+      ],
+      "mean_accuracy": 0.12220508015886232
+    }
+  ],
+  "reconciled": {
+    "('INTUBATION', 'MINVOL')": {
+      "direction": "INTUBATION->MINVOL",
+      "confidence": 0.9930956409394424,
+      "ds_posterior": [
+        0.9930956409394424,
+        0.006904359060557583
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9861912818788848,
+        "ds_entropy": 0.05948781880241847,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9930956409394424,
+          0.006904359060557583
+        ]
+      }
+    },
+    "('INTUBATION', 'SHUNT')": {
+      "direction": "INTUBATION->SHUNT",
+      "confidence": 0.9999987798207204,
+      "ds_posterior": [
+        0.9999987798207204,
+        1.2201792795267657e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999975596414409,
+        "ds_entropy": 2.5730127401577602e-05,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999987798207204,
+          1.2201792795267657e-06
+        ]
+      }
+    },
+    "('INTUBATION', 'PRESS')": {
+      "direction": "INTUBATION->PRESS",
+      "confidence": 0.9986532973027306,
+      "ds_posterior": [
+        0.9986532973027306,
+        0.0013467026972694713
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9973065946054611,
+        "ds_entropy": 0.014784204636663877,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9986532973027306,
+          0.0013467026972694713
+        ]
+      }
+    },
+    "('INTUBATION', 'VENTLUNG')": {
+      "direction": "VENTLUNG->INTUBATION",
+      "confidence": 0.9075781925078724,
+      "ds_posterior": [
+        0.09242180749212772,
+        0.9075781925078724
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.8151563850157447,
+        "ds_entropy": 0.4445022484323776,
+        "max_degree": 5,
+        "min_degree": 5,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.09242180749212772,
+          0.9075781925078724
+        ]
+      }
+    },
+    "('INTUBATION', 'VENTALV')": {
+      "direction": "INTUBATION->VENTALV",
+      "confidence": 0.9999995848400274,
+      "ds_posterior": [
+        0.9999995848400274,
+        4.15159972524866e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999991696800549,
+        "ds_entropy": 9.40026966348879e-06,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999995848400274,
+          4.15159972524866e-07
+        ]
+      }
+    },
+    "('EXPCO2', 'VENTLUNG')": {
+      "direction": "EXPCO2->VENTLUNG",
+      "confidence": 0.7921828661084821,
+      "ds_posterior": [
+        0.7921828661084821,
+        0.20781713389151796
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.5843657322169642,
+        "ds_entropy": 0.7372895001991484,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.7921828661084821,
+          0.20781713389151796
+        ]
+      }
+    },
+    "('MINVOL', 'VENTLUNG')": {
+      "direction": "MINVOL->VENTLUNG",
+      "confidence": 0.7935872634847777,
+      "ds_posterior": [
+        0.7935872634847777,
+        0.20641273651522232
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.5871745269695554,
+        "ds_entropy": 0.734569628047633,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.7935872634847777,
+          0.20641273651522232
+        ]
+      }
+    },
+    "('VENTLUNG', 'VENTTUBE')": {
+      "direction": "VENTTUBE->VENTLUNG",
+      "confidence": 0.9999999453537666,
+      "ds_posterior": [
+        5.4646233460595364e-08,
+        0.9999999453537666
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9999998907075331,
+        "ds_entropy": 1.3971947714003028e-06,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          5.4646233460595364e-08,
+          0.9999999453537666
+        ]
+      }
+    },
+    "('VENTALV', 'VENTLUNG')": {
+      "direction": "VENTALV->VENTLUNG",
+      "confidence": 0.9999999130276498,
+      "ds_posterior": [
+        0.9999999130276498,
+        8.697235017517793e-08
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9999998260552996,
+        "ds_entropy": 2.1653995606604275e-06,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999130276498,
+          8.697235017517793e-08
+        ]
+      }
+    },
+    "('HR', 'HRBP')": {
+      "direction": "HR->HRBP",
+      "confidence": 0.8081754278639667,
+      "ds_posterior": [
+        0.8081754278639667,
+        0.19182457213603332
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.6163508557279334,
+        "ds_entropy": 0.7052727576900134,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8081754278639667,
+          0.19182457213603332
+        ]
+      }
+    },
+    "('HR', 'HREKG')": {
+      "direction": "HR->HREKG",
+      "confidence": 0.8081754278640515,
+      "ds_posterior": [
+        0.8081754278640515,
+        0.19182457213594856
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.616350855728103,
+        "ds_entropy": 0.7052727576898375,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8081754278640515,
+          0.19182457213594856
+        ]
+      }
+    },
+    "('HR', 'HRSAT')": {
+      "direction": "HR->HRSAT",
+      "confidence": 0.8081754278640515,
+      "ds_posterior": [
+        0.8081754278640515,
+        0.19182457213594856
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.616350855728103,
+        "ds_entropy": 0.7052727576898375,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8081754278640515,
+          0.19182457213594856
+        ]
+      }
+    },
+    "('CATECHOL', 'HR')": {
+      "direction": "CATECHOL->HR",
+      "confidence": 0.8081753479796754,
+      "ds_posterior": [
+        0.8081753479796754,
+        0.1918246520203245
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.6163506959593509,
+        "ds_entropy": 0.705272923440378,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8081753479796754,
+          0.1918246520203245
+        ]
+      }
+    },
+    "('CO', 'HR')": {
+      "direction": "HR->CO",
+      "confidence": 0.9999663103856214,
+      "ds_posterior": [
+        3.368961437870986e-05,
+        0.9999663103856214
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999326207712428,
+        "ds_entropy": 0.0005491409602426815,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          3.368961437870986e-05,
+          0.9999663103856214
+        ]
+      }
+    },
+    "('CVP', 'LVEDVOLUME')": {
+      "direction": "LVEDVOLUME->CVP",
+      "confidence": 0.9999751342819369,
+      "ds_posterior": [
+        2.486571806315421e-05,
+        0.9999751342819369
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999502685638737,
+        "ds_entropy": 0.00041620635464983036,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          2.486571806315421e-05,
+          0.9999751342819369
+        ]
+      }
+    },
+    "('LVEDVOLUME', 'PCWP')": {
+      "direction": "LVEDVOLUME->PCWP",
+      "confidence": 0.8598687262989783,
+      "ds_posterior": [
+        0.8598687262989783,
+        0.14013127370102182
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7197374525979564,
+        "ds_entropy": 0.5845825024101666,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.8598687262989783,
+          0.14013127370102182
+        ]
+      }
+    },
+    "('HYPOVOLEMIA', 'LVEDVOLUME')": {
+      "direction": "HYPOVOLEMIA->LVEDVOLUME",
+      "confidence": 0.8598694964917805,
+      "ds_posterior": [
+        0.8598694964917805,
+        0.1401305035082194
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.719738992983561,
+        "ds_entropy": 0.5845804865521422,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8598694964917805,
+          0.1401305035082194
+        ]
+      }
+    },
+    "('LVEDVOLUME', 'LVFAILURE')": {
+      "direction": "LVEDVOLUME->LVFAILURE",
+      "confidence": 0.8598689201649367,
+      "ds_posterior": [
+        0.8598689201649367,
+        0.14013107983506345
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7197378403298732,
+        "ds_entropy": 0.5845819949973066,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8598689201649367,
+          0.14013107983506345
+        ]
+      }
+    },
+    "('PRESS', 'VENTTUBE')": {
+      "direction": "VENTTUBE->PRESS",
+      "confidence": 0.9999999999995035,
+      "ds_posterior": [
+        4.965418761416377e-13,
+        0.9999999999995035
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999999999007,
+        "ds_entropy": 2.101151667169626e-11,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          4.965418761416377e-13,
+          0.9999999999995035
+        ]
+      }
+    },
+    "('DISCONNECT', 'VENTTUBE')": {
+      "direction": "DISCONNECT->VENTTUBE",
+      "confidence": 0.9999993896679783,
+      "ds_posterior": [
+        0.9999993896679783,
+        6.10332021670846e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999987793359566,
+        "ds_entropy": 1.3480157386689898e-05,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9999993896679783,
+          6.10332021670846e-07
+        ]
+      }
+    },
+    "('VENTMACH', 'VENTTUBE')": {
+      "direction": "VENTMACH->VENTTUBE",
+      "confidence": 0.9999993896693337,
+      "ds_posterior": [
+        0.9999993896693337,
+        6.103306662400322e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999987793386674,
+        "ds_entropy": 1.3480129405409292e-05,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999993896693337,
+          6.103306662400322e-07
+        ]
+      }
+    },
+    "('PVSAT', 'VENTALV')": {
+      "direction": "VENTALV->PVSAT",
+      "confidence": 0.9999999999994247,
+      "ds_posterior": [
+        5.752146058081343e-13,
+        0.9999999999994247
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999988495,
+        "ds_entropy": 2.42187887179537e-11,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          5.752146058081343e-13,
+          0.9999999999994247
+        ]
+      }
+    },
+    "('ARTCO2', 'VENTALV')": {
+      "direction": "VENTALV->ARTCO2",
+      "confidence": 0.9999997443114516,
+      "ds_posterior": [
+        2.556885485645738e-07,
+        0.9999997443114516
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999488622903,
+        "ds_entropy": 5.968231978338305e-06,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.556885485645738e-07,
+          0.9999997443114516
+        ]
+      }
+    },
+    "('HISTORY', 'LVFAILURE')": {
+      "direction": "HISTORY->LVFAILURE",
+      "confidence": 0.6483474702491073,
+      "ds_posterior": [
+        0.6483474702491073,
+        0.3516525297508926
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.2966949404982147,
+        "ds_entropy": 0.9355352519567576,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6483474702491073,
+          0.3516525297508926
+        ]
+      }
+    },
+    "('LVFAILURE', 'STROKEVOLUME')": {
+      "direction": "LVFAILURE->STROKEVOLUME",
+      "confidence": 0.9987966583306179,
+      "ds_posterior": [
+        0.9987966583306179,
+        0.001203341669382027
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9975933166612359,
+        "ds_entropy": 0.01340590562655688,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9987966583306179,
+          0.001203341669382027
+        ]
+      }
+    },
+    "('HYPOVOLEMIA', 'STROKEVOLUME')": {
+      "direction": "HYPOVOLEMIA->STROKEVOLUME",
+      "confidence": 0.9987966640792946,
+      "ds_posterior": [
+        0.9987966640792946,
+        0.001203335920705446
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9975933281585891,
+        "ds_entropy": 0.013405849881615238,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9987966640792946,
+          0.001203335920705446
+        ]
+      }
+    },
+    "('CO', 'STROKEVOLUME')": {
+      "direction": "STROKEVOLUME->CO",
+      "confidence": 0.9999928755400707,
+      "ds_posterior": [
+        7.124459929282284e-06,
+        0.9999928755400707
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999857510801414,
+        "ds_entropy": 0.0001320980157326075,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          7.124459929282284e-06,
+          0.9999928755400707
+        ]
+      }
+    },
+    "('ANAPHYLAXIS', 'TPR')": {
+      "direction": "ANAPHYLAXIS->TPR",
+      "confidence": 0.9986432694552183,
+      "ds_posterior": [
+        0.9986432694552183,
+        0.0013567305447817633
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9972865389104365,
+        "ds_entropy": 0.014879760431094274,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9986432694552183,
+          0.0013567305447817633
+        ]
+      }
+    },
+    "('CATECHOL', 'TPR')": {
+      "direction": "CATECHOL->TPR",
+      "confidence": 0.9986432702958087,
+      "ds_posterior": [
+        0.9986432702958087,
+        0.00135672970419133
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9972865405916174,
+        "ds_entropy": 0.01487975242557011,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9986432702958087,
+          0.00135672970419133
+        ]
+      }
+    },
+    "('BP', 'TPR')": {
+      "direction": "TPR->BP",
+      "confidence": 0.9999928627841531,
+      "ds_posterior": [
+        7.13721584684916e-06,
+        0.9999928627841531
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999857255683062,
+        "ds_entropy": 0.00013231610986566116,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          7.13721584684916e-06,
+          0.9999928627841531
+        ]
+      }
+    },
+    "('FIO2', 'PVSAT')": {
+      "direction": "FIO2->PVSAT",
+      "confidence": 0.9999987798191787,
+      "ds_posterior": [
+        0.9999987798191787,
+        1.2201808211792105e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999975596383576,
+        "ds_entropy": 2.573015768653175e-05,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9999987798191787,
+          1.2201808211792105e-06
+        ]
+      }
+    },
+    "('PVSAT', 'SAO2')": {
+      "direction": "PVSAT->SAO2",
+      "confidence": 0.9999999999987799,
+      "ds_posterior": [
+        0.9999999999987799,
+        1.2201826146679273e-12
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999975597,
+        "ds_entropy": 5.005027890054771e-11,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999987799,
+          1.2201826146679273e-12
+        ]
+      }
+    },
+    "('SAO2', 'SHUNT')": {
+      "direction": "SHUNT->SAO2",
+      "confidence": 0.9999999999990781,
+      "ds_posterior": [
+        9.218591145434931e-13,
+        0.9999999999990781
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999981563,
+        "ds_entropy": 3.8186468482216224e-11,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          9.218591145434931e-13,
+          0.9999999999990781
+        ]
+      }
+    },
+    "('PULMEMBOLUS', 'SHUNT')": {
+      "direction": "PULMEMBOLUS->SHUNT",
+      "confidence": 0.9999999999978033,
+      "ds_posterior": [
+        0.9999999999978033,
+        2.196583866968399e-12
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999956067,
+        "ds_entropy": 8.823817648662803e-11,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999978033,
+          2.196583866968399e-12
+        ]
+      }
+    },
+    "('KINKEDTUBE', 'PRESS')": {
+      "direction": "KINKEDTUBE->PRESS",
+      "confidence": 0.9986532961119116,
+      "ds_posterior": [
+        0.9986532961119116,
+        0.0013467038880884002
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9973065922238231,
+        "ds_entropy": 0.014784215990417574,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9986532961119116,
+          0.0013467038880884002
+        ]
+      }
+    },
+    "('ARTCO2', 'EXPCO2')": {
+      "direction": "ARTCO2->EXPCO2",
+      "confidence": 0.9999999999969584,
+      "ds_posterior": [
+        0.9999999999969584,
+        3.041650772029261e-12
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999939168,
+        "ds_entropy": 1.2075638849105235e-10,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999969584,
+          3.041650772029261e-12
+        ]
+      }
+    },
+    "('ARTCO2', 'CATECHOL')": {
+      "direction": "CATECHOL->ARTCO2",
+      "confidence": 0.7093327008534548,
+      "ds_posterior": [
+        0.29066729914654527,
+        0.7093327008534548
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.4186654017069095,
+        "ds_entropy": 0.8695816814614967,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.29066729914654527,
+          0.7093327008534548
+        ]
+      }
+    },
+    "('BP', 'CO')": {
+      "direction": "BP->CO",
+      "confidence": 0.6483466633581813,
+      "ds_posterior": [
+        0.6483466633581813,
+        0.35165333664181886
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.2966933267163624,
+        "ds_entropy": 0.9355359641300323,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6483466633581813,
+          0.35165333664181886
+        ]
+      }
+    },
+    "('ERRLOWOUTPUT', 'HRBP')": {
+      "direction": "ERRLOWOUTPUT->HRBP",
+      "confidence": 0.6483473623586388,
+      "ds_posterior": [
+        0.6483473623586388,
+        0.35165263764136134
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.2966947247172774,
+        "ds_entropy": 0.9355353471826404,
+        "max_degree": 2,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6483473623586388,
+          0.35165263764136134
+        ]
+      }
+    },
+    "('ERRCAUTER', 'HREKG')": {
+      "direction": "ERRCAUTER->HREKG",
+      "confidence": 0.6483475084132925,
+      "ds_posterior": [
+        0.6483475084132925,
+        0.35165249158670747
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.296695016826585,
+        "ds_entropy": 0.935535218272409,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6483475084132925,
+          0.35165249158670747
+        ]
+      }
+    },
+    "('ERRCAUTER', 'HRSAT')": {
+      "direction": "ERRCAUTER->HRSAT",
+      "confidence": 0.6483475084132925,
+      "ds_posterior": [
+        0.6483475084132925,
+        0.35165249158670747
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.296695016826585,
+        "ds_entropy": 0.935535218272409,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6483475084132925,
+          0.35165249158670747
+        ]
+      }
+    },
+    "('PAP', 'PULMEMBOLUS')": {
+      "direction": "PULMEMBOLUS->PAP",
+      "confidence": 0.7093329240488557,
+      "ds_posterior": [
+        0.2906670759511443,
+        0.7093329240488557
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.4186658480977114,
+        "ds_entropy": 0.8695813941879313,
+        "max_degree": 2,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.2906670759511443,
+          0.7093329240488557
+        ]
+      }
+    },
+    "('MINVOLSET', 'VENTMACH')": {
+      "direction": "MINVOLSET->VENTMACH",
+      "confidence": 0.6483476097562657,
+      "ds_posterior": [
+        0.6483476097562657,
+        0.35165239024373435
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.29669521951253136,
+        "ds_entropy": 0.9355351288253606,
+        "max_degree": 2,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6483476097562657,
+          0.35165239024373435
+        ]
+      }
+    }
+  }
+}

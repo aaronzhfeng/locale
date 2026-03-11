@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "phase": 5,
+    "method": "pe_fallback",
+    "budget_fraction": 0.15
+  },
+  "hard_tail": {
+    "n_identified": 8,
+    "n_queried": 3,
+    "max_budget": 3,
+    "by_reason": {
+      "disagreement": 2,
+      "single_endpoint": 6
+    }
+  },
+  "fallback": {
+    "n_changes": 1,
+    "n_improved": 1,
+    "n_worsened": 0,
+    "net_gain": 1,
+    "changes": [
+      {
+        "edge": "('Grunting', 'Sick')",
+        "old": "Grunting->Sick",
+        "new": "Sick->Grunting",
+        "gt": "Sick->Grunting",
+        "improved": true,
+        "worsened": false
+      }
+    ]
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.88,
+    "phase3_correct": 22,
+    "phase5_accuracy": 0.92,
+    "phase5_correct": 23,
+    "total_edges": 25,
+    "delta_pp": 4.0
+  },
+  "final_orientations": {
+    "('BirthAsphyxia', 'Disease')": {
+      "direction": "Disease->BirthAsphyxia",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Age', 'Disease')": {
+      "direction": "Disease->Age",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Disease', 'LVH')": {
+      "direction": "Disease->LVH",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Disease', 'DuctFlow')": {
+      "direction": "Disease->DuctFlow",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CardiacMixing', 'Disease')": {
+      "direction": "Disease->CardiacMixing",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Disease', 'LungParench')": {
+      "direction": "Disease->LungParench",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Disease', 'LungFlow')": {
+      "direction": "Disease->LungFlow",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Disease', 'Sick')": {
+      "direction": "Disease->Sick",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HypoxiaInO2', 'LungParench')": {
+      "direction": "LungParench->HypoxiaInO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CO2', 'LungParench')": {
+      "direction": "LungParench->CO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChestXray', 'LungParench')": {
+      "direction": "LungParench->ChestXray",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Grunting', 'LungParench')": {
+      "direction": "LungParench->Grunting",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HypoxiaInO2', 'LowerBodyO2')": {
+      "direction": "HypoxiaInO2->LowerBodyO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HypoxiaInO2', 'RUQO2')": {
+      "direction": "HypoxiaInO2->RUQO2",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('CardiacMixing', 'HypoxiaInO2')": {
+      "direction": "CardiacMixing->HypoxiaInO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HypDistrib', 'LowerBodyO2')": {
+      "direction": "HypDistrib->LowerBodyO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('DuctFlow', 'HypDistrib')": {
+      "direction": "DuctFlow->HypDistrib",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CardiacMixing', 'HypDistrib')": {
+      "direction": "CardiacMixing->HypDistrib",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ChestXray', 'XrayReport')": {
+      "direction": "ChestXray->XrayReport",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('ChestXray', 'LungFlow')": {
+      "direction": "LungFlow->ChestXray",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Grunting', 'GruntingReport')": {
+      "direction": "Grunting->GruntingReport",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('Grunting', 'Sick')": {
+      "direction": "Sick->Grunting",
+      "source": "pe_tiebreak",
+      "changed": true
+    },
+    "('Age', 'Sick')": {
+      "direction": "Age->Sick",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CO2', 'CO2Report')": {
+      "direction": "CO2->CO2Report",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('LVH', 'LVHreport')": {
+      "direction": "LVH->LVHreport",
+      "source": "single_endpoint",
+      "changed": false
+    }
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "metadata": {
+    "phase": 3,
+    "method": "dawid_skene",
+    "source": "ego",
+    "network": "sachs",
+    "n_edges": 17,
+    "n_annotators": 11,
+    "n_em_classes": 3
+  },
+  "evaluation": {
+    "ds_accuracy": 0.8235294117647058,
+    "ds_correct": 14,
+    "mv_accuracy": 0.7647058823529411,
+    "mv_correct": 13,
+    "total": 17,
+    "delta_pp": 5.9,
+    "by_confidence": {
+      "high": {
+        "correct": 11,
+        "total": 14,
+        "accuracy": 0.7857142857142857
+      },
+      "medium": {
+        "correct": 3,
+        "total": 3,
+        "accuracy": 1.0
+      },
+      "low": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "class_priors": [
+    0.3480224345511465,
+    0.6519775654488535
+  ],
+  "top_annotators": [
+    {
+      "annotator": "Raf",
+      "accuracy_per_class": [
+        0.9999993177930822,
+        0.9999989999982339
+      ],
+      "mean_accuracy": 0.999999158895658
+    },
+    {
+      "annotator": "PIP3",
+      "accuracy_per_class": [
+        0.9999989999819656,
+        0.9999989999999225
+      ],
+      "mean_accuracy": 0.999998999990944
+    },
+    {
+      "annotator": "Erk",
+      "accuracy_per_class": [
+        0.9999977212704965,
+        0.9999931483975113
+      ],
+      "mean_accuracy": 0.9999954348340039
+    },
+    {
+      "annotator": "PKA",
+      "accuracy_per_class": [
+        0.9512302558159245,
+        0.9999994472211023
+      ],
+      "mean_accuracy": 0.9756148515185135
+    },
+    {
+      "annotator": "PIP2",
+      "accuracy_per_class": [
+        0.9511204279914252,
+        0.99999894582534
+      ],
+      "mean_accuracy": 0.9755596869083826
+    },
+    {
+      "annotator": "Plcg",
+      "accuracy_per_class": [
+        0.9999805415639845,
+        0.5131864726562665
+      ],
+      "mean_accuracy": 0.7565835071101255
+    },
+    {
+      "annotator": "PKC",
+      "accuracy_per_class": [
+        0.36199595530257117,
+        0.9999995530794685
+      ],
+      "mean_accuracy": 0.6809977541910198
+    },
+    {
+      "annotator": "Mek",
+      "accuracy_per_class": [
+        3.5740696604192867e-06,
+        0.9999997311980358
+      ],
+      "mean_accuracy": 0.5000016526338481
+    },
+    {
+      "annotator": "Jnk",
+      "accuracy_per_class": [
+        3.574089026165191e-06,
+        0.9999994186764462
+      ],
+      "mean_accuracy": 0.5000014963827362
+    },
+    {
+      "annotator": "P38",
+      "accuracy_per_class": [
+        3.574089026165191e-06,
+        0.9999994186764462
+      ],
+      "mean_accuracy": 0.5000014963827362
+    }
+  ],
+  "worst_annotators": [
+    {
+      "annotator": "PKC",
+      "accuracy_per_class": [
+        0.36199595530257117,
+        0.9999995530794685
+      ],
+      "mean_accuracy": 0.6809977541910198
+    },
+    {
+      "annotator": "Mek",
+      "accuracy_per_class": [
+        3.5740696604192867e-06,
+        0.9999997311980358
+      ],
+      "mean_accuracy": 0.5000016526338481
+    },
+    {
+      "annotator": "Jnk",
+      "accuracy_per_class": [
+        3.574089026165191e-06,
+        0.9999994186764462
+      ],
+      "mean_accuracy": 0.5000014963827362
+    },
+    {
+      "annotator": "P38",
+      "accuracy_per_class": [
+        3.574089026165191e-06,
+        0.9999994186764462
+      ],
+      "mean_accuracy": 0.5000014963827362
+    },
+    {
+      "annotator": "Akt",
+      "accuracy_per_class": [
+        0.9999990249839766,
+        1.0262938225503155e-06
+      ],
+      "mean_accuracy": 0.5000000256388996
+    }
+  ],
+  "reconciled": {
+    "('Akt', 'PKA')": {
+      "direction": "PKA->Akt",
+      "confidence": 0.9746274585029908,
+      "ds_posterior": [
+        0.02537254149700923,
+        0.9746274585029908
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9492549170059816,
+        "ds_entropy": 0.17062587565114107,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.02537254149700923,
+          0.9746274585029908
+        ]
+      }
+    },
+    "('Erk', 'PKA')": {
+      "direction": "PKA->Erk",
+      "confidence": 0.9999999406772833,
+      "ds_posterior": [
+        5.932271672606537e-08,
+        0.9999999406772833
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999998813545665,
+        "ds_entropy": 1.5097355608921831e-06,
+        "max_degree": 7,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          5.932271672606537e-08,
+          0.9999999406772833
+        ]
+      }
+    },
+    "('Jnk', 'PKA')": {
+      "direction": "PKA->Jnk",
+      "confidence": 0.9746275337785002,
+      "ds_posterior": [
+        0.025372466221499867,
+        0.9746275337785002
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9492550675570003,
+        "ds_entropy": 0.17062547943750972,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.025372466221499867,
+          0.9746275337785002
+        ]
+      }
+    },
+    "('Mek', 'PKA')": {
+      "direction": "PKA->Mek",
+      "confidence": 0.9746275415062774,
+      "ds_posterior": [
+        0.025372458493722654,
+        0.9746275415062774
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9492550830125548,
+        "ds_entropy": 0.17062543876223427,
+        "max_degree": 7,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.025372458493722654,
+          0.9746275415062774
+        ]
+      }
+    },
+    "('P38', 'PKA')": {
+      "direction": "PKA->P38",
+      "confidence": 0.9746275337785002,
+      "ds_posterior": [
+        0.025372466221499867,
+        0.9746275337785002
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9492550675570003,
+        "ds_entropy": 0.17062547943750972,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.025372466221499867,
+          0.9746275337785002
+        ]
+      }
+    },
+    "('PKA', 'PKC')": {
+      "direction": "PKA->PKC",
+      "confidence": 0.9999982936550007,
+      "ds_posterior": [
+        0.9999982936550007,
+        1.7063449994583299e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9999965873100013,
+        "ds_entropy": 3.5156428380675e-05,
+        "max_degree": 7,
+        "min_degree": 5,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999982936550007,
+          1.7063449994583299e-06
+        ]
+      }
+    },
+    "('PKA', 'Raf')": {
+      "direction": "PKA->Raf",
+      "confidence": 0.9999999999989113,
+      "ds_posterior": [
+        0.9999999999989113,
+        1.0886600207739877e-12
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999978226,
+        "ds_entropy": 4.48346246428922e-11,
+        "max_degree": 7,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999989113,
+          1.0886600207739877e-12
+        ]
+      }
+    },
+    "('Jnk', 'PKC')": {
+      "direction": "PKC->Jnk",
+      "confidence": 0.7459554831619135,
+      "ds_posterior": [
+        0.25404451683808643,
+        0.7459554831619135
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.4919109663238271,
+        "ds_entropy": 0.8176258233871826,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.25404451683808643,
+          0.7459554831619135
+        ]
+      }
+    },
+    "('Mek', 'PKC')": {
+      "direction": "PKC->Mek",
+      "confidence": 0.7459555423829495,
+      "ds_posterior": [
+        0.2540444576170506,
+        0.7459555423829495
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.4919110847658989,
+        "ds_entropy": 0.8176257313571933,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.2540444576170506,
+          0.7459555423829495
+        ]
+      }
+    },
+    "('P38', 'PKC')": {
+      "direction": "PKC->P38",
+      "confidence": 0.7459554831619135,
+      "ds_posterior": [
+        0.25404451683808643,
+        0.7459554831619135
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.4919109663238271,
+        "ds_entropy": 0.8176258233871826,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.25404451683808643,
+          0.7459554831619135
+        ]
+      }
+    },
+    "('PKC', 'Raf')": {
+      "direction": "PKC->Raf",
+      "confidence": 0.9999999999976872,
+      "ds_posterior": [
+        0.9999999999976872,
+        2.3128797985027227e-12
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999953743,
+        "ds_entropy": 9.273746540428936e-11,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999976872,
+          2.3128797985027227e-12
+        ]
+      }
+    },
+    "('Erk', 'Mek')": {
+      "direction": "Mek->Erk",
+      "confidence": 0.999998783622506,
+      "ds_posterior": [
+        1.2163774940676017e-06,
+        0.999998783622506
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999997567245012,
+        "ds_entropy": 2.565543477333779e-05,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.2163774940676017e-06,
+          0.999998783622506
+        ]
+      }
+    },
+    "('Mek', 'Raf')": {
+      "direction": "Raf->Mek",
+      "confidence": 0.9999996358422572,
+      "ds_posterior": [
+        3.6415774287610345e-07,
+        0.9999996358422572
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999992716845143,
+        "ds_entropy": 8.314314090132475e-06,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          3.6415774287610345e-07,
+          0.9999996358422572
+        ]
+      }
+    },
+    "('Akt', 'Erk')": {
+      "direction": "Akt->Erk",
+      "confidence": 0.9999871644949311,
+      "ds_posterior": [
+        0.9999871644949311,
+        1.2835505068898571e-05
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999743289898622,
+        "ds_entropy": 0.00022708814552514965,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999871644949311,
+          1.2835505068898571e-05
+        ]
+      }
+    },
+    "('PIP2', 'PIP3')": {
+      "direction": "PIP2->PIP3",
+      "confidence": 0.9999999999979237,
+      "ds_posterior": [
+        0.9999999999979237,
+        2.076361378734278e-12
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999958473,
+        "ds_entropy": 8.357719810855756e-11,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999979237,
+          2.076361378734278e-12
+        ]
+      }
+    },
+    "('PIP2', 'Plcg')": {
+      "direction": "Plcg->PIP2",
+      "confidence": 0.9491305207521025,
+      "ds_posterior": [
+        0.05086947924789755,
+        0.9491305207521025
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.8982610415042049,
+        "ds_entropy": 0.2900790237105535,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.05086947924789755,
+          0.9491305207521025
+        ]
+      }
+    },
+    "('PIP3', 'Plcg')": {
+      "direction": "Plcg->PIP3",
+      "confidence": 0.9999999999797597,
+      "ds_posterior": [
+        2.0240236644333143e-11,
+        0.9999999999797597
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999595195,
+        "ds_entropy": 7.482143341136797e-10,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.0240236644333143e-11,
+          0.9999999999797597
+        ]
+      }
+    }
+  }
+}

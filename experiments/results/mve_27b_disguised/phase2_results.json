@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "projects/locale/experiments/results/mve_27b_disguised/mve_results.json",
+    "network": "unknown",
+    "soft_score_source": "ego"
+  },
+  "per_node": {
+    "DrivingSkill": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "Age": "Age->DrivingSkill",
+        "DrivQuality": "DrivingSkill->DrivQuality",
+        "DrivHist": "DrivingSkill->DrivHist"
+      }
+    },
+    "DrivQuality": {
+      "degree": 3,
+      "n_feasible": 1,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "RiskAversion": "RiskAversion->DrivQuality",
+        "Accident": "DrivQuality->Accident",
+        "DrivingSkill": "DrivingSkill->DrivQuality"
+      }
+    },
+    "Accident": {
+      "degree": 4,
+      "n_feasible": 5,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "ThisCarDam": "Accident->ThisCarDam",
+        "DrivQuality": "DrivQuality->Accident",
+        "OtherCarCost": "Accident->OtherCarCost",
+        "MedCost": "Accident->MedCost"
+      }
+    },
+    "CarValue": {
+      "degree": 4,
+      "n_feasible": 1,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "VehicleYear": "VehicleYear->CarValue",
+        "MakeModel": "MakeModel->CarValue",
+        "Mileage": "Mileage->CarValue",
+        "ThisCarCost": "CarValue->ThisCarCost"
+      }
+    },
+    "SocioEcon": {
+      "degree": 5,
+      "n_feasible": 1,
+      "n_total": 32,
+      "hard_flips": [
+        [
+          "Age",
+          0,
+          1
+        ],
+        [
+          "VehicleYear",
+          0,
+          1
+        ]
+      ],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "Age": "Age->SocioEcon",
+        "VehicleYear": "VehicleYear->SocioEcon",
+        "MakeModel": "SocioEcon->MakeModel",
+        "HomeBase": "SocioEcon->HomeBase",
+        "AntiTheft": "SocioEcon->AntiTheft"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 19,
+    "phase1_correct": 18,
+    "phase2_correct": 18,
+    "phase1_accuracy": 94.7,
+    "phase2_accuracy": 94.7,
+    "delta_pp": 0.0,
+    "hard_flips": 2,
+    "hard_flips_helped": 1,
+    "hard_flips_hurt": 1,
+    "infeasible_nodes": 0
+  }
+}

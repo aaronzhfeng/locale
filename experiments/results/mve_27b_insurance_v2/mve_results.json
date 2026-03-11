@@ -1,0 +1,1969 @@
+{
+  "metadata": {
+    "network": "insurance",
+    "model": "Qwen/Qwen3.5-27B-FP8",
+    "temperature": 0.7,
+    "k_passes": 5,
+    "n_samples": 5000,
+    "seed": 42,
+    "test_nodes": [
+      "DrivingSkill",
+      "DrivQuality",
+      "Accident",
+      "CarValue",
+      "SocioEcon"
+    ],
+    "n_test_edges": 17,
+    "n_skeleton_edges": 37,
+    "n_gt_edges": 52,
+    "timestamp": "2026-03-10 17:50:45",
+    "disguised_names": true,
+    "enable_thinking": false,
+    "ego_prompt_version": "v2",
+    "contrastive_pe": false,
+    "temp_ladder": false,
+    "enriched": false
+  },
+  "summary": {
+    "acc_per_edge": 0.9473684210526315,
+    "acc_ego_graph": 0.9052631578947369,
+    "delta": -0.042105263157894646,
+    "delta_pp": -4.210526315789465,
+    "uncertain_per_edge": 0.021052631578947368,
+    "uncertain_ego_graph": 0.0,
+    "queries_per_edge": 95,
+    "queries_ego_graph": 25,
+    "verdict": "MARGINAL \u2014 Re-examine approach. Consider cost angle."
+  },
+  "per_node": {
+    "DrivingSkill": {
+      "degree": 3,
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 0.8
+    },
+    "DrivQuality": {
+      "degree": 3,
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "Accident": {
+      "degree": 4,
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    },
+    "CarValue": {
+      "degree": 4,
+      "acc_per_edge": 0.9,
+      "acc_ego_graph": 0.9
+    },
+    "SocioEcon": {
+      "degree": 5,
+      "acc_per_edge": 0.88,
+      "acc_ego_graph": 0.84
+    }
+  },
+  "raw_results_a": [
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "Age->DrivingSkill",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "Age->DrivingSkill",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "Age->DrivingSkill",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "Age->DrivingSkill",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "Age->DrivingSkill",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "CarValue->ThisCarCost",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "CarValue->ThisCarCost",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "CarValue->ThisCarCost",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "ThisCarCost->CarValue",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "ThisCarCost->CarValue",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "Age->SocioEcon",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "SocioEcon->Age",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "Age->SocioEcon",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    }
+  ],
+  "raw_results_b": [
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "DrivingSkill->Age",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "Age->DrivingSkill",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "DrivingSkill->Age",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "Age->DrivingSkill",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "Age",
+        "DrivingSkill"
+      ],
+      "predicted": "DrivingSkill->Age",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivHist"
+      ],
+      "predicted": "DrivingSkill->DrivHist",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivingSkill"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "RiskAversion",
+        "DrivQuality"
+      ],
+      "predicted": "RiskAversion->DrivQuality",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "DrivingSkill",
+        "DrivQuality"
+      ],
+      "predicted": "DrivingSkill->DrivQuality",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "DrivQuality"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "ThisCarDam"
+      ],
+      "predicted": "Accident->ThisCarDam",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "DrivQuality",
+        "Accident"
+      ],
+      "predicted": "DrivQuality->Accident",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "OtherCarCost"
+      ],
+      "predicted": "Accident->OtherCarCost",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "Accident",
+        "MedCost"
+      ],
+      "predicted": "Accident->MedCost",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Accident"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "CarValue->ThisCarCost",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "CarValue->ThisCarCost",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "ThisCarCost->CarValue",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "ThisCarCost->CarValue",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "VehicleYear",
+        "CarValue"
+      ],
+      "predicted": "VehicleYear->CarValue",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "MakeModel",
+        "CarValue"
+      ],
+      "predicted": "MakeModel->CarValue",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Mileage",
+        "CarValue"
+      ],
+      "predicted": "Mileage->CarValue",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "CarValue",
+        "ThisCarCost"
+      ],
+      "predicted": "CarValue->ThisCarCost",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "CarValue"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "Age->SocioEcon",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "SocioEcon->Age",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "SocioEcon->Age",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "SocioEcon->Age",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "Age",
+        "SocioEcon"
+      ],
+      "predicted": "SocioEcon->Age",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "VehicleYear"
+      ],
+      "predicted": "SocioEcon->VehicleYear",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "MakeModel"
+      ],
+      "predicted": "SocioEcon->MakeModel",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "HomeBase"
+      ],
+      "predicted": "SocioEcon->HomeBase",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    },
+    {
+      "edge": [
+        "SocioEcon",
+        "AntiTheft"
+      ],
+      "predicted": "SocioEcon->AntiTheft",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "SocioEcon"
+    }
+  ]
+}

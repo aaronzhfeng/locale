@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "phase": 4,
+    "method": "conservative_propagation",
+    "network": "child",
+    "commit_threshold": 0.3,
+    "batch_size": 5
+  },
+  "safety_valve": {
+    "fallback_recommended": false,
+    "net_delta_pp": 4.5,
+    "damaged_nodes": [],
+    "helped_nodes": [
+      {
+        "node": "Sick",
+        "p1_correct": 1,
+        "p2_correct": 2,
+        "n_edges": 3
+      },
+      {
+        "node": "LVH",
+        "p1_correct": 1,
+        "p2_correct": 2,
+        "n_edges": 2
+      }
+    ],
+    "n_damaged": 0,
+    "n_helped": 2
+  },
+  "propagation": {
+    "n_committed": 8,
+    "n_meek_compelled": 17,
+    "n_residual": 0,
+    "n_cycle_flips": 0,
+    "n_meek_overrides": 0,
+    "n_rounds": 2
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.88,
+    "phase3_correct": 22,
+    "phase4_accuracy": 0.88,
+    "phase4_correct": 22,
+    "total_edges": 25,
+    "delta_pp": 0.0,
+    "by_source": {
+      "committed": {
+        "correct": 7,
+        "total": 8,
+        "accuracy": 0.875
+      },
+      "meek_R1": {
+        "correct": 15,
+        "total": 17,
+        "accuracy": 0.8823529411764706
+      }
+    }
+  },
+  "propagation_log": [
+    {
+      "round": 1,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    },
+    {
+      "round": 1,
+      "event": "meek_propagation",
+      "n_proposed": 19,
+      "n_accepted": 17,
+      "n_rejected": 2,
+      "overrides": [
+        {
+          "edge": "frozenset({'Sick', 'Age'})",
+          "meek": "Sick->Age",
+          "llm": "Age->Sick",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'Disease', 'Sick'})",
+          "meek": "Sick->Disease",
+          "llm": "Disease->Sick",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event": "commit_batch",
+      "n_committed": 1,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    }
+  ],
+  "final_orientations": {
+    "frozenset({'Disease', 'LVH'})": {
+      "direction": "Disease->LVH",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Disease', 'DuctFlow'})": {
+      "direction": "Disease->DuctFlow",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Disease', 'CardiacMixing'})": {
+      "direction": "Disease->CardiacMixing",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Disease', 'LungParench'})": {
+      "direction": "Disease->LungParench",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Disease', 'LungFlow'})": {
+      "direction": "Disease->LungFlow",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Sick', 'Age'})": {
+      "direction": "Age->Sick",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Disease', 'Sick'})": {
+      "direction": "Disease->Sick",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Disease', 'Age'})": {
+      "direction": "Disease->Age",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'CardiacMixing', 'HypoxiaInO2'})": {
+      "direction": "CardiacMixing->HypoxiaInO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'LungParench', 'CO2'})": {
+      "direction": "LungParench->CO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'LungFlow', 'ChestXray'})": {
+      "direction": "LungFlow->ChestXray",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'LungParench', 'Grunting'})": {
+      "direction": "LungParench->Grunting",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'HypoxiaInO2', 'LungParench'})": {
+      "direction": "LungParench->HypoxiaInO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'LungParench', 'ChestXray'})": {
+      "direction": "LungParench->ChestXray",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'CardiacMixing', 'HypDistrib'})": {
+      "direction": "CardiacMixing->HypDistrib",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'LVH', 'LVHreport'})": {
+      "direction": "LVH->LVHreport",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'DuctFlow', 'HypDistrib'})": {
+      "direction": "DuctFlow->HypDistrib",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ChestXray', 'XrayReport'})": {
+      "direction": "ChestXray->XrayReport",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Sick', 'Grunting'})": {
+      "direction": "Grunting->Sick",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'HypoxiaInO2', 'LowerBodyO2'})": {
+      "direction": "HypoxiaInO2->LowerBodyO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'GruntingReport', 'Grunting'})": {
+      "direction": "Grunting->GruntingReport",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'CO2Report', 'CO2'})": {
+      "direction": "CO2->CO2Report",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RUQO2', 'HypoxiaInO2'})": {
+      "direction": "HypoxiaInO2->RUQO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'LowerBodyO2', 'HypDistrib'})": {
+      "direction": "HypDistrib->LowerBodyO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Disease', 'BirthAsphyxia'})": {
+      "direction": "Disease->BirthAsphyxia",
+      "source": "meek_R1",
+      "confidence": null
+    }
+  }
+}

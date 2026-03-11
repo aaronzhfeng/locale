@@ -1,0 +1,2069 @@
+{
+  "metadata": {
+    "network": "alarm",
+    "model": "Qwen/Qwen3.5-27B-FP8",
+    "temperature": 0.7,
+    "k_passes": 5,
+    "n_samples": 5000,
+    "seed": 42,
+    "test_nodes": [
+      "VENTLUNG",
+      "CATECHOL",
+      "HR",
+      "LVEDVOLUME",
+      "VENTALV"
+    ],
+    "n_test_edges": 19,
+    "n_skeleton_edges": 43,
+    "n_gt_edges": 46,
+    "timestamp": "2026-03-10 17:51:35",
+    "disguised_names": true,
+    "enable_thinking": false,
+    "ego_prompt_version": "v2",
+    "contrastive_pe": false,
+    "temp_ladder": false,
+    "enriched": false
+  },
+  "summary": {
+    "acc_per_edge": 0.28,
+    "acc_ego_graph": 0.12,
+    "delta": -0.16000000000000003,
+    "delta_pp": -16.000000000000004,
+    "uncertain_per_edge": 0.71,
+    "uncertain_ego_graph": 0.85,
+    "queries_per_edge": 100,
+    "queries_ego_graph": 25,
+    "verdict": "NO-GO \u2014 Kill this angle."
+  },
+  "per_node": {
+    "VENTLUNG": {
+      "degree": 5,
+      "acc_per_edge": 0.92,
+      "acc_ego_graph": 0.48
+    },
+    "CATECHOL": {
+      "degree": 2,
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 0.0
+    },
+    "HR": {
+      "degree": 4,
+      "acc_per_edge": 0.1,
+      "acc_ego_graph": 0.0
+    },
+    "LVEDVOLUME": {
+      "degree": 4,
+      "acc_per_edge": 0.05,
+      "acc_ego_graph": 0.0
+    },
+    "VENTALV": {
+      "degree": 5,
+      "acc_per_edge": 0.08,
+      "acc_ego_graph": 0.0
+    }
+  },
+  "raw_results_a": [
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "HR->HRSAT",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "HREKG->HR",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "HR->HRBP",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "LVEDVOLUME->PCWP",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "INTUBATION->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "VENTALV->PVSAT",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    }
+  ],
+  "raw_results_b": [
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "TPR",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "ARTCO2",
+        "CATECHOL"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "CATECHOL"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRBP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HREKG"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "HRSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "HR",
+        "CO"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "HR"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "CVP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVEDVOLUME",
+        "PCWP"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "HYPOVOLEMIA",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "LVFAILURE",
+        "LVEDVOLUME"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "LVEDVOLUME"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "PVSAT"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "VENTTUBE"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTALV",
+        "ARTCO2"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "VENTALV"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTLUNG->INTUBATION",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTTUBE->VENTLUNG",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTALV->VENTLUNG",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "EXPCO2"
+      ],
+      "predicted": "VENTLUNG->EXPCO2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "MINVOL"
+      ],
+      "predicted": "VENTLUNG->MINVOL",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "INTUBATION",
+        "VENTLUNG"
+      ],
+      "predicted": "INTUBATION->VENTLUNG",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTTUBE",
+        "VENTLUNG"
+      ],
+      "predicted": "VENTLUNG->VENTTUBE",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    },
+    {
+      "edge": [
+        "VENTLUNG",
+        "VENTALV"
+      ],
+      "predicted": "VENTLUNG->VENTALV",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "VENTLUNG"
+    }
+  ]
+}

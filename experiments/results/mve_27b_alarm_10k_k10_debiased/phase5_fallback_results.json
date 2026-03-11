@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "phase": 5,
+    "method": "pe_fallback",
+    "budget_fraction": 0.15
+  },
+  "hard_tail": {
+    "n_identified": 15,
+    "n_queried": 6,
+    "max_budget": 6,
+    "by_reason": {
+      "disagreement": 5,
+      "single_endpoint": 10
+    }
+  },
+  "fallback": {
+    "n_changes": 2,
+    "n_improved": 0,
+    "n_worsened": 2,
+    "net_gain": -2,
+    "changes": [
+      {
+        "edge": "('VENTALV', 'VENTLUNG')",
+        "old": "VENTLUNG->VENTALV",
+        "new": "VENTALV->VENTLUNG",
+        "gt": "VENTLUNG->VENTALV",
+        "improved": false,
+        "worsened": true
+      },
+      {
+        "edge": "('ARTCO2', 'CATECHOL')",
+        "old": "ARTCO2->CATECHOL",
+        "new": "CATECHOL->ARTCO2",
+        "gt": "ARTCO2->CATECHOL",
+        "improved": false,
+        "worsened": true
+      }
+    ]
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.9302325581395349,
+    "phase3_correct": 40,
+    "phase5_accuracy": 0.8837209302325582,
+    "phase5_correct": 38,
+    "total_edges": 43,
+    "delta_pp": -4.7
+  },
+  "final_orientations": {
+    "('INTUBATION', 'MINVOL')": {
+      "direction": "INTUBATION->MINVOL",
+      "source": "agreement",
+      "changed": false
+    },
+    "('INTUBATION', 'SHUNT')": {
+      "direction": "INTUBATION->SHUNT",
+      "source": "agreement",
+      "changed": false
+    },
+    "('INTUBATION', 'PRESS')": {
+      "direction": "INTUBATION->PRESS",
+      "source": "agreement",
+      "changed": false
+    },
+    "('INTUBATION', 'VENTLUNG')": {
+      "direction": "INTUBATION->VENTLUNG",
+      "source": "agreement",
+      "changed": false
+    },
+    "('INTUBATION', 'VENTALV')": {
+      "direction": "INTUBATION->VENTALV",
+      "source": "agreement",
+      "changed": false
+    },
+    "('EXPCO2', 'VENTLUNG')": {
+      "direction": "VENTLUNG->EXPCO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('MINVOL', 'VENTLUNG')": {
+      "direction": "VENTLUNG->MINVOL",
+      "source": "agreement",
+      "changed": false
+    },
+    "('VENTLUNG', 'VENTTUBE')": {
+      "direction": "VENTTUBE->VENTLUNG",
+      "source": "disagreement_confidence",
+      "changed": false
+    },
+    "('VENTALV', 'VENTLUNG')": {
+      "direction": "VENTALV->VENTLUNG",
+      "source": "pe_tiebreak",
+      "changed": true
+    },
+    "('HR', 'HRBP')": {
+      "direction": "HR->HRBP",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HR', 'HREKG')": {
+      "direction": "HR->HREKG",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HR', 'HRSAT')": {
+      "direction": "HR->HRSAT",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CATECHOL', 'HR')": {
+      "direction": "CATECHOL->HR",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CO', 'HR')": {
+      "direction": "HR->CO",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CVP', 'LVEDVOLUME')": {
+      "direction": "LVEDVOLUME->CVP",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('LVEDVOLUME', 'PCWP')": {
+      "direction": "LVEDVOLUME->PCWP",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('HYPOVOLEMIA', 'LVEDVOLUME')": {
+      "direction": "HYPOVOLEMIA->LVEDVOLUME",
+      "source": "agreement",
+      "changed": false
+    },
+    "('LVEDVOLUME', 'LVFAILURE')": {
+      "direction": "LVEDVOLUME->LVFAILURE",
+      "source": "disagreement_confidence",
+      "changed": false
+    },
+    "('PRESS', 'VENTTUBE')": {
+      "direction": "VENTTUBE->PRESS",
+      "source": "agreement",
+      "changed": false
+    },
+    "('DISCONNECT', 'VENTTUBE')": {
+      "direction": "DISCONNECT->VENTTUBE",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('VENTMACH', 'VENTTUBE')": {
+      "direction": "VENTMACH->VENTTUBE",
+      "source": "disagreement_confidence",
+      "changed": false
+    },
+    "('PVSAT', 'VENTALV')": {
+      "direction": "VENTALV->PVSAT",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ARTCO2', 'VENTALV')": {
+      "direction": "VENTALV->ARTCO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HISTORY', 'LVFAILURE')": {
+      "direction": "HISTORY->LVFAILURE",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('LVFAILURE', 'STROKEVOLUME')": {
+      "direction": "LVFAILURE->STROKEVOLUME",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HYPOVOLEMIA', 'STROKEVOLUME')": {
+      "direction": "HYPOVOLEMIA->STROKEVOLUME",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CO', 'STROKEVOLUME')": {
+      "direction": "STROKEVOLUME->CO",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ANAPHYLAXIS', 'TPR')": {
+      "direction": "ANAPHYLAXIS->TPR",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('CATECHOL', 'TPR')": {
+      "direction": "CATECHOL->TPR",
+      "source": "agreement",
+      "changed": false
+    },
+    "('BP', 'TPR')": {
+      "direction": "TPR->BP",
+      "source": "agreement",
+      "changed": false
+    },
+    "('FIO2', 'PVSAT')": {
+      "direction": "FIO2->PVSAT",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('PVSAT', 'SAO2')": {
+      "direction": "PVSAT->SAO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('SAO2', 'SHUNT')": {
+      "direction": "SHUNT->SAO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PULMEMBOLUS', 'SHUNT')": {
+      "direction": "PULMEMBOLUS->SHUNT",
+      "source": "agreement",
+      "changed": false
+    },
+    "('KINKEDTUBE', 'PRESS')": {
+      "direction": "KINKEDTUBE->PRESS",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('ARTCO2', 'EXPCO2')": {
+      "direction": "ARTCO2->EXPCO2",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ARTCO2', 'CATECHOL')": {
+      "direction": "CATECHOL->ARTCO2",
+      "source": "pe_tiebreak",
+      "changed": true
+    },
+    "('BP', 'CO')": {
+      "direction": "CO->BP",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ERRLOWOUTPUT', 'HRBP')": {
+      "direction": "ERRLOWOUTPUT->HRBP",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('ERRCAUTER', 'HREKG')": {
+      "direction": "ERRCAUTER->HREKG",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ERRCAUTER', 'HRSAT')": {
+      "direction": "ERRCAUTER->HRSAT",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PAP', 'PULMEMBOLUS')": {
+      "direction": "PULMEMBOLUS->PAP",
+      "source": "single_endpoint",
+      "changed": false
+    },
+    "('MINVOLSET', 'VENTMACH')": {
+      "direction": "MINVOLSET->VENTMACH",
+      "source": "single_endpoint",
+      "changed": false
+    }
+  }
+}

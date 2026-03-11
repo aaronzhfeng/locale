@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "phase": 5,
+    "method": "pe_fallback",
+    "budget_fraction": 0.15
+  },
+  "hard_tail": {
+    "n_identified": 6,
+    "n_queried": 6,
+    "max_budget": 6,
+    "by_reason": {
+      "disagreement": 2,
+      "single_endpoint": 4
+    }
+  },
+  "fallback": {
+    "n_changes": 0,
+    "n_improved": 0,
+    "n_worsened": 0,
+    "net_gain": 0,
+    "changes": []
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.9534883720930233,
+    "phase3_correct": 41,
+    "phase5_accuracy": 0.9534883720930233,
+    "phase5_correct": 41,
+    "total_edges": 43,
+    "delta_pp": 0.0
+  },
+  "final_orientations": {
+    "('Age', 'SocioEcon')": {
+      "direction": "Age->SocioEcon",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('RiskAversion', 'SocioEcon')": {
+      "direction": "SocioEcon->RiskAversion",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('SocioEcon', 'VehicleYear')": {
+      "direction": "SocioEcon->VehicleYear",
+      "source": "agreement",
+      "changed": false
+    },
+    "('MakeModel', 'SocioEcon')": {
+      "direction": "SocioEcon->MakeModel",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HomeBase', 'SocioEcon')": {
+      "direction": "SocioEcon->HomeBase",
+      "source": "agreement",
+      "changed": false
+    },
+    "('AntiTheft', 'SocioEcon')": {
+      "direction": "SocioEcon->AntiTheft",
+      "source": "agreement",
+      "changed": false
+    },
+    "('OtherCar', 'SocioEcon')": {
+      "direction": "SocioEcon->OtherCar",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Age', 'RiskAversion')": {
+      "direction": "Age->RiskAversion",
+      "source": "agreement",
+      "changed": false
+    },
+    "('DrivQuality', 'RiskAversion')": {
+      "direction": "RiskAversion->DrivQuality",
+      "source": "agreement",
+      "changed": false
+    },
+    "('RiskAversion', 'SeniorTrain')": {
+      "direction": "RiskAversion->SeniorTrain",
+      "source": "agreement",
+      "changed": false
+    },
+    "('HomeBase', 'RiskAversion')": {
+      "direction": "RiskAversion->HomeBase",
+      "source": "agreement",
+      "changed": false
+    },
+    "('AntiTheft', 'RiskAversion')": {
+      "direction": "RiskAversion->AntiTheft",
+      "source": "agreement",
+      "changed": false
+    },
+    "('DrivHist', 'RiskAversion')": {
+      "direction": "RiskAversion->DrivHist",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Age', 'GoodStudent')": {
+      "direction": "Age->GoodStudent",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Age', 'DrivingSkill')": {
+      "direction": "Age->DrivingSkill",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Age', 'SeniorTrain')": {
+      "direction": "Age->SeniorTrain",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Age', 'MedCost')": {
+      "direction": "Age->MedCost",
+      "source": "agreement",
+      "changed": false
+    },
+    "('RuggedAuto', 'VehicleYear')": {
+      "direction": "VehicleYear->RuggedAuto",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Antilock', 'VehicleYear')": {
+      "direction": "VehicleYear->Antilock",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CarValue', 'VehicleYear')": {
+      "direction": "VehicleYear->CarValue",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Airbag', 'VehicleYear')": {
+      "direction": "VehicleYear->Airbag",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Accident', 'ThisCarDam')": {
+      "direction": "Accident->ThisCarDam",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Accident', 'DrivQuality')": {
+      "direction": "DrivQuality->Accident",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Accident', 'OtherCarCost')": {
+      "direction": "Accident->OtherCarCost",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Accident', 'MedCost')": {
+      "direction": "Accident->MedCost",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Accident', 'ILiCost')": {
+      "direction": "Accident->ILiCost",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('MakeModel', 'RuggedAuto')": {
+      "direction": "MakeModel->RuggedAuto",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Antilock', 'MakeModel')": {
+      "direction": "MakeModel->Antilock",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CarValue', 'MakeModel')": {
+      "direction": "MakeModel->CarValue",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Airbag', 'MakeModel')": {
+      "direction": "MakeModel->Airbag",
+      "source": "agreement",
+      "changed": false
+    },
+    "('DrivQuality', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivQuality",
+      "source": "agreement",
+      "changed": false
+    },
+    "('DrivingSkill', 'SeniorTrain')": {
+      "direction": "SeniorTrain->DrivingSkill",
+      "source": "agreement",
+      "changed": false
+    },
+    "('DrivHist', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivHist",
+      "source": "agreement",
+      "changed": false
+    },
+    "('GoodStudent', 'SeniorTrain')": {
+      "direction": "SeniorTrain->GoodStudent",
+      "source": "agreement",
+      "changed": false
+    },
+    "('ThisCarCost', 'ThisCarDam')": {
+      "direction": "ThisCarDam->ThisCarCost",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Theft', 'ThisCarCost')": {
+      "direction": "ThisCarCost->Theft",
+      "source": "ego_kept_single",
+      "changed": false
+    },
+    "('CarValue', 'ThisCarCost')": {
+      "direction": "CarValue->ThisCarCost",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PropCost', 'ThisCarCost')": {
+      "direction": "ThisCarCost->PropCost",
+      "source": "agreement",
+      "changed": false
+    },
+    "('CarValue', 'Mileage')": {
+      "direction": "Mileage->CarValue",
+      "source": "pe_confirmed",
+      "changed": false
+    },
+    "('Cushioning', 'RuggedAuto')": {
+      "direction": "RuggedAuto->Cushioning",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Cushioning', 'MedCost')": {
+      "direction": "Cushioning->MedCost",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Airbag', 'Cushioning')": {
+      "direction": "Airbag->Cushioning",
+      "source": "agreement",
+      "changed": false
+    },
+    "('OtherCarCost', 'PropCost')": {
+      "direction": "OtherCarCost->PropCost",
+      "source": "agreement",
+      "changed": false
+    }
+  }
+}

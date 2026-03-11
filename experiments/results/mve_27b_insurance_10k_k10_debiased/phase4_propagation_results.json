@@ -1,0 +1,387 @@
+{
+  "metadata": {
+    "phase": 4,
+    "method": "conservative_propagation",
+    "network": "insurance",
+    "commit_threshold": 0.3,
+    "batch_size": 5
+  },
+  "safety_valve": {
+    "fallback_recommended": false,
+    "net_delta_pp": 3.5999999999999943,
+    "damaged_nodes": [],
+    "helped_nodes": [
+      {
+        "node": "ThisCarCost",
+        "p1_correct": 2,
+        "p2_correct": 3,
+        "n_edges": 4
+      },
+      {
+        "node": "Airbag",
+        "p1_correct": 2,
+        "p2_correct": 3,
+        "n_edges": 3
+      },
+      {
+        "node": "OtherCarCost",
+        "p1_correct": 1,
+        "p2_correct": 2,
+        "n_edges": 2
+      }
+    ],
+    "n_damaged": 0,
+    "n_helped": 3
+  },
+  "propagation": {
+    "n_committed": 16,
+    "n_meek_compelled": 27,
+    "n_residual": 0,
+    "n_cycle_flips": 0,
+    "n_meek_overrides": 0,
+    "n_rounds": 1
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.9534883720930233,
+    "phase3_correct": 41,
+    "phase4_accuracy": 0.9534883720930233,
+    "phase4_correct": 41,
+    "total_edges": 43,
+    "delta_pp": 0.0,
+    "by_source": {
+      "committed": {
+        "correct": 16,
+        "total": 16,
+        "accuracy": 1.0
+      },
+      "meek_R1": {
+        "correct": 25,
+        "total": 27,
+        "accuracy": 0.9259259259259259
+      }
+    }
+  },
+  "propagation_log": [
+    {
+      "round": 1,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    },
+    {
+      "round": 1,
+      "event": "meek_propagation",
+      "n_proposed": 38,
+      "n_accepted": 27,
+      "n_rejected": 11,
+      "overrides": [
+        {
+          "edge": "frozenset({'Mileage', 'CarValue'})",
+          "meek": "CarValue->Mileage",
+          "llm": "Mileage->CarValue",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'ThisCarCost', 'ThisCarDam'})",
+          "meek": "ThisCarCost->ThisCarDam",
+          "llm": "ThisCarDam->ThisCarCost",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'PropCost', 'OtherCarCost'})",
+          "meek": "PropCost->OtherCarCost",
+          "llm": "OtherCarCost->PropCost",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'MedCost', 'Accident'})",
+          "meek": "MedCost->Accident",
+          "llm": "Accident->MedCost",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'MedCost', 'Age'})",
+          "meek": "MedCost->Age",
+          "llm": "Age->MedCost",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'Accident', 'ThisCarDam'})",
+          "meek": "ThisCarDam->Accident",
+          "llm": "Accident->ThisCarDam",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'DrivQuality', 'Accident'})",
+          "meek": "Accident->DrivQuality",
+          "llm": "DrivQuality->Accident",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'DrivQuality', 'DrivingSkill'})",
+          "meek": "DrivQuality->DrivingSkill",
+          "llm": "DrivingSkill->DrivQuality",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'DrivingSkill', 'SeniorTrain'})",
+          "meek": "DrivingSkill->SeniorTrain",
+          "llm": "SeniorTrain->DrivingSkill",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'RiskAversion', 'SeniorTrain'})",
+          "meek": "SeniorTrain->RiskAversion",
+          "llm": "RiskAversion->SeniorTrain",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'RiskAversion', 'SocioEcon'})",
+          "meek": "RiskAversion->SocioEcon",
+          "llm": "SocioEcon->RiskAversion",
+          "rule": "R1",
+          "llm_confidence": 0.8,
+          "action": "llm_kept_over_meek"
+        }
+      ]
+    }
+  ],
+  "final_orientations": {
+    "frozenset({'Age', 'SocioEcon'})": {
+      "direction": "Age->SocioEcon",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VehicleYear', 'SocioEcon'})": {
+      "direction": "SocioEcon->VehicleYear",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'MakeModel', 'SocioEcon'})": {
+      "direction": "SocioEcon->MakeModel",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'HomeBase', 'SocioEcon'})": {
+      "direction": "SocioEcon->HomeBase",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'AntiTheft', 'SocioEcon'})": {
+      "direction": "SocioEcon->AntiTheft",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Mileage', 'CarValue'})": {
+      "direction": "Mileage->CarValue",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'ThisCarCost', 'ThisCarDam'})": {
+      "direction": "ThisCarDam->ThisCarCost",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PropCost', 'OtherCarCost'})": {
+      "direction": "OtherCarCost->PropCost",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'MedCost', 'Accident'})": {
+      "direction": "Accident->MedCost",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'MedCost', 'Age'})": {
+      "direction": "Age->MedCost",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Accident', 'ThisCarDam'})": {
+      "direction": "Accident->ThisCarDam",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'DrivQuality', 'Accident'})": {
+      "direction": "DrivQuality->Accident",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'DrivQuality', 'DrivingSkill'})": {
+      "direction": "DrivingSkill->DrivQuality",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'DrivingSkill', 'SeniorTrain'})": {
+      "direction": "SeniorTrain->DrivingSkill",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'RiskAversion', 'SeniorTrain'})": {
+      "direction": "RiskAversion->SeniorTrain",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'RiskAversion', 'SocioEcon'})": {
+      "direction": "SocioEcon->RiskAversion",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VehicleYear', 'Airbag'})": {
+      "direction": "VehicleYear->Airbag",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RuggedAuto', 'VehicleYear'})": {
+      "direction": "VehicleYear->RuggedAuto",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'VehicleYear', 'Antilock'})": {
+      "direction": "VehicleYear->Antilock",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'VehicleYear', 'CarValue'})": {
+      "direction": "VehicleYear->CarValue",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'MakeModel', 'Airbag'})": {
+      "direction": "MakeModel->Airbag",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'MakeModel', 'CarValue'})": {
+      "direction": "MakeModel->CarValue",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'OtherCar', 'SocioEcon'})": {
+      "direction": "SocioEcon->OtherCar",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RuggedAuto', 'MakeModel'})": {
+      "direction": "MakeModel->RuggedAuto",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'MakeModel', 'Antilock'})": {
+      "direction": "MakeModel->Antilock",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Airbag', 'Cushioning'})": {
+      "direction": "Airbag->Cushioning",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ThisCarCost', 'CarValue'})": {
+      "direction": "CarValue->ThisCarCost",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RuggedAuto', 'Cushioning'})": {
+      "direction": "RuggedAuto->Cushioning",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'MedCost', 'Cushioning'})": {
+      "direction": "Cushioning->MedCost",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ThisCarCost', 'Theft'})": {
+      "direction": "ThisCarCost->Theft",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ThisCarCost', 'PropCost'})": {
+      "direction": "ThisCarCost->PropCost",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RiskAversion', 'Age'})": {
+      "direction": "Age->RiskAversion",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'GoodStudent', 'Age'})": {
+      "direction": "Age->GoodStudent",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'SeniorTrain', 'Age'})": {
+      "direction": "Age->SeniorTrain",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Accident', 'ILiCost'})": {
+      "direction": "Accident->ILiCost",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'DrivingSkill', 'Age'})": {
+      "direction": "Age->DrivingSkill",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Accident', 'OtherCarCost'})": {
+      "direction": "Accident->OtherCarCost",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'DrivHist', 'DrivingSkill'})": {
+      "direction": "DrivingSkill->DrivHist",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RiskAversion', 'DrivHist'})": {
+      "direction": "RiskAversion->DrivHist",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RiskAversion', 'HomeBase'})": {
+      "direction": "RiskAversion->HomeBase",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RiskAversion', 'DrivQuality'})": {
+      "direction": "RiskAversion->DrivQuality",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RiskAversion', 'AntiTheft'})": {
+      "direction": "RiskAversion->AntiTheft",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'GoodStudent', 'SeniorTrain'})": {
+      "direction": "SeniorTrain->GoodStudent",
+      "source": "meek_R1",
+      "confidence": null
+    }
+  }
+}

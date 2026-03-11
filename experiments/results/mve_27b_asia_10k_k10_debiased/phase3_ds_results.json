@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "phase": 3,
+    "method": "dawid_skene",
+    "source": "ego",
+    "network": "asia",
+    "n_edges": 7,
+    "n_annotators": 5,
+    "n_em_classes": 3
+  },
+  "evaluation": {
+    "ds_accuracy": 1.0,
+    "ds_correct": 7,
+    "mv_accuracy": 1.0,
+    "mv_correct": 7,
+    "total": 7,
+    "delta_pp": 0.0,
+    "by_confidence": {
+      "high": {
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1.0
+      },
+      "medium": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "low": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "class_priors": [
+    0.33331926449724314,
+    0.6666807355027569
+  ],
+  "top_annotators": [
+    {
+      "annotator": "dysp",
+      "accuracy_per_class": [
+        0.9999989999998509,
+        0.9999989999999991
+      ],
+      "mean_accuracy": 0.999998999999925
+    },
+    {
+      "annotator": "bronc",
+      "accuracy_per_class": [
+        0.999998067104827,
+        0.9999989999990662
+      ],
+      "mean_accuracy": 0.9999985335519466
+    },
+    {
+      "annotator": "either",
+      "accuracy_per_class": [
+        0.9999947018097978,
+        0.9999990488508216
+      ],
+      "mean_accuracy": 0.9999968753303097
+    },
+    {
+      "annotator": "smoke",
+      "accuracy_per_class": [
+        3.000890603868711e-06,
+        0.9999994000370513
+      ],
+      "mean_accuracy": 0.5000012004638276
+    },
+    {
+      "annotator": "lung",
+      "accuracy_per_class": [
+        3.0008796515874334e-06,
+        0.9999994000366135
+      ],
+      "mean_accuracy": 0.5000012004581326
+    }
+  ],
+  "worst_annotators": [
+    {
+      "annotator": "dysp",
+      "accuracy_per_class": [
+        0.9999989999998509,
+        0.9999989999999991
+      ],
+      "mean_accuracy": 0.999998999999925
+    },
+    {
+      "annotator": "bronc",
+      "accuracy_per_class": [
+        0.999998067104827,
+        0.9999989999990662
+      ],
+      "mean_accuracy": 0.9999985335519466
+    },
+    {
+      "annotator": "either",
+      "accuracy_per_class": [
+        0.9999947018097978,
+        0.9999990488508216
+      ],
+      "mean_accuracy": 0.9999968753303097
+    },
+    {
+      "annotator": "smoke",
+      "accuracy_per_class": [
+        3.000890603868711e-06,
+        0.9999994000370513
+      ],
+      "mean_accuracy": 0.5000012004638276
+    },
+    {
+      "annotator": "lung",
+      "accuracy_per_class": [
+        3.0008796515874334e-06,
+        0.9999994000366135
+      ],
+      "mean_accuracy": 0.5000012004581326
+    }
+  ],
+  "reconciled": {
+    "('either', 'tub')": {
+      "direction": "tub->either",
+      "confidence": 0.9999973510771063,
+      "ds_posterior": [
+        2.6489228938150423e-06,
+        0.9999973510771063
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999947021542125,
+        "ds_entropy": 5.289595942364666e-05,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          2.6489228938150423e-06,
+          0.9999973510771063
+        ]
+      }
+    },
+    "('either', 'lung')": {
+      "direction": "lung->either",
+      "confidence": 0.9999973510834661,
+      "ds_posterior": [
+        2.648916533986008e-06,
+        0.9999973510834661
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999947021669321,
+        "ds_entropy": 5.2895841600472005e-05,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.648916533986008e-06,
+          0.9999973510834661
+        ]
+      }
+    },
+    "('either', 'xray')": {
+      "direction": "either->xray",
+      "confidence": 0.9999980975747439,
+      "ds_posterior": [
+        0.9999980975747439,
+        1.90242525612728e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999961951494878,
+        "ds_entropy": 3.889779049429454e-05,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9999980975747439,
+          1.90242525612728e-06
+        ]
+      }
+    },
+    "('dysp', 'either')": {
+      "direction": "either->dysp",
+      "confidence": 0.999999999997351,
+      "ds_posterior": [
+        2.6489329545444776e-12,
+        0.999999999997351
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999947021,
+        "ds_entropy": 1.0569362507296937e-10,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.6489329545444776e-12,
+          0.999999999997351
+        ]
+      }
+    },
+    "('lung', 'smoke')": {
+      "direction": "smoke->lung",
+      "confidence": 0.666681802557731,
+      "ds_posterior": [
+        0.33331819744226904,
+        0.666681802557731
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.333363605115462,
+        "ds_entropy": 0.9182806974197618,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.33331819744226904,
+          0.666681802557731
+        ]
+      }
+    },
+    "('bronc', 'smoke')": {
+      "direction": "smoke->bronc",
+      "confidence": 0.9999990336158855,
+      "ds_posterior": [
+        9.663841144948662e-07,
+        0.9999990336158855
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999998067231771,
+        "ds_entropy": 2.0703421176277985e-05,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          9.663841144948662e-07,
+          0.9999990336158855
+        ]
+      }
+    },
+    "('bronc', 'dysp')": {
+      "direction": "bronc->dysp",
+      "confidence": 0.9999999999979998,
+      "ds_posterior": [
+        0.9999999999979998,
+        2.0001343606199166e-12
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999959996,
+        "ds_entropy": 8.061694869921707e-11,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999979998,
+          2.0001343606199166e-12
+        ]
+      }
+    }
+  }
+}

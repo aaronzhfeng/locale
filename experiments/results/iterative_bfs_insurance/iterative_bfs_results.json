@@ -1,0 +1,317 @@
+{
+  "method": "iterative_bfs",
+  "network": "insurance",
+  "n_samples": 10000,
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "enable_thinking": false,
+  "max_rounds": 5,
+  "threshold": 0.7,
+  "k_passes": 5,
+  "n_rounds_completed": 1,
+  "skeleton": {
+    "n_nodes": 27,
+    "n_edges": 43,
+    "coverage": 0.8076923076923077
+  },
+  "final_metrics": {
+    "n_established": 39,
+    "n_total_edges": 43,
+    "coverage": 0.9069767441860465,
+    "accuracy": 0.9230769230769231,
+    "f1": 0.7912087912087913,
+    "precision": 0.9230769230769231,
+    "recall": 0.6923076923076923,
+    "tp": 36,
+    "fp": 3,
+    "fn": 16
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "nodes_queried": 23,
+      "queries": 115,
+      "edges_decimated": 60,
+      "total_established": 39,
+      "accuracy_established": 0.9230769230769231,
+      "accuracy_all": 0.9302325581395349,
+      "elapsed": 192.85025095939636
+    }
+  ],
+  "total_queries": 115,
+  "total_elapsed": 192.85044384002686,
+  "established_edges": {
+    "Age->SocioEcon": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "SocioEcon",
+      "votes": "5/5",
+      "correct": true
+    },
+    "SocioEcon->RiskAversion": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "RiskAversion",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VehicleYear->SocioEcon": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "SocioEcon",
+      "votes": "5/5",
+      "correct": false
+    },
+    "Age->RiskAversion": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "RiskAversion",
+      "votes": "5/5",
+      "correct": true
+    },
+    "RiskAversion->AntiTheft": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "AntiTheft",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Age->GoodStudent": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "GoodStudent",
+      "votes": "5/5",
+      "correct": true
+    },
+    "DrivingSkill->Age": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "Age",
+      "votes": "4/5",
+      "correct": false
+    },
+    "VehicleYear->RuggedAuto": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VehicleYear",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VehicleYear->Antilock": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VehicleYear",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VehicleYear->CarValue": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VehicleYear",
+      "votes": "5/5",
+      "correct": true
+    },
+    "VehicleYear->Airbag": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "VehicleYear",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Accident->ThisCarDam": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "Accident",
+      "votes": "5/5",
+      "correct": true
+    },
+    "DrivQuality->Accident": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "Accident",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Accident->OtherCarCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "Accident",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Accident->MedCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "Accident",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Accident->ILiCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "Accident",
+      "votes": "5/5",
+      "correct": true
+    },
+    "MakeModel->RuggedAuto": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "MakeModel",
+      "votes": "5/5",
+      "correct": true
+    },
+    "MakeModel->Antilock": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "MakeModel",
+      "votes": "5/5",
+      "correct": true
+    },
+    "MakeModel->CarValue": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "MakeModel",
+      "votes": "5/5",
+      "correct": true
+    },
+    "MakeModel->Airbag": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "MakeModel",
+      "votes": "5/5",
+      "correct": true
+    },
+    "DrivingSkill->DrivQuality": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "DrivingSkill",
+      "votes": "5/5",
+      "correct": true
+    },
+    "DrivingSkill->DrivHist": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "DrivingSkill",
+      "votes": "5/5",
+      "correct": true
+    },
+    "SeniorTrain->GoodStudent": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "GoodStudent",
+      "votes": "5/5",
+      "correct": false
+    },
+    "RiskAversion->SeniorTrain": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "SeniorTrain",
+      "votes": "4/5",
+      "correct": true
+    },
+    "ThisCarDam->ThisCarCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "ThisCarCost",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Theft->ThisCarCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "ThisCarCost",
+      "votes": "5/5",
+      "correct": true
+    },
+    "CarValue->ThisCarCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "ThisCarCost",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Mileage->CarValue": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "CarValue",
+      "votes": "5/5",
+      "correct": true
+    },
+    "RiskAversion->DrivQuality": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "DrivQuality",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Age->MedCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "MedCost",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Cushioning->MedCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "MedCost",
+      "votes": "5/5",
+      "correct": true
+    },
+    "RuggedAuto->Cushioning": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "Cushioning",
+      "votes": "5/5",
+      "correct": true
+    },
+    "Airbag->Cushioning": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "Cushioning",
+      "votes": "4/5",
+      "correct": true
+    },
+    "SocioEcon->HomeBase": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "HomeBase",
+      "votes": "4/5",
+      "correct": true
+    },
+    "RiskAversion->HomeBase": {
+      "confidence": 0.8,
+      "round": 1,
+      "source_node": "HomeBase",
+      "votes": "4/5",
+      "correct": true
+    },
+    "SocioEcon->AntiTheft": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "AntiTheft",
+      "votes": "5/5",
+      "correct": true
+    },
+    "ThisCarCost->PropCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "PropCost",
+      "votes": "5/5",
+      "correct": true
+    },
+    "OtherCarCost->PropCost": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "PropCost",
+      "votes": "5/5",
+      "correct": true
+    },
+    "RiskAversion->DrivHist": {
+      "confidence": 1.0,
+      "round": 1,
+      "source_node": "DrivHist",
+      "votes": "5/5",
+      "correct": true
+    }
+  }
+}

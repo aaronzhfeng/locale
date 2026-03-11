@@ -1,0 +1,1026 @@
+{
+  "threshold": 0.5,
+  "n_total": 43,
+  "n_output": 40,
+  "n_abstained": 3,
+  "coverage": 0.9302325581395349,
+  "precision_output": 0.925,
+  "false_orient_rate": 0.075,
+  "recall_oriented": 0.925,
+  "full_accuracy": 0.9302325581395349,
+  "selective_results": [
+    {
+      "edge_key": "('INTUBATION', 'MINVOL')",
+      "direction": "INTUBATION->MINVOL",
+      "gt": "INTUBATION->MINVOL",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('INTUBATION', 'SHUNT')",
+      "direction": "INTUBATION->SHUNT",
+      "gt": "INTUBATION->SHUNT",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('INTUBATION', 'PRESS')",
+      "direction": "INTUBATION->PRESS",
+      "gt": "INTUBATION->PRESS",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('INTUBATION', 'VENTLUNG')",
+      "direction": "INTUBATION->VENTLUNG",
+      "gt": "INTUBATION->VENTLUNG",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('INTUBATION', 'VENTALV')",
+      "direction": "INTUBATION->VENTALV",
+      "gt": "INTUBATION->VENTALV",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('EXPCO2', 'VENTLUNG')",
+      "direction": "VENTLUNG->EXPCO2",
+      "gt": "VENTLUNG->EXPCO2",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('MINVOL', 'VENTLUNG')",
+      "direction": "VENTLUNG->MINVOL",
+      "gt": "VENTLUNG->MINVOL",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.9702540605405366,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('VENTLUNG', 'VENTTUBE')",
+      "direction": "VENTTUBE->VENTLUNG",
+      "gt": "VENTTUBE->VENTLUNG",
+      "raw_confidence": 0.7000000000000001,
+      "calibrated_confidence": 0.9702540605405366,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('VENTALV', 'VENTLUNG')",
+      "direction": "VENTLUNG->VENTALV",
+      "gt": "VENTLUNG->VENTALV",
+      "raw_confidence": 0.26,
+      "calibrated_confidence": 0.0,
+      "output": "False",
+      "correct": true
+    },
+    {
+      "edge_key": "('HR', 'HRBP')",
+      "direction": "HR->HRBP",
+      "gt": "HR->HRBP",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.9702540605405366,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('HR', 'HREKG')",
+      "direction": "HR->HREKG",
+      "gt": "HR->HREKG",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.9702540605405366,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('HR', 'HRSAT')",
+      "direction": "HR->HRSAT",
+      "gt": "HR->HRSAT",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.9702540605405366,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CATECHOL', 'HR')",
+      "direction": "CATECHOL->HR",
+      "gt": "CATECHOL->HR",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CO', 'HR')",
+      "direction": "HR->CO",
+      "gt": "HR->CO",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CVP', 'LVEDVOLUME')",
+      "direction": "LVEDVOLUME->CVP",
+      "gt": "LVEDVOLUME->CVP",
+      "raw_confidence": 0.61,
+      "calibrated_confidence": 0.7834576344727431,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('LVEDVOLUME', 'PCWP')",
+      "direction": "LVEDVOLUME->PCWP",
+      "gt": "LVEDVOLUME->PCWP",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('HYPOVOLEMIA', 'LVEDVOLUME')",
+      "direction": "HYPOVOLEMIA->LVEDVOLUME",
+      "gt": "HYPOVOLEMIA->LVEDVOLUME",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('LVEDVOLUME', 'LVFAILURE')",
+      "direction": "LVEDVOLUME->LVFAILURE",
+      "gt": "LVFAILURE->LVEDVOLUME",
+      "raw_confidence": 0.54,
+      "calibrated_confidence": 0.7385695065254853,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('PRESS', 'VENTTUBE')",
+      "direction": "VENTTUBE->PRESS",
+      "gt": "VENTTUBE->PRESS",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('DISCONNECT', 'VENTTUBE')",
+      "direction": "DISCONNECT->VENTTUBE",
+      "gt": "DISCONNECT->VENTTUBE",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('VENTMACH', 'VENTTUBE')",
+      "direction": "VENTMACH->VENTTUBE",
+      "gt": "VENTMACH->VENTTUBE",
+      "raw_confidence": 0.66,
+      "calibrated_confidence": 0.9702540605405366,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PVSAT', 'VENTALV')",
+      "direction": "VENTALV->PVSAT",
+      "gt": "VENTALV->PVSAT",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ARTCO2', 'VENTALV')",
+      "direction": "VENTALV->ARTCO2",
+      "gt": "VENTALV->ARTCO2",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('HISTORY', 'LVFAILURE')",
+      "direction": "HISTORY->LVFAILURE",
+      "gt": "LVFAILURE->HISTORY",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('LVFAILURE', 'STROKEVOLUME')",
+      "direction": "LVFAILURE->STROKEVOLUME",
+      "gt": "LVFAILURE->STROKEVOLUME",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('HYPOVOLEMIA', 'STROKEVOLUME')",
+      "direction": "HYPOVOLEMIA->STROKEVOLUME",
+      "gt": "HYPOVOLEMIA->STROKEVOLUME",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CO', 'STROKEVOLUME')",
+      "direction": "STROKEVOLUME->CO",
+      "gt": "STROKEVOLUME->CO",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ANAPHYLAXIS', 'TPR')",
+      "direction": "ANAPHYLAXIS->TPR",
+      "gt": "ANAPHYLAXIS->TPR",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('CATECHOL', 'TPR')",
+      "direction": "CATECHOL->TPR",
+      "gt": "TPR->CATECHOL",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('BP', 'TPR')",
+      "direction": "TPR->BP",
+      "gt": "TPR->BP",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('FIO2', 'PVSAT')",
+      "direction": "FIO2->PVSAT",
+      "gt": "FIO2->PVSAT",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PVSAT', 'SAO2')",
+      "direction": "PVSAT->SAO2",
+      "gt": "PVSAT->SAO2",
+      "raw_confidence": 0.85,
+      "calibrated_confidence": 0.9747589695266624,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('SAO2', 'SHUNT')",
+      "direction": "SHUNT->SAO2",
+      "gt": "SHUNT->SAO2",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PULMEMBOLUS', 'SHUNT')",
+      "direction": "PULMEMBOLUS->SHUNT",
+      "gt": "PULMEMBOLUS->SHUNT",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('KINKEDTUBE', 'PRESS')",
+      "direction": "KINKEDTUBE->PRESS",
+      "gt": "KINKEDTUBE->PRESS",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ARTCO2', 'EXPCO2')",
+      "direction": "ARTCO2->EXPCO2",
+      "gt": "ARTCO2->EXPCO2",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ARTCO2', 'CATECHOL')",
+      "direction": "ARTCO2->CATECHOL",
+      "gt": "ARTCO2->CATECHOL",
+      "raw_confidence": 0.18000000000000002,
+      "calibrated_confidence": 0.0,
+      "output": "False",
+      "correct": true
+    },
+    {
+      "edge_key": "('BP', 'CO')",
+      "direction": "CO->BP",
+      "gt": "CO->BP",
+      "raw_confidence": 0.8699999999999999,
+      "calibrated_confidence": 0.9747589695266624,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ERRLOWOUTPUT', 'HRBP')",
+      "direction": "ERRLOWOUTPUT->HRBP",
+      "gt": "ERRLOWOUTPUT->HRBP",
+      "raw_confidence": 0.43,
+      "calibrated_confidence": 0.0,
+      "output": "False",
+      "correct": true
+    },
+    {
+      "edge_key": "('ERRCAUTER', 'HREKG')",
+      "direction": "ERRCAUTER->HREKG",
+      "gt": "ERRCAUTER->HREKG",
+      "raw_confidence": 0.86,
+      "calibrated_confidence": 0.9747589695266624,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ERRCAUTER', 'HRSAT')",
+      "direction": "ERRCAUTER->HRSAT",
+      "gt": "ERRCAUTER->HRSAT",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PAP', 'PULMEMBOLUS')",
+      "direction": "PULMEMBOLUS->PAP",
+      "gt": "PULMEMBOLUS->PAP",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('MINVOLSET', 'VENTMACH')",
+      "direction": "MINVOLSET->VENTMACH",
+      "gt": "MINVOLSET->VENTMACH",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.9702540605405364,
+      "output": "True",
+      "correct": true
+    }
+  ],
+  "calibration_points": [
+    [
+      0.26,
+      0.0
+    ],
+    [
+      0.26,
+      0.0
+    ],
+    [
+      0.29000000000000004,
+      0.0
+    ],
+    [
+      0.41000000000000003,
+      0.0
+    ],
+    [
+      0.42000000000000004,
+      0.0
+    ],
+    [
+      0.43,
+      0.0
+    ],
+    [
+      0.43,
+      0.7236067972097325
+    ],
+    [
+      0.43,
+      0.7236067972097325
+    ],
+    [
+      0.43,
+      0.7236067972097325
+    ],
+    [
+      0.43,
+      0.7236067972097326
+    ],
+    [
+      0.43,
+      0.7236067972097326
+    ],
+    [
+      0.4622222222222222,
+      0.7236067972097326
+    ],
+    [
+      0.5,
+      0.7236067972097326
+    ],
+    [
+      0.53,
+      0.7236067972097326
+    ],
+    [
+      0.57,
+      0.7834576344727431
+    ],
+    [
+      0.57,
+      0.7834576344727431
+    ],
+    [
+      0.5900000000000001,
+      0.7834576344727431
+    ],
+    [
+      0.5900000000000001,
+      0.7834576344727431
+    ],
+    [
+      0.5900000000000001,
+      0.7834576344727431
+    ],
+    [
+      0.6000000000000001,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.7834576344727431
+    ],
+    [
+      0.61,
+      0.9702540605405364
+    ],
+    [
+      0.63,
+      0.9702540605405364
+    ],
+    [
+      0.63,
+      0.9702540605405365
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.63,
+      0.9702540605405366
+    ],
+    [
+      0.64,
+      0.9702540605405366
+    ],
+    [
+      0.65,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.6799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.7799999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.7899999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.7899999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.8099999999999999,
+      0.9702540605405366
+    ],
+    [
+      0.82,
+      0.9702540605405366
+    ],
+    [
+      0.83,
+      0.9702540605405366
+    ],
+    [
+      0.83,
+      0.9702540605405366
+    ],
+    [
+      0.83,
+      0.9702540605405366
+    ],
+    [
+      0.83,
+      0.9702540605405366
+    ],
+    [
+      0.83,
+      0.9702540605405366
+    ],
+    [
+      0.84,
+      0.9702540605405366
+    ],
+    [
+      0.84,
+      0.9702540605405366
+    ],
+    [
+      0.84,
+      0.9702540605405366
+    ],
+    [
+      0.84,
+      0.9702540605405366
+    ],
+    [
+      0.85,
+      0.9747589695266624
+    ],
+    [
+      0.85,
+      0.9747589695266624
+    ],
+    [
+      0.85,
+      0.9747589695266624
+    ],
+    [
+      0.86,
+      0.9747589695266624
+    ],
+    [
+      0.86,
+      0.9747589695266624
+    ],
+    [
+      0.86,
+      0.9747589695266624
+    ],
+    [
+      0.8699999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8699999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      0.9747589695266624
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ]
+  ]
+}

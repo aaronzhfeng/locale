@@ -1,0 +1,1131 @@
+{
+  "threshold": 0.5,
+  "n_total": 64,
+  "n_output": 57,
+  "n_abstained": 7,
+  "coverage": 0.890625,
+  "precision_output": 0.9122807017543859,
+  "false_orient_rate": 0.08771929824561403,
+  "recall_oriented": 0.9454545454545454,
+  "full_accuracy": 0.859375,
+  "selective_results": [
+    {
+      "edge_key": "('Cirrhosis', 'fibrosis')",
+      "direction": "fibrosis->Cirrhosis",
+      "gt": "fibrosis->Cirrhosis",
+      "raw_confidence": 0.82,
+      "calibrated_confidence": 0.9683724800003551,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'Steatosis')",
+      "direction": "Steatosis->Cirrhosis",
+      "gt": "Steatosis->Cirrhosis",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'edema')",
+      "direction": "Cirrhosis->edema",
+      "gt": "Cirrhosis->edema",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'inr')",
+      "direction": "Cirrhosis->inr",
+      "gt": "Cirrhosis->inr",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'alcohol')",
+      "direction": "Cirrhosis->alcohol",
+      "gt": "Cirrhosis->alcohol",
+      "raw_confidence": 0.43,
+      "calibrated_confidence": 0.43929141871898897,
+      "output": "False",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'spleen')",
+      "direction": "Cirrhosis->spleen",
+      "gt": "Cirrhosis->spleen",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'spiders')",
+      "direction": "Cirrhosis->spiders",
+      "gt": "Cirrhosis->spiders",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'edge')",
+      "direction": "Cirrhosis->edge",
+      "gt": "Cirrhosis->edge",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'irregular_liver')",
+      "direction": "Cirrhosis->irregular_liver",
+      "gt": "Cirrhosis->irregular_liver",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'palms')",
+      "direction": "Cirrhosis->palms",
+      "gt": "Cirrhosis->palms",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Cirrhosis', 'carcinoma')",
+      "direction": "Cirrhosis->carcinoma",
+      "gt": "Cirrhosis->carcinoma",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ChHepatitis', 'vh_amn')",
+      "direction": "ChHepatitis->vh_amn",
+      "gt": "vh_amn->ChHepatitis",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.8960286476127375,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('ChHepatitis', 'injections')",
+      "direction": "injections->ChHepatitis",
+      "gt": "injections->ChHepatitis",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ChHepatitis', 'fibrosis')",
+      "direction": "ChHepatitis->fibrosis",
+      "gt": "ChHepatitis->fibrosis",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ChHepatitis', 'phosphatase')",
+      "direction": "ChHepatitis->phosphatase",
+      "gt": "ChHepatitis->phosphatase",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ChHepatitis', 'alt')",
+      "direction": "ChHepatitis->alt",
+      "gt": "ChHepatitis->alt",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ChHepatitis', 'ast')",
+      "direction": "ChHepatitis->ast",
+      "gt": "ChHepatitis->ast",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ChHepatitis', 'hbsag')",
+      "direction": "ChHepatitis->hbsag",
+      "gt": "ChHepatitis->hbsag",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.8960286476127375,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ChHepatitis', 'hbeag')",
+      "direction": "ChHepatitis->hbeag",
+      "gt": "ChHepatitis->hbeag",
+      "raw_confidence": 0.43,
+      "calibrated_confidence": 0.43929141871898897,
+      "output": "False",
+      "correct": true
+    },
+    {
+      "edge_key": "('PBC', 'sex')",
+      "direction": "sex->PBC",
+      "gt": "sex->PBC",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PBC', 'age')",
+      "direction": "age->PBC",
+      "gt": "age->PBC",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PBC', 'bilirubin')",
+      "direction": "PBC->bilirubin",
+      "gt": "PBC->bilirubin",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PBC', 'ama')",
+      "direction": "PBC->ama",
+      "gt": "PBC->ama",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('ESR', 'PBC')",
+      "direction": "PBC->ESR",
+      "gt": "PBC->ESR",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PBC', 'ggtp')",
+      "direction": "PBC->ggtp",
+      "gt": "PBC->ggtp",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('PBC', 'cholesterol')",
+      "direction": "PBC->cholesterol",
+      "gt": "PBC->cholesterol",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('bilirubin', 'gallstones')",
+      "direction": "gallstones->bilirubin",
+      "gt": "gallstones->bilirubin",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Hyperbilirubinemia', 'bilirubin')",
+      "direction": "bilirubin->Hyperbilirubinemia",
+      "gt": "Hyperbilirubinemia->bilirubin",
+      "raw_confidence": 0.29000000000000004,
+      "calibrated_confidence": 0.43929141871898897,
+      "output": "False",
+      "correct": false
+    },
+    {
+      "edge_key": "('bilirubin', 'itching')",
+      "direction": "bilirubin->itching",
+      "gt": "bilirubin->itching",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('bilirubin', 'skin')",
+      "direction": "bilirubin->skin",
+      "gt": "bilirubin->skin",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('bilirubin', 'jaundice')",
+      "direction": "bilirubin->jaundice",
+      "gt": "bilirubin->jaundice",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Steatosis', 'alcoholism')",
+      "direction": "alcoholism->Steatosis",
+      "gt": "alcoholism->Steatosis",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Steatosis', 'triglycerides')",
+      "direction": "Steatosis->triglycerides",
+      "gt": "Steatosis->triglycerides",
+      "raw_confidence": 0.57,
+      "calibrated_confidence": 0.8687325358264376,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Steatosis', 'ast')",
+      "direction": "Steatosis->ast",
+      "gt": "Steatosis->ast",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Steatosis', 'cholesterol')",
+      "direction": "Steatosis->cholesterol",
+      "gt": "Steatosis->cholesterol",
+      "raw_confidence": 0.64,
+      "calibrated_confidence": 0.8960286476127375,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('hbsag', 'vh_amn')",
+      "direction": "vh_amn->hbsag",
+      "gt": "vh_amn->hbsag",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('hbsag_anti', 'vh_amn')",
+      "direction": "hbsag_anti->vh_amn",
+      "gt": "vh_amn->hbsag_anti",
+      "raw_confidence": 0.43,
+      "calibrated_confidence": 0.43929141871898897,
+      "output": "False",
+      "correct": false
+    },
+    {
+      "edge_key": "('hbc_anti', 'vh_amn')",
+      "direction": "vh_amn->hbc_anti",
+      "gt": "vh_amn->hbc_anti",
+      "raw_confidence": 0.43,
+      "calibrated_confidence": 0.43929141871898897,
+      "output": "False",
+      "correct": true
+    },
+    {
+      "edge_key": "('THepatitis', 'alcoholism')",
+      "direction": "alcoholism->THepatitis",
+      "gt": "alcoholism->THepatitis",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('THepatitis', 'phosphatase')",
+      "direction": "THepatitis->phosphatase",
+      "gt": "THepatitis->phosphatase",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('THepatitis', 'alt')",
+      "direction": "THepatitis->alt",
+      "gt": "THepatitis->alt",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('THepatitis', 'ast')",
+      "direction": "THepatitis->ast",
+      "gt": "THepatitis->ast",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('choledocholithotomy', 'gallstones')",
+      "direction": "gallstones->choledocholithotomy",
+      "gt": "gallstones->choledocholithotomy",
+      "raw_confidence": 0.84,
+      "calibrated_confidence": 0.9683724800003551,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('fat', 'gallstones')",
+      "direction": "gallstones->fat",
+      "gt": "gallstones->fat",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('gallstones', 'pressure_ruq')",
+      "direction": "gallstones->pressure_ruq",
+      "gt": "gallstones->pressure_ruq",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('hospital', 'injections')",
+      "direction": "injections->hospital",
+      "gt": "hospital->injections",
+      "raw_confidence": 0.42000000000000004,
+      "calibrated_confidence": 0.43929141871898897,
+      "output": "False",
+      "correct": false
+    },
+    {
+      "edge_key": "('injections', 'surgery')",
+      "direction": "injections->surgery",
+      "gt": "surgery->injections",
+      "raw_confidence": 0.83,
+      "calibrated_confidence": 0.9683724800003551,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('choledocholithotomy', 'injections')",
+      "direction": "injections->choledocholithotomy",
+      "gt": "choledocholithotomy->injections",
+      "raw_confidence": 0.41000000000000003,
+      "calibrated_confidence": 0.43929141871898897,
+      "output": "False",
+      "correct": false
+    },
+    {
+      "edge_key": "('Hyperbilirubinemia', 'age')",
+      "direction": "age->Hyperbilirubinemia",
+      "gt": "age->Hyperbilirubinemia",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('Hyperbilirubinemia', 'hepatomegaly')",
+      "direction": "hepatomegaly->Hyperbilirubinemia",
+      "gt": "Hyperbilirubinemia->hepatomegaly",
+      "raw_confidence": 0.5900000000000001,
+      "calibrated_confidence": 0.8687325358264376,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('Hyperbilirubinemia', 'ggtp')",
+      "direction": "Hyperbilirubinemia->ggtp",
+      "gt": "Hyperbilirubinemia->ggtp",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.8960286476127375,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('RHepatitis', 'ast')",
+      "direction": "RHepatitis->ast",
+      "gt": "RHepatitis->ast",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('age', 'spleen')",
+      "direction": "age->spleen",
+      "gt": "spleen->age",
+      "raw_confidence": 0.84,
+      "calibrated_confidence": 0.9683724800003551,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('RHepatitis', 'fatigue')",
+      "direction": "RHepatitis->fatigue",
+      "gt": "RHepatitis->fatigue",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('RHepatitis', 'phosphatase')",
+      "direction": "RHepatitis->phosphatase",
+      "gt": "RHepatitis->phosphatase",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('encephalopathy', 'urea')",
+      "direction": "urea->encephalopathy",
+      "gt": "encephalopathy->urea",
+      "raw_confidence": 0.61,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": false
+    },
+    {
+      "edge_key": "('density', 'encephalopathy')",
+      "direction": "encephalopathy->density",
+      "gt": "encephalopathy->density",
+      "raw_confidence": 0.61,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('consciousness', 'encephalopathy')",
+      "direction": "encephalopathy->consciousness",
+      "gt": "encephalopathy->consciousness",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('cholesterol', 'ggtp')",
+      "direction": "cholesterol->ggtp",
+      "gt": "cholesterol->ggtp",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.8960286476127375,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('hospital', 'transfusion')",
+      "direction": "hospital->transfusion",
+      "gt": "hospital->transfusion",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.8960286476127375,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('surgery', 'transfusion')",
+      "direction": "surgery->transfusion",
+      "gt": "surgery->transfusion",
+      "raw_confidence": 0.6799999999999999,
+      "calibrated_confidence": 0.8960286476127375,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('bleeding', 'inr')",
+      "direction": "inr->bleeding",
+      "gt": "inr->bleeding",
+      "raw_confidence": 0.8799999999999999,
+      "calibrated_confidence": 1.0,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('bleeding', 'platelet')",
+      "direction": "platelet->bleeding",
+      "gt": "platelet->bleeding",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    },
+    {
+      "edge_key": "('hepatalgia', 'hepatomegaly')",
+      "direction": "hepatomegaly->hepatalgia",
+      "gt": "hepatomegaly->hepatalgia",
+      "raw_confidence": 0.63,
+      "calibrated_confidence": 0.8687325358264377,
+      "output": "True",
+      "correct": true
+    }
+  ],
+  "calibration_points": [
+    [
+      0.18000000000000002,
+      0.43929141871898897
+    ],
+    [
+      0.26,
+      0.43929141871898897
+    ],
+    [
+      0.26,
+      0.43929141871898897
+    ],
+    [
+      0.26,
+      0.43929141871898897
+    ],
+    [
+      0.43,
+      0.43929141871898897
+    ],
+    [
+      0.43,
+      0.7236067972097328
+    ],
+    [
+      0.43,
+      0.7236067972097328
+    ],
+    [
+      0.4622222222222222,
+      0.7236067972097328
+    ],
+    [
+      0.5,
+      0.7236067972097328
+    ],
+    [
+      0.53,
+      0.7236067972097328
+    ],
+    [
+      0.54,
+      0.7236067972097328
+    ],
+    [
+      0.57,
+      0.8687325358264376
+    ],
+    [
+      0.5900000000000001,
+      0.8687325358264376
+    ],
+    [
+      0.5900000000000001,
+      0.8687325358264377
+    ],
+    [
+      0.6000000000000001,
+      0.8687325358264377
+    ],
+    [
+      0.61,
+      0.8687325358264377
+    ],
+    [
+      0.61,
+      0.8687325358264377
+    ],
+    [
+      0.61,
+      0.8687325358264377
+    ],
+    [
+      0.61,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8687325358264377
+    ],
+    [
+      0.63,
+      0.8960286476127374
+    ],
+    [
+      0.63,
+      0.8960286476127374
+    ],
+    [
+      0.63,
+      0.8960286476127374
+    ],
+    [
+      0.63,
+      0.8960286476127374
+    ],
+    [
+      0.63,
+      0.8960286476127374
+    ],
+    [
+      0.65,
+      0.8960286476127375
+    ],
+    [
+      0.66,
+      0.8960286476127375
+    ],
+    [
+      0.6799999999999999,
+      0.8960286476127375
+    ],
+    [
+      0.6799999999999999,
+      0.8960286476127376
+    ],
+    [
+      0.6799999999999999,
+      0.8960286476127376
+    ],
+    [
+      0.6799999999999999,
+      0.968372480000355
+    ],
+    [
+      0.6799999999999999,
+      0.968372480000355
+    ],
+    [
+      0.6799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.6799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.7000000000000001,
+      0.9683724800003551
+    ],
+    [
+      0.7799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.7899999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.7899999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8099999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.83,
+      0.9683724800003551
+    ],
+    [
+      0.83,
+      0.9683724800003551
+    ],
+    [
+      0.83,
+      0.9683724800003551
+    ],
+    [
+      0.83,
+      0.9683724800003551
+    ],
+    [
+      0.84,
+      0.9683724800003551
+    ],
+    [
+      0.84,
+      0.9683724800003551
+    ],
+    [
+      0.85,
+      0.9683724800003551
+    ],
+    [
+      0.85,
+      0.9683724800003551
+    ],
+    [
+      0.85,
+      0.9683724800003551
+    ],
+    [
+      0.85,
+      0.9683724800003551
+    ],
+    [
+      0.86,
+      0.9683724800003551
+    ],
+    [
+      0.86,
+      0.9683724800003551
+    ],
+    [
+      0.86,
+      0.9683724800003551
+    ],
+    [
+      0.86,
+      0.9683724800003551
+    ],
+    [
+      0.8699999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8699999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8699999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9683724800003551
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255746
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255746
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255746
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255746
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255746
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255746
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255746
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      0.9719243346255747
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ],
+    [
+      0.8799999999999999,
+      1.0
+    ]
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "metadata": {
+    "phase": 3,
+    "method": "dawid_skene",
+    "source": "ego",
+    "network": "child",
+    "n_edges": 25,
+    "n_annotators": 14,
+    "n_em_classes": 3
+  },
+  "evaluation": {
+    "ds_accuracy": 0.88,
+    "ds_correct": 22,
+    "mv_accuracy": 0.84,
+    "mv_correct": 21,
+    "total": 25,
+    "delta_pp": 4.0,
+    "by_confidence": {
+      "high": {
+        "correct": 19,
+        "total": 21,
+        "accuracy": 0.9047619047619048
+      },
+      "medium": {
+        "correct": 3,
+        "total": 4,
+        "accuracy": 0.75
+      },
+      "low": {
+        "correct": 0,
+        "total": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "class_priors": [
+    0.6190630931367769,
+    0.3809369068632232
+  ],
+  "top_annotators": [
+    {
+      "annotator": "LungParench",
+      "accuracy_per_class": [
+        0.999998999997395,
+        0.9999997500000917
+      ],
+      "mean_accuracy": 0.9999993749987434
+    },
+    {
+      "annotator": "ChestXray",
+      "accuracy_per_class": [
+        0.9999989999983052,
+        0.9999992778394593
+      ],
+      "mean_accuracy": 0.9999991389188823
+    },
+    {
+      "annotator": "LungFlow",
+      "accuracy_per_class": [
+        0.9999990000003748,
+        0.9999990000014657
+      ],
+      "mean_accuracy": 0.9999990000009202
+    },
+    {
+      "annotator": "CardiacMixing",
+      "accuracy_per_class": [
+        0.9999994999392028,
+        0.9999974033995213
+      ],
+      "mean_accuracy": 0.9999984516693621
+    },
+    {
+      "annotator": "CO2",
+      "accuracy_per_class": [
+        0.9999989999987784,
+        0.999997403579565
+      ],
+      "mean_accuracy": 0.9999982017891718
+    },
+    {
+      "annotator": "Disease",
+      "accuracy_per_class": [
+        0.9999024147240406,
+        0.9999991322649078
+      ],
+      "mean_accuracy": 0.9999507734944741
+    },
+    {
+      "annotator": "HypoxiaInO2",
+      "accuracy_per_class": [
+        0.9999996666543494,
+        0.9998877860647727
+      ],
+      "mean_accuracy": 0.999943726359561
+    },
+    {
+      "annotator": "Grunting",
+      "accuracy_per_class": [
+        0.9999994999722859,
+        0.999887787478164
+      ],
+      "mean_accuracy": 0.9999436437252249
+    },
+    {
+      "annotator": "Sick",
+      "accuracy_per_class": [
+        0.999999618178542,
+        2.6248176034019784e-06
+      ],
+      "mean_accuracy": 0.5000011214980727
+    },
+    {
+      "annotator": "DuctFlow",
+      "accuracy_per_class": [
+        0.9999993823657205,
+        2.625203282110232e-06
+      ],
+      "mean_accuracy": 0.5000010037845013
+    }
+  ],
+  "worst_annotators": [
+    {
+      "annotator": "DuctFlow",
+      "accuracy_per_class": [
+        0.9999993823657205,
+        2.625203282110232e-06
+      ],
+      "mean_accuracy": 0.5000010037845013
+    },
+    {
+      "annotator": "LVH",
+      "accuracy_per_class": [
+        0.9999993823656426,
+        2.6252018748522296e-06
+      ],
+      "mean_accuracy": 0.5000010037837587
+    },
+    {
+      "annotator": "LowerBodyO2",
+      "accuracy_per_class": [
+        0.9999993823447086,
+        2.624823749425223e-06
+      ],
+      "mean_accuracy": 0.500001003584229
+    },
+    {
+      "annotator": "HypDistrib",
+      "accuracy_per_class": [
+        0.9999995532043597,
+        1.312604177172221e-06
+      ],
+      "mean_accuracy": 0.5000004329042684
+    },
+    {
+      "annotator": "Age",
+      "accuracy_per_class": [
+        0.999998385338305,
+        7.242811986486373e-07
+      ],
+      "mean_accuracy": 0.49999955480975183
+    }
+  ],
+  "reconciled": {
+    "('BirthAsphyxia', 'Disease')": {
+      "direction": "Disease->BirthAsphyxia",
+      "confidence": 0.9998414385291173,
+      "ds_posterior": [
+        0.00015856147088259953,
+        0.9998414385291173
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9996828770582348,
+        "ds_entropy": 0.002230206852917506,
+        "max_degree": 8,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.00015856147088259953,
+          0.9998414385291173
+        ]
+      }
+    },
+    "('Age', 'Disease')": {
+      "direction": "Disease->Age",
+      "confidence": 0.9998414386702752,
+      "ds_posterior": [
+        0.00015856132972484187,
+        0.9998414386702752
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9996828773405504,
+        "ds_entropy": 0.0022302050711617448,
+        "max_degree": 8,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.00015856132972484187,
+          0.9998414386702752
+        ]
+      }
+    },
+    "('Disease', 'LVH')": {
+      "direction": "Disease->LVH",
+      "confidence": 0.9999994659934576,
+      "ds_posterior": [
+        0.9999994659934576,
+        5.340065424833856e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999989319869151,
+        "ds_entropy": 1.1897310065987081e-05,
+        "max_degree": 8,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999994659934576,
+          5.340065424833856e-07
+        ]
+      }
+    },
+    "('Disease', 'DuctFlow')": {
+      "direction": "Disease->DuctFlow",
+      "confidence": 0.9999994659934576,
+      "ds_posterior": [
+        0.9999994659934576,
+        5.340065424825926e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999989319869151,
+        "ds_entropy": 1.1897310065971701e-05,
+        "max_degree": 8,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999994659934576,
+          5.340065424825926e-07
+        ]
+      }
+    },
+    "('CardiacMixing', 'Disease')": {
+      "direction": "Disease->CardiacMixing",
+      "confidence": 0.9999999999206968,
+      "ds_posterior": [
+        7.930315584486982e-11,
+        0.9999999999206968
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999998413936,
+        "ds_entropy": 2.775335047934801e-09,
+        "max_degree": 8,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          7.930315584486982e-11,
+          0.9999999999206968
+        ]
+      }
+    },
+    "('Disease', 'LungParench')": {
+      "direction": "Disease->LungParench",
+      "confidence": 0.9999999999998666,
+      "ds_posterior": [
+        0.9999999999998666,
+        1.3350205950890732e-13
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999997331,
+        "ds_entropy": 5.902169146286062e-12,
+        "max_degree": 8,
+        "min_degree": 5,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999998666,
+          1.3350205950890732e-13
+        ]
+      }
+    },
+    "('Disease', 'LungFlow')": {
+      "direction": "Disease->LungFlow",
+      "confidence": 0.999999999999466,
+      "ds_posterior": [
+        0.999999999999466,
+        5.340076509982091e-13
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999999998932,
+        "ds_entropy": 2.2540957366177875e-11,
+        "max_degree": 8,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.999999999999466,
+          5.340076509982091e-13
+        ]
+      }
+    },
+    "('Disease', 'Sick')": {
+      "direction": "Disease->Sick",
+      "confidence": 0.9999994659935832,
+      "ds_posterior": [
+        0.9999994659935832,
+        5.340064167629765e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999989319871665,
+        "ds_entropy": 1.1897307446458618e-05,
+        "max_degree": 8,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999994659935832,
+          5.340064167629765e-07
+        ]
+      }
+    },
+    "('HypoxiaInO2', 'LungParench')": {
+      "direction": "LungParench->HypoxiaInO2",
+      "confidence": 0.9999999999994582,
+      "ds_posterior": [
+        5.417845695335009e-13,
+        0.9999999999994582
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999989164,
+        "ds_entropy": 2.2857919340458577e-11,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          5.417845695335009e-13,
+          0.9999999999994582
+        ]
+      }
+    },
+    "('CO2', 'LungParench')": {
+      "direction": "LungParench->CO2",
+      "confidence": 0.9999999999983749,
+      "ds_posterior": [
+        1.6251174749141455e-12,
+        0.9999999999983749
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999967497,
+        "ds_entropy": 6.598840231437973e-11,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.6251174749141455e-12,
+          0.9999999999983749
+        ]
+      }
+    },
+    "('ChestXray', 'LungParench')": {
+      "direction": "LungParench->ChestXray",
+      "confidence": 0.9999999999983749,
+      "ds_posterior": [
+        1.6251151978732317e-12,
+        0.9999999999983749
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999967497,
+        "ds_entropy": 6.598831642462621e-11,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.6251151978732317e-12,
+          0.9999999999983749
+        ]
+      }
+    },
+    "('Grunting', 'LungParench')": {
+      "direction": "LungParench->Grunting",
+      "confidence": 0.9999999999991873,
+      "ds_posterior": [
+        8.12691867881736e-13,
+        0.9999999999991873
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999983746,
+        "ds_entropy": 3.3812074846714605e-11,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          8.12691867881736e-13,
+          0.9999999999991873
+        ]
+      }
+    },
+    "('HypoxiaInO2', 'LowerBodyO2')": {
+      "direction": "HypoxiaInO2->LowerBodyO2",
+      "confidence": 0.9999309546847801,
+      "ds_posterior": [
+        0.9999309546847801,
+        6.90453152200359e-05
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9998619093695601,
+        "ds_entropy": 0.001053958935482306,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999309546847801,
+          6.90453152200359e-05
+        ]
+      }
+    },
+    "('HypoxiaInO2', 'RUQO2')": {
+      "direction": "HypoxiaInO2->RUQO2",
+      "confidence": 0.9999309545462036,
+      "ds_posterior": [
+        0.9999309545462036,
+        6.904545379640985e-05
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9998619090924072,
+        "ds_entropy": 0.0010539608508845341,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9999309545462036,
+          6.904545379640985e-05
+        ]
+      }
+    },
+    "('CardiacMixing', 'HypoxiaInO2')": {
+      "direction": "CardiacMixing->HypoxiaInO2",
+      "confidence": 0.9999999998207041,
+      "ds_posterior": [
+        0.9999999998207041,
+        1.7929592757039268e-10
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999996414082,
+        "ds_entropy": 6.0637224939154445e-09,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999998207041,
+          1.7929592757039268e-10
+        ]
+      }
+    },
+    "('HypDistrib', 'LowerBodyO2')": {
+      "direction": "HypDistrib->LowerBodyO2",
+      "confidence": 0.6190637706543611,
+      "ds_posterior": [
+        0.6190637706543611,
+        0.380936229345639
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.23812754130872216,
+        "ds_entropy": 0.9587005689522933,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6190637706543611,
+          0.380936229345639
+        ]
+      }
+    },
+    "('DuctFlow', 'HypDistrib')": {
+      "direction": "DuctFlow->HypDistrib",
+      "confidence": 0.6190637707488192,
+      "ds_posterior": [
+        0.6190637707488192,
+        0.3809362292511808
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.23812754149763843,
+        "ds_entropy": 0.9587005688861218,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6190637707488192,
+          0.3809362292511808
+        ]
+      }
+    },
+    "('CardiacMixing', 'HypDistrib')": {
+      "direction": "CardiacMixing->HypDistrib",
+      "confidence": 0.9999984021999963,
+      "ds_posterior": [
+        0.9999984021999963,
+        1.5978000036888873e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999968043999926,
+        "ds_entropy": 3.307154508196576e-05,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999984021999963,
+          1.5978000036888873e-06
+        ]
+      }
+    },
+    "('ChestXray', 'XrayReport')": {
+      "direction": "ChestXray->XrayReport",
+      "confidence": 0.999999555622426,
+      "ds_posterior": [
+        0.999999555622426,
+        4.4437757398144574e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999991112448521,
+        "ds_entropy": 1.0018228166579063e-05,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.999999555622426,
+          4.4437757398144574e-07
+        ]
+      }
+    },
+    "('ChestXray', 'LungFlow')": {
+      "direction": "LungFlow->ChestXray",
+      "confidence": 0.9999999999983749,
+      "ds_posterior": [
+        1.6251115742863027e-12,
+        0.9999999999983749
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999967497,
+        "ds_entropy": 6.598817974328338e-11,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.6251115742863027e-12,
+          0.9999999999983749
+        ]
+      }
+    },
+    "('Grunting', 'GruntingReport')": {
+      "direction": "Grunting->GruntingReport",
+      "confidence": 0.9999309554042984,
+      "ds_posterior": [
+        0.9999309554042984,
+        6.904459570169878e-05
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9998619108085968,
+        "ds_entropy": 0.0010539489902963671,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9999309554042984,
+          6.904459570169878e-05
+        ]
+      }
+    },
+    "('Grunting', 'Sick')": {
+      "direction": "Grunting->Sick",
+      "confidence": 0.9999309555591545,
+      "ds_posterior": [
+        0.9999309555591545,
+        6.904444084557028e-05
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9998619111183089,
+        "ds_entropy": 0.0010539468498729546,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999309555591545,
+          6.904444084557028e-05
+        ]
+      }
+    },
+    "('Age', 'Sick')": {
+      "direction": "Age->Sick",
+      "confidence": 0.6190634121164806,
+      "ds_posterior": [
+        0.6190634121164806,
+        0.38093658788351936
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.23812682423296128,
+        "ds_entropy": 0.958700820121499,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6190634121164806,
+          0.38093658788351936
+        ]
+      }
+    },
+    "('CO2', 'CO2Report')": {
+      "direction": "CO2->CO2Report",
+      "confidence": 0.9999984023086028,
+      "ds_posterior": [
+        0.9999984023086028,
+        1.597691397228823e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999968046172056,
+        "ds_entropy": 3.306945380702712e-05,
+        "max_degree": 2,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9999984023086028,
+          1.597691397228823e-06
+        ]
+      }
+    },
+    "('LVH', 'LVHreport')": {
+      "direction": "LVH->LVHreport",
+      "confidence": 0.6190635665699931,
+      "ds_posterior": [
+        0.6190635665699931,
+        0.38093643343000694
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.23812713313998612,
+        "ds_entropy": 0.9587007119211287,
+        "max_degree": 2,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6190635665699931,
+          0.38093643343000694
+        ]
+      }
+    }
+  }
+}

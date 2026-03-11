@@ -1,0 +1,1761 @@
+{
+  "metadata": {
+    "network": "hepar2",
+    "n_samples": 10000,
+    "alpha": 0.05,
+    "k_passes": 5,
+    "add_threshold": 0.6,
+    "enable_thinking": false,
+    "n_candidates": 172,
+    "n_queries": 860,
+    "elapsed_seconds": 1227.2675771713257
+  },
+  "original_skeleton": {
+    "n_edges": 67,
+    "coverage": 0.5284552845528455,
+    "precision": 0.9701492537313433,
+    "false_positives": 2
+  },
+  "refinement": {
+    "n_candidates_queried": 172,
+    "n_gt_missing": 58,
+    "n_added": 9,
+    "tp_added": 0,
+    "fp_added": 9,
+    "recall_missing": 0.0,
+    "add_precision": 0.0
+  },
+  "refined_skeleton": {
+    "n_edges": 76,
+    "coverage": 0.5284552845528455,
+    "precision": 0.8552631578947368,
+    "false_positives": 11
+  },
+  "improvement": {
+    "coverage_delta": 0.0,
+    "precision_delta": -0.11488609583660647,
+    "fp_delta": 9
+  },
+  "edge_details": {
+    "Cirrhosis--cholesterol": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "injections--vh_amn": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ama--sex": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--Cirrhosis": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--fibrosis": {
+      "votes": {
+        "yes": 3,
+        "no": 1,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.6,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "phosphatase--vh_amn": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edema--spiders": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbsag--phosphatase": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--irregular_liver": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "choledocholithotomy--hospital": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--spleen": {
+      "votes": {
+        "yes": 2,
+        "no": 3,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "gallstones--skin": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bilirubin--choledocholithotomy": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "itching--skin": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--gallstones": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "age--hepatomegaly": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PBC--spleen": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "choledocholithotomy--fat": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--hospital": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "density--urea": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcoholism--ast": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bilirubin--cholesterol": {
+      "votes": {
+        "yes": 2,
+        "no": 3,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ama--bilirubin": {
+      "votes": {
+        "yes": 2,
+        "no": 3,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "choledocholithotomy--surgery": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--ggtp": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "bilirubin--pressure_ruq": {
+      "votes": {
+        "yes": 2,
+        "no": 2,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--skin": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edema--spleen": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--irregular_liver": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Cirrhosis--ast": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "inr--palms": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edema--fibrosis": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--inr": {
+      "votes": {
+        "yes": 3,
+        "no": 0,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.6,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "alt--ast": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--carcinoma": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--fatigue": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--hbsag": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "palms--spiders": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alt--fibrosis": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--hbsag_anti": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "hbeag--phosphatase": {
+      "votes": {
+        "yes": 3,
+        "no": 0,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.6,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "ESR--bilirubin": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--spiders": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "consciousness--urea": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbeag--vh_amn": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "edge--spiders": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ama--ggtp": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--carcinoma": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "gallstones--injections": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--palms": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcoholism--cholesterol": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--phosphatase": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbc_anti--hbsag_anti": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--fibrosis": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Cirrhosis--alcoholism": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PBC--jaundice": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "irregular_liver--spleen": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--surgery": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--jaundice": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--spleen": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--hbeag": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PBC--gallstones": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "irregular_liver--spiders": {
+      "votes": {
+        "yes": 1,
+        "no": 4,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "RHepatitis--Steatosis": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edema--edge": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ESR--ama": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--edema": {
+      "votes": {
+        "yes": 2,
+        "no": 2,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--THepatitis": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--edema": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edge--irregular_liver": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ESR--ggtp": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "itching--jaundice": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--inr": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--vh_amn": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--spleen": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--PBC": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--edge": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Cirrhosis--age": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alt--phosphatase": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "jaundice--skin": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--inr": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbeag--injections": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alt--hbsag": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alt--vh_amn": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alt--injections": {
+      "votes": {
+        "yes": 3,
+        "no": 1,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.6,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "Steatosis--alcohol": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--edge": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "RHepatitis--THepatitis": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--cholesterol": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "age--bilirubin": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--THepatitis": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "choledocholithotomy--pressure_ruq": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbsag--injections": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--phosphatase": {
+      "votes": {
+        "yes": 1,
+        "no": 4,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ama--cholesterol": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edge--fibrosis": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ESR--sex": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "gallstones--itching": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--choledocholithotomy": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcoholism--alt": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edge--inr": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ESR--age": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--injections": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--hbsag": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbeag--hbsag": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bilirubin--fat": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "spiders--spleen": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edema--palms": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "cholesterol--triglycerides": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edge--spleen": {
+      "votes": {
+        "yes": 2,
+        "no": 0,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PBC--skin": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--inr": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--palms": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edema--irregular_liver": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--fibrosis": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Steatosis--irregular_liver": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edge--palms": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--spleen": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--palms": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Cirrhosis--triglycerides": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--irregular_liver": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "injections--transfusion": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--injections": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ggtp--hepatomegaly": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--hbc_anti": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "injections--phosphatase": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ast--triglycerides": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "age--ggtp": {
+      "votes": {
+        "yes": 2,
+        "no": 0,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "age--cholesterol": {
+      "votes": {
+        "yes": 3,
+        "no": 1,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.6,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "alcoholism--phosphatase": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "gallstones--jaundice": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--vh_amn": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbsag--hbsag_anti": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": true
+    },
+    "fat--pressure_ruq": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--spiders": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--palms": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "consciousness--density": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--RHepatitis": {
+      "votes": {
+        "yes": 5,
+        "no": 0,
+        "uncertain": 0
+      },
+      "yes_fraction": 1.0,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "PBC--Steatosis": {
+      "votes": {
+        "yes": 3,
+        "no": 1,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.6,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--cholesterol": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--spiders": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "inr--platelet": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "inr--spleen": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--fibrosis": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--spiders": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Cirrhosis--bleeding": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hospital--surgery": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--spleen": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcohol--edema": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "age--sex": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bilirubin--hepatomegaly": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fatigue--phosphatase": {
+      "votes": {
+        "yes": 0,
+        "no": 0,
+        "uncertain": 5
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "PBC--itching": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--hepatalgia": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "edema--inr": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "alcoholism--triglycerides": {
+      "votes": {
+        "yes": 3,
+        "no": 1,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.6,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "alt--hbeag": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bilirubin--ggtp": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChHepatitis--Steatosis": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "fibrosis--hbeag": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "age--ama": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "inr--spiders": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "bilirubin--sex": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "irregular_liver--palms": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "cholesterol--sex": {
+      "votes": {
+        "yes": 4,
+        "no": 1,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.8,
+      "add": true,
+      "is_gt_missing": false
+    },
+    "ESR--cholesterol": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Hyperbilirubinemia--itching": {
+      "votes": {
+        "yes": 1,
+        "no": 1,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "inr--irregular_liver": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "palms--spleen": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "carcinoma--edge": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ggtp--sex": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "hbc_anti--hbsag": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    }
+  }
+}

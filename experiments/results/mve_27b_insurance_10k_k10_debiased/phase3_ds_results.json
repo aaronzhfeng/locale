@@ -1,0 +1,1069 @@
+{
+  "metadata": {
+    "phase": 3,
+    "method": "dawid_skene",
+    "source": "ego",
+    "network": "insurance",
+    "n_edges": 43,
+    "n_annotators": 23,
+    "n_em_classes": 3
+  },
+  "evaluation": {
+    "ds_accuracy": 0.8604651162790697,
+    "ds_correct": 37,
+    "mv_accuracy": 0.9767441860465116,
+    "mv_correct": 42,
+    "total": 43,
+    "delta_pp": -11.6,
+    "by_confidence": {
+      "high": {
+        "correct": 28,
+        "total": 32,
+        "accuracy": 0.875
+      },
+      "medium": {
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "low": {
+        "correct": 0,
+        "total": 1,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "class_priors": [
+    0.41538478930713413,
+    0.5846152106928658
+  ],
+  "top_annotators": [
+    {
+      "annotator": "RuggedAuto",
+      "accuracy_per_class": [
+        0.9999988561894388,
+        0.9999995000003058
+      ],
+      "mean_accuracy": 0.9999991780948723
+    },
+    {
+      "annotator": "SeniorTrain",
+      "accuracy_per_class": [
+        0.9999994707491718,
+        0.999998242795059
+      ],
+      "mean_accuracy": 0.9999988567721154
+    },
+    {
+      "annotator": "ThisCarDam",
+      "accuracy_per_class": [
+        0.9999990000000822,
+        0.9999973778241543
+      ],
+      "mean_accuracy": 0.9999981889121183
+    },
+    {
+      "annotator": "OtherCarCost",
+      "accuracy_per_class": [
+        0.9999989999996701,
+        0.9999973778241543
+      ],
+      "mean_accuracy": 0.9999981889119123
+    },
+    {
+      "annotator": "CarValue",
+      "accuracy_per_class": [
+        0.9999738469131357,
+        0.9999996410214189
+      ],
+      "mean_accuracy": 0.9999867439672774
+    },
+    {
+      "annotator": "RiskAversion",
+      "accuracy_per_class": [
+        0.9999960836941055,
+        0.9998134216649716
+      ],
+      "mean_accuracy": 0.9999047526795386
+    },
+    {
+      "annotator": "GoodStudent",
+      "accuracy_per_class": [
+        0.9999987860158188,
+        0.850146091154051
+      ],
+      "mean_accuracy": 0.9250724385849349
+    },
+    {
+      "annotator": "ThisCarCost",
+      "accuracy_per_class": [
+        0.9999996458543455,
+        0.8501196166914283
+      ],
+      "mean_accuracy": 0.9250596312728869
+    },
+    {
+      "annotator": "DrivingSkill",
+      "accuracy_per_class": [
+        0.8334259472152559,
+        0.9999991425145108
+      ],
+      "mean_accuracy": 0.9167125448648834
+    },
+    {
+      "annotator": "VehicleYear",
+      "accuracy_per_class": [
+        0.81673021762696,
+        0.9999997351418943
+      ],
+      "mean_accuracy": 0.9083649763844271
+    }
+  ],
+  "worst_annotators": [
+    {
+      "annotator": "HomeBase",
+      "accuracy_per_class": [
+        2.9813933048358426e-06,
+        0.9999993992515949
+      ],
+      "mean_accuracy": 0.5000011903224498
+    },
+    {
+      "annotator": "Airbag",
+      "accuracy_per_class": [
+        1.0717537550343966e-06,
+        0.9999995161962618
+      ],
+      "mean_accuracy": 0.5000002939750084
+    },
+    {
+      "annotator": "Age",
+      "accuracy_per_class": [
+        0.9999997813362141,
+        7.008823325823924e-07
+      ],
+      "mean_accuracy": 0.5000002411092733
+    },
+    {
+      "annotator": "MedCost",
+      "accuracy_per_class": [
+        0.999999396061011,
+        7.439327043501407e-07
+      ],
+      "mean_accuracy": 0.5000000699968576
+    },
+    {
+      "annotator": "PropCost",
+      "accuracy_per_class": [
+        9.999989814443916e-07,
+        1.2737846670427137e-06
+      ],
+      "mean_accuracy": 1.1368918242435525e-06
+    }
+  ],
+  "reconciled": {
+    "('Age', 'SocioEcon')": {
+      "direction": "SocioEcon->Age",
+      "confidence": 0.6635295530940049,
+      "ds_posterior": [
+        0.33647044690599515,
+        0.6635295530940049
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.3270591061880097,
+        "ds_entropy": 0.9214010513068758,
+        "max_degree": 7,
+        "min_degree": 6,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.33647044690599515,
+          0.6635295530940049
+        ]
+      }
+    },
+    "('RiskAversion', 'SocioEcon')": {
+      "direction": "RiskAversion->SocioEcon",
+      "confidence": 0.9996321957827602,
+      "ds_posterior": [
+        0.9996321957827602,
+        0.0003678042172398693
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9992643915655203,
+        "ds_entropy": 0.004726727046741125,
+        "max_degree": 7,
+        "min_degree": 7,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9996321957827602,
+          0.0003678042172398693
+        ]
+      }
+    },
+    "('SocioEcon', 'VehicleYear')": {
+      "direction": "SocioEcon->VehicleYear",
+      "confidence": 0.9999999999995455,
+      "ds_posterior": [
+        0.9999999999995455,
+        4.544941577302593e-13
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999999999091,
+        "ds_entropy": 1.929036705107335e-11,
+        "max_degree": 7,
+        "min_degree": 5,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999995455,
+          4.544941577302593e-13
+        ]
+      }
+    },
+    "('MakeModel', 'SocioEcon')": {
+      "direction": "SocioEcon->MakeModel",
+      "confidence": 0.8472374031585246,
+      "ds_posterior": [
+        0.1527625968414754,
+        0.8472374031585246
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.6944748063170492,
+        "ds_entropy": 0.6167107418073013,
+        "max_degree": 7,
+        "min_degree": 5,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.1527625968414754,
+          0.8472374031585246
+        ]
+      }
+    },
+    "('HomeBase', 'SocioEcon')": {
+      "direction": "SocioEcon->HomeBase",
+      "confidence": 0.6635301922521186,
+      "ds_posterior": [
+        0.3364698077478815,
+        0.6635301922521186
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.32706038450423713,
+        "ds_entropy": 0.9214004251345411,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.3364698077478815,
+          0.6635301922521186
+        ]
+      }
+    },
+    "('AntiTheft', 'SocioEcon')": {
+      "direction": "SocioEcon->AntiTheft",
+      "confidence": 0.6635301922521186,
+      "ds_posterior": [
+        0.3364698077478815,
+        0.6635301922521186
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.32706038450423713,
+        "ds_entropy": 0.9214004251345411,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.3364698077478815,
+          0.6635301922521186
+        ]
+      }
+    },
+    "('OtherCar', 'SocioEcon')": {
+      "direction": "SocioEcon->OtherCar",
+      "confidence": 0.6635296607532353,
+      "ds_posterior": [
+        0.3364703392467648,
+        0.6635296607532353
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.3270593215064705,
+        "ds_entropy": 0.9214009458351433,
+        "max_degree": 7,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.3364703392467648,
+          0.6635296607532353
+        ]
+      }
+    },
+    "('Age', 'RiskAversion')": {
+      "direction": "Age->RiskAversion",
+      "confidence": 0.9997374764922116,
+      "ds_posterior": [
+        0.9997374764922116,
+        0.0002625235077884144
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9994749529844231,
+        "ds_entropy": 0.003501478538688391,
+        "max_degree": 7,
+        "min_degree": 6,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9997374764922116,
+          0.0002625235077884144
+        ]
+      }
+    },
+    "('DrivQuality', 'RiskAversion')": {
+      "direction": "RiskAversion->DrivQuality",
+      "confidence": 0.999997216874966,
+      "ds_posterior": [
+        2.7831250339223924e-06,
+        0.999997216874966
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999944337499321,
+        "ds_entropy": 5.5377385879025336e-05,
+        "max_degree": 7,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.7831250339223924e-06,
+          0.999997216874966
+        ]
+      }
+    },
+    "('RiskAversion', 'SeniorTrain')": {
+      "direction": "RiskAversion->SeniorTrain",
+      "confidence": 0.9999999995385709,
+      "ds_posterior": [
+        0.9999999995385709,
+        4.61429207411128e-10
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999990771417,
+        "ds_entropy": 1.497608470001844e-08,
+        "max_degree": 7,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999995385709,
+          4.61429207411128e-10
+        ]
+      }
+    },
+    "('HomeBase', 'RiskAversion')": {
+      "direction": "RiskAversion->HomeBase",
+      "confidence": 0.9999972168547028,
+      "ds_posterior": [
+        2.7831452972579664e-06,
+        0.9999972168547028
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999944337094056,
+        "ds_entropy": 5.537775983577202e-05,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.7831452972579664e-06,
+          0.9999972168547028
+        ]
+      }
+    },
+    "('AntiTheft', 'RiskAversion')": {
+      "direction": "RiskAversion->AntiTheft",
+      "confidence": 0.9999972168547028,
+      "ds_posterior": [
+        2.7831452972579664e-06,
+        0.9999972168547028
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999944337094056,
+        "ds_entropy": 5.537775983577202e-05,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.7831452972579664e-06,
+          0.9999972168547028
+        ]
+      }
+    },
+    "('DrivHist', 'RiskAversion')": {
+      "direction": "RiskAversion->DrivHist",
+      "confidence": 0.9999972168744611,
+      "ds_posterior": [
+        2.783125538826433e-06,
+        0.9999972168744611
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999944337489223,
+        "ds_entropy": 5.5377395196994685e-05,
+        "max_degree": 7,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.783125538826433e-06,
+          0.9999972168744611
+        ]
+      }
+    },
+    "('Age', 'GoodStudent')": {
+      "direction": "Age->GoodStudent",
+      "confidence": 0.8258282716392668,
+      "ds_posterior": [
+        0.8258282716392668,
+        0.17417172836073325
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.6516565432785335,
+        "ds_entropy": 0.6671595269991231,
+        "max_degree": 6,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8258282716392668,
+          0.17417172836073325
+        ]
+      }
+    },
+    "('Age', 'DrivingSkill')": {
+      "direction": "Age->DrivingSkill",
+      "confidence": 0.9999985519670471,
+      "ds_posterior": [
+        0.9999985519670471,
+        1.4480329527507383e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999971039340944,
+        "ds_entropy": 3.017725019561522e-05,
+        "max_degree": 6,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999985519670471,
+          1.4480329527507383e-06
+        ]
+      }
+    },
+    "('Age', 'SeniorTrain')": {
+      "direction": "Age->SeniorTrain",
+      "confidence": 0.9999975269045209,
+      "ds_posterior": [
+        0.9999975269045209,
+        2.473095479137232e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999950538090417,
+        "ds_entropy": 4.96299413027256e-05,
+        "max_degree": 6,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999975269045209,
+          2.473095479137232e-06
+        ]
+      }
+    },
+    "('Age', 'MedCost')": {
+      "direction": "MedCost->Age",
+      "confidence": 0.5846150595945899,
+      "ds_posterior": [
+        0.4153849404054102,
+        0.5846150595945899
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.16923011918917974,
+        "ds_entropy": 0.9792416952876293,
+        "max_degree": 6,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.4153849404054102,
+          0.5846150595945899
+        ]
+      }
+    },
+    "('RuggedAuto', 'VehicleYear')": {
+      "direction": "VehicleYear->RuggedAuto",
+      "confidence": 0.9999998510550743,
+      "ds_posterior": [
+        1.4894492579271143e-07,
+        0.9999998510550743
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999997021101484,
+        "ds_entropy": 3.5927620129779592e-06,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.4894492579271143e-07,
+          0.9999998510550743
+        ]
+      }
+    },
+    "('Antilock', 'VehicleYear')": {
+      "direction": "VehicleYear->Antilock",
+      "confidence": 0.8847852225597759,
+      "ds_posterior": [
+        0.11521477744022418,
+        0.8847852225597759
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7695704451195517,
+        "ds_entropy": 0.5154476403791125,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.11521477744022418,
+          0.8847852225597759
+        ]
+      }
+    },
+    "('CarValue', 'VehicleYear')": {
+      "direction": "VehicleYear->CarValue",
+      "confidence": 0.9999965944042838,
+      "ds_posterior": [
+        3.405595716201642e-06,
+        0.9999965944042838
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999931888085676,
+        "ds_entropy": 6.677131510107533e-05,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          3.405595716201642e-06,
+          0.9999965944042838
+        ]
+      }
+    },
+    "('Airbag', 'VehicleYear')": {
+      "direction": "VehicleYear->Airbag",
+      "confidence": 0.8847850165358251,
+      "ds_posterior": [
+        0.11521498346417502,
+        0.8847850165358251
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7695700330716501,
+        "ds_entropy": 0.5154482462955651,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.11521498346417502,
+          0.8847850165358251
+        ]
+      }
+    },
+    "('Accident', 'ThisCarDam')": {
+      "direction": "Accident->ThisCarDam",
+      "confidence": 0.9999984080446646,
+      "ds_posterior": [
+        0.9999984080446646,
+        1.5919553354222648e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999968160893291,
+        "ds_entropy": 3.2958987751443434e-05,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999984080446646,
+          1.5919553354222648e-06
+        ]
+      }
+    },
+    "('Accident', 'DrivQuality')": {
+      "direction": "DrivQuality->Accident",
+      "confidence": 0.9999993734948517,
+      "ds_posterior": [
+        6.265051482135437e-07,
+        0.9999993734948517
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999987469897035,
+        "ds_entropy": 1.3813727365021771e-05,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          6.265051482135437e-07,
+          0.9999993734948517
+        ]
+      }
+    },
+    "('Accident', 'OtherCarCost')": {
+      "direction": "Accident->OtherCarCost",
+      "confidence": 0.9999984080446646,
+      "ds_posterior": [
+        0.9999984080446646,
+        1.5919553354257374e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999968160893291,
+        "ds_entropy": 3.295898775150531e-05,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999984080446646,
+          1.5919553354257374e-06
+        ]
+      }
+    },
+    "('Accident', 'MedCost')": {
+      "direction": "Accident->MedCost",
+      "confidence": 0.6222339280013472,
+      "ds_posterior": [
+        0.6222339280013472,
+        0.37776607199865275
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.2444678560026945,
+        "ds_entropy": 0.9564489774810686,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6222339280013472,
+          0.37776607199865275
+        ]
+      }
+    },
+    "('Accident', 'ILiCost')": {
+      "direction": "Accident->ILiCost",
+      "confidence": 0.6222338950945604,
+      "ds_posterior": [
+        0.6222338950945604,
+        0.3777661049054396
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.2444677901891208,
+        "ds_entropy": 0.9564490011727649,
+        "max_degree": 5,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6222338950945604,
+          0.3777661049054396
+        ]
+      }
+    },
+    "('MakeModel', 'RuggedAuto')": {
+      "direction": "MakeModel->RuggedAuto",
+      "confidence": 0.9999999999996834,
+      "ds_posterior": [
+        0.9999999999996834,
+        3.166769097472359e-13
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999993667,
+        "ds_entropy": 1.3605884225705567e-11,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999996834,
+          3.166769097472359e-13
+        ]
+      }
+    },
+    "('Antilock', 'MakeModel')": {
+      "direction": "MakeModel->Antilock",
+      "confidence": 0.7983129598975963,
+      "ds_posterior": [
+        0.20168704010240365,
+        0.7983129598975963
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.5966259197951926,
+        "ds_entropy": 0.7252893705888063,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.20168704010240365,
+          0.7983129598975963
+        ]
+      }
+    },
+    "('CarValue', 'MakeModel')": {
+      "direction": "MakeModel->CarValue",
+      "confidence": 0.9999933926671026,
+      "ds_posterior": [
+        6.607332897377885e-06,
+        0.9999933926671026
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999867853342053,
+        "ds_entropy": 0.00012322801928220958,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          6.607332897377885e-06,
+          0.9999933926671026
+        ]
+      }
+    },
+    "('Airbag', 'MakeModel')": {
+      "direction": "MakeModel->Airbag",
+      "confidence": 0.7983126344936904,
+      "ds_posterior": [
+        0.2016873655063097,
+        0.7983126344936904
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.5966252689873807,
+        "ds_entropy": 0.725290016461735,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.2016873655063097,
+          0.7983126344936904
+        ]
+      }
+    },
+    "('DrivQuality', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivQuality",
+      "confidence": 0.8941710227418302,
+      "ds_posterior": [
+        0.10582897725816977,
+        0.8941710227418302
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7883420454836605,
+        "ds_entropy": 0.4872052588264032,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.10582897725816977,
+          0.8941710227418302
+        ]
+      }
+    },
+    "('DrivingSkill', 'SeniorTrain')": {
+      "direction": "SeniorTrain->DrivingSkill",
+      "confidence": 0.9999999373601821,
+      "ds_posterior": [
+        6.263981775543348e-08,
+        0.9999999373601821
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999998747203643,
+        "ds_entropy": 1.5892373057429327e-06,
+        "max_degree": 4,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          6.263981775543348e-08,
+          0.9999999373601821
+        ]
+      }
+    },
+    "('DrivHist', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivHist",
+      "confidence": 0.8941710055745098,
+      "ds_posterior": [
+        0.1058289944254903,
+        0.8941710055745098
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7883420111490195,
+        "ds_entropy": 0.48720531168142345,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.1058289944254903,
+          0.8941710055745098
+        ]
+      }
+    },
+    "('GoodStudent', 'SeniorTrain')": {
+      "direction": "SeniorTrain->GoodStudent",
+      "confidence": 0.9999999999994631,
+      "ds_posterior": [
+        5.369851223488424e-13,
+        0.9999999999994631
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999989261,
+        "ds_entropy": 2.266220044608714e-11,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          5.369851223488424e-13,
+          0.9999999999994631
+        ]
+      }
+    },
+    "('ThisCarCost', 'ThisCarDam')": {
+      "direction": "ThisCarDam->ThisCarCost",
+      "confidence": 0.999999999999704,
+      "ds_posterior": [
+        2.959943772439403e-13,
+        0.999999999999704
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999999999408,
+        "ds_entropy": 1.2746153393761199e-11,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.959943772439403e-13,
+          0.999999999999704
+        ]
+      }
+    },
+    "('Theft', 'ThisCarCost')": {
+      "direction": "Theft->ThisCarCost",
+      "confidence": 0.8258029154660576,
+      "ds_posterior": [
+        0.8258029154660576,
+        0.17419708453394234
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.6516058309321152,
+        "ds_entropy": 0.6672164567853748,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.8258029154660576,
+          0.17419708453394234
+        ]
+      }
+    },
+    "('CarValue', 'ThisCarCost')": {
+      "direction": "CarValue->ThisCarCost",
+      "confidence": 0.9999999242741195,
+      "ds_posterior": [
+        0.9999999242741195,
+        7.572588060307445e-08
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999848548239,
+        "ds_entropy": 1.9005176643692502e-06,
+        "max_degree": 4,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999242741195,
+          7.572588060307445e-08
+        ]
+      }
+    },
+    "('PropCost', 'ThisCarCost')": {
+      "direction": "PropCost->ThisCarCost",
+      "confidence": 0.9999997313042452,
+      "ds_posterior": [
+        0.9999997313042452,
+        2.686957546842477e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9999994626084906,
+        "ds_entropy": 6.252608782959688e-06,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999997313042452,
+          2.686957546842477e-07
+        ]
+      }
+    },
+    "('CarValue', 'Mileage')": {
+      "direction": "Mileage->CarValue",
+      "confidence": 0.9999814178688664,
+      "ds_posterior": [
+        1.8582131133673733e-05,
+        0.9999814178688664
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999628357377327,
+        "ds_entropy": 0.00031883975295901546,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          1.8582131133673733e-05,
+          0.9999814178688664
+        ]
+      }
+    },
+    "('Cushioning', 'RuggedAuto')": {
+      "direction": "RuggedAuto->Cushioning",
+      "confidence": 0.9999999999988487,
+      "ds_posterior": [
+        1.151313639981022e-12,
+        0.9999999999988487
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999976974,
+        "ds_entropy": 4.7321910083837096e-11,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.151313639981022e-12,
+          0.9999999999988487
+        ]
+      }
+    },
+    "('Cushioning', 'MedCost')": {
+      "direction": "Cushioning->MedCost",
+      "confidence": 0.6222347961368196,
+      "ds_posterior": [
+        0.6222347961368196,
+        0.3777652038631804
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.24446959227363924,
+        "ds_entropy": 0.9564483524525331,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6222347961368196,
+          0.3777652038631804
+        ]
+      }
+    },
+    "('Airbag', 'Cushioning')": {
+      "direction": "Airbag->Cushioning",
+      "confidence": 0.6222346250272004,
+      "ds_posterior": [
+        0.6222346250272004,
+        0.37776537497279955
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.24446925005440084,
+        "ds_entropy": 0.9564484756461081,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6222346250272004,
+          0.37776537497279955
+        ]
+      }
+    },
+    "('OtherCarCost', 'PropCost')": {
+      "direction": "PropCost->OtherCarCost",
+      "confidence": 0.9999999999992895,
+      "ds_posterior": [
+        7.105291035090726e-13,
+        0.9999999999992895
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9999999999985789,
+        "ds_entropy": 2.9699330830775274e-11,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          7.105291035090726e-13,
+          0.9999999999992895
+        ]
+      }
+    }
+  }
+}

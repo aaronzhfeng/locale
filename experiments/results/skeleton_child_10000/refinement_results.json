@@ -1,0 +1,561 @@
+{
+  "metadata": {
+    "network": "child",
+    "n_samples": 10000,
+    "alpha": 0.05,
+    "k_passes": 5,
+    "add_threshold": 0.6,
+    "enable_thinking": false,
+    "n_candidates": 52,
+    "n_queries": 260,
+    "elapsed_seconds": 416.83736658096313
+  },
+  "original_skeleton": {
+    "n_edges": 25,
+    "coverage": 1.0,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "refinement": {
+    "n_candidates_queried": 52,
+    "n_gt_missing": 0,
+    "n_added": 0,
+    "tp_added": 0,
+    "fp_added": 0,
+    "recall_missing": 0.0,
+    "add_precision": 0.0
+  },
+  "refined_skeleton": {
+    "n_edges": 25,
+    "coverage": 1.0,
+    "precision": 1.0,
+    "false_positives": 0
+  },
+  "improvement": {
+    "coverage_delta": 0.0,
+    "precision_delta": 0.0,
+    "fp_delta": 0
+  },
+  "edge_details": {
+    "DuctFlow--LowerBodyO2": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--LungFlow": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "HypDistrib--HypoxiaInO2": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--DuctFlow": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Disease--HypDistrib": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LungParench--Sick": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "GruntingReport--LungParench": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO2--ChestXray": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LungFlow--Sick": {
+      "votes": {
+        "yes": 1,
+        "no": 4,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BirthAsphyxia--DuctFlow": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DuctFlow--LVH": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CardiacMixing--LungParench": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO2--HypoxiaInO2": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LungParench--RUQO2": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LVH--LungFlow": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DuctFlow--LungParench": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO2--Grunting": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Disease--LVHreport": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CardiacMixing--LowerBodyO2": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChestXray--HypoxiaInO2": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--LVH": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BirthAsphyxia--LungFlow": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CardiacMixing--Sick": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChestXray--Disease": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO2--Disease": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BirthAsphyxia--LungParench": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CardiacMixing--LVH": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--BirthAsphyxia": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CO2Report--LungParench": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CardiacMixing--RUQO2": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DuctFlow--Sick": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--CardiacMixing": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CardiacMixing--LungFlow": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BirthAsphyxia--CardiacMixing": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LVH--LungParench": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BirthAsphyxia--LVH": {
+      "votes": {
+        "yes": 2,
+        "no": 1,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.4,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LowerBodyO2--RUQO2": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "CardiacMixing--DuctFlow": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LungFlow--XrayReport": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LowerBodyO2--LungParench": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LungFlow--LungParench": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "ChestXray--Grunting": {
+      "votes": {
+        "yes": 0,
+        "no": 1,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LungParench--XrayReport": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--Grunting": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "GruntingReport--Sick": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "DuctFlow--LungFlow": {
+      "votes": {
+        "yes": 0,
+        "no": 3,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "BirthAsphyxia--Sick": {
+      "votes": {
+        "yes": 1,
+        "no": 0,
+        "uncertain": 4
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Disease--HypoxiaInO2": {
+      "votes": {
+        "yes": 0,
+        "no": 4,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "LVH--Sick": {
+      "votes": {
+        "yes": 0,
+        "no": 2,
+        "uncertain": 3
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Age--LungParench": {
+      "votes": {
+        "yes": 0,
+        "no": 5,
+        "uncertain": 0
+      },
+      "yes_fraction": 0.0,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Disease--Grunting": {
+      "votes": {
+        "yes": 1,
+        "no": 3,
+        "uncertain": 1
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    },
+    "Grunting--HypoxiaInO2": {
+      "votes": {
+        "yes": 1,
+        "no": 2,
+        "uncertain": 2
+      },
+      "yes_fraction": 0.2,
+      "add": false,
+      "is_gt_missing": false
+    }
+  }
+}

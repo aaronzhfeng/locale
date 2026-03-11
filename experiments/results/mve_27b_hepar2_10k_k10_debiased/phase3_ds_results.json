@@ -1,0 +1,1510 @@
+{
+  "metadata": {
+    "phase": 3,
+    "method": "dawid_skene",
+    "source": "ego",
+    "network": "hepar2",
+    "n_edges": 64,
+    "n_annotators": 29,
+    "n_em_classes": 3
+  },
+  "evaluation": {
+    "ds_accuracy": 0.765625,
+    "ds_correct": 49,
+    "mv_accuracy": 0.796875,
+    "mv_correct": 51,
+    "total": 64,
+    "delta_pp": -3.1,
+    "by_confidence": {
+      "high": {
+        "correct": 35,
+        "total": 41,
+        "accuracy": 0.8536585365853658
+      },
+      "medium": {
+        "correct": 11,
+        "total": 18,
+        "accuracy": 0.6111111111111112
+      },
+      "low": {
+        "correct": 3,
+        "total": 5,
+        "accuracy": 0.6
+      }
+    }
+  },
+  "class_priors": [
+    0.6510195214542348,
+    0.34898047854576525
+  ],
+  "top_annotators": [
+    {
+      "annotator": "age",
+      "accuracy_per_class": [
+        0.9999989999793215,
+        0.9999993180054955
+      ],
+      "mean_accuracy": 0.9999991589924084
+    },
+    {
+      "annotator": "fibrosis",
+      "accuracy_per_class": [
+        0.999999000001237,
+        0.9999986144372325
+      ],
+      "mean_accuracy": 0.9999988072192347
+    },
+    {
+      "annotator": "PBC",
+      "accuracy_per_class": [
+        0.9999889378120408,
+        0.9999991975992699
+      ],
+      "mean_accuracy": 0.9999940677056554
+    },
+    {
+      "annotator": "gallstones",
+      "accuracy_per_class": [
+        0.9999767390244023,
+        0.9999993175580012
+      ],
+      "mean_accuracy": 0.9999880282912017
+    },
+    {
+      "annotator": "Cirrhosis",
+      "accuracy_per_class": [
+        0.9999997985979534,
+        0.9981216587047983
+      ],
+      "mean_accuracy": 0.9990607286513759
+    },
+    {
+      "annotator": "Hyperbilirubinemia",
+      "accuracy_per_class": [
+        0.9999996569281624,
+        0.9215235241563275
+      ],
+      "mean_accuracy": 0.960761590542245
+    },
+    {
+      "annotator": "injections",
+      "accuracy_per_class": [
+        0.7668620209603023,
+        0.9999996290781699
+      ],
+      "mean_accuracy": 0.8834308250192361
+    },
+    {
+      "annotator": "surgery",
+      "accuracy_per_class": [
+        0.7668629538967663,
+        0.9999985631944314
+      ],
+      "mean_accuracy": 0.8834307585455988
+    },
+    {
+      "annotator": "inr",
+      "accuracy_per_class": [
+        0.7668629530806977,
+        0.999998561014908
+      ],
+      "mean_accuracy": 0.8834307570478028
+    },
+    {
+      "annotator": "hbsag",
+      "accuracy_per_class": [
+        0.766862044014124,
+        0.9999969907902162
+      ],
+      "mean_accuracy": 0.88342951740217
+    }
+  ],
+  "worst_annotators": [
+    {
+      "annotator": "bleeding",
+      "accuracy_per_class": [
+        1.0465967251711436e-06,
+        0.9999990426280757
+      ],
+      "mean_accuracy": 0.5000000446124004
+    },
+    {
+      "annotator": "hospital",
+      "accuracy_per_class": [
+        0.999998953403935,
+        9.573724767975984e-07
+      ],
+      "mean_accuracy": 0.4999999553882059
+    },
+    {
+      "annotator": "transfusion",
+      "accuracy_per_class": [
+        0.9999989534032522,
+        9.573719055193294e-07
+      ],
+      "mean_accuracy": 0.49999995538757885
+    },
+    {
+      "annotator": "hepatomegaly",
+      "accuracy_per_class": [
+        6.194157335271846e-07,
+        0.9999974065004276
+      ],
+      "mean_accuracy": 0.4999990129580805
+    },
+    {
+      "annotator": "choledocholithotomy",
+      "accuracy_per_class": [
+        1.7807798065681333e-06,
+        9.999991456400909e-07
+      ],
+      "mean_accuracy": 1.390389476104112e-06
+    }
+  ],
+  "reconciled": {
+    "('Cirrhosis', 'fibrosis')": {
+      "direction": "fibrosis->Cirrhosis",
+      "confidence": 0.9999999999996236,
+      "ds_posterior": [
+        3.7642056489424454e-13,
+        0.9999999999996236
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999992473,
+        "ds_entropy": 1.607888128855224e-11,
+        "max_degree": 11,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          3.7642056489424454e-13,
+          0.9999999999996236
+        ]
+      }
+    },
+    "('Cirrhosis', 'Steatosis')": {
+      "direction": "Steatosis->Cirrhosis",
+      "confidence": 0.9999997680094536,
+      "ds_posterior": [
+        2.3199054656166847e-07,
+        0.9999997680094536
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999536018907,
+        "ds_entropy": 5.447631133622461e-06,
+        "max_degree": 11,
+        "min_degree": 5,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.3199054656166847e-07,
+          0.9999997680094536
+        ]
+      }
+    },
+    "('Cirrhosis', 'edema')": {
+      "direction": "Cirrhosis->edema",
+      "confidence": 0.9989941235279726,
+      "ds_posterior": [
+        0.9989941235279726,
+        0.001005876472027385
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9979882470559451,
+        "ds_entropy": 0.011466288021320067,
+        "max_degree": 11,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9989941235279726,
+          0.001005876472027385
+        ]
+      }
+    },
+    "('Cirrhosis', 'inr')": {
+      "direction": "Cirrhosis->inr",
+      "confidence": 0.999999998110616,
+      "ds_posterior": [
+        0.999999998110616,
+        1.889384083888997e-09
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999962212319,
+        "ds_entropy": 5.7479091632284625e-08,
+        "max_degree": 11,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.999999998110616,
+          1.889384083888997e-09
+        ]
+      }
+    },
+    "('Cirrhosis', 'alcohol')": {
+      "direction": "alcohol->Cirrhosis",
+      "confidence": 0.9999996235796327,
+      "ds_posterior": [
+        3.764203672955201e-07,
+        0.9999996235796327
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999992471592654,
+        "ds_entropy": 8.576303959166424e-06,
+        "max_degree": 11,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          3.764203672955201e-07,
+          0.9999996235796327
+        ]
+      }
+    },
+    "('Cirrhosis', 'spleen')": {
+      "direction": "Cirrhosis->spleen",
+      "confidence": 0.9989953671724748,
+      "ds_posterior": [
+        0.9989953671724748,
+        0.0010046328275252188
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9979907343449497,
+        "ds_entropy": 0.011453905336112558,
+        "max_degree": 11,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9989953671724748,
+          0.0010046328275252188
+        ]
+      }
+    },
+    "('Cirrhosis', 'spiders')": {
+      "direction": "Cirrhosis->spiders",
+      "confidence": 0.9989941235279726,
+      "ds_posterior": [
+        0.9989941235279726,
+        0.001005876472027385
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9979882470559451,
+        "ds_entropy": 0.011466288021320067,
+        "max_degree": 11,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9989941235279726,
+          0.001005876472027385
+        ]
+      }
+    },
+    "('Cirrhosis', 'edge')": {
+      "direction": "Cirrhosis->edge",
+      "confidence": 0.9989941235279726,
+      "ds_posterior": [
+        0.9989941235279726,
+        0.001005876472027385
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9979882470559451,
+        "ds_entropy": 0.011466288021320067,
+        "max_degree": 11,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9989941235279726,
+          0.001005876472027385
+        ]
+      }
+    },
+    "('Cirrhosis', 'irregular_liver')": {
+      "direction": "Cirrhosis->irregular_liver",
+      "confidence": 0.9989941235279726,
+      "ds_posterior": [
+        0.9989941235279726,
+        0.001005876472027385
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9979882470559451,
+        "ds_entropy": 0.011466288021320067,
+        "max_degree": 11,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9989941235279726,
+          0.001005876472027385
+        ]
+      }
+    },
+    "('Cirrhosis', 'palms')": {
+      "direction": "Cirrhosis->palms",
+      "confidence": 0.9989941235279726,
+      "ds_posterior": [
+        0.9989941235279726,
+        0.001005876472027385
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9979882470559451,
+        "ds_entropy": 0.011466288021320067,
+        "max_degree": 11,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9989941235279726,
+          0.001005876472027385
+        ]
+      }
+    },
+    "('Cirrhosis', 'carcinoma')": {
+      "direction": "Cirrhosis->carcinoma",
+      "confidence": 0.9989941235279726,
+      "ds_posterior": [
+        0.9989941235279726,
+        0.001005876472027385
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9979882470559451,
+        "ds_entropy": 0.011466288021320067,
+        "max_degree": 11,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9989941235279726,
+          0.001005876472027385
+        ]
+      }
+    },
+    "('ChHepatitis', 'vh_amn')": {
+      "direction": "ChHepatitis->vh_amn",
+      "confidence": 0.7815465837231284,
+      "ds_posterior": [
+        0.7815465837231284,
+        0.21845341627687168
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.5630931674462567,
+        "ds_entropy": 0.7573334147543919,
+        "max_degree": 8,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.7815465837231284,
+          0.21845341627687168
+        ]
+      }
+    },
+    "('ChHepatitis', 'injections')": {
+      "direction": "injections->ChHepatitis",
+      "confidence": 0.9999998182027865,
+      "ds_posterior": [
+        1.8179721353017195e-07,
+        0.9999998182027865
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999636405573,
+        "ds_entropy": 4.332929605956664e-06,
+        "max_degree": 8,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.8179721353017195e-07,
+          0.9999998182027865
+        ]
+      }
+    },
+    "('ChHepatitis', 'fibrosis')": {
+      "direction": "ChHepatitis->fibrosis",
+      "confidence": 0.9999996127151304,
+      "ds_posterior": [
+        0.9999996127151304,
+        3.872848695114728e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999992254302609,
+        "ds_entropy": 8.807940892350669e-06,
+        "max_degree": 8,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999996127151304,
+          3.872848695114728e-07
+        ]
+      }
+    },
+    "('ChHepatitis', 'phosphatase')": {
+      "direction": "ChHepatitis->phosphatase",
+      "confidence": 0.781546720180637,
+      "ds_posterior": [
+        0.781546720180637,
+        0.218453279819363
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.563093440361274,
+        "ds_entropy": 0.7573331638081089,
+        "max_degree": 8,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.781546720180637,
+          0.218453279819363
+        ]
+      }
+    },
+    "('ChHepatitis', 'alt')": {
+      "direction": "ChHepatitis->alt",
+      "confidence": 0.7815469363819525,
+      "ds_posterior": [
+        0.7815469363819525,
+        0.2184530636180475
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.563093872763905,
+        "ds_entropy": 0.7573327662121025,
+        "max_degree": 8,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.7815469363819525,
+          0.2184530636180475
+        ]
+      }
+    },
+    "('ChHepatitis', 'ast')": {
+      "direction": "ChHepatitis->ast",
+      "confidence": 0.7815467426179591,
+      "ds_posterior": [
+        0.7815467426179591,
+        0.21845325738204086
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.5630934852359182,
+        "ds_entropy": 0.7573331225457063,
+        "max_degree": 8,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.7815467426179591,
+          0.21845325738204086
+        ]
+      }
+    },
+    "('ChHepatitis', 'hbsag')": {
+      "direction": "ChHepatitis->hbsag",
+      "confidence": 0.9999989031713008,
+      "ds_posterior": [
+        0.9999989031713008,
+        1.0968286993097467e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999978063426015,
+        "ds_entropy": 2.3297655693473998e-05,
+        "max_degree": 8,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999989031713008,
+          1.0968286993097467e-06
+        ]
+      }
+    },
+    "('ChHepatitis', 'hbeag')": {
+      "direction": "ChHepatitis->hbeag",
+      "confidence": 0.781546549207643,
+      "ds_posterior": [
+        0.781546549207643,
+        0.21845345079235706
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.563093098415286,
+        "ds_entropy": 0.7573334782285783,
+        "max_degree": 8,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.781546549207643,
+          0.21845345079235706
+        ]
+      }
+    },
+    "('PBC', 'sex')": {
+      "direction": "sex->PBC",
+      "confidence": 0.9999793640105433,
+      "ds_posterior": [
+        2.0635989456688757e-05,
+        0.9999793640105433
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999587280210867,
+        "ds_entropy": 0.00035095953348575684,
+        "max_degree": 7,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          2.0635989456688757e-05,
+          0.9999793640105433
+        ]
+      }
+    },
+    "('PBC', 'age')": {
+      "direction": "age->PBC",
+      "confidence": 0.9999999999793632,
+      "ds_posterior": [
+        2.063685611575689e-11,
+        0.9999999999793632
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999587263,
+        "ds_entropy": 7.622981984139637e-10,
+        "max_degree": 7,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          2.063685611575689e-11,
+          0.9999999999793632
+        ]
+      }
+    },
+    "('PBC', 'bilirubin')": {
+      "direction": "PBC->bilirubin",
+      "confidence": 0.9999998737444926,
+      "ds_posterior": [
+        0.9999998737444926,
+        1.2625550741025186e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999997474889852,
+        "ds_entropy": 3.075564627834034e-06,
+        "max_degree": 7,
+        "min_degree": 6,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999998737444926,
+          1.2625550741025186e-07
+        ]
+      }
+    },
+    "('PBC', 'ama')": {
+      "direction": "PBC->ama",
+      "confidence": 0.9999995698667108,
+      "ds_posterior": [
+        0.9999995698667108,
+        4.301332891128217e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999991397334217,
+        "ds_entropy": 9.717316459124957e-06,
+        "max_degree": 7,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.9999995698667108,
+          4.301332891128217e-07
+        ]
+      }
+    },
+    "('ESR', 'PBC')": {
+      "direction": "PBC->ESR",
+      "confidence": 0.9999793640105433,
+      "ds_posterior": [
+        2.0635989456688757e-05,
+        0.9999793640105433
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999587280210867,
+        "ds_entropy": 0.00035095953348575684,
+        "max_degree": 7,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          2.0635989456688757e-05,
+          0.9999793640105433
+        ]
+      }
+    },
+    "('PBC', 'ggtp')": {
+      "direction": "PBC->ggtp",
+      "confidence": 0.9999995698676618,
+      "ds_posterior": [
+        0.9999995698676618,
+        4.301323380860453e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999991397353237,
+        "ds_entropy": 9.717296346145843e-06,
+        "max_degree": 7,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999995698676618,
+          4.301323380860453e-07
+        ]
+      }
+    },
+    "('PBC', 'cholesterol')": {
+      "direction": "PBC->cholesterol",
+      "confidence": 0.9999995698670432,
+      "ds_posterior": [
+        0.9999995698670432,
+        4.3013295681245725e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999991397340864,
+        "ds_entropy": 9.717309431255125e-06,
+        "max_degree": 7,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999995698670432,
+          4.3013295681245725e-07
+        ]
+      }
+    },
+    "('bilirubin', 'gallstones')": {
+      "direction": "gallstones->bilirubin",
+      "confidence": 0.999999999986602,
+      "ds_posterior": [
+        1.3397913214934034e-11,
+        0.999999999986602
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999732041,
+        "ds_entropy": 5.032510719787126e-10,
+        "max_degree": 6,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.3397913214934034e-11,
+          0.999999999986602
+        ]
+      }
+    },
+    "('Hyperbilirubinemia', 'bilirubin')": {
+      "direction": "Hyperbilirubinemia->bilirubin",
+      "confidence": 0.9878026885958974,
+      "ds_posterior": [
+        0.9878026885958974,
+        0.012197311404102632
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9756053771917947,
+        "ds_entropy": 0.09503112618691009,
+        "max_degree": 6,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9878026885958974,
+          0.012197311404102632
+        ]
+      }
+    },
+    "('bilirubin', 'itching')": {
+      "direction": "bilirubin->itching",
+      "confidence": 0.8640462322920617,
+      "ds_posterior": [
+        0.8640462322920617,
+        0.1359537677079382
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7280924645841235,
+        "ds_entropy": 0.5735432021040975,
+        "max_degree": 6,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.8640462322920617,
+          0.1359537677079382
+        ]
+      }
+    },
+    "('bilirubin', 'skin')": {
+      "direction": "bilirubin->skin",
+      "confidence": 0.8640462322920617,
+      "ds_posterior": [
+        0.8640462322920617,
+        0.1359537677079382
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7280924645841235,
+        "ds_entropy": 0.5735432021040975,
+        "max_degree": 6,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.8640462322920617,
+          0.1359537677079382
+        ]
+      }
+    },
+    "('bilirubin', 'jaundice')": {
+      "direction": "bilirubin->jaundice",
+      "confidence": 0.8640462322920617,
+      "ds_posterior": [
+        0.8640462322920617,
+        0.1359537677079382
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7280924645841235,
+        "ds_entropy": 0.5735432021040975,
+        "max_degree": 6,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.8640462322920617,
+          0.1359537677079382
+        ]
+      }
+    },
+    "('Steatosis', 'alcoholism')": {
+      "direction": "Steatosis->alcoholism",
+      "confidence": 0.5348216435171905,
+      "ds_posterior": [
+        0.5348216435171905,
+        0.46517835648280953
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.069643287034381,
+        "ds_entropy": 0.9964984956217894,
+        "max_degree": 5,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.5348216435171905,
+          0.46517835648280953
+        ]
+      }
+    },
+    "('Steatosis', 'triglycerides')": {
+      "direction": "Steatosis->triglycerides",
+      "confidence": 0.5348219382961534,
+      "ds_posterior": [
+        0.5348219382961534,
+        0.4651780617038465
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.06964387659230692,
+        "ds_entropy": 0.9964984362902329,
+        "max_degree": 5,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.5348219382961534,
+          0.4651780617038465
+        ]
+      }
+    },
+    "('Steatosis', 'ast')": {
+      "direction": "Steatosis->ast",
+      "confidence": 0.999998600524637,
+      "ds_posterior": [
+        0.999998600524637,
+        1.399475363087682e-06
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999972010492739,
+        "ds_entropy": 2.9234167777811807e-05,
+        "max_degree": 5,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.999998600524637,
+          1.399475363087682e-06
+        ]
+      }
+    },
+    "('Steatosis', 'cholesterol')": {
+      "direction": "Steatosis->cholesterol",
+      "confidence": 0.5348221304975521,
+      "ds_posterior": [
+        0.5348221304975521,
+        0.4651778695024478
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.06964426099510429,
+        "ds_entropy": 0.9964983976046765,
+        "max_degree": 5,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.5348221304975521,
+          0.4651778695024478
+        ]
+      }
+    },
+    "('hbsag', 'vh_amn')": {
+      "direction": "vh_amn->hbsag",
+      "confidence": 0.6969039955565669,
+      "ds_posterior": [
+        0.3030960044434331,
+        0.6969039955565669
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.3938079911131338,
+        "ds_entropy": 0.8850425706832225,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.3030960044434331,
+          0.6969039955565669
+        ]
+      }
+    },
+    "('hbsag_anti', 'vh_amn')": {
+      "direction": "hbsag_anti->vh_amn",
+      "confidence": 0.6510195673841225,
+      "ds_posterior": [
+        0.6510195673841225,
+        0.34898043261587763
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.30203913476824484,
+        "ds_entropy": 0.9331541977062218,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6510195673841225,
+          0.34898043261587763
+        ]
+      }
+    },
+    "('hbc_anti', 'vh_amn')": {
+      "direction": "hbc_anti->vh_amn",
+      "confidence": 0.6510195673841225,
+      "ds_posterior": [
+        0.6510195673841225,
+        0.34898043261587763
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.30203913476824484,
+        "ds_entropy": 0.9331541977062218,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6510195673841225,
+          0.34898043261587763
+        ]
+      }
+    },
+    "('THepatitis', 'alcoholism')": {
+      "direction": "alcoholism->THepatitis",
+      "confidence": 0.9999845611890877,
+      "ds_posterior": [
+        1.543881091222283e-05,
+        0.9999845611890877
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999691223781755,
+        "ds_entropy": 0.0002690330558997963,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          1.543881091222283e-05,
+          0.9999845611890877
+        ]
+      }
+    },
+    "('THepatitis', 'phosphatase')": {
+      "direction": "THepatitis->phosphatase",
+      "confidence": 0.8691678359057439,
+      "ds_posterior": [
+        0.8691678359057439,
+        0.1308321640942561
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7383356718114877,
+        "ds_entropy": 0.5597159894697399,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8691678359057439,
+          0.1308321640942561
+        ]
+      }
+    },
+    "('THepatitis', 'alt')": {
+      "direction": "THepatitis->alt",
+      "confidence": 0.8691679799058928,
+      "ds_posterior": [
+        0.8691679799058928,
+        0.13083202009410722
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7383359598117856,
+        "ds_entropy": 0.5597155960730775,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8691679799058928,
+          0.13083202009410722
+        ]
+      }
+    },
+    "('THepatitis', 'ast')": {
+      "direction": "THepatitis->ast",
+      "confidence": 0.8691678508500472,
+      "ds_posterior": [
+        0.8691678508500472,
+        0.1308321491499528
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.7383357017000944,
+        "ds_entropy": 0.5597159486431343,
+        "max_degree": 4,
+        "min_degree": 4,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.8691678508500472,
+          0.1308321491499528
+        ]
+      }
+    },
+    "('choledocholithotomy', 'gallstones')": {
+      "direction": "choledocholithotomy->gallstones",
+      "confidence": 0.9999999999996341,
+      "ds_posterior": [
+        0.9999999999996341,
+        3.6583341672060796e-13
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9999999999992683,
+        "ds_entropy": 1.5641921970184842e-11,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999996341,
+          3.6583341672060796e-13
+        ]
+      }
+    },
+    "('fat', 'gallstones')": {
+      "direction": "gallstones->fat",
+      "confidence": 0.9999566087406656,
+      "ds_posterior": [
+        4.3391259334428876e-05,
+        0.9999566087406656
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999132174813312,
+        "ds_entropy": 0.0006914353678210564,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          4.3391259334428876e-05,
+          0.9999566087406656
+        ]
+      }
+    },
+    "('gallstones', 'pressure_ruq')": {
+      "direction": "gallstones->pressure_ruq",
+      "confidence": 0.999999634167056,
+      "ds_posterior": [
+        0.999999634167056,
+        3.6583294397130334e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.999999268334112,
+        "ds_entropy": 8.350139303232838e-06,
+        "max_degree": 4,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.999999634167056,
+          3.6583294397130334e-07
+        ]
+      }
+    },
+    "('hospital', 'injections')": {
+      "direction": "injections->hospital",
+      "confidence": 0.696904593501403,
+      "ds_posterior": [
+        0.30309540649859695,
+        0.696904593501403
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.39380918700280604,
+        "ds_entropy": 0.8850418524395782,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.30309540649859695,
+          0.696904593501403
+        ]
+      }
+    },
+    "('injections', 'surgery')": {
+      "direction": "injections->surgery",
+      "confidence": 0.9999999999995142,
+      "ds_posterior": [
+        0.9999999999995142,
+        4.857944299781682e-13
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999990283,
+        "ds_entropy": 2.057219450756642e-11,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999999999995142,
+          4.857944299781682e-13
+        ]
+      }
+    },
+    "('choledocholithotomy', 'injections')": {
+      "direction": "injections->choledocholithotomy",
+      "confidence": 0.9999992255089803,
+      "ds_posterior": [
+        7.744910196672389e-07,
+        0.9999992255089803
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9999984510179607,
+        "ds_entropy": 1.6839713812360253e-05,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          7.744910196672389e-07,
+          0.9999992255089803
+        ]
+      }
+    },
+    "('Hyperbilirubinemia', 'age')": {
+      "direction": "age->Hyperbilirubinemia",
+      "confidence": 0.9999999999993054,
+      "ds_posterior": [
+        6.945136678618626e-13,
+        0.9999999999993054
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999999999986109,
+        "ds_entropy": 2.905278750371667e-11,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          6.945136678618626e-13,
+          0.9999999999993054
+        ]
+      }
+    },
+    "('Hyperbilirubinemia', 'hepatomegaly')": {
+      "direction": "Hyperbilirubinemia->hepatomegaly",
+      "confidence": 0.9596308052340475,
+      "ds_posterior": [
+        0.9596308052340475,
+        0.04036919476595251
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.9192616104680951,
+        "ds_entropy": 0.2439823802568091,
+        "max_degree": 4,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9596308052340475,
+          0.04036919476595251
+        ]
+      }
+    },
+    "('Hyperbilirubinemia', 'ggtp')": {
+      "direction": "Hyperbilirubinemia->ggtp",
+      "confidence": 0.9596308144122612,
+      "ds_posterior": [
+        0.9596308144122612,
+        0.04036918558773894
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9192616288245222,
+        "ds_entropy": 0.24398233830179122,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9596308144122612,
+          0.04036918558773894
+        ]
+      }
+    },
+    "('RHepatitis', 'ast')": {
+      "direction": "RHepatitis->ast",
+      "confidence": 0.651019879860734,
+      "ds_posterior": [
+        0.651019879860734,
+        0.3489801201392661
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.30203975972146785,
+        "ds_entropy": 0.9331539166160885,
+        "max_degree": 4,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.651019879860734,
+          0.3489801201392661
+        ]
+      }
+    },
+    "('age', 'spleen')": {
+      "direction": "age->spleen",
+      "confidence": 0.9999996348675361,
+      "ds_posterior": [
+        0.9999996348675361,
+        3.651324639259397e-07
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.9999992697350721,
+        "ds_entropy": 8.335160452728055e-06,
+        "max_degree": 3,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.9999996348675361,
+          3.651324639259397e-07
+        ]
+      }
+    },
+    "('RHepatitis', 'fatigue')": {
+      "direction": "RHepatitis->fatigue",
+      "confidence": 0.6510196224888943,
+      "ds_posterior": [
+        0.6510196224888943,
+        0.3489803775111057
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.3020392449777886,
+        "ds_entropy": 0.9331541481364523,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6510196224888943,
+          0.3489803775111057
+        ]
+      }
+    },
+    "('RHepatitis', 'phosphatase')": {
+      "direction": "RHepatitis->phosphatase",
+      "confidence": 0.6510198500033006,
+      "ds_posterior": [
+        0.6510198500033006,
+        0.34898014999669935
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.3020397000066013,
+        "ds_entropy": 0.9331539434745411,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6510198500033006,
+          0.34898014999669935
+        ]
+      }
+    },
+    "('encephalopathy', 'urea')": {
+      "direction": "urea->encephalopathy",
+      "confidence": 0.5232047544813675,
+      "ds_posterior": [
+        0.47679524551863245,
+        0.5232047544813675
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.04640950896273505,
+        "ds_entropy": 0.9984457728297738,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.47679524551863245,
+          0.5232047544813675
+        ]
+      }
+    },
+    "('density', 'encephalopathy')": {
+      "direction": "encephalopathy->density",
+      "confidence": 0.5232047544813675,
+      "ds_posterior": [
+        0.47679524551863245,
+        0.5232047544813675
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.04640950896273505,
+        "ds_entropy": 0.9984457728297738,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.47679524551863245,
+          0.5232047544813675
+        ]
+      }
+    },
+    "('consciousness', 'encephalopathy')": {
+      "direction": "consciousness->encephalopathy",
+      "confidence": 0.999956273847435,
+      "ds_posterior": [
+        0.999956273847435,
+        4.372615256501354e-05
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.99991254769487,
+        "ds_entropy": 0.000696286838823116,
+        "max_degree": 3,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.999956273847435,
+          4.372615256501354e-05
+        ]
+      }
+    },
+    "('cholesterol', 'ggtp')": {
+      "direction": "cholesterol->ggtp",
+      "confidence": 0.6510201992983967,
+      "ds_posterior": [
+        0.6510201992983967,
+        0.3489798007016033
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.30204039859679344,
+        "ds_entropy": 0.9331536292634608,
+        "max_degree": 3,
+        "min_degree": 3,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6510201992983967,
+          0.3489798007016033
+        ]
+      }
+    },
+    "('hospital', 'transfusion')": {
+      "direction": "hospital->transfusion",
+      "confidence": 0.6510194809119401,
+      "ds_posterior": [
+        0.6510194809119401,
+        0.3489805190880599
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.3020389618238802,
+        "ds_entropy": 0.9331542754926613,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.6510194809119401,
+          0.3489805190880599
+        ]
+      }
+    },
+    "('surgery', 'transfusion')": {
+      "direction": "transfusion->surgery",
+      "confidence": 0.6969052136204213,
+      "ds_posterior": [
+        0.3030947863795786,
+        0.6969052136204213
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": true,
+        "ds_margin": 0.39381042724084275,
+        "ds_entropy": 0.885041107558012,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.3030947863795786,
+          0.6969052136204213
+        ]
+      }
+    },
+    "('bleeding', 'inr')": {
+      "direction": "inr->bleeding",
+      "confidence": 0.6969052124206551,
+      "ds_posterior": [
+        0.30309478757934494,
+        0.6969052124206551
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.3938104248413101,
+        "ds_entropy": 0.8850411089991634,
+        "max_degree": 2,
+        "min_degree": 2,
+        "n_annotations": 2,
+        "ds_posterior": [
+          0.30309478757934494,
+          0.6969052124206551
+        ]
+      }
+    },
+    "('bleeding', 'platelet')": {
+      "direction": "bleeding->platelet",
+      "confidence": 0.6510195011829547,
+      "ds_posterior": [
+        0.6510195011829547,
+        0.34898049881704535
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.30203900236590936,
+        "ds_entropy": 0.9331542572577833,
+        "max_degree": 2,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6510195011829547,
+          0.34898049881704535
+        ]
+      }
+    },
+    "('hepatalgia', 'hepatomegaly')": {
+      "direction": "hepatalgia->hepatomegaly",
+      "confidence": 0.6510199699530568,
+      "ds_posterior": [
+        0.6510199699530568,
+        0.3489800300469433
+      ],
+      "method": "dawid_skene",
+      "features": {
+        "endpoint_disagreement": false,
+        "ds_margin": 0.3020399399061135,
+        "ds_entropy": 0.9331538355729062,
+        "max_degree": 2,
+        "min_degree": 0,
+        "n_annotations": 1,
+        "ds_posterior": [
+          0.6510199699530568,
+          0.3489800300469433
+        ]
+      }
+    }
+  }
+}

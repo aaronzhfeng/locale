@@ -1,0 +1,84 @@
+{
+  "insurance": {
+    "1000": {
+      "n_seeds": 1,
+      "fc_rate_mean": 0.8823529411764706,
+      "fc_rate_std": 0.0,
+      "ci_accuracy_mean": 0.7068965517241379,
+      "skel_coverage_mean": 0.5576923076923077,
+      "total_errors_mean": 17.0,
+      "total_fc_mean": 15.0,
+      "total_fnc_mean": 0.0,
+      "per_seed": [
+        {
+          "metadata": {
+            "network": "insurance",
+            "n_samples": 1000,
+            "alpha": 0.05,
+            "seed": 42
+          },
+          "skeleton": {
+            "n_edges": 30,
+            "n_gt_edges": 52,
+            "coverage": 0.5576923076923077,
+            "precision": 0.9666666666666667,
+            "false_positives": 1,
+            "false_negatives": 23
+          },
+          "ci_facts": {
+            "total": 58,
+            "correct": 41,
+            "incorrect": 17,
+            "accuracy": 0.7068965517241379,
+            "true_colliders": 9,
+            "true_non_colliders": 32,
+            "false_colliders": 15,
+            "false_non_colliders": 0,
+            "false_collider_rate_of_errors": 0.8823529411764706
+          },
+          "n_nodes_analyzed": 20
+        }
+      ]
+    },
+    "5000": {
+      "n_seeds": 1,
+      "fc_rate_mean": 0.7777777777777778,
+      "fc_rate_std": 0.0,
+      "ci_accuracy_mean": 0.9021739130434783,
+      "skel_coverage_mean": 0.6923076923076923,
+      "total_errors_mean": 9.0,
+      "total_fc_mean": 7.0,
+      "total_fnc_mean": 0.0,
+      "per_seed": [
+        {
+          "metadata": {
+            "network": "insurance",
+            "n_samples": 5000,
+            "alpha": 0.05,
+            "seed": 42
+          },
+          "skeleton": {
+            "n_edges": 37,
+            "n_gt_edges": 52,
+            "coverage": 0.6923076923076923,
+            "precision": 0.972972972972973,
+            "false_positives": 1,
+            "false_negatives": 16
+          },
+          "ci_facts": {
+            "total": 92,
+            "correct": 83,
+            "incorrect": 9,
+            "accuracy": 0.9021739130434783,
+            "true_colliders": 14,
+            "true_non_colliders": 69,
+            "false_colliders": 7,
+            "false_non_colliders": 0,
+            "false_collider_rate_of_errors": 0.7777777777777778
+          },
+          "n_nodes_analyzed": 22
+        }
+      ]
+    }
+  }
+}

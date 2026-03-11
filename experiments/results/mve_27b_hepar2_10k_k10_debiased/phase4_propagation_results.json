@@ -1,0 +1,565 @@
+{
+  "metadata": {
+    "phase": 4,
+    "method": "conservative_propagation",
+    "network": "hepar2",
+    "commit_threshold": 0.3,
+    "batch_size": 5
+  },
+  "safety_valve": {
+    "fallback_recommended": false,
+    "net_delta_pp": 12.600000000000009,
+    "damaged_nodes": [],
+    "helped_nodes": [
+      {
+        "node": "Cirrhosis",
+        "p1_correct": 10,
+        "p2_correct": 11,
+        "n_edges": 11
+      },
+      {
+        "node": "Steatosis",
+        "p1_correct": 3,
+        "p2_correct": 4,
+        "n_edges": 5
+      },
+      {
+        "node": "vh_amn",
+        "p1_correct": 0,
+        "p2_correct": 1,
+        "n_edges": 4
+      },
+      {
+        "node": "gallstones",
+        "p1_correct": 3,
+        "p2_correct": 4,
+        "n_edges": 4
+      },
+      {
+        "node": "Hyperbilirubinemia",
+        "p1_correct": 3,
+        "p2_correct": 4,
+        "n_edges": 4
+      },
+      {
+        "node": "RHepatitis",
+        "p1_correct": 0,
+        "p2_correct": 3,
+        "n_edges": 3
+      },
+      {
+        "node": "encephalopathy",
+        "p1_correct": 1,
+        "p2_correct": 2,
+        "n_edges": 3
+      },
+      {
+        "node": "cholesterol",
+        "p1_correct": 2,
+        "p2_correct": 3,
+        "n_edges": 3
+      },
+      {
+        "node": "hospital",
+        "p1_correct": 0,
+        "p2_correct": 2,
+        "n_edges": 2
+      },
+      {
+        "node": "surgery",
+        "p1_correct": 0,
+        "p2_correct": 1,
+        "n_edges": 2
+      }
+    ],
+    "n_damaged": 0,
+    "n_helped": 10
+  },
+  "propagation": {
+    "n_committed": 22,
+    "n_meek_compelled": 42,
+    "n_residual": 0,
+    "n_cycle_flips": 0,
+    "n_meek_overrides": 0,
+    "n_rounds": 2
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.875,
+    "phase3_correct": 56,
+    "phase4_accuracy": 0.875,
+    "phase4_correct": 56,
+    "total_edges": 64,
+    "delta_pp": 0.0,
+    "by_source": {
+      "committed": {
+        "correct": 16,
+        "total": 22,
+        "accuracy": 0.7272727272727273
+      },
+      "meek_R1": {
+        "correct": 40,
+        "total": 42,
+        "accuracy": 0.9523809523809523
+      }
+    }
+  },
+  "propagation_log": [
+    {
+      "round": 1,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    },
+    {
+      "round": 1,
+      "event": "meek_propagation",
+      "n_proposed": 55,
+      "n_accepted": 42,
+      "n_rejected": 13,
+      "overrides": [
+        {
+          "edge": "frozenset({'vh_amn', 'hbsag_anti'})",
+          "meek": "vh_amn->hbsag_anti",
+          "llm": "hbsag_anti->vh_amn",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'age', 'spleen'})",
+          "meek": "spleen->age",
+          "llm": "age->spleen",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'platelet', 'bleeding'})",
+          "meek": "bleeding->platelet",
+          "llm": "platelet->bleeding",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'sex', 'PBC'})",
+          "meek": "PBC->sex",
+          "llm": "sex->PBC",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'Hyperbilirubinemia', 'hepatomegaly'})",
+          "meek": "Hyperbilirubinemia->hepatomegaly",
+          "llm": "hepatomegaly->Hyperbilirubinemia",
+          "rule": "R1",
+          "llm_confidence": 0.8,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'Hyperbilirubinemia', 'bilirubin'})",
+          "meek": "Hyperbilirubinemia->bilirubin",
+          "llm": "bilirubin->Hyperbilirubinemia",
+          "rule": "R1",
+          "llm_confidence": 0.0,
+          "action": "meek_override_low_conf"
+        },
+        {
+          "edge": "frozenset({'gallstones', 'bilirubin'})",
+          "meek": "bilirubin->gallstones",
+          "llm": "gallstones->bilirubin",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'ggtp', 'cholesterol'})",
+          "meek": "ggtp->cholesterol",
+          "llm": "cholesterol->ggtp",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'Steatosis', 'cholesterol'})",
+          "meek": "cholesterol->Steatosis",
+          "llm": "Steatosis->cholesterol",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'alcoholism', 'Steatosis'})",
+          "meek": "Steatosis->alcoholism",
+          "llm": "alcoholism->Steatosis",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'injections', 'choledocholithotomy'})",
+          "meek": "choledocholithotomy->injections",
+          "llm": "injections->choledocholithotomy",
+          "rule": "R1",
+          "llm_confidence": 0.6,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'ast', 'ChHepatitis'})",
+          "meek": "ast->ChHepatitis",
+          "llm": "ChHepatitis->ast",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'THepatitis', 'ast'})",
+          "meek": "ast->THepatitis",
+          "llm": "THepatitis->ast",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'RHepatitis', 'ast'})",
+          "meek": "ast->RHepatitis",
+          "llm": "RHepatitis->ast",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event": "commit_batch",
+      "n_committed": 4,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    }
+  ],
+  "final_orientations": {
+    "frozenset({'Cirrhosis', 'fibrosis'})": {
+      "direction": "fibrosis->Cirrhosis",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Steatosis', 'Cirrhosis'})": {
+      "direction": "Steatosis->Cirrhosis",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'inr', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->inr",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'spleen', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->spleen",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'vh_amn', 'ChHepatitis'})": {
+      "direction": "ChHepatitis->vh_amn",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'vh_amn', 'hbsag_anti'})": {
+      "direction": "hbsag_anti->vh_amn",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'age', 'spleen'})": {
+      "direction": "age->spleen",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'platelet', 'bleeding'})": {
+      "direction": "platelet->bleeding",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'sex', 'PBC'})": {
+      "direction": "sex->PBC",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Hyperbilirubinemia', 'hepatomegaly'})": {
+      "direction": "hepatomegaly->Hyperbilirubinemia",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'gallstones', 'bilirubin'})": {
+      "direction": "gallstones->bilirubin",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'ggtp', 'cholesterol'})": {
+      "direction": "cholesterol->ggtp",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Steatosis', 'cholesterol'})": {
+      "direction": "Steatosis->cholesterol",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'alcoholism', 'Steatosis'})": {
+      "direction": "alcoholism->Steatosis",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'injections', 'choledocholithotomy'})": {
+      "direction": "injections->choledocholithotomy",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'ast', 'ChHepatitis'})": {
+      "direction": "ChHepatitis->ast",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'THepatitis', 'ast'})": {
+      "direction": "THepatitis->ast",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'RHepatitis', 'ast'})": {
+      "direction": "RHepatitis->ast",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'vh_amn', 'hbsag'})": {
+      "direction": "vh_amn->hbsag",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'urea', 'encephalopathy'})": {
+      "direction": "urea->encephalopathy",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'density', 'encephalopathy'})": {
+      "direction": "encephalopathy->density",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'consciousness', 'encephalopathy'})": {
+      "direction": "encephalopathy->consciousness",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'edema', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->edema",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'carcinoma', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->carcinoma",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'edge', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->edge",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'spiders', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->spiders",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'palms', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->palms",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'inr', 'bleeding'})": {
+      "direction": "inr->bleeding",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'irregular_liver', 'Cirrhosis'})": {
+      "direction": "Cirrhosis->irregular_liver",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'vh_amn', 'hbc_anti'})": {
+      "direction": "vh_amn->hbc_anti",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Cirrhosis', 'alcohol'})": {
+      "direction": "Cirrhosis->alcohol",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'age', 'PBC'})": {
+      "direction": "age->PBC",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'age', 'Hyperbilirubinemia'})": {
+      "direction": "age->Hyperbilirubinemia",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Hyperbilirubinemia', 'bilirubin'})": {
+      "direction": "Hyperbilirubinemia->bilirubin",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'bilirubin', 'PBC'})": {
+      "direction": "PBC->bilirubin",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ama', 'PBC'})": {
+      "direction": "PBC->ama",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'cholesterol', 'PBC'})": {
+      "direction": "PBC->cholesterol",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ESR', 'PBC'})": {
+      "direction": "PBC->ESR",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ggtp', 'Hyperbilirubinemia'})": {
+      "direction": "Hyperbilirubinemia->ggtp",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ggtp', 'PBC'})": {
+      "direction": "PBC->ggtp",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'skin', 'bilirubin'})": {
+      "direction": "bilirubin->skin",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'itching', 'bilirubin'})": {
+      "direction": "bilirubin->itching",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'jaundice', 'bilirubin'})": {
+      "direction": "bilirubin->jaundice",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'hepatalgia', 'hepatomegaly'})": {
+      "direction": "hepatomegaly->hepatalgia",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'triglycerides', 'Steatosis'})": {
+      "direction": "Steatosis->triglycerides",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'pressure_ruq', 'gallstones'})": {
+      "direction": "gallstones->pressure_ruq",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'Steatosis', 'ast'})": {
+      "direction": "Steatosis->ast",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'fat', 'gallstones'})": {
+      "direction": "gallstones->fat",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'choledocholithotomy', 'gallstones'})": {
+      "direction": "gallstones->choledocholithotomy",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'THepatitis', 'alcoholism'})": {
+      "direction": "alcoholism->THepatitis",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'injections', 'ChHepatitis'})": {
+      "direction": "injections->ChHepatitis",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'fatigue', 'RHepatitis'})": {
+      "direction": "RHepatitis->fatigue",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'fibrosis', 'ChHepatitis'})": {
+      "direction": "ChHepatitis->fibrosis",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'injections', 'surgery'})": {
+      "direction": "injections->surgery",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'THepatitis', 'alt'})": {
+      "direction": "THepatitis->alt",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'hbsag', 'ChHepatitis'})": {
+      "direction": "ChHepatitis->hbsag",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'alt', 'ChHepatitis'})": {
+      "direction": "ChHepatitis->alt",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'hbeag', 'ChHepatitis'})": {
+      "direction": "ChHepatitis->hbeag",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'RHepatitis', 'phosphatase'})": {
+      "direction": "RHepatitis->phosphatase",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'THepatitis', 'phosphatase'})": {
+      "direction": "THepatitis->phosphatase",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'phosphatase', 'ChHepatitis'})": {
+      "direction": "ChHepatitis->phosphatase",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'injections', 'hospital'})": {
+      "direction": "injections->hospital",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'transfusion', 'surgery'})": {
+      "direction": "surgery->transfusion",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'transfusion', 'hospital'})": {
+      "direction": "hospital->transfusion",
+      "source": "meek_R1",
+      "confidence": null
+    }
+  }
+}

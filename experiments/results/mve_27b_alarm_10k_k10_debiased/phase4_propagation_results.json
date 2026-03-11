@@ -1,0 +1,444 @@
+{
+  "metadata": {
+    "phase": 4,
+    "method": "conservative_propagation",
+    "network": "alarm",
+    "commit_threshold": 0.3,
+    "batch_size": 5
+  },
+  "safety_valve": {
+    "fallback_recommended": false,
+    "net_delta_pp": 2.700000000000003,
+    "damaged_nodes": [],
+    "helped_nodes": [
+      {
+        "node": "LVFAILURE",
+        "p1_correct": 1,
+        "p2_correct": 2,
+        "n_edges": 3
+      },
+      {
+        "node": "ARTCO2",
+        "p1_correct": 2,
+        "p2_correct": 3,
+        "n_edges": 3
+      }
+    ],
+    "n_damaged": 0,
+    "n_helped": 2
+  },
+  "propagation": {
+    "n_committed": 25,
+    "n_meek_compelled": 18,
+    "n_residual": 0,
+    "n_cycle_flips": 0,
+    "n_meek_overrides": 0,
+    "n_rounds": 2
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.9302325581395349,
+    "phase3_correct": 40,
+    "phase4_accuracy": 0.9302325581395349,
+    "phase4_correct": 40,
+    "total_edges": 43,
+    "delta_pp": 0.0,
+    "by_source": {
+      "committed": {
+        "correct": 23,
+        "total": 25,
+        "accuracy": 0.92
+      },
+      "meek_R1": {
+        "correct": 17,
+        "total": 18,
+        "accuracy": 0.9444444444444444
+      }
+    }
+  },
+  "propagation_log": [
+    {
+      "round": 1,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    },
+    {
+      "round": 1,
+      "event": "meek_propagation",
+      "n_proposed": 36,
+      "n_accepted": 18,
+      "n_rejected": 18,
+      "overrides": [
+        {
+          "edge": "frozenset({'PULMEMBOLUS', 'SHUNT'})",
+          "meek": "SHUNT->PULMEMBOLUS",
+          "llm": "PULMEMBOLUS->SHUNT",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'VENTTUBE', 'VENTLUNG'})",
+          "meek": "VENTLUNG->VENTTUBE",
+          "llm": "VENTTUBE->VENTLUNG",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'VENTTUBE', 'PRESS'})",
+          "meek": "PRESS->VENTTUBE",
+          "llm": "VENTTUBE->PRESS",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'PRESS', 'KINKEDTUBE'})",
+          "meek": "PRESS->KINKEDTUBE",
+          "llm": "KINKEDTUBE->PRESS",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'VENTTUBE', 'DISCONNECT'})",
+          "meek": "VENTTUBE->DISCONNECT",
+          "llm": "DISCONNECT->VENTTUBE",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'PVSAT', 'FIO2'})",
+          "meek": "PVSAT->FIO2",
+          "llm": "FIO2->PVSAT",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'VENTTUBE', 'VENTMACH'})",
+          "meek": "VENTTUBE->VENTMACH",
+          "llm": "VENTMACH->VENTTUBE",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'MINVOLSET', 'VENTMACH'})",
+          "meek": "VENTMACH->MINVOLSET",
+          "llm": "MINVOLSET->VENTMACH",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'TPR', 'ANAPHYLAXIS'})",
+          "meek": "TPR->ANAPHYLAXIS",
+          "llm": "ANAPHYLAXIS->TPR",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'ERRCAUTER', 'HRSAT'})",
+          "meek": "HRSAT->ERRCAUTER",
+          "llm": "ERRCAUTER->HRSAT",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'ERRLOWOUTPUT', 'HRBP'})",
+          "meek": "HRBP->ERRLOWOUTPUT",
+          "llm": "ERRLOWOUTPUT->HRBP",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'ERRCAUTER', 'HREKG'})",
+          "meek": "HREKG->ERRCAUTER",
+          "llm": "ERRCAUTER->HREKG",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'BP', 'CO'})",
+          "meek": "BP->CO",
+          "llm": "CO->BP",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'CO', 'STROKEVOLUME'})",
+          "meek": "CO->STROKEVOLUME",
+          "llm": "STROKEVOLUME->CO",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'HYPOVOLEMIA', 'STROKEVOLUME'})",
+          "meek": "STROKEVOLUME->HYPOVOLEMIA",
+          "llm": "HYPOVOLEMIA->STROKEVOLUME",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'LVFAILURE', 'STROKEVOLUME'})",
+          "meek": "STROKEVOLUME->LVFAILURE",
+          "llm": "LVFAILURE->STROKEVOLUME",
+          "rule": "R1",
+          "llm_confidence": 1.0,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'LVEDVOLUME', 'LVFAILURE'})",
+          "meek": "LVFAILURE->LVEDVOLUME",
+          "llm": "LVEDVOLUME->LVFAILURE",
+          "rule": "R1",
+          "llm_confidence": 0.8,
+          "action": "llm_kept_over_meek"
+        },
+        {
+          "edge": "frozenset({'HISTORY', 'LVFAILURE'})",
+          "meek": "LVFAILURE->HISTORY",
+          "llm": "HISTORY->LVFAILURE",
+          "rule": "R1",
+          "llm_confidence": 0.5,
+          "action": "llm_kept_over_meek"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event": "commit_batch",
+      "n_committed": 2,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    }
+  ],
+  "final_orientations": {
+    "frozenset({'INTUBATION', 'MINVOL'})": {
+      "direction": "INTUBATION->MINVOL",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'SHUNT', 'INTUBATION'})": {
+      "direction": "INTUBATION->SHUNT",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PRESS', 'INTUBATION'})": {
+      "direction": "INTUBATION->PRESS",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTLUNG', 'INTUBATION'})": {
+      "direction": "INTUBATION->VENTLUNG",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTALV', 'INTUBATION'})": {
+      "direction": "INTUBATION->VENTALV",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PULMEMBOLUS', 'SHUNT'})": {
+      "direction": "PULMEMBOLUS->SHUNT",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTTUBE', 'VENTLUNG'})": {
+      "direction": "VENTTUBE->VENTLUNG",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTTUBE', 'PRESS'})": {
+      "direction": "VENTTUBE->PRESS",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PRESS', 'KINKEDTUBE'})": {
+      "direction": "KINKEDTUBE->PRESS",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTTUBE', 'DISCONNECT'})": {
+      "direction": "DISCONNECT->VENTTUBE",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PVSAT', 'FIO2'})": {
+      "direction": "FIO2->PVSAT",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTTUBE', 'VENTMACH'})": {
+      "direction": "VENTMACH->VENTTUBE",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'MINVOLSET', 'VENTMACH'})": {
+      "direction": "MINVOLSET->VENTMACH",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'TPR', 'ANAPHYLAXIS'})": {
+      "direction": "ANAPHYLAXIS->TPR",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'ERRCAUTER', 'HRSAT'})": {
+      "direction": "ERRCAUTER->HRSAT",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'ERRLOWOUTPUT', 'HRBP'})": {
+      "direction": "ERRLOWOUTPUT->HRBP",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'ERRCAUTER', 'HREKG'})": {
+      "direction": "ERRCAUTER->HREKG",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'BP', 'CO'})": {
+      "direction": "CO->BP",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'CO', 'STROKEVOLUME'})": {
+      "direction": "STROKEVOLUME->CO",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'HYPOVOLEMIA', 'STROKEVOLUME'})": {
+      "direction": "HYPOVOLEMIA->STROKEVOLUME",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'LVFAILURE', 'STROKEVOLUME'})": {
+      "direction": "LVFAILURE->STROKEVOLUME",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'LVEDVOLUME', 'LVFAILURE'})": {
+      "direction": "LVEDVOLUME->LVFAILURE",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'HISTORY', 'LVFAILURE'})": {
+      "direction": "HISTORY->LVFAILURE",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTLUNG', 'MINVOL'})": {
+      "direction": "VENTLUNG->MINVOL",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'VENTLUNG', 'VENTALV'})": {
+      "direction": "VENTLUNG->VENTALV",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'SHUNT', 'SAO2'})": {
+      "direction": "SHUNT->SAO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'VENTLUNG', 'EXPCO2'})": {
+      "direction": "VENTLUNG->EXPCO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'PVSAT', 'VENTALV'})": {
+      "direction": "VENTALV->PVSAT",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ARTCO2', 'VENTALV'})": {
+      "direction": "VENTALV->ARTCO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'ARTCO2', 'EXPCO2'})": {
+      "direction": "ARTCO2->EXPCO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'CATECHOL', 'ARTCO2'})": {
+      "direction": "ARTCO2->CATECHOL",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'PVSAT', 'SAO2'})": {
+      "direction": "PVSAT->SAO2",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'PAP', 'PULMEMBOLUS'})": {
+      "direction": "PULMEMBOLUS->PAP",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'CATECHOL', 'TPR'})": {
+      "direction": "CATECHOL->TPR",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'CATECHOL', 'HR'})": {
+      "direction": "CATECHOL->HR",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'CO', 'HR'})": {
+      "direction": "HR->CO",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'HR', 'HREKG'})": {
+      "direction": "HR->HREKG",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'HR', 'HRSAT'})": {
+      "direction": "HR->HRSAT",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'TPR', 'BP'})": {
+      "direction": "TPR->BP",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'HR', 'HRBP'})": {
+      "direction": "HR->HRBP",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'HYPOVOLEMIA', 'LVEDVOLUME'})": {
+      "direction": "HYPOVOLEMIA->LVEDVOLUME",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'PCWP', 'LVEDVOLUME'})": {
+      "direction": "LVEDVOLUME->PCWP",
+      "source": "meek_R1",
+      "confidence": null
+    },
+    "frozenset({'CVP', 'LVEDVOLUME'})": {
+      "direction": "LVEDVOLUME->CVP",
+      "source": "meek_R1",
+      "confidence": null
+    }
+  }
+}

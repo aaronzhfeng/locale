@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "phase": 4,
+    "network": "child"
+  },
+  "safety_valve": {
+    "fallback_recommended": false,
+    "net_delta_pp": 6.299999999999997,
+    "damaged_nodes": [],
+    "helped_nodes": [
+      {
+        "node": "Sick",
+        "p1_correct": 1,
+        "p2_correct": 2,
+        "n_edges": 3
+      },
+      {
+        "node": "ChestXray",
+        "p1_correct": 2,
+        "p2_correct": 3,
+        "n_edges": 3
+      }
+    ],
+    "n_damaged": 0,
+    "n_helped": 2
+  },
+  "reverted_nodes": [],
+  "cycle_breaking": {
+    "had_cycles_before": false,
+    "is_acyclic_after": true,
+    "n_flipped": 0,
+    "flipped_edges": []
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.9130434782608695,
+    "phase3_correct": 21,
+    "phase4_accuracy": 0.9130434782608695,
+    "phase4_correct": 21,
+    "adaptive_accuracy": 0.9565217391304348,
+    "adaptive_correct": 22,
+    "best_method": "adaptive",
+    "best_accuracy": 0.9565217391304348,
+    "best_correct": 22,
+    "total_edges": 23,
+    "delta_pp": 4.3
+  },
+  "best_alt_reconciliation": {
+    "strategy": "constraints",
+    "accuracy": 0.9565217391304348
+  },
+  "reconciled": {
+    "('BirthAsphyxia', 'Disease')": {
+      "direction": "Disease->BirthAsphyxia",
+      "method": "single_endpoint",
+      "endpoint": "Disease"
+    },
+    "('Age', 'Disease')": {
+      "direction": "Disease->Age",
+      "method": "single_endpoint",
+      "endpoint": "Disease"
+    },
+    "('Disease', 'LVH')": {
+      "direction": "Disease->LVH",
+      "method": "single_endpoint",
+      "endpoint": "Disease"
+    },
+    "('Disease', 'DuctFlow')": {
+      "direction": "Disease->DuctFlow",
+      "method": "single_endpoint",
+      "endpoint": "Disease"
+    },
+    "('CardiacMixing', 'Disease')": {
+      "direction": "Disease->CardiacMixing",
+      "method": "agreement"
+    },
+    "('Disease', 'LungParench')": {
+      "direction": "Disease->LungParench",
+      "method": "agreement"
+    },
+    "('Disease', 'LungFlow')": {
+      "direction": "Disease->LungFlow",
+      "method": "single_endpoint",
+      "endpoint": "Disease"
+    },
+    "('Disease', 'Sick')": {
+      "direction": "Disease->Sick",
+      "method": "agreement"
+    },
+    "('HypoxiaInO2', 'LungParench')": {
+      "direction": "LungParench->HypoxiaInO2",
+      "method": "agreement"
+    },
+    "('CO2', 'LungParench')": {
+      "direction": "LungParench->CO2",
+      "method": "single_endpoint",
+      "endpoint": "LungParench"
+    },
+    "('ChestXray', 'LungParench')": {
+      "direction": "LungParench->ChestXray",
+      "method": "agreement"
+    },
+    "('Grunting', 'LungParench')": {
+      "direction": "LungParench->Grunting",
+      "method": "agreement"
+    },
+    "('HypoxiaInO2', 'LowerBodyO2')": {
+      "direction": "HypoxiaInO2->LowerBodyO2",
+      "method": "single_endpoint",
+      "endpoint": "HypoxiaInO2"
+    },
+    "('HypoxiaInO2', 'RUQO2')": {
+      "direction": "HypoxiaInO2->RUQO2",
+      "method": "single_endpoint",
+      "endpoint": "HypoxiaInO2"
+    },
+    "('CardiacMixing', 'HypoxiaInO2')": {
+      "direction": "CardiacMixing->HypoxiaInO2",
+      "method": "agreement"
+    },
+    "('CardiacMixing', 'HypDistrib')": {
+      "direction": "CardiacMixing->HypDistrib",
+      "method": "agreement"
+    },
+    "('Grunting', 'Sick')": {
+      "direction": "Sick->Grunting",
+      "method": "adaptive_constraint_count",
+      "endpoints": [
+        {
+          "node": "Sick",
+          "dir": "Grunting->Sick",
+          "margin": 1.0,
+          "degree": 3,
+          "n_constraints": 2
+        },
+        {
+          "node": "Grunting",
+          "dir": "Sick->Grunting",
+          "margin": 0.6,
+          "degree": 3,
+          "n_constraints": 3
+        }
+      ]
+    },
+    "('Age', 'Sick')": {
+      "direction": "Sick->Age",
+      "method": "single_endpoint",
+      "endpoint": "Sick"
+    },
+    "('HypDistrib', 'LowerBodyO2')": {
+      "direction": "HypDistrib->LowerBodyO2",
+      "method": "single_endpoint",
+      "endpoint": "HypDistrib"
+    },
+    "('DuctFlow', 'HypDistrib')": {
+      "direction": "DuctFlow->HypDistrib",
+      "method": "single_endpoint",
+      "endpoint": "HypDistrib"
+    },
+    "('ChestXray', 'XrayReport')": {
+      "direction": "ChestXray->XrayReport",
+      "method": "single_endpoint",
+      "endpoint": "ChestXray"
+    },
+    "('ChestXray', 'LungFlow')": {
+      "direction": "LungFlow->ChestXray",
+      "method": "single_endpoint",
+      "endpoint": "ChestXray"
+    },
+    "('Grunting', 'GruntingReport')": {
+      "direction": "Grunting->GruntingReport",
+      "method": "single_endpoint",
+      "endpoint": "Grunting"
+    }
+  }
+}

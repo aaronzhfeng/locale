@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "phase": 5,
+    "method": "pe_fallback",
+    "budget_fraction": 0.15
+  },
+  "hard_tail": {
+    "n_identified": 4,
+    "n_queried": 2,
+    "max_budget": 2,
+    "by_reason": {
+      "disagreement": 4
+    }
+  },
+  "fallback": {
+    "n_changes": 1,
+    "n_improved": 1,
+    "n_worsened": 0,
+    "net_gain": 1,
+    "changes": [
+      {
+        "edge": "('PIP2', 'Plcg')",
+        "old": "PIP2->Plcg",
+        "new": "Plcg->PIP2",
+        "gt": "Plcg->PIP2",
+        "improved": true,
+        "worsened": false
+      }
+    ]
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.7647058823529411,
+    "phase3_correct": 13,
+    "phase5_accuracy": 0.8235294117647058,
+    "phase5_correct": 14,
+    "total_edges": 17,
+    "delta_pp": 5.9
+  },
+  "final_orientations": {
+    "('Akt', 'PKA')": {
+      "direction": "PKA->Akt",
+      "source": "disagreement_confidence",
+      "changed": false
+    },
+    "('Erk', 'PKA')": {
+      "direction": "PKA->Erk",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Jnk', 'PKA')": {
+      "direction": "PKA->Jnk",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Mek', 'PKA')": {
+      "direction": "PKA->Mek",
+      "source": "agreement",
+      "changed": false
+    },
+    "('P38', 'PKA')": {
+      "direction": "PKA->P38",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PKA', 'PKC')": {
+      "direction": "PKA->PKC",
+      "source": "ego_kept_no_majority",
+      "changed": false
+    },
+    "('PKA', 'Raf')": {
+      "direction": "PKA->Raf",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Jnk', 'PKC')": {
+      "direction": "PKC->Jnk",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Mek', 'PKC')": {
+      "direction": "PKC->Mek",
+      "source": "agreement",
+      "changed": false
+    },
+    "('P38', 'PKC')": {
+      "direction": "PKC->P38",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PKC', 'Raf')": {
+      "direction": "PKC->Raf",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Erk', 'Mek')": {
+      "direction": "Mek->Erk",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Mek', 'Raf')": {
+      "direction": "Raf->Mek",
+      "source": "agreement",
+      "changed": false
+    },
+    "('Akt', 'Erk')": {
+      "direction": "Akt->Erk",
+      "source": "disagreement_confidence",
+      "changed": false
+    },
+    "('PIP2', 'PIP3')": {
+      "direction": "PIP2->PIP3",
+      "source": "agreement",
+      "changed": false
+    },
+    "('PIP2', 'Plcg')": {
+      "direction": "Plcg->PIP2",
+      "source": "pe_tiebreak",
+      "changed": true
+    },
+    "('PIP3', 'Plcg')": {
+      "direction": "Plcg->PIP3",
+      "source": "agreement",
+      "changed": false
+    }
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "reconciled": {
+    "('Akt', 'PKA')": {
+      "direction": "Akt->PKA",
+      "method": "agreement"
+    },
+    "('Erk', 'PKA')": {
+      "direction": "PKA->Erk",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PKA->Erk",
+        "degree": "PKA->Erk",
+        "constraints": "PKA->Erk",
+        "hard_flip": "PKA->Erk"
+      },
+      "endpoints": [
+        {
+          "node": "PKA",
+          "dir": "PKA->Erk",
+          "margin": 1.0,
+          "degree": 7
+        },
+        {
+          "node": "Erk",
+          "dir": "Erk->PKA",
+          "margin": 0.2,
+          "degree": 3
+        }
+      ]
+    },
+    "('Jnk', 'PKA')": {
+      "direction": "PKA->Jnk",
+      "method": "agreement"
+    },
+    "('Mek', 'PKA')": {
+      "direction": "PKA->Mek",
+      "method": "agreement"
+    },
+    "('P38', 'PKA')": {
+      "direction": "PKA->P38",
+      "method": "agreement"
+    },
+    "('PKA', 'PKC')": {
+      "direction": "PKA->PKC",
+      "method": "agreement"
+    },
+    "('PKA', 'Raf')": {
+      "direction": "Raf->PKA",
+      "method": "agreement"
+    },
+    "('Jnk', 'PKC')": {
+      "direction": "PKC->Jnk",
+      "method": "agreement"
+    },
+    "('Mek', 'PKC')": {
+      "direction": "PKC->Mek",
+      "method": "agreement"
+    },
+    "('P38', 'PKC')": {
+      "direction": "PKC->P38",
+      "method": "agreement"
+    },
+    "('PKC', 'Raf')": {
+      "direction": "PKC->Raf",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PKC->Raf",
+        "degree": "PKC->Raf",
+        "constraints": "PKC->Raf",
+        "hard_flip": "PKC->Raf"
+      },
+      "endpoints": [
+        {
+          "node": "PKC",
+          "dir": "PKC->Raf",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "Raf",
+          "dir": "Raf->PKC",
+          "margin": 0.6,
+          "degree": 3
+        }
+      ]
+    },
+    "('Erk', 'Mek')": {
+      "direction": "Mek->Erk",
+      "method": "agreement"
+    },
+    "('Mek', 'Raf')": {
+      "direction": "Raf->Mek",
+      "method": "agreement"
+    },
+    "('Akt', 'Erk')": {
+      "direction": "Akt->Erk",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Akt->Erk",
+        "degree": "Erk->Akt",
+        "constraints": "Erk->Akt",
+        "hard_flip": "Akt->Erk"
+      },
+      "endpoints": [
+        {
+          "node": "Erk",
+          "dir": "Erk->Akt",
+          "margin": 0.2,
+          "degree": 3
+        },
+        {
+          "node": "Akt",
+          "dir": "Akt->Erk",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('PIP2', 'PIP3')": {
+      "direction": "PIP2->PIP3",
+      "method": "agreement"
+    },
+    "('PIP3', 'Plcg')": {
+      "direction": "Plcg->PIP3",
+      "method": "agreement"
+    },
+    "('PIP2', 'Plcg')": {
+      "direction": "PIP2->Plcg",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PIP2->Plcg",
+        "degree": "PIP2->Plcg",
+        "constraints": "PIP2->Plcg",
+        "hard_flip": "PIP2->Plcg"
+      },
+      "endpoints": [
+        {
+          "node": "PIP2",
+          "dir": "Plcg->PIP2",
+          "margin": 0.2,
+          "degree": 2
+        },
+        {
+          "node": "Plcg",
+          "dir": "PIP2->Plcg",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "correct": 11,
+    "total": 17,
+    "accuracy": 0.6470588235294118,
+    "agreements": 13,
+    "disagreements": 4,
+    "by_method": {
+      "agreement": {
+        "correct": 9,
+        "total": 13
+      },
+      "disagreement_confidence": {
+        "correct": 2,
+        "total": 4
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 12,
+      "total": 17,
+      "accuracy": 0.7058823529411765,
+      "agreements": 13,
+      "disagreements": 4,
+      "by_method": {
+        "agreement": {
+          "correct": 9,
+          "total": 13
+        },
+        "disagreement_confidence": {
+          "correct": 3,
+          "total": 4
+        }
+      }
+    },
+    "constraints": {
+      "correct": 12,
+      "total": 17,
+      "accuracy": 0.7058823529411765,
+      "agreements": 13,
+      "disagreements": 4,
+      "by_method": {
+        "agreement": {
+          "correct": 9,
+          "total": 13
+        },
+        "disagreement_confidence": {
+          "correct": 3,
+          "total": 4
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 11,
+      "total": 17,
+      "accuracy": 0.6470588235294118,
+      "agreements": 13,
+      "disagreements": 4,
+      "by_method": {
+        "agreement": {
+          "correct": 9,
+          "total": 13
+        },
+        "disagreement_confidence": {
+          "correct": 2,
+          "total": 4
+        }
+      }
+    }
+  },
+  "n_unique_edges": 17
+}

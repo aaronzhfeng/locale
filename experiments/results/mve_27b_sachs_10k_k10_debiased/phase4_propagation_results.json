@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "phase": 4,
+    "method": "conservative_propagation",
+    "network": "sachs",
+    "commit_threshold": 0.3,
+    "batch_size": 5
+  },
+  "safety_valve": {
+    "fallback_recommended": false,
+    "net_delta_pp": 3.0,
+    "damaged_nodes": [],
+    "helped_nodes": [
+      {
+        "node": "Erk",
+        "p1_correct": 2,
+        "p2_correct": 3,
+        "n_edges": 3
+      }
+    ],
+    "n_damaged": 0,
+    "n_helped": 1
+  },
+  "propagation": {
+    "n_committed": 16,
+    "n_meek_compelled": 1,
+    "n_residual": 0,
+    "n_cycle_flips": 0,
+    "n_meek_overrides": 0,
+    "n_rounds": 3
+  },
+  "evaluation": {
+    "phase3_accuracy": 0.7647058823529411,
+    "phase3_correct": 13,
+    "phase4_accuracy": 0.7647058823529411,
+    "phase4_correct": 13,
+    "total_edges": 17,
+    "delta_pp": 0.0,
+    "by_source": {
+      "committed": {
+        "correct": 12,
+        "total": 16,
+        "accuracy": 0.75
+      },
+      "meek_R1": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "propagation_log": [
+    {
+      "round": 1,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    },
+    {
+      "round": 2,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    },
+    {
+      "round": 2,
+      "event": "meek_propagation",
+      "n_proposed": 2,
+      "n_accepted": 1,
+      "n_rejected": 1,
+      "overrides": [
+        {
+          "edge": "frozenset({'Erk', 'Akt'})",
+          "meek": "Erk->Akt",
+          "llm": "Akt->Erk",
+          "rule": "R1",
+          "llm_confidence": 0.8,
+          "action": "llm_kept_over_meek"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "event": "commit_batch",
+      "n_committed": 5,
+      "n_rejected_cycles": 0,
+      "batch_size": 5
+    }
+  ],
+  "final_orientations": {
+    "frozenset({'Akt', 'PKA'})": {
+      "direction": "PKA->Akt",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Erk', 'PKA'})": {
+      "direction": "PKA->Erk",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Jnk', 'PKA'})": {
+      "direction": "PKA->Jnk",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Mek', 'PKA'})": {
+      "direction": "PKA->Mek",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'P38', 'PKA'})": {
+      "direction": "PKA->P38",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PKA', 'PKC'})": {
+      "direction": "PKA->PKC",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Raf', 'PKA'})": {
+      "direction": "PKA->Raf",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Jnk', 'PKC'})": {
+      "direction": "PKC->Jnk",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Mek', 'PKC'})": {
+      "direction": "PKC->Mek",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'P38', 'PKC'})": {
+      "direction": "PKC->P38",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Erk', 'Akt'})": {
+      "direction": "Akt->Erk",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Raf', 'PKC'})": {
+      "direction": "PKC->Raf",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Mek', 'Raf'})": {
+      "direction": "Raf->Mek",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PIP3', 'PIP2'})": {
+      "direction": "PIP2->PIP3",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'PIP3', 'Plcg'})": {
+      "direction": "Plcg->PIP3",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Plcg', 'PIP2'})": {
+      "direction": "PIP2->Plcg",
+      "source": "committed",
+      "confidence": null
+    },
+    "frozenset({'Mek', 'Erk'})": {
+      "direction": "Mek->Erk",
+      "source": "meek_R1",
+      "confidence": null
+    }
+  }
+}
