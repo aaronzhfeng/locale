@@ -241,7 +241,7 @@ blockquote {
 
 # LOCALE
 
-## Ego-Graph Orientation for LLM-Assisted Causal Discovery
+**L**ocal **O**racle for **C**ausal **A**lignment via **L**earnable **E**go-graphs
 
 ### Aaron Feng · DSC 190 · Prof. Biwei Huang
 
