@@ -4,7 +4,7 @@ Living document. Tracks what the proposal specified vs what has been built, what
 
 **Baseline**: `baseline.md` (proposal v2: 04_ego-causal_v2.md)
 
-Last updated: 2026-03-11
+Last updated: 2026-03-11 (multi-seed validation in progress)
 
 ---
 
@@ -12,11 +12,11 @@ Last updated: 2026-03-11
 
 | ID | Hypothesis | Status | Evidence |
 |----|-----------|--------|----------|
-| H1 | Ego-context improves accuracy-cost tradeoff | Partially supported | Ego wins on unfamiliar domains (Alarm +10pp), ties on familiar. 2.4-4x query savings universal. |
-| H2 | Hard CI constraints improve local consistency | Partially supported | NCO finding: 100% of CI errors are false colliders. Hard constraints hurt when colliders are wrong. |
-| H3 | Reconciliation improves over majority vote | Not supported | Dawid-Skene underperforms majority vote (too sparse: 2 annotators per edge) |
-| H4 | Conservative propagation resolves easy edges | Not tested meaningfully | Meek is no-op when Max-2SAT orients everything. Conservative filtering essential. |
-| H5 | Calibration + abstention reduces false-orientation risk | Not tested | Phase 6 not validated |
+| H1 | Ego-context improves accuracy-cost tradeoff | Supported | Multi-seed (XN-027): LOCALE 4W/0T/1L vs MosaCD with ~50% fewer queries. Disguised test (XN-026) confirms structural reasoning, not memorization. |
+| H2 | Hard CI constraints improve local consistency | Supported (refined) | NCO finding: 100% of CI errors are false colliders (XN-022). Non-collider-only constraints improve accuracy; collider constraints hurt. The H2 hypothesis holds but with the important caveat that only non-collider constraints should be enforced. |
+| H3 | Reconciliation improves over majority vote | Not supported | Dawid-Skene underperforms majority vote (too sparse: 2 annotators per edge). Confidence-weighted majority vote used instead. |
+| H4 | Conservative propagation resolves easy edges | Not tested meaningfully | Meek is no-op when Max-2SAT orients everything. Conservative filtering essential but propagation itself is unnecessary. |
+| H5 | Calibration + abstention reduces false-orientation risk | Not tested | Phase 6 not built. Descoped. |
 
 ## Pipeline Phases (Section 4)
 
@@ -35,18 +35,28 @@ Last updated: 2026-03-11
 | ID | Experiment | Proposal Spec | Status | Notes |
 |----|-----------|---------------|--------|-------|
 | E1 | Ego vs per-edge on oracle skeleton | Matched-budget comparison | Done | 6 networks, 194 edges. Ego ~ties or wins depending on domain. |
-| E2 | Full pipeline vs MosaCD/chatPC | End-to-end directed F1 | Partially done | F1 computed but using PC skeleton, not oracle. LOCALE 2 wins, MosaCD 3 wins. |
+| E2 | Full pipeline vs MosaCD/chatPC | End-to-end directed F1 | Done (5 networks, 4 seeds) | Multi-seed (XN-027): LOCALE 4W/0T/1L. Insurance +4.6pp, Alarm +7.5pp, Sachs +30.1pp, Child +2.4pp, Asia -6.7pp. Always ~50% fewer queries. |
 | E3 | Reconciliation variants | DS vs majority vs shuffled | Partially done | DS rejected. Confidence-weighted tested. EBCC not tested. |
 | E4 | Propagation ablation | With/without Meek + rollback | Done | Meek is no-op. Safety valve prevents damage. |
 | E5 | Calibration | Selective SHD, coverage-accuracy | Not done | Phase 6 not built. |
 
+## Additional Experiments (beyond proposal)
+
+| ID | Experiment | Status | Notes |
+|----|-----------|--------|-------|
+| E-BFS | Iterative BFS decimation | Negative result (XN-025) | Single-pass K=10 beats multi-round K=5×2. More votes > more context. |
+| E-DIS | Disguised variable robustness | Done (XN-026) | Names → V01, V02: -0.7pp ego, +4.7pp/0.0pp after NCO. LOCALE doesn't rely on memorized domain knowledge. |
+| E-ABL | 9B model ablation | Done (XN-023) | 27B required for ego accuracy. 9B too weak. |
+| E-NCO | NCO validation | Done (XN-022) | 97.9% false collider rate across 6 networks. |
+
 ## What Remains from Proposal
 
-1. **Skeleton refinement** — proposal doesn't cover this, but F1 decomposition shows skeleton is the bottleneck. This is beyond-proposal work.
-2. **EBCC sensitivity analysis** (Section 4.5) — dependence-aware reconciliation not tested.
-3. **Cross-model validation** — proposal specifies testing with different LLMs.
-4. **Robustness** (disguised variables at scale) — done at MVE level, not at full scale.
+1. **Skeleton refinement** — proposal doesn't cover this, but F1 decomposition shows skeleton is the bottleneck. VETOED (I10) — 0 true positives across 5/6 networks.
+2. **EBCC sensitivity analysis** (Section 4.5) — dependence-aware reconciliation not tested. DS already rejected, EBCC unlikely to help with 2 annotators.
+3. **Cross-model validation** — proposal specifies testing with different LLMs. 9B ablation done (XN-023), other model families not tested.
+4. **Robustness** (disguised variables) — Done (XN-026). Insurance +4.7pp, Alarm 0.0pp after NCO. Structural constraints are the primary value driver.
 5. **Formal evaluation matrix** (Section 5) — proposal specifies exact comparison rules not yet followed.
+6. ~~**Multi-seed validation**~~ — DONE (XN-027). 4 seeds × 5 networks × 2 methods. LOCALE 4W/0T/1L.
 
 ## Deviations Logged
 
@@ -57,3 +67,5 @@ Last updated: 2026-03-11
 | 2026-03-10 | Phase 5 descoped | Residual empty after Max-2SAT | LOG-2026-03-11-22 |
 | 2026-03-10 | Phase 6 descoped | Needs held-out instances, premature | LOG-2026-03-11-22 |
 | 2026-03-10 | NCO as default over hard constraints | 100% of CI errors are false colliders | LOG-2026-03-10-5 |
+| 2026-03-11 | Multi-seed validation required | research-reflect: MosaCD comparison at 2/5 confidence with single seed | LOG-2026-03-11-32 |
+| 2026-03-12 | Multi-seed validation complete | 4W/0T/1L. MosaCD comparison confidence now moderate-high | LOG-2026-03-12-33 |

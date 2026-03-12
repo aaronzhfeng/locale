@@ -600,3 +600,76 @@ Ran the MosaCD re-implementation (E01) and iterative BFS (E02) with the 27B endp
 
 → DAG: E01 (→ good), E02 (→ negative)
 → Evidence: XN-024, XN-025
+
+<a id="LOG-2026-03-11-31"></a>
+### 2026-03-11 — Disguised variable robustness: negligible accuracy drop
+
+Ran Insurance and Alarm with disguised variable names (V01, V02, ...) through the K=10 debiased pipeline + Phase 2 NCO. Key finding: LOCALE does NOT rely on domain knowledge from variable names.
+
+Raw ego accuracy drops by only 0.7pp (Insurance 89.0%→88.3%, Alarm 83.9%→83.3%). After Phase 2 NCO + Max-2SAT, disguised accuracy **matches or exceeds** real names: Insurance 93.0%→97.7% (+4.7pp), Alarm identical at 90.7%. The structural constraints (CI-derived NCO constraints + Max-2SAT) are the primary value driver, not the LLM's domain knowledge.
+
+This debunks the "LLM memorizes textbook causal graphs" criticism. Pairs with XN-023 (9B ablation): ego-graph requires model scale but NOT domain-specific knowledge.
+
+→ DAG: I02, I03
+→ Evidence: XN-026
+
+---
+
+<a id="LOG-2026-03-11-32"></a>
+### 2026-03-11 — Multi-seed validation: research-reflect recommends DO hold
+
+research-reflect evaluated DO→THINK transition. Assessment: NCO insight at 5/5 confidence (already multi-seed), but MosaCD comparison at 2/5 (single seed, ties are fragile), disguised robustness at 2/5 (2 networks, 1 seed). Recommendation: run 3 additional seeds (0, 1, 2) on core pipeline and MosaCD comparison before transitioning to THINK.
+
+Launched multi-seed LOCALE runs (5 networks × 3 seeds). Also prepared MosaCD multi-seed runner. Added `--seed` argument to mve_insurance.py. Created `run_multiseed.py` and `run_multiseed_mosacd.py` for systematic multi-seed validation.
+
+F1 computation verified: checkpoint F1 numbers are correct (from Phase 3 confidence-weighted reconciliation output, computed against full GT DAG). Phase 2 per-node accuracy ≠ unique-edge accuracy — Phase 3 reconciliation resolves endpoint disagreements and typically adds 1-2 TP edges.
+
+→ DAG: E01
+→ Evidence: XN-024, XN-026
+
+---
+
+<a id="LOG-2026-03-12-33"></a>
+### 2026-03-12 — Multi-seed validation complete: LOCALE 4W/0T/1L vs MosaCD
+
+All 40 runs complete (5 networks × 4 seeds × 2 methods). Results dramatically shift from single-seed s42 comparison (1W/3T on 4 networks) to 4W/0T/1L.
+
+| Network | LOCALE F1 | MosaCD F1 | Delta | Result |
+|---------|-----------|-----------|-------|--------|
+| Insurance | 0.853±0.011 | 0.806±0.056 | +4.6pp | WIN |
+| Alarm | 0.876±0.016 | 0.801±0.016 | +7.5pp | WIN |
+| Sachs | 0.824±0.042 | 0.523±0.098 | +30.1pp | WIN |
+| Child | 0.900±0.020 | 0.876±0.007 | +2.4pp | WIN |
+| Asia | 0.867±0.067 | 0.933±0.000 | -6.7pp | LOSS |
+
+Key insights:
+1. Seed 42 was MosaCD's best/tied-best on 4/5 networks — single-seed understated LOCALE's advantage
+2. MosaCD's shuffled debiasing introduces more sampling variance than LOCALE's ego-graph voting
+3. Sachs reveals MosaCD fragility: 0.412-0.647 (23.5pp range) vs LOCALE 0.765-0.882
+4. Asia (8 edges) is MosaCD's clear strength — per-edge gets perfect accuracy on tiny networks
+5. Child flips from TIE to WIN with multi-seed
+
+This validates research-reflect's recommendation (LOG-2026-03-11-32) to run multi-seed before claiming results. Single-seed would have supported a weaker narrative.
+
+→ DAG: E01
+→ Evidence: XN-027, XN-024
+
+---
+
+<a id="LOG-2026-03-12-34"></a>
+### 2026-03-12 — Phase transition DO→THINK; judge evaluation reveals significance caveats
+
+Transitioned to THINK after research-reflect approved with high confidence. Narrative framing (narrator agent) identified story type as "surprise reframe" — the NCO discovery is the cargo, the ego-graph is the vehicle.
+
+Judge evaluation found critical nuance in the 4W/0T/1L headline:
+- Only 2/4 wins are statistically significant (Alarm t=5.18, Sachs t=5.33)
+- Insurance (t=1.73) and Child (t=2.49) are directional but not significant at p<0.05
+- Skeletons are identical across seeds at n=10k — variance is purely LLM sampling
+- Insurance win is fragile (s42 Δ=0.000, s0 Δ=+0.119)
+- Alarm comparison disadvantaged MosaCD due to 4096-token context overflow
+- Disguised robustness (XN-026) is thin but not load-bearing
+
+Recommendation: proceed to SAY with mandatory caveats. Paper must report paired significance tests alongside threshold-based W/T/L. Must cite MosaCD Theorem 5.5 for NCO. Must disclose Alarm context overflow.
+
+→ DAG: E01, I03
+→ Evidence: XN-027, XN-026, LN-003

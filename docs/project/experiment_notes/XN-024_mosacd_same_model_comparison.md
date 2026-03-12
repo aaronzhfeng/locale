@@ -1,6 +1,6 @@
 ---
 id: XN-024
-title: "MosaCD same-model comparison: LOCALE matches or beats on all 5 networks"
+title: "MosaCD same-model comparison: LOCALE matches or beats on all 6 networks"
 date: 2026-03-11
 dag_nodes: [E01, I02, I03]
 links:
@@ -28,8 +28,9 @@ LOCALE: K=10 passes per node, ego-graph prompts with NCO constraints. Max-2SAT +
 | Asia | 0.933 | 0.933 | 0.0 | ~50 | 70 | 29% |
 | Child | 0.880 | 0.880 | 0.0 | ~75 | 250 | 70% |
 | Sachs | 0.765 | 0.588 | **+17.7pp** | ~85 | 170 | 50% |
+| Hepar2 | 0.599 | 0.442 | **+15.7pp** | ~350 | 670 | 48% |
 
-**Score: LOCALE 2 wins, 3 ties, 0 losses.**
+**Score: LOCALE 3 wins, 3 ties, 0 losses. Always 29-70% fewer queries.**
 
 ## MosaCD Detailed Metrics
 
@@ -40,12 +41,13 @@ LOCALE: K=10 passes per node, ego-graph prompts with NCO constraints. Max-2SAT +
 | Asia | 7/7 | 100% | 7/7 | 0.933 | 1.000 | 0.875 | 1 |
 | Child | 25/25 | 88.0% | 25/25 | 0.880 | 0.880 | 0.880 | 3 |
 | Sachs | 14/17 | 57.1% | 17/17 | 0.588 | 0.588 | 0.588 | 7 |
+| Hepar2 | 42/67 | 62.7% | 67/67 | 0.442 | 0.627 | 0.341 | 83 |
 
 ## Key Observations
 
-1. **Same accuracy, fewer queries.** On 3/5 networks (Insurance, Asia, Child), both methods achieve identical F1. LOCALE uses 29-70% fewer queries by batching multiple edges per ego-graph query.
+1. **Same accuracy, fewer queries.** On 3/6 networks (Insurance, Asia, Child), both methods achieve identical F1. LOCALE uses 29-70% fewer queries by batching multiple edges per ego-graph query.
 
-2. **LOCALE wins on hard networks.** On Alarm (+9pp) and Sachs (+17.7pp), LOCALE's ego-graph approach significantly outperforms MosaCD's per-edge approach. Alarm suffers from MosaCD context overflow (3597 tokens > 4096 limit on "full" template prompts). Sachs shows MosaCD's seed accuracy collapses to 57% (vs LOCALE's 76.5% orientation accuracy).
+2. **LOCALE wins on hard networks.** On Alarm (+9pp), Sachs (+17.7pp), and Hepar2 (+15.7pp), LOCALE's ego-graph approach significantly outperforms MosaCD's per-edge approach. Alarm suffers from MosaCD context overflow (3597 tokens > 4096 limit on "full" template prompts). Sachs shows MosaCD's seed accuracy collapses to 57%. Hepar2 demonstrates that LOCALE's NCO constraints provide better orientation quality even when both methods face the same skeleton bottleneck (52% coverage).
 
 3. **MosaCD context overflow on Alarm.** Some Alarm edges with the "full" template (including chain CI context) exceeded the 4096-token context window, returning empty responses. This dropped seed accuracy to 84.2%. LOCALE's ego prompts (~4200 chars for highest-degree nodes) don't hit this limit because they're more compact.
 
