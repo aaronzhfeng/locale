@@ -1117,11 +1117,13 @@ def parse_ego_graph_response(response, node, neighbors):
 def run_mve(args):
     """Run the MVE: ego vs per-edge on Insurance."""
 
-    global N_SAMPLES, K_PASSES
+    global N_SAMPLES, K_PASSES, SEED_DATA
     if getattr(args, 'n_samples', None) is not None:
         N_SAMPLES = args.n_samples
     if getattr(args, 'k_passes', None) is not None:
         K_PASSES = args.k_passes
+    if getattr(args, 'seed', None) is not None:
+        SEED_DATA = args.seed
     pc_alpha = getattr(args, 'alpha', None) or 0.05
     use_debiased = getattr(args, 'debiased', False)
 
@@ -1655,5 +1657,7 @@ if __name__ == "__main__":
                        help="PC algorithm significance level (default: 0.05)")
     parser.add_argument("--debiased", action="store_true",
                        help="Answer-order debiasing: swap variable order on odd passes")
+    parser.add_argument("--seed", type=int, default=None,
+                       help="Override SEED_DATA for data sampling (default: 42)")
     args = parser.parse_args()
     run_mve(args)
