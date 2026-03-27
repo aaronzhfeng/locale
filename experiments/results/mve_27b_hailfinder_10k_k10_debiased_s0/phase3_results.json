@@ -1,0 +1,1108 @@
+{
+  "reconciled": {
+    "('ScenRelAMCIN', 'Scenario')": {
+      "direction": "Scenario->ScenRelAMCIN",
+      "method": "agreement"
+    },
+    "('ScenRelAMIns', 'Scenario')": {
+      "direction": "Scenario->ScenRelAMIns",
+      "method": "agreement"
+    },
+    "('ScenRel3_4', 'Scenario')": {
+      "direction": "Scenario->ScenRel3_4",
+      "method": "agreement"
+    },
+    "('Scenario', 'ScnRelPlFcst')": {
+      "direction": "Scenario->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('Dewpoints', 'Scenario')": {
+      "direction": "Scenario->Dewpoints",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Scenario->Dewpoints",
+        "degree": "Scenario->Dewpoints",
+        "constraints": "Scenario->Dewpoints",
+        "hard_flip": "Scenario->Dewpoints"
+      },
+      "endpoints": [
+        {
+          "node": "Scenario",
+          "dir": "Scenario->Dewpoints",
+          "margin": 1.0,
+          "degree": 12
+        },
+        {
+          "node": "Dewpoints",
+          "dir": "Dewpoints->Scenario",
+          "margin": 0.6,
+          "degree": 6
+        }
+      ]
+    },
+    "('MidLLapse', 'Scenario')": {
+      "direction": "Scenario->MidLLapse",
+      "method": "agreement"
+    },
+    "('MvmtFeatures', 'Scenario')": {
+      "direction": "Scenario->MvmtFeatures",
+      "method": "agreement"
+    },
+    "('Scenario', 'SfcWndShfDis')": {
+      "direction": "Scenario->SfcWndShfDis",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Scenario->SfcWndShfDis",
+        "degree": "Scenario->SfcWndShfDis",
+        "constraints": "Scenario->SfcWndShfDis",
+        "hard_flip": "SfcWndShfDis->Scenario"
+      },
+      "endpoints": [
+        {
+          "node": "Scenario",
+          "dir": "Scenario->SfcWndShfDis",
+          "margin": 1.0,
+          "degree": 12
+        },
+        {
+          "node": "SfcWndShfDis",
+          "dir": "SfcWndShfDis->Scenario",
+          "margin": 0.0,
+          "degree": 6
+        }
+      ]
+    },
+    "('Scenario', 'SynForcng')": {
+      "direction": "Scenario->SynForcng",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Scenario->SynForcng",
+        "degree": "Scenario->SynForcng",
+        "constraints": "Scenario->SynForcng",
+        "hard_flip": "Scenario->SynForcng"
+      },
+      "endpoints": [
+        {
+          "node": "Scenario",
+          "dir": "Scenario->SynForcng",
+          "margin": 1.0,
+          "degree": 12
+        },
+        {
+          "node": "SynForcng",
+          "dir": "SynForcng->Scenario",
+          "margin": 0.8,
+          "degree": 5
+        }
+      ]
+    },
+    "('Scenario', 'TempDis')": {
+      "direction": "Scenario->TempDis",
+      "method": "agreement"
+    },
+    "('Scenario', 'WindAloft')": {
+      "direction": "Scenario->WindAloft",
+      "method": "agreement"
+    },
+    "('Scenario', 'WindFieldPln')": {
+      "direction": "Scenario->WindFieldPln",
+      "method": "agreement"
+    },
+    "('ScenRelAMCIN', 'ScnRelPlFcst')": {
+      "direction": "ScenRelAMCIN->ScnRelPlFcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "ScenRelAMCIN->ScnRelPlFcst",
+        "degree": "ScenRelAMCIN->ScnRelPlFcst",
+        "constraints": "ScenRelAMCIN->ScnRelPlFcst",
+        "hard_flip": "ScenRelAMCIN->ScnRelPlFcst"
+      },
+      "endpoints": [
+        {
+          "node": "ScnRelPlFcst",
+          "dir": "ScenRelAMCIN->ScnRelPlFcst",
+          "margin": 1.0,
+          "degree": 12
+        },
+        {
+          "node": "ScenRelAMCIN",
+          "dir": "ScnRelPlFcst->ScenRelAMCIN",
+          "margin": 0.8,
+          "degree": 6
+        }
+      ]
+    },
+    "('ScenRelAMIns', 'ScnRelPlFcst')": {
+      "direction": "ScenRelAMIns->ScnRelPlFcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "ScenRelAMIns->ScnRelPlFcst",
+        "degree": "ScenRelAMIns->ScnRelPlFcst",
+        "constraints": "ScenRelAMIns->ScnRelPlFcst",
+        "hard_flip": "ScenRelAMIns->ScnRelPlFcst"
+      },
+      "endpoints": [
+        {
+          "node": "ScnRelPlFcst",
+          "dir": "ScenRelAMIns->ScnRelPlFcst",
+          "margin": 1.0,
+          "degree": 12
+        },
+        {
+          "node": "ScenRelAMIns",
+          "dir": "ScnRelPlFcst->ScenRelAMIns",
+          "margin": 1.0,
+          "degree": 5
+        }
+      ]
+    },
+    "('ScenRel3_4', 'ScnRelPlFcst')": {
+      "direction": "ScenRel3_4->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('Dewpoints', 'ScnRelPlFcst')": {
+      "direction": "Dewpoints->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('MidLLapse', 'ScnRelPlFcst')": {
+      "direction": "MidLLapse->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('MvmtFeatures', 'ScnRelPlFcst')": {
+      "direction": "MvmtFeatures->ScnRelPlFcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "MvmtFeatures->ScnRelPlFcst",
+        "degree": "MvmtFeatures->ScnRelPlFcst",
+        "constraints": "MvmtFeatures->ScnRelPlFcst",
+        "hard_flip": "MvmtFeatures->ScnRelPlFcst"
+      },
+      "endpoints": [
+        {
+          "node": "ScnRelPlFcst",
+          "dir": "MvmtFeatures->ScnRelPlFcst",
+          "margin": 1.0,
+          "degree": 12
+        },
+        {
+          "node": "MvmtFeatures",
+          "dir": "ScnRelPlFcst->MvmtFeatures",
+          "margin": 0.6,
+          "degree": 4
+        }
+      ]
+    },
+    "('ScnRelPlFcst', 'SfcWndShfDis')": {
+      "direction": "SfcWndShfDis->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('ScnRelPlFcst', 'SynForcng')": {
+      "direction": "SynForcng->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('ScnRelPlFcst', 'TempDis')": {
+      "direction": "TempDis->ScnRelPlFcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "TempDis->ScnRelPlFcst",
+        "degree": "TempDis->ScnRelPlFcst",
+        "constraints": "TempDis->ScnRelPlFcst",
+        "hard_flip": "TempDis->ScnRelPlFcst"
+      },
+      "endpoints": [
+        {
+          "node": "ScnRelPlFcst",
+          "dir": "TempDis->ScnRelPlFcst",
+          "margin": 1.0,
+          "degree": 12
+        },
+        {
+          "node": "TempDis",
+          "dir": "ScnRelPlFcst->TempDis",
+          "margin": 0.1111111111111111,
+          "degree": 3
+        }
+      ]
+    },
+    "('ScnRelPlFcst', 'WindAloft')": {
+      "direction": "WindAloft->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('ScnRelPlFcst', 'WindFieldPln')": {
+      "direction": "WindFieldPln->ScnRelPlFcst",
+      "method": "agreement"
+    },
+    "('ScenRel3_4', 'ScenRelAMCIN')": {
+      "direction": "ScenRel3_4->ScenRelAMCIN",
+      "method": "agreement"
+    },
+    "('Dewpoints', 'ScenRel3_4')": {
+      "direction": "Dewpoints->ScenRel3_4",
+      "method": "agreement"
+    },
+    "('MvmtFeatures', 'ScenRel3_4')": {
+      "direction": "ScenRel3_4->MvmtFeatures",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "ScenRel3_4->MvmtFeatures",
+        "degree": "MvmtFeatures->ScenRel3_4",
+        "constraints": "MvmtFeatures->ScenRel3_4",
+        "hard_flip": "ScenRel3_4->MvmtFeatures"
+      },
+      "endpoints": [
+        {
+          "node": "ScenRel3_4",
+          "dir": "MvmtFeatures->ScenRel3_4",
+          "margin": 0.4,
+          "degree": 9
+        },
+        {
+          "node": "MvmtFeatures",
+          "dir": "ScenRel3_4->MvmtFeatures",
+          "margin": 0.6,
+          "degree": 4
+        }
+      ]
+    },
+    "('ScenRel3_4', 'SfcWndShfDis')": {
+      "direction": "SfcWndShfDis->ScenRel3_4",
+      "method": "agreement"
+    },
+    "('ScenRel3_4', 'SynForcng')": {
+      "direction": "SynForcng->ScenRel3_4",
+      "method": "agreement"
+    },
+    "('ScenRel3_4', 'WindAloft')": {
+      "direction": "WindAloft->ScenRel3_4",
+      "method": "agreement"
+    },
+    "('ScenRel3_4', 'WindFieldPln')": {
+      "direction": "WindFieldPln->ScenRel3_4",
+      "method": "agreement"
+    },
+    "('CombVerMo', 'N0_7muVerMo')": {
+      "direction": "N0_7muVerMo->CombVerMo",
+      "method": "agreement"
+    },
+    "('CombVerMo', 'SubjVertMo')": {
+      "direction": "SubjVertMo->CombVerMo",
+      "method": "agreement"
+    },
+    "('CombVerMo', 'QGVertMotion')": {
+      "direction": "QGVertMotion->CombVerMo",
+      "method": "agreement"
+    },
+    "('AreaMeso_ALS', 'CombVerMo')": {
+      "direction": "AreaMeso_ALS->CombVerMo",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AreaMeso_ALS->CombVerMo",
+        "degree": "AreaMeso_ALS->CombVerMo",
+        "constraints": "AreaMeso_ALS->CombVerMo",
+        "hard_flip": "CombVerMo->AreaMeso_ALS"
+      },
+      "endpoints": [
+        {
+          "node": "CombVerMo",
+          "dir": "CombVerMo->AreaMeso_ALS",
+          "margin": 0.0,
+          "degree": 8
+        },
+        {
+          "node": "AreaMeso_ALS",
+          "dir": "AreaMeso_ALS->CombVerMo",
+          "margin": 0.4,
+          "degree": 8
+        }
+      ]
+    },
+    "('AreaMoDryAir', 'CombVerMo')": {
+      "direction": "AreaMoDryAir->CombVerMo",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AreaMoDryAir->CombVerMo",
+        "degree": "CombVerMo->AreaMoDryAir",
+        "constraints": "CombVerMo->AreaMoDryAir",
+        "hard_flip": "CombVerMo->AreaMoDryAir"
+      },
+      "endpoints": [
+        {
+          "node": "CombVerMo",
+          "dir": "CombVerMo->AreaMoDryAir",
+          "margin": 0.0,
+          "degree": 8
+        },
+        {
+          "node": "AreaMoDryAir",
+          "dir": "AreaMoDryAir->CombVerMo",
+          "margin": 0.8,
+          "degree": 4
+        }
+      ]
+    },
+    "('CldShadeOth', 'CombVerMo')": {
+      "direction": "CombVerMo->CldShadeOth",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CombVerMo->CldShadeOth",
+        "degree": "CombVerMo->CldShadeOth",
+        "constraints": "CombVerMo->CldShadeOth",
+        "hard_flip": "CldShadeOth->CombVerMo"
+      },
+      "endpoints": [
+        {
+          "node": "CombVerMo",
+          "dir": "CombVerMo->CldShadeOth",
+          "margin": 0.4,
+          "degree": 8
+        },
+        {
+          "node": "CldShadeOth",
+          "dir": "CldShadeOth->CombVerMo",
+          "margin": 0.0,
+          "degree": 7
+        }
+      ]
+    },
+    "('CombVerMo', 'CompPlFcst')": {
+      "direction": "CombVerMo->CompPlFcst",
+      "method": "agreement"
+    },
+    "('CapChange', 'CombVerMo')": {
+      "direction": "CombVerMo->CapChange",
+      "method": "agreement"
+    },
+    "('AreaMeso_ALS', 'N0_7muVerMo')": {
+      "direction": "AreaMeso_ALS->N0_7muVerMo",
+      "method": "agreement"
+    },
+    "('AreaMeso_ALS', 'SubjVertMo')": {
+      "direction": "AreaMeso_ALS->SubjVertMo",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AreaMeso_ALS->SubjVertMo",
+        "degree": "AreaMeso_ALS->SubjVertMo",
+        "constraints": "AreaMeso_ALS->SubjVertMo",
+        "hard_flip": "SubjVertMo->AreaMeso_ALS"
+      },
+      "endpoints": [
+        {
+          "node": "AreaMeso_ALS",
+          "dir": "AreaMeso_ALS->SubjVertMo",
+          "margin": 0.4,
+          "degree": 8
+        },
+        {
+          "node": "SubjVertMo",
+          "dir": "SubjVertMo->AreaMeso_ALS",
+          "margin": 0.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('AreaMeso_ALS', 'QGVertMotion')": {
+      "direction": "QGVertMotion->AreaMeso_ALS",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "QGVertMotion->AreaMeso_ALS",
+        "degree": "AreaMeso_ALS->QGVertMotion",
+        "constraints": "AreaMeso_ALS->QGVertMotion",
+        "hard_flip": "QGVertMotion->AreaMeso_ALS"
+      },
+      "endpoints": [
+        {
+          "node": "AreaMeso_ALS",
+          "dir": "AreaMeso_ALS->QGVertMotion",
+          "margin": 0.4,
+          "degree": 8
+        },
+        {
+          "node": "QGVertMotion",
+          "dir": "QGVertMotion->AreaMeso_ALS",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    },
+    "('AreaMeso_ALS', 'AreaMoDryAir')": {
+      "direction": "AreaMoDryAir->AreaMeso_ALS",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AreaMoDryAir->AreaMeso_ALS",
+        "degree": "AreaMeso_ALS->AreaMoDryAir",
+        "constraints": "AreaMeso_ALS->AreaMoDryAir",
+        "hard_flip": "AreaMoDryAir->AreaMeso_ALS"
+      },
+      "endpoints": [
+        {
+          "node": "AreaMeso_ALS",
+          "dir": "AreaMeso_ALS->AreaMoDryAir",
+          "margin": 0.6,
+          "degree": 8
+        },
+        {
+          "node": "AreaMoDryAir",
+          "dir": "AreaMoDryAir->AreaMeso_ALS",
+          "margin": 0.8,
+          "degree": 4
+        }
+      ]
+    },
+    "('AreaMeso_ALS', 'CldShadeOth')": {
+      "direction": "AreaMeso_ALS->CldShadeOth",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AreaMeso_ALS->CldShadeOth",
+        "degree": "AreaMeso_ALS->CldShadeOth",
+        "constraints": "AreaMeso_ALS->CldShadeOth",
+        "hard_flip": "AreaMeso_ALS->CldShadeOth"
+      },
+      "endpoints": [
+        {
+          "node": "AreaMeso_ALS",
+          "dir": "AreaMeso_ALS->CldShadeOth",
+          "margin": 0.8,
+          "degree": 8
+        },
+        {
+          "node": "CldShadeOth",
+          "dir": "CldShadeOth->AreaMeso_ALS",
+          "margin": 0.2,
+          "degree": 7
+        }
+      ]
+    },
+    "('AreaMeso_ALS', 'CompPlFcst')": {
+      "direction": "AreaMeso_ALS->CompPlFcst",
+      "method": "agreement"
+    },
+    "('AreaMeso_ALS', 'CapChange')": {
+      "direction": "AreaMeso_ALS->CapChange",
+      "method": "agreement"
+    },
+    "('CldShadeOth', 'CompPlFcst')": {
+      "direction": "CldShadeOth->CompPlFcst",
+      "method": "agreement"
+    },
+    "('Boundaries', 'CompPlFcst')": {
+      "direction": "Boundaries->CompPlFcst",
+      "method": "agreement"
+    },
+    "('CldShadeConv', 'CompPlFcst')": {
+      "direction": "CldShadeConv->CompPlFcst",
+      "method": "agreement"
+    },
+    "('CapChange', 'CompPlFcst')": {
+      "direction": "CapChange->CompPlFcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CapChange->CompPlFcst",
+        "degree": "CapChange->CompPlFcst",
+        "constraints": "CapChange->CompPlFcst",
+        "hard_flip": "CapChange->CompPlFcst"
+      },
+      "endpoints": [
+        {
+          "node": "CompPlFcst",
+          "dir": "CapChange->CompPlFcst",
+          "margin": 0.6,
+          "degree": 8
+        },
+        {
+          "node": "CapChange",
+          "dir": "CompPlFcst->CapChange",
+          "margin": 0.2,
+          "degree": 8
+        }
+      ]
+    },
+    "('CompPlFcst', 'InsChange')": {
+      "direction": "InsChange->CompPlFcst",
+      "method": "agreement"
+    },
+    "('CapInScen', 'CompPlFcst')": {
+      "direction": "CompPlFcst->CapInScen",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CompPlFcst->CapInScen",
+        "degree": "CompPlFcst->CapInScen",
+        "constraints": "CompPlFcst->CapInScen",
+        "hard_flip": "CompPlFcst->CapInScen"
+      },
+      "endpoints": [
+        {
+          "node": "CompPlFcst",
+          "dir": "CompPlFcst->CapInScen",
+          "margin": 0.6,
+          "degree": 8
+        },
+        {
+          "node": "CapInScen",
+          "dir": "CapInScen->CompPlFcst",
+          "margin": 0.4,
+          "degree": 3
+        }
+      ]
+    },
+    "('CapChange', 'CldShadeOth')": {
+      "direction": "CldShadeOth->CapChange",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CldShadeOth->CapChange",
+        "degree": "CldShadeOth->CapChange",
+        "constraints": "CldShadeOth->CapChange",
+        "hard_flip": "CldShadeOth->CapChange"
+      },
+      "endpoints": [
+        {
+          "node": "CapChange",
+          "dir": "CldShadeOth->CapChange",
+          "margin": 0.4,
+          "degree": 8
+        },
+        {
+          "node": "CldShadeOth",
+          "dir": "CapChange->CldShadeOth",
+          "margin": 0.2,
+          "degree": 7
+        }
+      ]
+    },
+    "('Boundaries', 'CapChange')": {
+      "direction": "Boundaries->CapChange",
+      "method": "agreement"
+    },
+    "('CapChange', 'CldShadeConv')": {
+      "direction": "CldShadeConv->CapChange",
+      "method": "agreement"
+    },
+    "('CapChange', 'InsChange')": {
+      "direction": "CapChange->InsChange",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CapChange->InsChange",
+        "degree": "CapChange->InsChange",
+        "constraints": "CapChange->InsChange",
+        "hard_flip": "CapChange->InsChange"
+      },
+      "endpoints": [
+        {
+          "node": "CapChange",
+          "dir": "CapChange->InsChange",
+          "margin": 0.4,
+          "degree": 8
+        },
+        {
+          "node": "InsChange",
+          "dir": "InsChange->CapChange",
+          "margin": 0.0,
+          "degree": 4
+        }
+      ]
+    },
+    "('CapChange', 'CapInScen')": {
+      "direction": "CapChange->CapInScen",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CapChange->CapInScen",
+        "degree": "CapChange->CapInScen",
+        "constraints": "CapChange->CapInScen",
+        "hard_flip": "CapChange->CapInScen"
+      },
+      "endpoints": [
+        {
+          "node": "CapChange",
+          "dir": "CapChange->CapInScen",
+          "margin": 0.2,
+          "degree": 8
+        },
+        {
+          "node": "CapInScen",
+          "dir": "CapInScen->CapChange",
+          "margin": 0.2,
+          "degree": 3
+        }
+      ]
+    },
+    "('AreaMoDryAir', 'CldShadeOth')": {
+      "direction": "AreaMoDryAir->CldShadeOth",
+      "method": "agreement"
+    },
+    "('CldShadeOth', 'CombClouds')": {
+      "direction": "CldShadeOth->CombClouds",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CldShadeOth->CombClouds",
+        "degree": "CldShadeOth->CombClouds",
+        "constraints": "CldShadeOth->CombClouds",
+        "hard_flip": "CldShadeOth->CombClouds"
+      },
+      "endpoints": [
+        {
+          "node": "CldShadeOth",
+          "dir": "CldShadeOth->CombClouds",
+          "margin": 0.4,
+          "degree": 7
+        },
+        {
+          "node": "CombClouds",
+          "dir": "CombClouds->CldShadeOth",
+          "margin": 0.4,
+          "degree": 3
+        }
+      ]
+    },
+    "('CldShadeOth', 'InsInMt')": {
+      "direction": "CldShadeOth->InsInMt",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CldShadeOth->InsInMt",
+        "degree": "CldShadeOth->InsInMt",
+        "constraints": "CldShadeOth->InsInMt",
+        "hard_flip": "CldShadeOth->InsInMt"
+      },
+      "endpoints": [
+        {
+          "node": "CldShadeOth",
+          "dir": "CldShadeOth->InsInMt",
+          "margin": 0.2,
+          "degree": 7
+        },
+        {
+          "node": "InsInMt",
+          "dir": "InsInMt->CldShadeOth",
+          "margin": 0.0,
+          "degree": 5
+        }
+      ]
+    },
+    "('Dewpoints', 'ScenRelAMCIN')": {
+      "direction": "Dewpoints->ScenRelAMCIN",
+      "method": "agreement"
+    },
+    "('ScenRelAMCIN', 'SfcWndShfDis')": {
+      "direction": "SfcWndShfDis->ScenRelAMCIN",
+      "method": "agreement"
+    },
+    "('ScenRelAMCIN', 'TempDis')": {
+      "direction": "TempDis->ScenRelAMCIN",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "TempDis->ScenRelAMCIN",
+        "degree": "TempDis->ScenRelAMCIN",
+        "constraints": "TempDis->ScenRelAMCIN",
+        "hard_flip": "TempDis->ScenRelAMCIN"
+      },
+      "endpoints": [
+        {
+          "node": "ScenRelAMCIN",
+          "dir": "TempDis->ScenRelAMCIN",
+          "margin": 0.8,
+          "degree": 6
+        },
+        {
+          "node": "TempDis",
+          "dir": "ScenRelAMCIN->TempDis",
+          "margin": 0.2,
+          "degree": 3
+        }
+      ]
+    },
+    "('Dewpoints', 'ScenRelAMIns')": {
+      "direction": "Dewpoints->ScenRelAMIns",
+      "method": "agreement"
+    },
+    "('Dewpoints', 'SfcWndShfDis')": {
+      "direction": "Dewpoints->SfcWndShfDis",
+      "method": "agreement"
+    },
+    "('ScenRelAMIns', 'SfcWndShfDis')": {
+      "direction": "SfcWndShfDis->ScenRelAMIns",
+      "method": "agreement"
+    },
+    "('AMInstabMt', 'InsInMt')": {
+      "direction": "AMInstabMt->InsInMt",
+      "method": "single_endpoint",
+      "endpoint": "InsInMt"
+    },
+    "('InsInMt', 'OutflowFrMt')": {
+      "direction": "InsInMt->OutflowFrMt",
+      "method": "agreement"
+    },
+    "('CldShadeConv', 'InsInMt')": {
+      "direction": "InsInMt->CldShadeConv",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "InsInMt->CldShadeConv",
+        "degree": "InsInMt->CldShadeConv",
+        "constraints": "InsInMt->CldShadeConv",
+        "hard_flip": "InsInMt->CldShadeConv"
+      },
+      "endpoints": [
+        {
+          "node": "InsInMt",
+          "dir": "InsInMt->CldShadeConv",
+          "margin": 0.8,
+          "degree": 5
+        },
+        {
+          "node": "CldShadeConv",
+          "dir": "CldShadeConv->InsInMt",
+          "margin": 0.2,
+          "degree": 4
+        }
+      ]
+    },
+    "('InsInMt', 'MountainFcst')": {
+      "direction": "InsInMt->MountainFcst",
+      "method": "agreement"
+    },
+    "('Boundaries', 'WndHodograph')": {
+      "direction": "WndHodograph->Boundaries",
+      "method": "agreement"
+    },
+    "('Boundaries', 'OutflowFrMt')": {
+      "direction": "OutflowFrMt->Boundaries",
+      "method": "agreement"
+    },
+    "('Boundaries', 'MorningBound')": {
+      "direction": "MorningBound->Boundaries",
+      "method": "single_endpoint",
+      "endpoint": "Boundaries"
+    },
+    "('ScenRelAMIns', 'WindFieldPln')": {
+      "direction": "WindFieldPln->ScenRelAMIns",
+      "method": "agreement"
+    },
+    "('MvmtFeatures', 'SynForcng')": {
+      "direction": "SynForcng->MvmtFeatures",
+      "method": "agreement"
+    },
+    "('SynForcng', 'WindFieldMt')": {
+      "direction": "SynForcng->WindFieldMt",
+      "method": "single_endpoint",
+      "endpoint": "SynForcng"
+    },
+    "('AreaMoDryAir', 'CombMoisture')": {
+      "direction": "AreaMoDryAir->CombMoisture",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AreaMoDryAir->CombMoisture",
+        "degree": "AreaMoDryAir->CombMoisture",
+        "constraints": "AreaMoDryAir->CombMoisture",
+        "hard_flip": "CombMoisture->AreaMoDryAir"
+      },
+      "endpoints": [
+        {
+          "node": "AreaMoDryAir",
+          "dir": "AreaMoDryAir->CombMoisture",
+          "margin": 0.8,
+          "degree": 4
+        },
+        {
+          "node": "CombMoisture",
+          "dir": "CombMoisture->AreaMoDryAir",
+          "margin": 0.6,
+          "degree": 3
+        }
+      ]
+    },
+    "('CldShadeConv', 'WndHodograph')": {
+      "direction": "WndHodograph->CldShadeConv",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "WndHodograph->CldShadeConv",
+        "degree": "CldShadeConv->WndHodograph",
+        "constraints": "CldShadeConv->WndHodograph",
+        "hard_flip": "WndHodograph->CldShadeConv"
+      },
+      "endpoints": [
+        {
+          "node": "CldShadeConv",
+          "dir": "CldShadeConv->WndHodograph",
+          "margin": 0.2,
+          "degree": 4
+        },
+        {
+          "node": "WndHodograph",
+          "dir": "WndHodograph->CldShadeConv",
+          "margin": 0.8,
+          "degree": 3
+        }
+      ]
+    },
+    "('InsChange', 'LoLevMoistAd')": {
+      "direction": "LoLevMoistAd->InsChange",
+      "method": "single_endpoint",
+      "endpoint": "InsChange"
+    },
+    "('InsChange', 'InsSclInScen')": {
+      "direction": "InsSclInScen->InsChange",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "InsSclInScen->InsChange",
+        "degree": "InsChange->InsSclInScen",
+        "constraints": "InsChange->InsSclInScen",
+        "hard_flip": "InsChange->InsSclInScen"
+      },
+      "endpoints": [
+        {
+          "node": "InsChange",
+          "dir": "InsChange->InsSclInScen",
+          "margin": 0.4,
+          "degree": 4
+        },
+        {
+          "node": "InsSclInScen",
+          "dir": "InsSclInScen->InsChange",
+          "margin": 0.8,
+          "degree": 3
+        }
+      ]
+    },
+    "('CombMoisture', 'SatContMoist')": {
+      "direction": "SatContMoist->CombMoisture",
+      "method": "single_endpoint",
+      "endpoint": "CombMoisture"
+    },
+    "('CombMoisture', 'RaoContMoist')": {
+      "direction": "RaoContMoist->CombMoisture",
+      "method": "single_endpoint",
+      "endpoint": "CombMoisture"
+    },
+    "('CombClouds', 'VISCloudCov')": {
+      "direction": "CombClouds->VISCloudCov",
+      "method": "single_endpoint",
+      "endpoint": "CombClouds"
+    },
+    "('CombClouds', 'IRCloudCover')": {
+      "direction": "CombClouds->IRCloudCover",
+      "method": "single_endpoint",
+      "endpoint": "CombClouds"
+    },
+    "('OutflowFrMt', 'WndHodograph')": {
+      "direction": "WndHodograph->OutflowFrMt",
+      "method": "agreement"
+    },
+    "('AMCINInScen', 'CapInScen')": {
+      "direction": "AMCINInScen->CapInScen",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AMCINInScen->CapInScen",
+        "degree": "CapInScen->AMCINInScen",
+        "constraints": "CapInScen->AMCINInScen",
+        "hard_flip": "AMCINInScen->CapInScen"
+      },
+      "endpoints": [
+        {
+          "node": "CapInScen",
+          "dir": "CapInScen->AMCINInScen",
+          "margin": 0.2,
+          "degree": 3
+        },
+        {
+          "node": "AMCINInScen",
+          "dir": "AMCINInScen->CapInScen",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('AMInsWliScen', 'LIfr12ZDENSd')": {
+      "direction": "AMInsWliScen->LIfr12ZDENSd",
+      "method": "single_endpoint",
+      "endpoint": "AMInsWliScen"
+    },
+    "('AMDewptCalPl', 'AMInsWliScen')": {
+      "direction": "AMInsWliScen->AMDewptCalPl",
+      "method": "single_endpoint",
+      "endpoint": "AMInsWliScen"
+    },
+    "('AMInsWliScen', 'InsSclInScen')": {
+      "direction": "AMInsWliScen->InsSclInScen",
+      "method": "agreement"
+    },
+    "('InsSclInScen', 'PlainsFcst')": {
+      "direction": "InsSclInScen->PlainsFcst",
+      "method": "agreement"
+    },
+    "('CurPropConv', 'LatestCIN')": {
+      "direction": "LatestCIN->CurPropConv",
+      "method": "single_endpoint",
+      "endpoint": "CurPropConv"
+    },
+    "('CurPropConv', 'LLIW')": {
+      "direction": "LLIW->CurPropConv",
+      "method": "single_endpoint",
+      "endpoint": "CurPropConv"
+    },
+    "('CurPropConv', 'PlainsFcst')": {
+      "direction": "CurPropConv->PlainsFcst",
+      "method": "agreement"
+    },
+    "('N34StarFcst', 'PlainsFcst')": {
+      "direction": "PlainsFcst->N34StarFcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PlainsFcst->N34StarFcst",
+        "degree": "PlainsFcst->N34StarFcst",
+        "constraints": "PlainsFcst->N34StarFcst",
+        "hard_flip": "N34StarFcst->PlainsFcst"
+      },
+      "endpoints": [
+        {
+          "node": "PlainsFcst",
+          "dir": "PlainsFcst->N34StarFcst",
+          "margin": 1.0,
+          "degree": 3
+        },
+        {
+          "node": "N34StarFcst",
+          "dir": "N34StarFcst->PlainsFcst",
+          "margin": 0.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('MountainFcst', 'R5Fcst')": {
+      "direction": "MountainFcst->R5Fcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "MountainFcst->R5Fcst",
+        "degree": "MountainFcst->R5Fcst",
+        "constraints": "MountainFcst->R5Fcst",
+        "hard_flip": "MountainFcst->R5Fcst"
+      },
+      "endpoints": [
+        {
+          "node": "MountainFcst",
+          "dir": "MountainFcst->R5Fcst",
+          "margin": 0.8,
+          "degree": 2
+        },
+        {
+          "node": "R5Fcst",
+          "dir": "R5Fcst->MountainFcst",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    },
+    "('AMCINInScen', 'MorningCIN')": {
+      "direction": "MorningCIN->AMCINInScen",
+      "method": "single_endpoint",
+      "endpoint": "AMCINInScen"
+    },
+    "('N34StarFcst', 'R5Fcst')": {
+      "direction": "R5Fcst->N34StarFcst",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "R5Fcst->N34StarFcst",
+        "degree": "R5Fcst->N34StarFcst",
+        "constraints": "R5Fcst->N34StarFcst",
+        "hard_flip": "N34StarFcst->R5Fcst"
+      },
+      "endpoints": [
+        {
+          "node": "N34StarFcst",
+          "dir": "N34StarFcst->R5Fcst",
+          "margin": 0.0,
+          "degree": 2
+        },
+        {
+          "node": "R5Fcst",
+          "dir": "R5Fcst->N34StarFcst",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "correct": 63,
+    "total": 96,
+    "accuracy": 0.65625,
+    "agreements": 52,
+    "disagreements": 31,
+    "by_method": {
+      "agreement": {
+        "correct": 37,
+        "total": 52
+      },
+      "disagreement_confidence": {
+        "correct": 17,
+        "total": 31
+      },
+      "single_endpoint": {
+        "correct": 9,
+        "total": 13
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 64,
+      "total": 96,
+      "accuracy": 0.6666666666666666,
+      "agreements": 52,
+      "disagreements": 31,
+      "by_method": {
+        "agreement": {
+          "correct": 37,
+          "total": 52
+        },
+        "disagreement_confidence": {
+          "correct": 18,
+          "total": 31
+        },
+        "single_endpoint": {
+          "correct": 9,
+          "total": 13
+        }
+      }
+    },
+    "constraints": {
+      "correct": 64,
+      "total": 96,
+      "accuracy": 0.6666666666666666,
+      "agreements": 52,
+      "disagreements": 31,
+      "by_method": {
+        "agreement": {
+          "correct": 37,
+          "total": 52
+        },
+        "disagreement_confidence": {
+          "correct": 18,
+          "total": 31
+        },
+        "single_endpoint": {
+          "correct": 9,
+          "total": 13
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 64,
+      "total": 96,
+      "accuracy": 0.6666666666666666,
+      "agreements": 52,
+      "disagreements": 31,
+      "by_method": {
+        "agreement": {
+          "correct": 37,
+          "total": 52
+        },
+        "disagreement_confidence": {
+          "correct": 18,
+          "total": 31
+        },
+        "single_endpoint": {
+          "correct": 9,
+          "total": 13
+        }
+      }
+    }
+  },
+  "n_unique_edges": 96
+}

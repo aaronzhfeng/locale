@@ -40,6 +40,8 @@ from mve_insurance import (
     VAR_DESCRIPTIONS, ALARM_DESCRIPTIONS, SACHS_DESCRIPTIONS,
     CHILD_DESCRIPTIONS, ASIA_DESCRIPTIONS, HEPAR2_DESCRIPTIONS,
     HAILFINDER_DESCRIPTIONS,
+    CANCER_DESCRIPTIONS, WATER_DESCRIPTIONS, MILDEW_DESCRIPTIONS,
+    WIN95PTS_DESCRIPTIONS,
 )
 
 # ── Configuration ─────────────────────────────────────────────────
@@ -58,6 +60,10 @@ DOMAIN_DESCRIPTIONS = {
     "asia": "a simplified medical diagnosis system for tuberculosis and lung cancer. Variables describe patient history, diseases, and test results.",
     "hepar2": "a liver disease diagnosis system. Variables describe hepatic conditions, lab tests, symptoms, and patient history.",
     "hailfinder": "a severe weather forecasting system for hail prediction. Variables describe meteorological conditions and forecast factors.",
+    "cancer": "a lung cancer diagnosis system. Variables describe pollution exposure, smoking status, cancer presence, and diagnostic test results.",
+    "water": "a wastewater treatment monitoring system. Variables describe biochemical measurements across denitrification and nitrification tanks at multiple time points.",
+    "mildew": "an agricultural crop disease management system for wheat powdery mildew. Variables describe plant growth, disease severity, treatments, and weather conditions across growing periods.",
+    "win95pts": "a Windows 95 printer troubleshooting system. Variables describe printer hardware, drivers, network configuration, print output quality, and diagnostic symptoms.",
 }
 
 # Description lookup by network
@@ -69,6 +75,10 @@ DESCRIPTIONS = {
     "asia": ASIA_DESCRIPTIONS,
     "hepar2": HEPAR2_DESCRIPTIONS,
     "hailfinder": HAILFINDER_DESCRIPTIONS,
+    "cancer": CANCER_DESCRIPTIONS,
+    "water": WATER_DESCRIPTIONS,
+    "mildew": MILDEW_DESCRIPTIONS,
+    "win95pts": WIN95PTS_DESCRIPTIONS,
 }
 
 

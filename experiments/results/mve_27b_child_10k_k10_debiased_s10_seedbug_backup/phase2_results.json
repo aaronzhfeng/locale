@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_child_10k_k10_debiased_s10/mve_results.json",
+    "network": "child",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "Disease": {
+      "degree": 8,
+      "n_feasible": 15,
+      "n_total": 256,
+      "hard_flips": [
+        [
+          "BirthAsphyxia",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 6,
+      "p2_correct": 6,
+      "n_edges": 8,
+      "directions": {
+        "BirthAsphyxia": "Disease->BirthAsphyxia",
+        "Age": "Age->Disease",
+        "LVH": "Disease->LVH",
+        "DuctFlow": "Disease->DuctFlow",
+        "CardiacMixing": "Disease->CardiacMixing",
+        "LungParench": "Disease->LungParench",
+        "LungFlow": "Disease->LungFlow",
+        "Sick": "Disease->Sick"
+      }
+    },
+    "LungParench": {
+      "degree": 5,
+      "n_feasible": 7,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 5,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "HypoxiaInO2": "LungParench->HypoxiaInO2",
+        "CO2": "LungParench->CO2",
+        "ChestXray": "LungParench->ChestXray",
+        "Grunting": "LungParench->Grunting",
+        "Disease": "Disease->LungParench"
+      }
+    },
+    "HypoxiaInO2": {
+      "degree": 4,
+      "n_feasible": 8,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "LowerBodyO2": "HypoxiaInO2->LowerBodyO2",
+        "RUQO2": "HypoxiaInO2->RUQO2",
+        "CardiacMixing": "CardiacMixing->HypoxiaInO2",
+        "LungParench": "LungParench->HypoxiaInO2"
+      }
+    },
+    "HypDistrib": {
+      "degree": 3,
+      "n_feasible": 6,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "LowerBodyO2": "HypDistrib->LowerBodyO2",
+        "DuctFlow": "HypDistrib->DuctFlow",
+        "CardiacMixing": "HypDistrib->CardiacMixing"
+      }
+    },
+    "ChestXray": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "XrayReport": "ChestXray->XrayReport",
+        "LungParench": "LungParench->ChestXray",
+        "LungFlow": "LungFlow->ChestXray"
+      }
+    },
+    "Grunting": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "GruntingReport": "Grunting->GruntingReport",
+        "LungParench": "LungParench->Grunting",
+        "Sick": "Sick->Grunting"
+      }
+    },
+    "CardiacMixing": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "HypDistrib": "CardiacMixing->HypDistrib",
+        "HypoxiaInO2": "CardiacMixing->HypoxiaInO2",
+        "Disease": "Disease->CardiacMixing"
+      }
+    },
+    "Sick": {
+      "degree": 3,
+      "n_feasible": 6,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "Grunting": "Sick->Grunting",
+        "Disease": "Disease->Sick",
+        "Age": "Age->Sick"
+      }
+    },
+    "CO2": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CO2Report": "CO2->CO2Report",
+        "LungParench": "LungParench->CO2"
+      }
+    },
+    "LowerBodyO2": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "HypDistrib",
+          1,
+          0
+        ],
+        [
+          "HypoxiaInO2",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "HypDistrib": "LowerBodyO2->HypDistrib",
+        "HypoxiaInO2": "LowerBodyO2->HypoxiaInO2"
+      }
+    },
+    "Age": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "Disease": "Age->Disease",
+        "Sick": "Age->Sick"
+      }
+    },
+    "LVH": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "LVHreport": "LVH->LVHreport",
+        "Disease": "Disease->LVH"
+      }
+    },
+    "DuctFlow": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "HypDistrib": "DuctFlow->HypDistrib",
+        "Disease": "Disease->DuctFlow"
+      }
+    },
+    "LungFlow": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "ChestXray": "LungFlow->ChestXray",
+        "Disease": "Disease->LungFlow"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 44,
+    "phase1_correct": 35,
+    "phase2_correct": 35,
+    "phase1_accuracy": 79.5,
+    "phase2_accuracy": 79.5,
+    "delta_pp": 0.0,
+    "hard_flips": 3,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

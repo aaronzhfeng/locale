@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_water_10k_k10_debiased_s1/mve_results.json",
+    "network": "water",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "CKNI_12_30": {
+      "degree": 4,
+      "n_feasible": 7,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "CKNI_12_15": "CKNI_12_15->CKNI_12_30",
+        "CKNI_12_45": "CKNI_12_30->CKNI_12_45",
+        "CBODD_12_45": "CKNI_12_30->CBODD_12_45",
+        "CKND_12_45": "CKNI_12_30->CKND_12_45"
+      }
+    },
+    "CKNI_12_00": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "CKNI_12_15": "CKNI_12_00->CKNI_12_15",
+        "CBODD_12_15": "CKNI_12_00->CBODD_12_15",
+        "CKND_12_15": "CKNI_12_00->CKND_12_15"
+      }
+    },
+    "CKNI_12_15": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "CKNI_12_00": "CKNI_12_00->CKNI_12_15",
+        "CKNI_12_30": "CKNI_12_15->CKNI_12_30",
+        "CBODD_12_30": "CKNI_12_15->CBODD_12_30"
+      }
+    },
+    "CBODD_12_15": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "C_NI_12_00": "C_NI_12_00->CBODD_12_15",
+        "CKNI_12_00": "CKNI_12_00->CBODD_12_15",
+        "CBODD_12_30": "CBODD_12_15->CBODD_12_30"
+      }
+    },
+    "C_NI_12_30": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "C_NI_12_15": "C_NI_12_15->C_NI_12_30",
+        "C_NI_12_45": "C_NI_12_30->C_NI_12_45",
+        "CBODD_12_45": "C_NI_12_30->CBODD_12_45"
+      }
+    },
+    "CBODD_12_30": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "CKNI_12_15": "CKNI_12_15->CBODD_12_30",
+        "CBODD_12_15": "CBODD_12_15->CBODD_12_30",
+        "CBODD_12_45": "CBODD_12_30->CBODD_12_45"
+      }
+    },
+    "CKND_12_30": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "CKND_12_15": "CKND_12_15->CKND_12_30",
+        "CKND_12_45": "CKND_12_30->CKND_12_45",
+        "CKNN_12_45": "CKND_12_30->CKNN_12_45"
+      }
+    },
+    "CNOD_12_30": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "CNOD_12_15": "CNOD_12_15->CNOD_12_30",
+        "CNOD_12_45": "CNOD_12_30->CNOD_12_45",
+        "CNON_12_45": "CNOD_12_30->CNON_12_45"
+      }
+    },
+    "CKNN_12_30": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "CKNN_12_15": "CKNN_12_15->CKNN_12_30",
+        "CKNN_12_45": "CKNN_12_30->CKNN_12_45",
+        "CNON_12_45": "CKNN_12_30->CNON_12_45"
+      }
+    },
+    "CBODD_12_45": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "C_NI_12_30": "C_NI_12_30->CBODD_12_45",
+        "CKNI_12_30": "CKNI_12_30->CBODD_12_45",
+        "CBODD_12_30": "CBODD_12_30->CBODD_12_45"
+      }
+    },
+    "CNON_12_45": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "CNOD_12_30": "CNOD_12_30->CNON_12_45",
+        "CKNN_12_30": "CKNN_12_30->CNON_12_45",
+        "CNON_12_30": "CNON_12_30->CNON_12_45"
+      }
+    },
+    "C_NI_12_00": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "C_NI_12_15": "C_NI_12_00->C_NI_12_15",
+        "CBODD_12_15": "C_NI_12_00->CBODD_12_15"
+      }
+    },
+    "C_NI_12_15": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "C_NI_12_00": "C_NI_12_00->C_NI_12_15",
+        "C_NI_12_30": "C_NI_12_15->C_NI_12_30"
+      }
+    },
+    "CKND_12_15": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CKNI_12_00": "CKNI_12_00->CKND_12_15",
+        "CKND_12_30": "CKND_12_15->CKND_12_30"
+      }
+    },
+    "CBODN_12_30": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CBODN_12_15": "CBODN_12_15->CBODN_12_30",
+        "CBODN_12_45": "CBODN_12_30->CBODN_12_45"
+      }
+    },
+    "CNON_12_30": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CNON_12_15": "CNON_12_15->CNON_12_30",
+        "CNON_12_45": "CNON_12_30->CNON_12_45"
+      }
+    },
+    "CKND_12_45": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CKNI_12_30": "CKNI_12_30->CKND_12_45",
+        "CKND_12_30": "CKND_12_30->CKND_12_45"
+      }
+    },
+    "CKNN_12_45": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CKND_12_30": "CKND_12_30->CKNN_12_45",
+        "CKNN_12_30": "CKNN_12_30->CKNN_12_45"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 48,
+    "phase1_correct": 48,
+    "phase2_correct": 48,
+    "phase1_accuracy": 100.0,
+    "phase2_accuracy": 100.0,
+    "delta_pp": 0.0,
+    "hard_flips": 0,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

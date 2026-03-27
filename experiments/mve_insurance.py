@@ -23,7 +23,7 @@ from openai import OpenAI
 
 # ── Configuration ──────────────────────────────────────────────────
 
-BASE_URL = "https://wjbxofkz5f6i5g-8000.proxy.runpod.net/v1"
+BASE_URL = "https://vxzw0ht4g3y2ov-8000.proxy.runpod.net/v1"
 MODEL = os.environ.get("LOCALE_MODEL", "Qwen/Qwen3.5-27B-FP8")
 API_KEY = "unused"
 TEMPERATURE = 0.7
@@ -319,6 +319,172 @@ HEPAR2_DESCRIPTIONS = {
     "carcinoma": "Hepatocellular carcinoma: Present, Absent",
 }
 
+# Cancer network variable descriptions (lung cancer diagnosis)
+CANCER_DESCRIPTIONS = {
+    "Pollution": "Level of environmental pollution exposure: low, high",
+    "Smoker": "Whether the patient is a smoker: True, False",
+    "Cancer": "Whether the patient has lung cancer: True, False",
+    "Xray": "Result of a chest X-ray examination: positive, negative",
+    "Dyspnoea": "Whether the patient experiences shortness of breath: True, False",
+}
+
+# Water network variable descriptions (wastewater treatment)
+# 8 measurements x 4 time slices (12:00, 12:15, 12:30, 12:45)
+WATER_DESCRIPTIONS = {
+    "C_NI_12_00": "Nitrification capacity index at 12:00",
+    "C_NI_12_15": "Nitrification capacity index at 12:15",
+    "C_NI_12_30": "Nitrification capacity index at 12:30",
+    "C_NI_12_45": "Nitrification capacity index at 12:45",
+    "CKNI_12_00": "Kjeldahl nitrogen in influent (incoming wastewater) at 12:00",
+    "CKNI_12_15": "Kjeldahl nitrogen in influent (incoming wastewater) at 12:15",
+    "CKNI_12_30": "Kjeldahl nitrogen in influent (incoming wastewater) at 12:30",
+    "CKNI_12_45": "Kjeldahl nitrogen in influent (incoming wastewater) at 12:45",
+    "CBODD_12_00": "Biochemical oxygen demand in denitrification tank at 12:00",
+    "CBODD_12_15": "Biochemical oxygen demand in denitrification tank at 12:15",
+    "CBODD_12_30": "Biochemical oxygen demand in denitrification tank at 12:30",
+    "CBODD_12_45": "Biochemical oxygen demand in denitrification tank at 12:45",
+    "CKND_12_00": "Kjeldahl nitrogen in denitrification tank at 12:00",
+    "CKND_12_15": "Kjeldahl nitrogen in denitrification tank at 12:15",
+    "CKND_12_30": "Kjeldahl nitrogen in denitrification tank at 12:30",
+    "CKND_12_45": "Kjeldahl nitrogen in denitrification tank at 12:45",
+    "CNOD_12_00": "Nitrate concentration in denitrification tank at 12:00",
+    "CNOD_12_15": "Nitrate concentration in denitrification tank at 12:15",
+    "CNOD_12_30": "Nitrate concentration in denitrification tank at 12:30",
+    "CNOD_12_45": "Nitrate concentration in denitrification tank at 12:45",
+    "CBODN_12_00": "Biochemical oxygen demand in nitrification tank at 12:00",
+    "CBODN_12_15": "Biochemical oxygen demand in nitrification tank at 12:15",
+    "CBODN_12_30": "Biochemical oxygen demand in nitrification tank at 12:30",
+    "CBODN_12_45": "Biochemical oxygen demand in nitrification tank at 12:45",
+    "CKNN_12_00": "Kjeldahl nitrogen in nitrification tank at 12:00",
+    "CKNN_12_15": "Kjeldahl nitrogen in nitrification tank at 12:15",
+    "CKNN_12_30": "Kjeldahl nitrogen in nitrification tank at 12:30",
+    "CKNN_12_45": "Kjeldahl nitrogen in nitrification tank at 12:45",
+    "CNON_12_00": "Nitrate concentration in nitrification tank at 12:00",
+    "CNON_12_15": "Nitrate concentration in nitrification tank at 12:15",
+    "CNON_12_30": "Nitrate concentration in nitrification tank at 12:30",
+    "CNON_12_45": "Nitrate concentration in nitrification tank at 12:45",
+}
+
+# Mildew network variable descriptions (agricultural crop disease management)
+# Temporal model with period suffixes _0 through _4
+MILDEW_DESCRIPTIONS = {
+    "lai_0": "Leaf area index (canopy density measure) at period 0",
+    "lai_1": "Leaf area index (canopy density measure) at period 1",
+    "lai_2": "Leaf area index (canopy density measure) at period 2",
+    "lai_3": "Leaf area index (canopy density measure) at period 3",
+    "lai_4": "Leaf area index (canopy density measure) at period 4",
+    "dm_1": "Accumulated dry matter biomass at period 1",
+    "dm_2": "Accumulated dry matter biomass at period 2",
+    "dm_3": "Accumulated dry matter biomass at period 3",
+    "dm_4": "Accumulated dry matter biomass at period 4",
+    "foto_1": "Rate of photosynthetic production at period 1",
+    "foto_2": "Rate of photosynthetic production at period 2",
+    "foto_3": "Rate of photosynthetic production at period 3",
+    "foto_4": "Rate of photosynthetic production at period 4",
+    "meldug_1": "Powdery mildew infection severity at period 1",
+    "meldug_2": "Powdery mildew infection severity at period 2",
+    "meldug_3": "Powdery mildew infection severity at period 3",
+    "meldug_4": "Powdery mildew infection severity at period 4",
+    "mikro_1": "Microclimate conditions in crop canopy at period 1",
+    "mikro_2": "Microclimate conditions in crop canopy at period 2",
+    "mikro_3": "Microclimate conditions in crop canopy at period 3",
+    "middel_1": "Fungicide treatment dose applied at period 1",
+    "middel_2": "Fungicide treatment dose applied at period 2",
+    "middel_3": "Fungicide treatment dose applied at period 3",
+    "straaling_1": "Incoming solar radiation at period 1",
+    "straaling_2": "Incoming solar radiation at period 2",
+    "straaling_3": "Incoming solar radiation at period 3",
+    "straaling_4": "Incoming solar radiation at period 4",
+    "temp_1": "Mean air temperature at period 1",
+    "temp_2": "Mean air temperature at period 2",
+    "temp_3": "Mean air temperature at period 3",
+    "temp_4": "Mean air temperature at period 4",
+    "nedboer_1": "Precipitation amount at period 1",
+    "nedboer_2": "Precipitation amount at period 2",
+    "nedboer_3": "Precipitation amount at period 3",
+    "udbytte": "Final grain yield",
+}
+
+# Win95pts network variable descriptions (Windows 95 printer troubleshooting)
+WIN95PTS_DESCRIPTIONS = {
+    "AppOK": "Application software integrity",
+    "DataFile": "Data file integrity",
+    "DskLocal": "Available local disk space",
+    "PrtSpool": "Print spooler enabled/disabled",
+    "PrtOn": "Printer power state",
+    "PrtPaper": "Paper presence in printer",
+    "NetPrint": "Network vs local printer",
+    "PrtDriver": "Printer driver installed correctly",
+    "PrtThread": "Print thread status",
+    "DrvSet": "Driver settings correctness",
+    "DrvOK": "Driver software integrity",
+    "PrtSel": "Printer selected as active",
+    "PrtPath": "Network printer path configuration",
+    "NtwrkCnfg": "Network configuration settings",
+    "PTROFFLINE": "Printer online/offline state",
+    "PrtCbl": "Printer cable connection",
+    "PrtPort": "Printer port configuration",
+    "DSApplctn": "Application type (DOS vs Windows)",
+    "PrtMpTPth": "Print mapping path to network printer",
+    "PrtMem": "Printer memory capacity",
+    "PrtTimeOut": "Printer timeout setting",
+    "TnrSpply": "Toner supply level",
+    "PgOrnttnOK": "Page orientation setting correctness",
+    "PrntngArOK": "Printing area/margins setting",
+    "GrphcsRltdDrvrSttngs": "Graphics-related driver settings",
+    "EPSGrphc": "Whether document contains EPS graphics",
+    "PrtPScript": "Printer PostScript support",
+    "TrTypFnts": "Document uses TrueType fonts",
+    "FntInstlltn": "Font installation status",
+    "PrntrAccptsTrtyp": "Printer accepts TrueType fonts",
+    "ScrnFntNtPrntrFnt": "Screen font doesn't match printer font",
+    "PrtQueue": "Print queue length",
+    "AppData": "Application data generated correctly",
+    "EMFOK": "Enhanced Metafile spool file created correctly",
+    "GDIIN": "GDI input data correct",
+    "GDIOUT": "GDI output rendered correctly",
+    "PrtDataOut": "Print data output from spooler correct",
+    "PrtFile": "Print-to-file output created",
+    "FllCrrptdBffr": "Printer buffer state",
+    "PrtData": "Print data received by printer",
+    "PC2PRT": "Data path from PC to printer working",
+    "DS_LCLOK": "Local data stream OK",
+    "DS_NTOK": "Network data stream OK",
+    "CblPrtHrdwrOK": "Cable and printer hardware operational",
+    "LclOK": "Local printing subsystem OK",
+    "NetOK": "Network printing subsystem OK",
+    "CmpltPgPrntd": "Complete page printed without truncation",
+    "AppDtGnTm": "Application data generation time",
+    "PrntPrcssTm": "Print processing time",
+    "DeskPrntSpd": "Desktop-to-printer speed",
+    "NtSpd": "Network printing speed",
+    "LclGrbld": "Local printing produces garbled output",
+    "NtGrbld": "Network printing produces garbled output",
+    "GrbldOtpt": "Overall garbled output detected",
+    "TTOK": "TrueType font rendering OK",
+    "NnTTOK": "Non-TrueType font rendering OK",
+    "NnPSGrphc": "Non-PostScript graphics rendering OK",
+    "PSGRAPHIC": "PostScript graphics rendering OK",
+    "AvlblVrtlMmry": "Available virtual memory",
+    "PSERRMEM": "PostScript memory error status",
+    "GrbldPS": "PostScript output garbled",
+    "IncmpltPS": "PostScript output incomplete",
+    "HrglssDrtnAftrPrnt": "Hourglass cursor duration after print",
+    "REPEAT": "Output repetition pattern",
+    "TstpsTxt": "Test PostScript text output",
+    "PrtStatPaper": "Printer paper status indicator",
+    "PrtStatToner": "Printer toner status indicator",
+    "PrtStatMem": "Printer memory status indicator",
+    "PrtStatOff": "Printer offline status indicator",
+    "PrtIcon": "Printer icon appearance in Windows",
+    "Problem1": "No output from printer",
+    "Problem2": "Printing takes too long",
+    "Problem3": "Incomplete page printed",
+    "Problem4": "Graphics don't print correctly",
+    "Problem5": "Font/text doesn't print correctly",
+    "Problem6": "Garbled output",
+}
+
 # Network configurations
 NETWORK_CONFIGS = {
     "insurance": {
@@ -362,6 +528,30 @@ NETWORK_CONFIGS = {
         "descriptions": HEPAR2_DESCRIPTIONS,
         "test_nodes": [],  # all d>=2 via --all-nodes
         "domain": "liver disease diagnosis",
+    },
+    "cancer": {
+        "pgmpy_name": "cancer",
+        "descriptions": CANCER_DESCRIPTIONS,
+        "test_nodes": [],
+        "domain": "lung cancer diagnosis",
+    },
+    "water": {
+        "pgmpy_name": "water",
+        "descriptions": WATER_DESCRIPTIONS,
+        "test_nodes": [],
+        "domain": "wastewater treatment",
+    },
+    "mildew": {
+        "pgmpy_name": "mildew",
+        "descriptions": MILDEW_DESCRIPTIONS,
+        "test_nodes": [],
+        "domain": "agricultural crop disease management",
+    },
+    "win95pts": {
+        "pgmpy_name": "win95pts",
+        "descriptions": WIN95PTS_DESCRIPTIONS,
+        "test_nodes": [],
+        "domain": "printer troubleshooting",
     },
 }
 
@@ -1151,7 +1341,7 @@ def run_mve(args):
     print(f"  Ground truth: {len(model.nodes())} nodes, {len(gt_edges)} edges")
 
     print(f"\n[Step 0] Sampling {N_SAMPLES} observations (seed={SEED_DATA})...")
-    data = sample_data(model, n=N_SAMPLES)
+    data = sample_data(model, n=N_SAMPLES, seed=SEED_DATA)
 
     print(f"\n[Step 0] Estimating PC skeleton (alpha={pc_alpha})...")
     skeleton, sep_sets = estimate_skeleton(data, alpha=pc_alpha)

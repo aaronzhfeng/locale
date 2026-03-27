@@ -1,0 +1,673 @@
+{
+  "reconciled": {
+    "('INTUBATION', 'MINVOL')": {
+      "direction": "INTUBATION->MINVOL",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "INTUBATION->MINVOL",
+        "degree": "INTUBATION->MINVOL",
+        "constraints": "INTUBATION->MINVOL",
+        "hard_flip": "MINVOL->INTUBATION"
+      },
+      "endpoints": [
+        {
+          "node": "INTUBATION",
+          "dir": "INTUBATION->MINVOL",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "MINVOL",
+          "dir": "MINVOL->INTUBATION",
+          "margin": 0.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('INTUBATION', 'SHUNT')": {
+      "direction": "INTUBATION->SHUNT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "INTUBATION->SHUNT",
+        "degree": "INTUBATION->SHUNT",
+        "constraints": "INTUBATION->SHUNT",
+        "hard_flip": "SHUNT->INTUBATION"
+      },
+      "endpoints": [
+        {
+          "node": "INTUBATION",
+          "dir": "INTUBATION->SHUNT",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "SHUNT",
+          "dir": "SHUNT->INTUBATION",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('INTUBATION', 'PRESS')": {
+      "direction": "INTUBATION->PRESS",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "INTUBATION->PRESS",
+        "degree": "INTUBATION->PRESS",
+        "constraints": "INTUBATION->PRESS",
+        "hard_flip": "PRESS->INTUBATION"
+      },
+      "endpoints": [
+        {
+          "node": "INTUBATION",
+          "dir": "INTUBATION->PRESS",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "PRESS",
+          "dir": "PRESS->INTUBATION",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('INTUBATION', 'VENTLUNG')": {
+      "direction": "INTUBATION->VENTLUNG",
+      "method": "agreement"
+    },
+    "('INTUBATION', 'VENTALV')": {
+      "direction": "INTUBATION->VENTALV",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "INTUBATION->VENTALV",
+        "degree": "INTUBATION->VENTALV",
+        "constraints": "INTUBATION->VENTALV",
+        "hard_flip": "VENTALV->INTUBATION"
+      },
+      "endpoints": [
+        {
+          "node": "INTUBATION",
+          "dir": "INTUBATION->VENTALV",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "VENTALV",
+          "dir": "VENTALV->INTUBATION",
+          "margin": 0.0,
+          "degree": 4
+        }
+      ]
+    },
+    "('EXPCO2', 'VENTLUNG')": {
+      "direction": "VENTLUNG->EXPCO2",
+      "method": "agreement"
+    },
+    "('MINVOL', 'VENTLUNG')": {
+      "direction": "VENTLUNG->MINVOL",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "VENTLUNG->MINVOL",
+        "degree": "VENTLUNG->MINVOL",
+        "constraints": "VENTLUNG->MINVOL",
+        "hard_flip": "VENTLUNG->MINVOL"
+      },
+      "endpoints": [
+        {
+          "node": "VENTLUNG",
+          "dir": "VENTLUNG->MINVOL",
+          "margin": 0.6,
+          "degree": 5
+        },
+        {
+          "node": "MINVOL",
+          "dir": "MINVOL->VENTLUNG",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    },
+    "('VENTLUNG', 'VENTTUBE')": {
+      "direction": "VENTLUNG->VENTTUBE",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "VENTLUNG->VENTTUBE",
+        "degree": "VENTLUNG->VENTTUBE",
+        "constraints": "VENTLUNG->VENTTUBE",
+        "hard_flip": "VENTLUNG->VENTTUBE"
+      },
+      "endpoints": [
+        {
+          "node": "VENTLUNG",
+          "dir": "VENTLUNG->VENTTUBE",
+          "margin": 0.0,
+          "degree": 5
+        },
+        {
+          "node": "VENTTUBE",
+          "dir": "VENTTUBE->VENTLUNG",
+          "margin": 0.0,
+          "degree": 4
+        }
+      ]
+    },
+    "('VENTALV', 'VENTLUNG')": {
+      "direction": "VENTLUNG->VENTALV",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "VENTLUNG->VENTALV",
+        "degree": "VENTLUNG->VENTALV",
+        "constraints": "VENTLUNG->VENTALV",
+        "hard_flip": "VENTALV->VENTLUNG"
+      },
+      "endpoints": [
+        {
+          "node": "VENTLUNG",
+          "dir": "VENTLUNG->VENTALV",
+          "margin": 0.6,
+          "degree": 5
+        },
+        {
+          "node": "VENTALV",
+          "dir": "VENTALV->VENTLUNG",
+          "margin": 0.0,
+          "degree": 4
+        }
+      ]
+    },
+    "('HR', 'HRBP')": {
+      "direction": "HR->HRBP",
+      "method": "agreement"
+    },
+    "('HR', 'HREKG')": {
+      "direction": "HR->HREKG",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "HR->HREKG",
+        "degree": "HR->HREKG",
+        "constraints": "HR->HREKG",
+        "hard_flip": "HR->HREKG"
+      },
+      "endpoints": [
+        {
+          "node": "HR",
+          "dir": "HR->HREKG",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "HREKG",
+          "dir": "HREKG->HR",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    },
+    "('HR', 'HRSAT')": {
+      "direction": "HR->HRSAT",
+      "method": "agreement"
+    },
+    "('CATECHOL', 'HR')": {
+      "direction": "CATECHOL->HR",
+      "method": "agreement"
+    },
+    "('CO', 'HR')": {
+      "direction": "HR->CO",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "HR->CO",
+        "degree": "HR->CO",
+        "constraints": "HR->CO",
+        "hard_flip": "CO->HR"
+      },
+      "endpoints": [
+        {
+          "node": "HR",
+          "dir": "HR->CO",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "CO",
+          "dir": "CO->HR",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('CVP', 'LVEDVOLUME')": {
+      "direction": "LVEDVOLUME->CVP",
+      "method": "single_endpoint",
+      "endpoint": "LVEDVOLUME"
+    },
+    "('LVEDVOLUME', 'PCWP')": {
+      "direction": "LVEDVOLUME->PCWP",
+      "method": "single_endpoint",
+      "endpoint": "LVEDVOLUME"
+    },
+    "('HYPOVOLEMIA', 'LVEDVOLUME')": {
+      "direction": "HYPOVOLEMIA->LVEDVOLUME",
+      "method": "agreement"
+    },
+    "('LVEDVOLUME', 'LVFAILURE')": {
+      "direction": "LVEDVOLUME->LVFAILURE",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "LVEDVOLUME->LVFAILURE",
+        "degree": "LVEDVOLUME->LVFAILURE",
+        "constraints": "LVEDVOLUME->LVFAILURE",
+        "hard_flip": "LVEDVOLUME->LVFAILURE"
+      },
+      "endpoints": [
+        {
+          "node": "LVEDVOLUME",
+          "dir": "LVEDVOLUME->LVFAILURE",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "LVFAILURE",
+          "dir": "LVFAILURE->LVEDVOLUME",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('PRESS', 'VENTTUBE')": {
+      "direction": "VENTTUBE->PRESS",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "VENTTUBE->PRESS",
+        "degree": "VENTTUBE->PRESS",
+        "constraints": "VENTTUBE->PRESS",
+        "hard_flip": "VENTTUBE->PRESS"
+      },
+      "endpoints": [
+        {
+          "node": "VENTTUBE",
+          "dir": "VENTTUBE->PRESS",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "PRESS",
+          "dir": "PRESS->VENTTUBE",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('DISCONNECT', 'VENTTUBE')": {
+      "direction": "VENTTUBE->DISCONNECT",
+      "method": "single_endpoint",
+      "endpoint": "VENTTUBE"
+    },
+    "('VENTMACH', 'VENTTUBE')": {
+      "direction": "VENTMACH->VENTTUBE",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "VENTMACH->VENTTUBE",
+        "degree": "VENTTUBE->VENTMACH",
+        "constraints": "VENTTUBE->VENTMACH",
+        "hard_flip": "VENTTUBE->VENTMACH"
+      },
+      "endpoints": [
+        {
+          "node": "VENTTUBE",
+          "dir": "VENTTUBE->VENTMACH",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "VENTMACH",
+          "dir": "VENTMACH->VENTTUBE",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('PVSAT', 'VENTALV')": {
+      "direction": "VENTALV->PVSAT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "VENTALV->PVSAT",
+        "degree": "VENTALV->PVSAT",
+        "constraints": "VENTALV->PVSAT",
+        "hard_flip": "VENTALV->PVSAT"
+      },
+      "endpoints": [
+        {
+          "node": "VENTALV",
+          "dir": "VENTALV->PVSAT",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "PVSAT",
+          "dir": "PVSAT->VENTALV",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('ARTCO2', 'VENTALV')": {
+      "direction": "VENTALV->ARTCO2",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "VENTALV->ARTCO2",
+        "degree": "VENTALV->ARTCO2",
+        "constraints": "VENTALV->ARTCO2",
+        "hard_flip": "VENTALV->ARTCO2"
+      },
+      "endpoints": [
+        {
+          "node": "VENTALV",
+          "dir": "VENTALV->ARTCO2",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "ARTCO2",
+          "dir": "ARTCO2->VENTALV",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('HISTORY', 'LVFAILURE')": {
+      "direction": "LVFAILURE->HISTORY",
+      "method": "single_endpoint",
+      "endpoint": "LVFAILURE"
+    },
+    "('LVFAILURE', 'STROKEVOLUME')": {
+      "direction": "LVFAILURE->STROKEVOLUME",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "LVFAILURE->STROKEVOLUME",
+        "degree": "LVFAILURE->STROKEVOLUME",
+        "constraints": "LVFAILURE->STROKEVOLUME",
+        "hard_flip": "LVFAILURE->STROKEVOLUME"
+      },
+      "endpoints": [
+        {
+          "node": "LVFAILURE",
+          "dir": "LVFAILURE->STROKEVOLUME",
+          "margin": 0.0,
+          "degree": 3
+        },
+        {
+          "node": "STROKEVOLUME",
+          "dir": "STROKEVOLUME->LVFAILURE",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('HYPOVOLEMIA', 'STROKEVOLUME')": {
+      "direction": "HYPOVOLEMIA->STROKEVOLUME",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "HYPOVOLEMIA->STROKEVOLUME",
+        "degree": "STROKEVOLUME->HYPOVOLEMIA",
+        "constraints": "STROKEVOLUME->HYPOVOLEMIA",
+        "hard_flip": "STROKEVOLUME->HYPOVOLEMIA"
+      },
+      "endpoints": [
+        {
+          "node": "STROKEVOLUME",
+          "dir": "STROKEVOLUME->HYPOVOLEMIA",
+          "margin": 0.0,
+          "degree": 3
+        },
+        {
+          "node": "HYPOVOLEMIA",
+          "dir": "HYPOVOLEMIA->STROKEVOLUME",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('CO', 'STROKEVOLUME')": {
+      "direction": "STROKEVOLUME->CO",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "STROKEVOLUME->CO",
+        "degree": "STROKEVOLUME->CO",
+        "constraints": "STROKEVOLUME->CO",
+        "hard_flip": "STROKEVOLUME->CO"
+      },
+      "endpoints": [
+        {
+          "node": "STROKEVOLUME",
+          "dir": "STROKEVOLUME->CO",
+          "margin": 0.0,
+          "degree": 3
+        },
+        {
+          "node": "CO",
+          "dir": "CO->STROKEVOLUME",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('ANAPHYLAXIS', 'TPR')": {
+      "direction": "TPR->ANAPHYLAXIS",
+      "method": "single_endpoint",
+      "endpoint": "TPR"
+    },
+    "('CATECHOL', 'TPR')": {
+      "direction": "TPR->CATECHOL",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "TPR->CATECHOL",
+        "degree": "TPR->CATECHOL",
+        "constraints": "TPR->CATECHOL",
+        "hard_flip": "TPR->CATECHOL"
+      },
+      "endpoints": [
+        {
+          "node": "TPR",
+          "dir": "TPR->CATECHOL",
+          "margin": 0.0,
+          "degree": 3
+        },
+        {
+          "node": "CATECHOL",
+          "dir": "CATECHOL->TPR",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('BP', 'TPR')": {
+      "direction": "TPR->BP",
+      "method": "agreement"
+    },
+    "('FIO2', 'PVSAT')": {
+      "direction": "PVSAT->FIO2",
+      "method": "single_endpoint",
+      "endpoint": "PVSAT"
+    },
+    "('PVSAT', 'SAO2')": {
+      "direction": "PVSAT->SAO2",
+      "method": "agreement"
+    },
+    "('SAO2', 'SHUNT')": {
+      "direction": "SHUNT->SAO2",
+      "method": "agreement"
+    },
+    "('PULMEMBOLUS', 'SHUNT')": {
+      "direction": "PULMEMBOLUS->SHUNT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PULMEMBOLUS->SHUNT",
+        "degree": "SHUNT->PULMEMBOLUS",
+        "constraints": "SHUNT->PULMEMBOLUS",
+        "hard_flip": "SHUNT->PULMEMBOLUS"
+      },
+      "endpoints": [
+        {
+          "node": "SHUNT",
+          "dir": "SHUNT->PULMEMBOLUS",
+          "margin": 0.0,
+          "degree": 3
+        },
+        {
+          "node": "PULMEMBOLUS",
+          "dir": "PULMEMBOLUS->SHUNT",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('KINKEDTUBE', 'PRESS')": {
+      "direction": "PRESS->KINKEDTUBE",
+      "method": "single_endpoint",
+      "endpoint": "PRESS"
+    },
+    "('ARTCO2', 'EXPCO2')": {
+      "direction": "ARTCO2->EXPCO2",
+      "method": "agreement"
+    },
+    "('ARTCO2', 'CATECHOL')": {
+      "direction": "ARTCO2->CATECHOL",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "ARTCO2->CATECHOL",
+        "degree": "ARTCO2->CATECHOL",
+        "constraints": "ARTCO2->CATECHOL",
+        "hard_flip": "ARTCO2->CATECHOL"
+      },
+      "endpoints": [
+        {
+          "node": "ARTCO2",
+          "dir": "ARTCO2->CATECHOL",
+          "margin": 0.0,
+          "degree": 3
+        },
+        {
+          "node": "CATECHOL",
+          "dir": "CATECHOL->ARTCO2",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('BP', 'CO')": {
+      "direction": "CO->BP",
+      "method": "agreement"
+    },
+    "('ERRLOWOUTPUT', 'HRBP')": {
+      "direction": "HRBP->ERRLOWOUTPUT",
+      "method": "single_endpoint",
+      "endpoint": "HRBP"
+    },
+    "('ERRCAUTER', 'HREKG')": {
+      "direction": "ERRCAUTER->HREKG",
+      "method": "agreement"
+    },
+    "('ERRCAUTER', 'HRSAT')": {
+      "direction": "ERRCAUTER->HRSAT",
+      "method": "agreement"
+    },
+    "('PAP', 'PULMEMBOLUS')": {
+      "direction": "PULMEMBOLUS->PAP",
+      "method": "single_endpoint",
+      "endpoint": "PULMEMBOLUS"
+    },
+    "('MINVOLSET', 'VENTMACH')": {
+      "direction": "MINVOLSET->VENTMACH",
+      "method": "single_endpoint",
+      "endpoint": "VENTMACH"
+    }
+  },
+  "evaluation": {
+    "correct": 36,
+    "total": 43,
+    "accuracy": 0.8372093023255814,
+    "agreements": 13,
+    "disagreements": 20,
+    "by_method": {
+      "disagreement_confidence": {
+        "correct": 18,
+        "total": 20
+      },
+      "agreement": {
+        "correct": 13,
+        "total": 13
+      },
+      "single_endpoint": {
+        "correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 33,
+      "total": 43,
+      "accuracy": 0.7674418604651163,
+      "agreements": 13,
+      "disagreements": 20,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 15,
+          "total": 20
+        },
+        "agreement": {
+          "correct": 13,
+          "total": 13
+        },
+        "single_endpoint": {
+          "correct": 5,
+          "total": 10
+        }
+      }
+    },
+    "constraints": {
+      "correct": 33,
+      "total": 43,
+      "accuracy": 0.7674418604651163,
+      "agreements": 13,
+      "disagreements": 20,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 15,
+          "total": 20
+        },
+        "agreement": {
+          "correct": 13,
+          "total": 13
+        },
+        "single_endpoint": {
+          "correct": 5,
+          "total": 10
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 27,
+      "total": 43,
+      "accuracy": 0.627906976744186,
+      "agreements": 13,
+      "disagreements": 20,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 9,
+          "total": 20
+        },
+        "agreement": {
+          "correct": 13,
+          "total": 13
+        },
+        "single_endpoint": {
+          "correct": 5,
+          "total": 10
+        }
+      }
+    }
+  },
+  "n_unique_edges": 43
+}

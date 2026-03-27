@@ -19,58 +19,18 @@
         {
           "node": "Age",
           "dir": "Age->SocioEcon",
-          "margin": 0.4,
-          "degree": 6
+          "margin": 0.8,
+          "degree": 5
         }
       ]
     },
     "('RiskAversion', 'SocioEcon')": {
       "direction": "SocioEcon->RiskAversion",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "SocioEcon->RiskAversion",
-        "degree": "SocioEcon->RiskAversion",
-        "constraints": "SocioEcon->RiskAversion",
-        "hard_flip": "SocioEcon->RiskAversion"
-      },
-      "endpoints": [
-        {
-          "node": "SocioEcon",
-          "dir": "SocioEcon->RiskAversion",
-          "margin": 1.0,
-          "degree": 7
-        },
-        {
-          "node": "RiskAversion",
-          "dir": "RiskAversion->SocioEcon",
-          "margin": 0.4,
-          "degree": 7
-        }
-      ]
+      "method": "agreement"
     },
     "('SocioEcon', 'VehicleYear')": {
       "direction": "SocioEcon->VehicleYear",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "SocioEcon->VehicleYear",
-        "degree": "SocioEcon->VehicleYear",
-        "constraints": "SocioEcon->VehicleYear",
-        "hard_flip": "VehicleYear->SocioEcon"
-      },
-      "endpoints": [
-        {
-          "node": "SocioEcon",
-          "dir": "SocioEcon->VehicleYear",
-          "margin": 1.0,
-          "degree": 7
-        },
-        {
-          "node": "VehicleYear",
-          "dir": "VehicleYear->SocioEcon",
-          "margin": 0.0,
-          "degree": 5
-        }
-      ]
+      "method": "agreement"
     },
     "('MakeModel', 'SocioEcon')": {
       "direction": "SocioEcon->MakeModel",
@@ -79,7 +39,7 @@
         "confidence": "SocioEcon->MakeModel",
         "degree": "SocioEcon->MakeModel",
         "constraints": "SocioEcon->MakeModel",
-        "hard_flip": "SocioEcon->MakeModel"
+        "hard_flip": "MakeModel->SocioEcon"
       },
       "endpoints": [
         {
@@ -91,7 +51,7 @@
         {
           "node": "MakeModel",
           "dir": "MakeModel->SocioEcon",
-          "margin": 0.4,
+          "margin": 0.0,
           "degree": 5
         }
       ]
@@ -111,27 +71,7 @@
     },
     "('Age', 'RiskAversion')": {
       "direction": "Age->RiskAversion",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "Age->RiskAversion",
-        "degree": "RiskAversion->Age",
-        "constraints": "RiskAversion->Age",
-        "hard_flip": "RiskAversion->Age"
-      },
-      "endpoints": [
-        {
-          "node": "RiskAversion",
-          "dir": "RiskAversion->Age",
-          "margin": 0.0,
-          "degree": 7
-        },
-        {
-          "node": "Age",
-          "dir": "Age->RiskAversion",
-          "margin": 1.0,
-          "degree": 6
-        }
-      ]
+      "method": "agreement"
     },
     "('DrivQuality', 'RiskAversion')": {
       "direction": "RiskAversion->DrivQuality",
@@ -139,27 +79,7 @@
     },
     "('RiskAversion', 'SeniorTrain')": {
       "direction": "RiskAversion->SeniorTrain",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "RiskAversion->SeniorTrain",
-        "degree": "RiskAversion->SeniorTrain",
-        "constraints": "RiskAversion->SeniorTrain",
-        "hard_flip": "RiskAversion->SeniorTrain"
-      },
-      "endpoints": [
-        {
-          "node": "RiskAversion",
-          "dir": "RiskAversion->SeniorTrain",
-          "margin": 1.0,
-          "degree": 7
-        },
-        {
-          "node": "SeniorTrain",
-          "dir": "SeniorTrain->RiskAversion",
-          "margin": 0.2,
-          "degree": 4
-        }
-      ]
+      "method": "agreement"
     },
     "('HomeBase', 'RiskAversion')": {
       "direction": "RiskAversion->HomeBase",
@@ -171,27 +91,7 @@
     },
     "('DrivHist', 'RiskAversion')": {
       "direction": "RiskAversion->DrivHist",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "RiskAversion->DrivHist",
-        "degree": "RiskAversion->DrivHist",
-        "constraints": "RiskAversion->DrivHist",
-        "hard_flip": "DrivHist->RiskAversion"
-      },
-      "endpoints": [
-        {
-          "node": "RiskAversion",
-          "dir": "RiskAversion->DrivHist",
-          "margin": 1.0,
-          "degree": 7
-        },
-        {
-          "node": "DrivHist",
-          "dir": "DrivHist->RiskAversion",
-          "margin": 0.0,
-          "degree": 2
-        }
-      ]
+      "method": "agreement"
     },
     "('Age', 'GoodStudent')": {
       "direction": "Age->GoodStudent",
@@ -205,37 +105,13 @@
       "direction": "Age->SeniorTrain",
       "method": "agreement"
     },
-    "('Age', 'MedCost')": {
-      "direction": "Age->MedCost",
-      "method": "agreement"
-    },
     "('RuggedAuto', 'VehicleYear')": {
       "direction": "VehicleYear->RuggedAuto",
       "method": "agreement"
     },
     "('Antilock', 'VehicleYear')": {
       "direction": "VehicleYear->Antilock",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "VehicleYear->Antilock",
-        "degree": "VehicleYear->Antilock",
-        "constraints": "VehicleYear->Antilock",
-        "hard_flip": "Antilock->VehicleYear"
-      },
-      "endpoints": [
-        {
-          "node": "VehicleYear",
-          "dir": "VehicleYear->Antilock",
-          "margin": 1.0,
-          "degree": 5
-        },
-        {
-          "node": "Antilock",
-          "dir": "Antilock->VehicleYear",
-          "margin": 0.0,
-          "degree": 2
-        }
-      ]
+      "method": "agreement"
     },
     "('CarValue', 'VehicleYear')": {
       "direction": "VehicleYear->CarValue",
@@ -255,27 +131,7 @@
     },
     "('Accident', 'OtherCarCost')": {
       "direction": "Accident->OtherCarCost",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "Accident->OtherCarCost",
-        "degree": "Accident->OtherCarCost",
-        "constraints": "Accident->OtherCarCost",
-        "hard_flip": "OtherCarCost->Accident"
-      },
-      "endpoints": [
-        {
-          "node": "Accident",
-          "dir": "Accident->OtherCarCost",
-          "margin": 1.0,
-          "degree": 5
-        },
-        {
-          "node": "OtherCarCost",
-          "dir": "OtherCarCost->Accident",
-          "margin": 0.0,
-          "degree": 2
-        }
-      ]
+      "method": "agreement"
     },
     "('Accident', 'MedCost')": {
       "direction": "Accident->MedCost",
@@ -292,27 +148,7 @@
     },
     "('Antilock', 'MakeModel')": {
       "direction": "MakeModel->Antilock",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "MakeModel->Antilock",
-        "degree": "MakeModel->Antilock",
-        "constraints": "MakeModel->Antilock",
-        "hard_flip": "Antilock->MakeModel"
-      },
-      "endpoints": [
-        {
-          "node": "MakeModel",
-          "dir": "MakeModel->Antilock",
-          "margin": 1.0,
-          "degree": 5
-        },
-        {
-          "node": "Antilock",
-          "dir": "Antilock->MakeModel",
-          "margin": 0.0,
-          "degree": 2
-        }
-      ]
+      "method": "agreement"
     },
     "('CarValue', 'MakeModel')": {
       "direction": "MakeModel->CarValue",
@@ -320,62 +156,6 @@
     },
     "('Airbag', 'MakeModel')": {
       "direction": "MakeModel->Airbag",
-      "method": "agreement"
-    },
-    "('DrivQuality', 'DrivingSkill')": {
-      "direction": "DrivingSkill->DrivQuality",
-      "method": "agreement"
-    },
-    "('DrivingSkill', 'SeniorTrain')": {
-      "direction": "SeniorTrain->DrivingSkill",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "SeniorTrain->DrivingSkill",
-        "degree": "SeniorTrain->DrivingSkill",
-        "constraints": "DrivingSkill->SeniorTrain",
-        "hard_flip": "SeniorTrain->DrivingSkill"
-      },
-      "endpoints": [
-        {
-          "node": "DrivingSkill",
-          "dir": "DrivingSkill->SeniorTrain",
-          "margin": 0.4,
-          "degree": 4
-        },
-        {
-          "node": "SeniorTrain",
-          "dir": "SeniorTrain->DrivingSkill",
-          "margin": 0.6,
-          "degree": 4
-        }
-      ]
-    },
-    "('DrivHist', 'DrivingSkill')": {
-      "direction": "DrivingSkill->DrivHist",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "DrivingSkill->DrivHist",
-        "degree": "DrivingSkill->DrivHist",
-        "constraints": "DrivingSkill->DrivHist",
-        "hard_flip": "DrivHist->DrivingSkill"
-      },
-      "endpoints": [
-        {
-          "node": "DrivingSkill",
-          "dir": "DrivingSkill->DrivHist",
-          "margin": 1.0,
-          "degree": 4
-        },
-        {
-          "node": "DrivHist",
-          "dir": "DrivHist->DrivingSkill",
-          "margin": 0.0,
-          "degree": 2
-        }
-      ]
-    },
-    "('GoodStudent', 'SeniorTrain')": {
-      "direction": "SeniorTrain->GoodStudent",
       "method": "agreement"
     },
     "('ThisCarCost', 'ThisCarDam')": {
@@ -393,27 +173,7 @@
     },
     "('PropCost', 'ThisCarCost')": {
       "direction": "ThisCarCost->PropCost",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "ThisCarCost->PropCost",
-        "degree": "ThisCarCost->PropCost",
-        "constraints": "ThisCarCost->PropCost",
-        "hard_flip": "ThisCarCost->PropCost"
-      },
-      "endpoints": [
-        {
-          "node": "ThisCarCost",
-          "dir": "ThisCarCost->PropCost",
-          "margin": 0.0,
-          "degree": 4
-        },
-        {
-          "node": "PropCost",
-          "dir": "PropCost->ThisCarCost",
-          "margin": 0.0,
-          "degree": 2
-        }
-      ]
+      "method": "agreement"
     },
     "('CarValue', 'Mileage')": {
       "direction": "Mileage->CarValue",
@@ -424,73 +184,65 @@
       "direction": "RuggedAuto->Cushioning",
       "method": "agreement"
     },
+    "('DrivQuality', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivQuality",
+      "method": "agreement"
+    },
+    "('DrivHist', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivHist",
+      "method": "agreement"
+    },
+    "('GoodStudent', 'SeniorTrain')": {
+      "direction": "GoodStudent->SeniorTrain",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "GoodStudent->SeniorTrain",
+        "degree": "GoodStudent->SeniorTrain",
+        "constraints": "GoodStudent->SeniorTrain",
+        "hard_flip": "GoodStudent->SeniorTrain"
+      },
+      "endpoints": [
+        {
+          "node": "SeniorTrain",
+          "dir": "GoodStudent->SeniorTrain",
+          "margin": 0.6,
+          "degree": 3
+        },
+        {
+          "node": "GoodStudent",
+          "dir": "SeniorTrain->GoodStudent",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    },
     "('Cushioning', 'MedCost')": {
       "direction": "Cushioning->MedCost",
       "method": "agreement"
     },
     "('Airbag', 'Cushioning')": {
       "direction": "Airbag->Cushioning",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "Airbag->Cushioning",
-        "degree": "Airbag->Cushioning",
-        "constraints": "Airbag->Cushioning",
-        "hard_flip": "Airbag->Cushioning"
-      },
-      "endpoints": [
-        {
-          "node": "Cushioning",
-          "dir": "Cushioning->Airbag",
-          "margin": 0.0,
-          "degree": 3
-        },
-        {
-          "node": "Airbag",
-          "dir": "Airbag->Cushioning",
-          "margin": 0.8,
-          "degree": 3
-        }
-      ]
+      "method": "agreement"
     },
     "('OtherCarCost', 'PropCost')": {
-      "direction": "PropCost->OtherCarCost",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "PropCost->OtherCarCost",
-        "degree": "PropCost->OtherCarCost",
-        "constraints": "PropCost->OtherCarCost",
-        "hard_flip": "PropCost->OtherCarCost"
-      },
-      "endpoints": [
-        {
-          "node": "PropCost",
-          "dir": "PropCost->OtherCarCost",
-          "margin": 0.0,
-          "degree": 2
-        },
-        {
-          "node": "OtherCarCost",
-          "dir": "OtherCarCost->PropCost",
-          "margin": 0.0,
-          "degree": 2
-        }
-      ]
+      "direction": "OtherCarCost->PropCost",
+      "method": "agreement"
     }
   },
   "evaluation": {
     "correct": 40,
-    "total": 43,
-    "accuracy": 0.9302325581395349,
-    "agreements": 24,
-    "disagreements": 15,
+    "total": 41,
+    "accuracy": 0.975609756097561,
+    "agreements": 34,
+    "disagreements": 3,
     "by_method": {
       "disagreement_confidence": {
-        "correct": 13,
-        "total": 15
+        "correct": 2,
+        "total": 3
       },
       "agreement": {
-        "correct": 23,
-        "total": 24
+        "correct": 34,
+        "total": 34
       },
       "single_endpoint": {
         "correct": 4,
@@ -500,19 +252,19 @@
   },
   "alt_evaluations": {
     "degree": {
-      "correct": 39,
-      "total": 43,
-      "accuracy": 0.9069767441860465,
-      "agreements": 24,
-      "disagreements": 15,
+      "correct": 40,
+      "total": 41,
+      "accuracy": 0.975609756097561,
+      "agreements": 34,
+      "disagreements": 3,
       "by_method": {
         "disagreement_confidence": {
-          "correct": 12,
-          "total": 15
+          "correct": 2,
+          "total": 3
         },
         "agreement": {
-          "correct": 23,
-          "total": 24
+          "correct": 34,
+          "total": 34
         },
         "single_endpoint": {
           "correct": 4,
@@ -521,19 +273,19 @@
       }
     },
     "constraints": {
-      "correct": 38,
-      "total": 43,
-      "accuracy": 0.8837209302325582,
-      "agreements": 24,
-      "disagreements": 15,
+      "correct": 40,
+      "total": 41,
+      "accuracy": 0.975609756097561,
+      "agreements": 34,
+      "disagreements": 3,
       "by_method": {
         "disagreement_confidence": {
-          "correct": 11,
-          "total": 15
+          "correct": 2,
+          "total": 3
         },
         "agreement": {
-          "correct": 23,
-          "total": 24
+          "correct": 34,
+          "total": 34
         },
         "single_endpoint": {
           "correct": 4,
@@ -542,19 +294,19 @@
       }
     },
     "hard_flip": {
-      "correct": 33,
-      "total": 43,
-      "accuracy": 0.7674418604651163,
-      "agreements": 24,
-      "disagreements": 15,
+      "correct": 39,
+      "total": 41,
+      "accuracy": 0.9512195121951219,
+      "agreements": 34,
+      "disagreements": 3,
       "by_method": {
         "disagreement_confidence": {
-          "correct": 6,
-          "total": 15
+          "correct": 1,
+          "total": 3
         },
         "agreement": {
-          "correct": 23,
-          "total": 24
+          "correct": 34,
+          "total": 34
         },
         "single_endpoint": {
           "correct": 4,
@@ -563,5 +315,5 @@
       }
     }
   },
-  "n_unique_edges": 43
+  "n_unique_edges": 41
 }

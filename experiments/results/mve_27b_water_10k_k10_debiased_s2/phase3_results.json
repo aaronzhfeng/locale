@@ -1,0 +1,279 @@
+{
+  "reconciled": {
+    "('CKNI_12_15', 'CKNI_12_30')": {
+      "direction": "CKNI_12_15->CKNI_12_30",
+      "method": "agreement"
+    },
+    "('CKNI_12_30', 'CKNI_12_45')": {
+      "direction": "CKNI_12_30->CKNI_12_45",
+      "method": "single_endpoint",
+      "endpoint": "CKNI_12_30"
+    },
+    "('CBODD_12_45', 'CKNI_12_30')": {
+      "direction": "CKNI_12_30->CBODD_12_45",
+      "method": "agreement"
+    },
+    "('CKND_12_45', 'CKNI_12_30')": {
+      "direction": "CKNI_12_30->CKND_12_45",
+      "method": "agreement"
+    },
+    "('CBODD_12_30', 'C_NI_12_15')": {
+      "direction": "C_NI_12_15->CBODD_12_30",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "C_NI_12_15->CBODD_12_30",
+        "degree": "CBODD_12_30->C_NI_12_15",
+        "constraints": "CBODD_12_30->C_NI_12_15",
+        "hard_flip": "CBODD_12_30->C_NI_12_15"
+      },
+      "endpoints": [
+        {
+          "node": "CBODD_12_30",
+          "dir": "CBODD_12_30->C_NI_12_15",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "C_NI_12_15",
+          "dir": "C_NI_12_15->CBODD_12_30",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('CBODD_12_30', 'CKNI_12_15')": {
+      "direction": "CKNI_12_15->CBODD_12_30",
+      "method": "agreement"
+    },
+    "('CBODD_12_15', 'CBODD_12_30')": {
+      "direction": "CBODD_12_15->CBODD_12_30",
+      "method": "agreement"
+    },
+    "('CBODD_12_30', 'CBODD_12_45')": {
+      "direction": "CBODD_12_30->CBODD_12_45",
+      "method": "agreement"
+    },
+    "('CKND_12_15', 'CKNN_12_30')": {
+      "direction": "CKND_12_15->CKNN_12_30",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CKND_12_15->CKNN_12_30",
+        "degree": "CKNN_12_30->CKND_12_15",
+        "constraints": "CKNN_12_30->CKND_12_15",
+        "hard_flip": "CKNN_12_30->CKND_12_15"
+      },
+      "endpoints": [
+        {
+          "node": "CKNN_12_30",
+          "dir": "CKNN_12_30->CKND_12_15",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "CKND_12_15",
+          "dir": "CKND_12_15->CKNN_12_30",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('CKNN_12_15', 'CKNN_12_30')": {
+      "direction": "CKNN_12_15->CKNN_12_30",
+      "method": "single_endpoint",
+      "endpoint": "CKNN_12_30"
+    },
+    "('CKNN_12_30', 'CKNN_12_45')": {
+      "direction": "CKNN_12_30->CKNN_12_45",
+      "method": "agreement"
+    },
+    "('CKNN_12_30', 'CNON_12_45')": {
+      "direction": "CKNN_12_30->CNON_12_45",
+      "method": "agreement"
+    },
+    "('CKNI_12_00', 'CKNI_12_15')": {
+      "direction": "CKNI_12_00->CKNI_12_15",
+      "method": "agreement"
+    },
+    "('CBODD_12_15', 'CKNI_12_00')": {
+      "direction": "CKNI_12_00->CBODD_12_15",
+      "method": "agreement"
+    },
+    "('CKND_12_15', 'CKNI_12_00')": {
+      "direction": "CKNI_12_00->CKND_12_15",
+      "method": "agreement"
+    },
+    "('C_NI_12_00', 'C_NI_12_15')": {
+      "direction": "C_NI_12_00->C_NI_12_15",
+      "method": "agreement"
+    },
+    "('C_NI_12_15', 'C_NI_12_30')": {
+      "direction": "C_NI_12_15->C_NI_12_30",
+      "method": "agreement"
+    },
+    "('CBODD_12_15', 'C_NI_12_00')": {
+      "direction": "C_NI_12_00->CBODD_12_15",
+      "method": "agreement"
+    },
+    "('CKND_12_15', 'CKND_12_30')": {
+      "direction": "CKND_12_15->CKND_12_30",
+      "method": "agreement"
+    },
+    "('C_NI_12_30', 'C_NI_12_45')": {
+      "direction": "C_NI_12_30->C_NI_12_45",
+      "method": "single_endpoint",
+      "endpoint": "C_NI_12_30"
+    },
+    "('CBODD_12_45', 'C_NI_12_30')": {
+      "direction": "C_NI_12_30->CBODD_12_45",
+      "method": "agreement"
+    },
+    "('CKND_12_30', 'CKND_12_45')": {
+      "direction": "CKND_12_30->CKND_12_45",
+      "method": "agreement"
+    },
+    "('CKND_12_30', 'CKNN_12_45')": {
+      "direction": "CKND_12_30->CKNN_12_45",
+      "method": "agreement"
+    },
+    "('CNOD_12_15', 'CNOD_12_30')": {
+      "direction": "CNOD_12_15->CNOD_12_30",
+      "method": "single_endpoint",
+      "endpoint": "CNOD_12_30"
+    },
+    "('CNOD_12_30', 'CNOD_12_45')": {
+      "direction": "CNOD_12_30->CNOD_12_45",
+      "method": "single_endpoint",
+      "endpoint": "CNOD_12_30"
+    },
+    "('CNOD_12_30', 'CNON_12_45')": {
+      "direction": "CNOD_12_30->CNON_12_45",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CNOD_12_30->CNON_12_45",
+        "degree": "CNOD_12_30->CNON_12_45",
+        "constraints": "CNOD_12_30->CNON_12_45",
+        "hard_flip": "CNON_12_45->CNOD_12_30"
+      },
+      "endpoints": [
+        {
+          "node": "CNOD_12_30",
+          "dir": "CNOD_12_30->CNON_12_45",
+          "margin": 0.6,
+          "degree": 3
+        },
+        {
+          "node": "CNON_12_45",
+          "dir": "CNON_12_45->CNOD_12_30",
+          "margin": 0.4,
+          "degree": 3
+        }
+      ]
+    },
+    "('CNON_12_30', 'CNON_12_45')": {
+      "direction": "CNON_12_30->CNON_12_45",
+      "method": "agreement"
+    },
+    "('CBODN_12_15', 'CBODN_12_30')": {
+      "direction": "CBODN_12_15->CBODN_12_30",
+      "method": "single_endpoint",
+      "endpoint": "CBODN_12_30"
+    },
+    "('CBODN_12_30', 'CBODN_12_45')": {
+      "direction": "CBODN_12_30->CBODN_12_45",
+      "method": "single_endpoint",
+      "endpoint": "CBODN_12_30"
+    },
+    "('CNON_12_15', 'CNON_12_30')": {
+      "direction": "CNON_12_15->CNON_12_30",
+      "method": "single_endpoint",
+      "endpoint": "CNON_12_30"
+    }
+  },
+  "evaluation": {
+    "correct": 30,
+    "total": 30,
+    "accuracy": 1.0,
+    "agreements": 19,
+    "disagreements": 3,
+    "by_method": {
+      "agreement": {
+        "correct": 19,
+        "total": 19
+      },
+      "single_endpoint": {
+        "correct": 8,
+        "total": 8
+      },
+      "disagreement_confidence": {
+        "correct": 3,
+        "total": 3
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 28,
+      "total": 30,
+      "accuracy": 0.9333333333333333,
+      "agreements": 19,
+      "disagreements": 3,
+      "by_method": {
+        "agreement": {
+          "correct": 19,
+          "total": 19
+        },
+        "single_endpoint": {
+          "correct": 8,
+          "total": 8
+        },
+        "disagreement_confidence": {
+          "correct": 1,
+          "total": 3
+        }
+      }
+    },
+    "constraints": {
+      "correct": 28,
+      "total": 30,
+      "accuracy": 0.9333333333333333,
+      "agreements": 19,
+      "disagreements": 3,
+      "by_method": {
+        "agreement": {
+          "correct": 19,
+          "total": 19
+        },
+        "single_endpoint": {
+          "correct": 8,
+          "total": 8
+        },
+        "disagreement_confidence": {
+          "correct": 1,
+          "total": 3
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 27,
+      "total": 30,
+      "accuracy": 0.9,
+      "agreements": 19,
+      "disagreements": 3,
+      "by_method": {
+        "agreement": {
+          "correct": 19,
+          "total": 19
+        },
+        "single_endpoint": {
+          "correct": 8,
+          "total": 8
+        },
+        "disagreement_confidence": {
+          "correct": 0,
+          "total": 3
+        }
+      }
+    }
+  },
+  "n_unique_edges": 30
+}

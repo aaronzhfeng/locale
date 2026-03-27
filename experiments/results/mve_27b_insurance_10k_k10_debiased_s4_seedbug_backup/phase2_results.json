@@ -1,0 +1,382 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_insurance_10k_k10_debiased_s4/mve_results.json",
+    "network": "insurance",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "SocioEcon": {
+      "degree": 7,
+      "n_feasible": 17,
+      "n_total": 128,
+      "hard_flips": [],
+      "p1_correct": 6,
+      "p2_correct": 6,
+      "n_edges": 7,
+      "directions": {
+        "Age": "SocioEcon->Age",
+        "RiskAversion": "SocioEcon->RiskAversion",
+        "VehicleYear": "SocioEcon->VehicleYear",
+        "MakeModel": "SocioEcon->MakeModel",
+        "HomeBase": "SocioEcon->HomeBase",
+        "AntiTheft": "SocioEcon->AntiTheft",
+        "OtherCar": "SocioEcon->OtherCar"
+      }
+    },
+    "RiskAversion": {
+      "degree": 7,
+      "n_feasible": 14,
+      "n_total": 128,
+      "hard_flips": [],
+      "p1_correct": 5,
+      "p2_correct": 5,
+      "n_edges": 7,
+      "directions": {
+        "Age": "RiskAversion->Age",
+        "SocioEcon": "RiskAversion->SocioEcon",
+        "DrivQuality": "RiskAversion->DrivQuality",
+        "SeniorTrain": "RiskAversion->SeniorTrain",
+        "HomeBase": "RiskAversion->HomeBase",
+        "AntiTheft": "RiskAversion->AntiTheft",
+        "DrivHist": "RiskAversion->DrivHist"
+      }
+    },
+    "Age": {
+      "degree": 6,
+      "n_feasible": 26,
+      "n_total": 64,
+      "hard_flips": [],
+      "p1_correct": 6,
+      "p2_correct": 6,
+      "n_edges": 6,
+      "directions": {
+        "GoodStudent": "Age->GoodStudent",
+        "SocioEcon": "Age->SocioEcon",
+        "RiskAversion": "Age->RiskAversion",
+        "DrivingSkill": "Age->DrivingSkill",
+        "SeniorTrain": "Age->SeniorTrain",
+        "MedCost": "Age->MedCost"
+      }
+    },
+    "VehicleYear": {
+      "degree": 5,
+      "n_feasible": 6,
+      "n_total": 32,
+      "hard_flips": [
+        [
+          "SocioEcon",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "SocioEcon": "VehicleYear->SocioEcon",
+        "RuggedAuto": "VehicleYear->RuggedAuto",
+        "Antilock": "VehicleYear->Antilock",
+        "CarValue": "VehicleYear->CarValue",
+        "Airbag": "VehicleYear->Airbag"
+      }
+    },
+    "Accident": {
+      "degree": 5,
+      "n_feasible": 7,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 5,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "ThisCarDam": "Accident->ThisCarDam",
+        "DrivQuality": "DrivQuality->Accident",
+        "OtherCarCost": "Accident->OtherCarCost",
+        "MedCost": "Accident->MedCost",
+        "ILiCost": "Accident->ILiCost"
+      }
+    },
+    "MakeModel": {
+      "degree": 5,
+      "n_feasible": 6,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 5,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "SocioEcon": "SocioEcon->MakeModel",
+        "RuggedAuto": "MakeModel->RuggedAuto",
+        "Antilock": "MakeModel->Antilock",
+        "CarValue": "MakeModel->CarValue",
+        "Airbag": "MakeModel->Airbag"
+      }
+    },
+    "DrivingSkill": {
+      "degree": 4,
+      "n_feasible": 6,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 4,
+      "directions": {
+        "Age": "Age->DrivingSkill",
+        "DrivQuality": "DrivingSkill->DrivQuality",
+        "SeniorTrain": "DrivingSkill->SeniorTrain",
+        "DrivHist": "DrivingSkill->DrivHist"
+      }
+    },
+    "SeniorTrain": {
+      "degree": 4,
+      "n_feasible": 12,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "RiskAversion",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 4,
+      "directions": {
+        "GoodStudent": "GoodStudent->SeniorTrain",
+        "Age": "Age->SeniorTrain",
+        "RiskAversion": "SeniorTrain->RiskAversion",
+        "DrivingSkill": "SeniorTrain->DrivingSkill"
+      }
+    },
+    "ThisCarCost": {
+      "degree": 4,
+      "n_feasible": 9,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "PropCost",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 3,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "ThisCarDam": "ThisCarDam->ThisCarCost",
+        "Theft": "Theft->ThisCarCost",
+        "CarValue": "CarValue->ThisCarCost",
+        "PropCost": "ThisCarCost->PropCost"
+      }
+    },
+    "CarValue": {
+      "degree": 4,
+      "n_feasible": 9,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "VehicleYear": "VehicleYear->CarValue",
+        "MakeModel": "MakeModel->CarValue",
+        "Mileage": "Mileage->CarValue",
+        "ThisCarCost": "CarValue->ThisCarCost"
+      }
+    },
+    "RuggedAuto": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "VehicleYear": "VehicleYear->RuggedAuto",
+        "MakeModel": "MakeModel->RuggedAuto",
+        "Cushioning": "RuggedAuto->Cushioning"
+      }
+    },
+    "DrivQuality": {
+      "degree": 3,
+      "n_feasible": 6,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "RiskAversion": "RiskAversion->DrivQuality",
+        "Accident": "DrivQuality->Accident",
+        "DrivingSkill": "DrivingSkill->DrivQuality"
+      }
+    },
+    "MedCost": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "Age": "Age->MedCost",
+        "Accident": "Accident->MedCost",
+        "Cushioning": "Cushioning->MedCost"
+      }
+    },
+    "Cushioning": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "RuggedAuto": "RuggedAuto->Cushioning",
+        "MedCost": "Cushioning->MedCost",
+        "Airbag": "Airbag->Cushioning"
+      }
+    },
+    "Airbag": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "Cushioning",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "VehicleYear": "VehicleYear->Airbag",
+        "MakeModel": "MakeModel->Airbag",
+        "Cushioning": "Airbag->Cushioning"
+      }
+    },
+    "GoodStudent": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "Age": "Age->GoodStudent",
+        "SeniorTrain": "SeniorTrain->GoodStudent"
+      }
+    },
+    "ThisCarDam": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "Accident": "Accident->ThisCarDam",
+        "ThisCarCost": "ThisCarDam->ThisCarCost"
+      }
+    },
+    "Antilock": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "VehicleYear": "VehicleYear->Antilock",
+        "MakeModel": "MakeModel->Antilock"
+      }
+    },
+    "HomeBase": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "SocioEcon": "SocioEcon->HomeBase",
+        "RiskAversion": "RiskAversion->HomeBase"
+      }
+    },
+    "AntiTheft": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "SocioEcon": "SocioEcon->AntiTheft",
+        "RiskAversion": "RiskAversion->AntiTheft"
+      }
+    },
+    "PropCost": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "ThisCarCost": "ThisCarCost->PropCost",
+        "OtherCarCost": "OtherCarCost->PropCost"
+      }
+    },
+    "OtherCarCost": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "Accident": "Accident->OtherCarCost",
+        "PropCost": "OtherCarCost->PropCost"
+      }
+    },
+    "DrivHist": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "RiskAversion": "RiskAversion->DrivHist",
+        "DrivingSkill": "DrivingSkill->DrivHist"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 82,
+    "phase1_correct": 72,
+    "phase2_correct": 74,
+    "phase1_accuracy": 87.8,
+    "phase2_accuracy": 90.2,
+    "delta_pp": 2.4,
+    "hard_flips": 4,
+    "hard_flips_helped": 1,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

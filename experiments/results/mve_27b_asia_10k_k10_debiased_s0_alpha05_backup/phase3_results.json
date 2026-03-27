@@ -1,0 +1,141 @@
+{
+  "reconciled": {
+    "('either', 'tub')": {
+      "direction": "either->tub",
+      "method": "single_endpoint",
+      "endpoint": "either"
+    },
+    "('either', 'lung')": {
+      "direction": "lung->either",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "lung->either",
+        "degree": "either->lung",
+        "constraints": "either->lung",
+        "hard_flip": "lung->either"
+      },
+      "endpoints": [
+        {
+          "node": "either",
+          "dir": "either->lung",
+          "margin": 0.2,
+          "degree": 4
+        },
+        {
+          "node": "lung",
+          "dir": "lung->either",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('either', 'xray')": {
+      "direction": "either->xray",
+      "method": "single_endpoint",
+      "endpoint": "either"
+    },
+    "('dysp', 'either')": {
+      "direction": "either->dysp",
+      "method": "agreement"
+    },
+    "('lung', 'smoke')": {
+      "direction": "smoke->lung",
+      "method": "agreement"
+    },
+    "('bronc', 'smoke')": {
+      "direction": "smoke->bronc",
+      "method": "agreement"
+    },
+    "('bronc', 'dysp')": {
+      "direction": "bronc->dysp",
+      "method": "agreement"
+    }
+  },
+  "evaluation": {
+    "correct": 6,
+    "total": 7,
+    "accuracy": 0.8571428571428571,
+    "agreements": 4,
+    "disagreements": 1,
+    "by_method": {
+      "single_endpoint": {
+        "correct": 1,
+        "total": 2
+      },
+      "disagreement_confidence": {
+        "correct": 1,
+        "total": 1
+      },
+      "agreement": {
+        "correct": 4,
+        "total": 4
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 5,
+      "total": 7,
+      "accuracy": 0.7142857142857143,
+      "agreements": 4,
+      "disagreements": 1,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 1,
+          "total": 2
+        },
+        "disagreement_confidence": {
+          "correct": 0,
+          "total": 1
+        },
+        "agreement": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "constraints": {
+      "correct": 5,
+      "total": 7,
+      "accuracy": 0.7142857142857143,
+      "agreements": 4,
+      "disagreements": 1,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 1,
+          "total": 2
+        },
+        "disagreement_confidence": {
+          "correct": 0,
+          "total": 1
+        },
+        "agreement": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 6,
+      "total": 7,
+      "accuracy": 0.8571428571428571,
+      "agreements": 4,
+      "disagreements": 1,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 1,
+          "total": 2
+        },
+        "disagreement_confidence": {
+          "correct": 1,
+          "total": 1
+        },
+        "agreement": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    }
+  },
+  "n_unique_edges": 7
+}

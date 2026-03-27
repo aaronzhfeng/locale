@@ -1,7 +1,7 @@
 {
   "metadata": {
     "phase": 2,
-    "source": "/teamspace/studios/this_studio/auto_on/research-copilot/projects/locale/experiments/results/mve_27b_child_10k_k10_debiased_s2/mve_results.json",
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_child_10k_k10_debiased_s2/mve_results.json",
     "network": "child",
     "soft_score_source": "ego",
     "collider_mode": "non-collider-only"
@@ -11,13 +11,19 @@
       "degree": 8,
       "n_feasible": 14,
       "n_total": 256,
-      "hard_flips": [],
+      "hard_flips": [
+        [
+          "Age",
+          1,
+          0
+        ]
+      ],
       "p1_correct": 7,
-      "p2_correct": 7,
+      "p2_correct": 8,
       "n_edges": 8,
       "directions": {
         "BirthAsphyxia": "BirthAsphyxia->Disease",
-        "Age": "Age->Disease",
+        "Age": "Disease->Age",
         "LVH": "Disease->LVH",
         "DuctFlow": "Disease->DuctFlow",
         "CardiacMixing": "Disease->CardiacMixing",
@@ -28,7 +34,7 @@
     },
     "LungParench": {
       "degree": 5,
-      "n_feasible": 7,
+      "n_feasible": 6,
       "n_total": 32,
       "hard_flips": [],
       "p1_correct": 5,
@@ -44,7 +50,7 @@
     },
     "HypoxiaInO2": {
       "degree": 4,
-      "n_feasible": 8,
+      "n_feasible": 7,
       "n_total": 16,
       "hard_flips": [],
       "p1_correct": 4,
@@ -59,7 +65,7 @@
     },
     "HypDistrib": {
       "degree": 3,
-      "n_feasible": 5,
+      "n_feasible": 6,
       "n_total": 8,
       "hard_flips": [],
       "p1_correct": 1,
@@ -89,13 +95,7 @@
       "degree": 3,
       "n_feasible": 5,
       "n_total": 8,
-      "hard_flips": [
-        [
-          "Sick",
-          1,
-          0
-        ]
-      ],
+      "hard_flips": [],
       "p1_correct": 2,
       "p2_correct": 2,
       "n_edges": 3,
@@ -121,14 +121,14 @@
     },
     "Sick": {
       "degree": 3,
-      "n_feasible": 5,
+      "n_feasible": 8,
       "n_total": 8,
       "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
+      "p1_correct": 1,
+      "p2_correct": 1,
       "n_edges": 3,
       "directions": {
-        "Grunting": "Sick->Grunting",
+        "Grunting": "Grunting->Sick",
         "Disease": "Disease->Sick",
         "Age": "Age->Sick"
       }
@@ -214,11 +214,11 @@
   },
   "summary": {
     "total_edges": 44,
-    "phase1_correct": 35,
+    "phase1_correct": 34,
     "phase2_correct": 35,
-    "phase1_accuracy": 79.5,
+    "phase1_accuracy": 77.3,
     "phase2_accuracy": 79.5,
-    "delta_pp": 0.0,
+    "delta_pp": 2.3,
     "hard_flips": 1,
     "hard_flips_helped": 0,
     "hard_flips_hurt": 0,

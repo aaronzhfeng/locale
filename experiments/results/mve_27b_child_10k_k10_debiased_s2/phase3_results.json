@@ -7,7 +7,27 @@
     },
     "('Age', 'Disease')": {
       "direction": "Age->Disease",
-      "method": "agreement"
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Age->Disease",
+        "degree": "Disease->Age",
+        "constraints": "Disease->Age",
+        "hard_flip": "Disease->Age"
+      },
+      "endpoints": [
+        {
+          "node": "Disease",
+          "dir": "Disease->Age",
+          "margin": 0.0,
+          "degree": 8
+        },
+        {
+          "node": "Age",
+          "dir": "Age->Disease",
+          "margin": 0.3333333333333333,
+          "degree": 2
+        }
+      ]
     },
     "('Disease', 'LVH')": {
       "direction": "Disease->LVH",
@@ -68,7 +88,7 @@
         {
           "node": "LowerBodyO2",
           "dir": "LowerBodyO2->HypoxiaInO2",
-          "margin": 0.6,
+          "margin": 0.2,
           "degree": 2
         }
       ]
@@ -95,13 +115,13 @@
         {
           "node": "HypDistrib",
           "dir": "HypDistrib->LowerBodyO2",
-          "margin": 1.0,
+          "margin": 0.8,
           "degree": 3
         },
         {
           "node": "LowerBodyO2",
           "dir": "LowerBodyO2->HypDistrib",
-          "margin": 0.6,
+          "margin": 0.2,
           "degree": 2
         }
       ]
@@ -119,7 +139,7 @@
         {
           "node": "HypDistrib",
           "dir": "HypDistrib->DuctFlow",
-          "margin": 0.6,
+          "margin": 0.2,
           "degree": 3
         },
         {
@@ -143,7 +163,7 @@
         {
           "node": "HypDistrib",
           "dir": "HypDistrib->CardiacMixing",
-          "margin": 0.4,
+          "margin": 0.2,
           "degree": 3
         },
         {
@@ -169,28 +189,8 @@
       "endpoint": "Grunting"
     },
     "('Grunting', 'Sick')": {
-      "direction": "Sick->Grunting",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "Sick->Grunting",
-        "degree": "Sick->Grunting",
-        "constraints": "Grunting->Sick",
-        "hard_flip": "Grunting->Sick"
-      },
-      "endpoints": [
-        {
-          "node": "Grunting",
-          "dir": "Grunting->Sick",
-          "margin": 0.0,
-          "degree": 3
-        },
-        {
-          "node": "Sick",
-          "dir": "Sick->Grunting",
-          "margin": 0.8,
-          "degree": 3
-        }
-      ]
+      "direction": "Grunting->Sick",
+      "method": "agreement"
     },
     "('Age', 'Sick')": {
       "direction": "Age->Sick",
@@ -208,9 +208,9 @@
     }
   },
   "evaluation": {
-    "correct": 23,
+    "correct": 22,
     "total": 25,
-    "accuracy": 0.92,
+    "accuracy": 0.88,
     "agreements": 14,
     "disagreements": 5,
     "by_method": {
@@ -218,13 +218,13 @@
         "correct": 6,
         "total": 6
       },
+      "disagreement_confidence": {
+        "correct": 4,
+        "total": 5
+      },
       "agreement": {
         "correct": 12,
         "total": 14
-      },
-      "disagreement_confidence": {
-        "correct": 5,
-        "total": 5
       }
     }
   },
@@ -240,38 +240,17 @@
           "correct": 6,
           "total": 6
         },
-        "agreement": {
-          "correct": 12,
-          "total": 14
-        },
         "disagreement_confidence": {
           "correct": 4,
           "total": 5
+        },
+        "agreement": {
+          "correct": 12,
+          "total": 14
         }
       }
     },
     "constraints": {
-      "correct": 21,
-      "total": 25,
-      "accuracy": 0.84,
-      "agreements": 14,
-      "disagreements": 5,
-      "by_method": {
-        "single_endpoint": {
-          "correct": 6,
-          "total": 6
-        },
-        "agreement": {
-          "correct": 12,
-          "total": 14
-        },
-        "disagreement_confidence": {
-          "correct": 3,
-          "total": 5
-        }
-      }
-    },
-    "hard_flip": {
       "correct": 22,
       "total": 25,
       "accuracy": 0.88,
@@ -282,13 +261,34 @@
           "correct": 6,
           "total": 6
         },
-        "agreement": {
-          "correct": 12,
-          "total": 14
-        },
         "disagreement_confidence": {
           "correct": 4,
           "total": 5
+        },
+        "agreement": {
+          "correct": 12,
+          "total": 14
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 23,
+      "total": 25,
+      "accuracy": 0.92,
+      "agreements": 14,
+      "disagreements": 5,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 6,
+          "total": 6
+        },
+        "disagreement_confidence": {
+          "correct": 5,
+          "total": 5
+        },
+        "agreement": {
+          "correct": 12,
+          "total": 14
         }
       }
     }

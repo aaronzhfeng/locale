@@ -1,0 +1,94 @@
+{
+  "method": "mosacd_baseline",
+  "network": "cancer",
+  "n_samples": 10000,
+  "seed": 42,
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "enable_thinking": false,
+  "n_repeats": 5,
+  "pc_alpha": 0.05,
+  "skeleton": {
+    "n_nodes": 5,
+    "n_edges": 4,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "coverage": 1.0
+  },
+  "seeding": {
+    "total_queries": 40,
+    "n_consistent": 4,
+    "n_inconsistent": 0,
+    "n_undecided": 0,
+    "n_valid_seeds": 4,
+    "seed_accuracy": 1.0
+  },
+  "metrics": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "shd": 0,
+    "n_directed": 4,
+    "n_undirected_remaining": 0
+  },
+  "elapsed_seconds": 30.399944067001343,
+  "all_votes": {
+    "Cancer-Xray": [
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray"
+    ],
+    "Cancer-Pollution": [
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer",
+      "Pollution->Cancer"
+    ],
+    "Cancer-Smoker": [
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer"
+    ],
+    "Cancer-Dyspnoea": [
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea"
+    ]
+  },
+  "seeds": {
+    "Cancer-Xray": "Cancer->Xray",
+    "Cancer-Pollution": "Pollution->Cancer",
+    "Cancer-Smoker": "Smoker->Cancer",
+    "Cancer-Dyspnoea": "Cancer->Dyspnoea"
+  }
+}

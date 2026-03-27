@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_cancer_10k_k10_debiased_s1/mve_results.json",
+    "network": "cancer",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "Cancer": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "Smoker": "Smoker->Cancer",
+        "Xray": "Cancer->Xray",
+        "Dyspnoea": "Cancer->Dyspnoea"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 3,
+    "phase1_correct": 3,
+    "phase2_correct": 3,
+    "phase1_accuracy": 100.0,
+    "phase2_accuracy": 100.0,
+    "delta_pp": 0.0,
+    "hard_flips": 0,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

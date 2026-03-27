@@ -22,7 +22,7 @@ import numpy as np
 EXPERIMENTS_DIR = Path(__file__).parent
 RESULTS_DIR = EXPERIMENTS_DIR / "results"
 
-NETWORKS = ["insurance", "alarm", "sachs", "child", "asia", "hepar2"]
+NETWORKS = ["insurance", "alarm", "sachs", "child", "asia", "hepar2", "cancer", "water", "mildew", "hailfinder", "win95pts"]
 
 
 def result_dir_name(network, seed):
@@ -34,7 +34,7 @@ def results_exist(network, seed):
     return (d / "mosacd_results.json").exists()
 
 
-def run_mosacd(network, seed):
+def run_mosacd(network, seed, alpha=None):
     """Run MosaCD for a single network+seed."""
     out_dir = RESULTS_DIR / result_dir_name(network, seed)
     cmd = [
@@ -45,6 +45,8 @@ def run_mosacd(network, seed):
         "--seed", str(seed),
         "--output-dir", str(out_dir),
     ]
+    if alpha is not None:
+        cmd.extend(["--alpha", str(alpha)])
     print(f"\n{'='*60}")
     print(f"MosaCD: {network} seed={seed}")
     print(f"{'='*60}")
@@ -95,6 +97,8 @@ def main():
                        choices=NETWORKS)
     parser.add_argument("--summary-only", action="store_true")
     parser.add_argument("--include-seed42", action="store_true")
+    parser.add_argument("--alpha", type=float, default=None,
+                       help="PC skeleton alpha (default: use script default 0.05)")
     args = parser.parse_args()
 
     all_results = {}
@@ -105,7 +109,7 @@ def main():
                 if results_exist(network, seed):
                     print(f"MosaCD exists for {network} seed={seed}, skipping")
                 else:
-                    run_mosacd(network, seed)
+                    run_mosacd(network, seed, alpha=args.alpha)
 
     # Collect results
     for network in args.networks:

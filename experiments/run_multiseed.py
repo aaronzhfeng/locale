@@ -24,7 +24,7 @@ EXPERIMENTS_DIR = Path(__file__).parent
 RESULTS_DIR = EXPERIMENTS_DIR / "results"
 
 # Networks and their config
-NETWORKS = ["insurance", "alarm", "sachs", "child", "asia", "hepar2"]
+NETWORKS = ["insurance", "alarm", "sachs", "child", "asia", "hepar2", "cancer", "water", "mildew", "hailfinder", "win95pts"]
 
 
 def result_dir_name(network, seed):
@@ -50,7 +50,7 @@ def phase3_exists(network, seed):
     return (d / "phase3_results.json").exists()
 
 
-def run_phase1(network, seed):
+def run_phase1(network, seed, alpha=None):
     """Run Phase 1 for a single network+seed."""
     out_dir = RESULTS_DIR / result_dir_name(network, seed)
     cmd = [
@@ -64,6 +64,8 @@ def run_phase1(network, seed):
         "--seed", str(seed),
         "--output-dir", str(out_dir),
     ]
+    if alpha is not None:
+        cmd.extend(["--alpha", str(alpha)])
     print(f"\n{'='*60}")
     print(f"Phase 1: {network} seed={seed}")
     print(f"{'='*60}")
@@ -252,6 +254,8 @@ def main():
                        help="Only print summary from existing results")
     parser.add_argument("--include-seed42", action="store_true",
                        help="Include original seed=42 results in summary")
+    parser.add_argument("--alpha", type=float, default=None,
+                       help="PC skeleton alpha (default: use script default 0.05)")
     args = parser.parse_args()
 
     all_results = {}  # {network: {seed: metrics_dict}}
@@ -264,7 +268,7 @@ def main():
                     if phase1_exists(network, seed):
                         print(f"Phase 1 exists for {network} seed={seed}, skipping")
                     else:
-                        success = run_phase1(network, seed)
+                        success = run_phase1(network, seed, alpha=args.alpha)
                         if not success:
                             print(f"Phase 1 FAILED for {network} seed={seed}")
                             continue

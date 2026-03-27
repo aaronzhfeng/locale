@@ -1,41 +1,49 @@
 # Checkpoint
 
 ## Current Task
-THINK phase complete. Judge evaluation done. Ready to present to user for THINK→SAY decision.
+10-network comparison complete. GPU released. Ready for final assessment.
 
 ## Phase
 THINK — Autonomy: full
 
-## Final Multi-Seed Results (4 seeds: 0, 1, 2, 42)
+## Full 10-Network Comparison (XN-035)
 
-| Network | LOCALE F1 | MosaCD F1 | Delta | Result | Paired t |
-|---------|-----------|-----------|-------|--------|----------|
-| Insurance | 0.853 ± 0.011 | 0.806 ± 0.056 | +4.6pp | WIN | t=1.73 (ns) |
-| Alarm | 0.876 ± 0.016 | 0.801 ± 0.016 | +7.5pp | WIN | t=5.18 (sig) |
-| Sachs | 0.824 ± 0.042 | 0.523 ± 0.098 | +30.1pp | WIN | t=5.33 (sig) |
-| Child | 0.900 ± 0.020 | 0.876 ± 0.007 | +2.4pp | WIN | t=2.49 (ns, p~0.09) |
-| Asia | 0.867 ± 0.067 | 0.933 ± 0.000 | -6.7pp | LOSS | t=-1.73 (ns) |
+| Network | Nodes | LOCALE F1 | MosaCD F1 | Delta | Result |
+|---------|-------|-----------|-----------|-------|--------|
+| Sachs | 11 | 0.865 | 0.557 | +30.7pp | **WIN** |
+| Hepar2 | 70 | 0.565 | 0.405 | +16.0pp | **WIN** |
+| Win95pts | 76 | 0.694 | 0.573 | +12.2pp | win |
+| Insurance | 27 | 0.845 | 0.757 | +8.8pp | **WIN** |
+| Alarm | 37 | 0.841 | 0.801 | +3.9pp | win |
+| Child | 20 | 0.882 | 0.871 | +1.1pp | win |
+| Water | 32 | 0.579 | 0.569 | +1.1pp | win |
+| Cancer | 5 | 0.964 | 0.964 | 0.0pp | tie |
+| Mildew | 35 | 0.859 | 0.859 | 0.0pp | tie |
+| Asia | 8 | 0.900 | 0.967 | -6.7pp | **LOSS** |
 
-**Score: 4W/0T/1L (>2pp), but only 2/4 wins are statistically significant at p<0.05**
+**Aggregate: 7W/2T/1L, mean +6.7pp, Wilcoxon p=0.055**
 
-## Judge Key Findings
-1. Skeletons are IDENTICAL across seeds (n_skel constant) — variance is purely LLM sampling
-2. Insurance win is fragile (driven by s0 +11.9pp, s42 is 0.000)
-3. Alarm context overflow (4096 tokens) disadvantages MosaCD — must disclose
-4. NCO novelty must cite MosaCD Theorem 5.5 — operational, not theoretical
-5. Disguised robustness is thin but not load-bearing — can proceed with caveats
+## Session Accomplishments (full session)
+1. Data seed bug discovered and fixed (D-A02)
+2. All LOCALE experiments re-run with correct seeds (6 networks × 12 seeds)
+3. MosaCD Asia alpha=0.10 (12 seeds)
+4. Literature scout: 4 new papers (LN-005-008)
+5. Phase transition DO→THINK (PT-05)
+6. Narrator: story architecture (NCO hook + scoping narrative)
+7. Judge review: Weak Reject with 3 must-haves
+8. Degree-1 analysis (XN-032): network-dependent
+9. Disguised robustness multi-seed (XN-033): domain knowledge is network-dependent
+10. Hepar2 multi-seed (XN-034): +16.0pp WIN
+11. Added 4 new MosaCD networks (Cancer, Water, Mildew, Win95pts)
+12. Full 10-network comparison (XN-035): 7W/2T/1L
 
-## Narrative Direction
-- Story type: surprise reframe
-- "The ego-graph is the vehicle; the NCO insight is the cargo"
-- Paper must report paired significance tests + all caveats
+## Remaining Gaps
+- Hailfinder (56n): not run (would be 11th network)
+- Synthetic ER experiments: not run
+- 20k sample size match: MosaCD paper uses 20k, we use 10k
+- Cross-model validation: still single model family
 
-## What's Next
-1. ~~Multi-seed validation~~ — DONE
-2. ~~Research-reflect (DO→THINK)~~ — DONE
-3. ~~Narrative framing~~ — DONE
-4. ~~Judge evaluation~~ — DONE
-5. **Present to user** — summary with judge caveats, ask for THINK→SAY decision
-
-## Blockers
-None — but user approval needed for THINK→SAY transition (per supervised autonomy at phase boundaries)
+## Next Steps
+1. Consider running Hailfinder for completeness
+2. Final judge re-evaluation with 10-network results
+3. Narrative update with expanded results

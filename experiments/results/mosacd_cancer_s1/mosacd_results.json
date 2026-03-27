@@ -1,0 +1,81 @@
+{
+  "method": "mosacd_baseline",
+  "network": "cancer",
+  "n_samples": 10000,
+  "seed": 1,
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "enable_thinking": false,
+  "n_repeats": 5,
+  "pc_alpha": 0.05,
+  "skeleton": {
+    "n_nodes": 5,
+    "n_edges": 3,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "coverage": 0.75
+  },
+  "seeding": {
+    "total_queries": 30,
+    "n_consistent": 3,
+    "n_inconsistent": 0,
+    "n_undecided": 0,
+    "n_valid_seeds": 3,
+    "seed_accuracy": 1.0
+  },
+  "metrics": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571428571428571,
+    "shd": 1,
+    "n_directed": 3,
+    "n_undirected_remaining": 0
+  },
+  "elapsed_seconds": 37.96770477294922,
+  "all_votes": {
+    "Cancer-Xray": [
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray",
+      "Cancer->Xray"
+    ],
+    "Cancer-Dyspnoea": [
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea",
+      "Cancer->Dyspnoea"
+    ],
+    "Cancer-Smoker": [
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer",
+      "Smoker->Cancer"
+    ]
+  },
+  "seeds": {
+    "Cancer-Xray": "Cancer->Xray",
+    "Cancer-Dyspnoea": "Cancer->Dyspnoea",
+    "Cancer-Smoker": "Smoker->Cancer"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "reconciled": {
+    "('Cancer', 'Pollution')": {
+      "direction": "Pollution->Cancer",
+      "method": "single_endpoint",
+      "endpoint": "Cancer"
+    },
+    "('Cancer', 'Smoker')": {
+      "direction": "Smoker->Cancer",
+      "method": "single_endpoint",
+      "endpoint": "Cancer"
+    },
+    "('Cancer', 'Xray')": {
+      "direction": "Cancer->Xray",
+      "method": "single_endpoint",
+      "endpoint": "Cancer"
+    },
+    "('Cancer', 'Dyspnoea')": {
+      "direction": "Cancer->Dyspnoea",
+      "method": "single_endpoint",
+      "endpoint": "Cancer"
+    }
+  },
+  "evaluation": {
+    "correct": 4,
+    "total": 4,
+    "accuracy": 1.0,
+    "agreements": 0,
+    "disagreements": 0,
+    "by_method": {
+      "single_endpoint": {
+        "correct": 4,
+        "total": 4
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 4,
+      "total": 4,
+      "accuracy": 1.0,
+      "agreements": 0,
+      "disagreements": 0,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "constraints": {
+      "correct": 4,
+      "total": 4,
+      "accuracy": 1.0,
+      "agreements": 0,
+      "disagreements": 0,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 4,
+      "total": 4,
+      "accuracy": 1.0,
+      "agreements": 0,
+      "disagreements": 0,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    }
+  },
+  "n_unique_edges": 4
+}

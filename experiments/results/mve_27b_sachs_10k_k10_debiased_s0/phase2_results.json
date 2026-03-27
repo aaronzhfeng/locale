@@ -1,7 +1,7 @@
 {
   "metadata": {
     "phase": 2,
-    "source": "/teamspace/studios/this_studio/auto_on/research-copilot/projects/locale/experiments/results/mve_27b_sachs_10k_k10_debiased_s0/mve_results.json",
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_sachs_10k_k10_debiased_s0/mve_results.json",
     "network": "sachs",
     "soft_score_source": "ego",
     "collider_mode": "non-collider-only"
@@ -9,7 +9,7 @@
   "per_node": {
     "PKA": {
       "degree": 7,
-      "n_feasible": 16,
+      "n_feasible": 20,
       "n_total": 128,
       "hard_flips": [],
       "p1_correct": 6,
@@ -25,9 +25,25 @@
         "Raf": "PKA->Raf"
       }
     },
+    "Mek": {
+      "degree": 5,
+      "n_feasible": 20,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 5,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "Erk": "Mek->Erk",
+        "P38": "Mek->P38",
+        "PKA": "PKA->Mek",
+        "PKC": "PKC->Mek",
+        "Raf": "Raf->Mek"
+      }
+    },
     "PKC": {
       "degree": 5,
-      "n_feasible": 12,
+      "n_feasible": 16,
       "n_total": 32,
       "hard_flips": [],
       "p1_correct": 5,
@@ -41,19 +57,19 @@
         "Raf": "PKC->Raf"
       }
     },
-    "Mek": {
+    "P38": {
       "degree": 4,
-      "n_feasible": 10,
+      "n_feasible": 16,
       "n_total": 16,
       "hard_flips": [],
-      "p1_correct": 4,
-      "p2_correct": 4,
+      "p1_correct": 2,
+      "p2_correct": 2,
       "n_edges": 4,
       "directions": {
-        "Erk": "Mek->Erk",
-        "PKA": "PKA->Mek",
-        "PKC": "PKC->Mek",
-        "Raf": "Raf->Mek"
+        "Jnk": "P38->Jnk",
+        "Mek": "P38->Mek",
+        "PKA": "P38->PKA",
+        "PKC": "P38->PKC"
       }
     },
     "Erk": {
@@ -68,6 +84,20 @@
         "Akt": "Erk->Akt",
         "Mek": "Mek->Erk",
         "PKA": "Erk->PKA"
+      }
+    },
+    "Jnk": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "P38": "Jnk->P38",
+        "PKA": "PKA->Jnk",
+        "PKC": "PKC->Jnk"
       }
     },
     "Raf": {
@@ -97,43 +127,6 @@
         "PKA": "Akt->PKA"
       }
     },
-    "Jnk": {
-      "degree": 2,
-      "n_feasible": 4,
-      "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
-      "n_edges": 2,
-      "directions": {
-        "PKA": "PKA->Jnk",
-        "PKC": "PKC->Jnk"
-      }
-    },
-    "P38": {
-      "degree": 2,
-      "n_feasible": 4,
-      "n_total": 4,
-      "hard_flips": [
-        [
-          "PKA",
-          1,
-          0
-        ],
-        [
-          "PKC",
-          1,
-          0
-        ]
-      ],
-      "p1_correct": 0,
-      "p2_correct": 0,
-      "n_edges": 2,
-      "directions": {
-        "PKA": "P38->PKA",
-        "PKC": "P38->PKC"
-      }
-    },
     "PIP2": {
       "degree": 2,
       "n_feasible": 4,
@@ -151,7 +144,13 @@
       "degree": 2,
       "n_feasible": 4,
       "n_total": 4,
-      "hard_flips": [],
+      "hard_flips": [
+        [
+          "Plcg",
+          1,
+          0
+        ]
+      ],
       "p1_correct": 0,
       "p2_correct": 0,
       "n_edges": 2,
@@ -164,8 +163,14 @@
       "degree": 2,
       "n_feasible": 4,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
+      "hard_flips": [
+        [
+          "PIP2",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
       "p2_correct": 2,
       "n_edges": 2,
       "directions": {
@@ -175,12 +180,12 @@
     }
   },
   "summary": {
-    "total_edges": 34,
-    "phase1_correct": 25,
-    "phase2_correct": 25,
-    "phase1_accuracy": 73.5,
-    "phase2_accuracy": 73.5,
-    "delta_pp": 0.0,
+    "total_edges": 38,
+    "phase1_correct": 28,
+    "phase2_correct": 29,
+    "phase1_accuracy": 73.7,
+    "phase2_accuracy": 76.3,
+    "delta_pp": 2.6,
     "hard_flips": 2,
     "hard_flips_helped": 0,
     "hard_flips_hurt": 0,

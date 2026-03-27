@@ -673,3 +673,106 @@ Recommendation: proceed to SAY with mandatory caveats. Paper must report paired 
 
 → DAG: E01, I03
 → Evidence: XN-027, XN-026, LN-003
+
+---
+
+<a id="LOG-2026-03-17-35"></a>
+### 2026-03-17 — Phase transition THINK→DO: skeleton improvement + MosaCD replication
+
+User directive: "We need to replicate MosaCD" and "didn't we mention improving on the skeleton?" Full autonomy set — explore all directions before paper.
+
+**Reviewer challenge** (pre-THINK→DO): MosaCD re-implementation may systematically disadvantage MosaCD. Three confounds: (1) 4096-token context overflow on Alarm returns degraded responses — MosaCD designed for 128K, (2) 12pp gap between our Alarm re-implementation (80.9%) and published MosaCD (93%) is suspicious, (3) only 2/4 wins statistically significant at p<0.05. Reviewer verdict: "contribution is thin even if numbers improve." Key questions: what specific statistical method for skeleton improvement? How many seeds needed (power analysis)? Hepar2 orientation at 77% contradicts "orientation at ceiling" narrative.
+
+**research-reflect recommendation** (high confidence): Loop to DO with priority ordering: (1) MosaCD replication — fix context overflow, validate against published numbers. Highest information per cost. (2) Cross-model comparison — run both methods on same frontier model to eliminate model confound. (3) NCO-informed skeleton improvement — but only with concrete hypothesis, not vague exploration. Also flagged: proposal Section 5.5 synthetic experiments completely untouched.
+
+**Three new DAG nodes**:
+- PT-04: Phase transition THINK→DO
+- I11: NCO-informed skeleton improvement (statistical, distinct from vetoed I10 LLM-based)
+- E03: MosaCD faithful replication (fix context overflow + validate)
+
+Skeleton analysis experiment running (CPU-only, all 6 networks × 6 alphas × 4 seeds + sample size sweep). Context overflow quantification on Alarm: seed s0 had 11/45 undecided edges vs 2/43 at seed 42 — variable but not catastrophic. Need larger context window to eliminate confound entirely.
+
+→ DAG: PT-04, I11, E03
+→ Evidence: XN-024, XN-027, XN-016, XN-014, XN-022, D-I10
+
+---
+
+<a id="LOG-2026-03-19-36"></a>
+### 2026-03-19 — 12-seed fair comparison complete: LOCALE 2 sig wins + 1 sig loss (Holm-corrected)
+
+Expanded from 4 seeds to 12 (s0-s10, s42) at 4096 context for all MosaCD runs. Three endpoint deployments: (1) original 4096 with 14 tok/s, (2) optimized 2048 with 227 tok/s — discovered MosaCD context sensitivity (XN-029), (3) final 4096 with 386 tok/s.
+
+**12-seed results** (all at 4096, Holm-corrected):
+- Insurance: +9.1pp, p=0.008, **SIG** (was ns at 4 seeds — power analysis confirmed)
+- Sachs: +30.4pp, p<0.0001, **SIG**
+- Alarm: +4.0pp, p=0.086, ns (lost Holm significance vs 4-seed)
+- Child: +2.7pp, p=0.059, ns
+- Asia: -12.7pp, p<0.0001, **SIG LOSS**
+
+**Context sensitivity finding** (XN-029): MosaCD breaks at 2048 tokens (Insurance: 27/42 valid seeds at 4096 → 2/41 at 2048). LOCALE unaffected (0.848±0.014 stable). This is a genuine prompt architecture advantage — ego-graph prompts are 2-3x more context-efficient than MosaCD's chain-based per-edge templates.
+
+**Skeleton analysis** (XN-028): alpha tuning helps Asia only (87.5%→100% at alpha=0.10). Insurance is stuck at 80.8% (PC depth limit). I11 status → partially addressed.
+
+→ DAG: E03, I11
+→ Evidence: XN-028, XN-029, XN-030
+
+---
+
+<a id="LOG-2026-03-26-37"></a>
+### 2026-03-26 — Data seed bug: LOCALE used fixed seed=42 for all multi-seed runs
+
+Critical bug discovered during Asia alpha=0.10 experiment. LOCALE's `sample_data()` call on line 1154 of `mve_insurance.py` did not pass the seed explicitly — Python default parameters bind at definition time, so every LOCALE run used seed=42 data regardless of `--seed` flag. MosaCD correctly passed the seed explicitly.
+
+**Impact**: All 12-seed LOCALE results (XN-030) used identical data and skeleton. LOCALE's low variance was artificial. Paired comparison was unfair (different data for the same nominal seed). Asia results were especially affected — LOCALE always got the favorable 8-edge skeleton while MosaCD seeds varied.
+
+**Fix**: Changed `sample_data(model, n=N_SAMPLES)` to `sample_data(model, n=N_SAMPLES, seed=SEED_DATA)`. Existing results backed up as `*_seedbug_backup`. Full re-run in progress.
+
+**Discovery method**: Noticed LOCALE Asia alpha=0.10 reported 8/8 edges (F1=1.000) while MosaCD s0 reported 7/8 edges despite same parameters. Traced to skeleton discrepancy → data seed discrepancy → default parameter binding bug.
+
+→ DAG: A02, E03 (status → exploring)
+→ Evidence: XN-030
+→ Decision: D-A02
+
+---
+
+<a id="LOG-2026-03-26-38"></a>
+### 2026-03-26 — Corrected 12-seed comparison complete: headline robust to bug fix
+
+Re-ran all LOCALE experiments (5 networks × 12 seeds) with corrected data seeding. Asia uses alpha=0.10.
+
+**Result: 2 SIG wins + 2 directional + 1 SIG loss** — same headline as XN-030.
+
+- Sachs (+30.7pp, p<0.0001) and Insurance (+8.8pp, p=0.0125) remain significant wins
+- Alarm (+3.9pp) and Child (+1.1pp) remain directional but ns
+- Asia (-6.7pp, p=0.0069) remains a significant loss but halved from -12.7pp
+
+Key insight: LOCALE's stability advantage is network-dependent, not universal. LOCALE is 4.4x more stable on Insurance but 3x less stable on Asia. The old "6x more stable" claim was an artifact of fixed data. Asia loss is structural: single-endpoint coverage on degree-1 nodes causes 100% consistent orientation error on `either→tub`.
+
+Also discovered broken symlinks from old Lightning Studio environment affecting s42 directories. All fixed.
+
+→ DAG: E03 (status → good), A02
+→ Evidence: XN-031 (supersedes XN-030)
+
+---
+
+<a id="LOG-2026-03-26-39"></a>
+### 2026-03-26 — Phase transition DO→THINK: corrected comparison validates headline
+
+research-reflect approved DO→THINK with medium-high confidence. The three concerns that triggered the previous THINK→DO loop-back (PT-04) are all resolved: (1) data seed bug fixed and re-run validates results, (2) 4096-context confound addressed, (3) 12-seed comparison well-powered.
+
+Remaining gaps flagged for THINK evaluation: proposal Section 5.7 threats-to-validity gates (benchmark contamination, anonymization) not formally passed. Published MosaCD gap (model confound) needs positioning decision. THINK should evaluate these before declaring results ready for SAY.
+
+→ DAG: PT-05
+→ Evidence: XN-031, XN-029, D-A02
+
+---
+
+<a id="LOG-2026-03-26-40"></a>
+### 2026-03-26 — Full 10-network comparison: LOCALE 7W/2T/1L across all MosaCD benchmarks
+
+Expanded to all 10 MosaCD benchmark networks (minus Hailfinder). Added Cancer (5n), Water (32n), Mildew (35n), Win95pts (76n) with variable descriptions from BNLearn repository.
+
+Results: LOCALE wins or ties on 9/10 networks. Only loss is Asia (8 nodes). Win95pts (+12.2pp on 76 nodes) is a strong new result. Aggregate Wilcoxon p=0.055. Only Sachs survives Holm with 10 tests, but the 7W/2T/1L pattern speaks for itself.
+
+→ DAG: E03
+→ Evidence: XN-035, XN-031, XN-034

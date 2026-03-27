@@ -1,7 +1,7 @@
 {
   "metadata": {
     "phase": 2,
-    "source": "/teamspace/studios/this_studio/auto_on/research-copilot/projects/locale/experiments/results/mve_27b_alarm_10k_k10_debiased_s0/mve_results.json",
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_alarm_10k_k10_debiased_s0/mve_results.json",
     "network": "alarm",
     "soft_score_source": "ego",
     "collider_mode": "non-collider-only"
@@ -59,7 +59,13 @@
       "degree": 4,
       "n_feasible": 6,
       "n_total": 16,
-      "hard_flips": [],
+      "hard_flips": [
+        [
+          "LVFAILURE",
+          1,
+          0
+        ]
+      ],
       "p1_correct": 3,
       "p2_correct": 3,
       "n_edges": 4,
@@ -70,46 +76,212 @@
         "LVFAILURE": "LVEDVOLUME->LVFAILURE"
       }
     },
+    "PVSAT": {
+      "degree": 4,
+      "n_feasible": 10,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "FIO2",
+          1,
+          0
+        ],
+        [
+          "SAO2",
+          1,
+          0
+        ],
+        [
+          "VENTALV",
+          1,
+          0
+        ],
+        [
+          "ARTCO2",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 4,
+      "directions": {
+        "FIO2": "PVSAT->FIO2",
+        "SAO2": "PVSAT->SAO2",
+        "VENTALV": "PVSAT->VENTALV",
+        "ARTCO2": "PVSAT->ARTCO2"
+      }
+    },
     "VENTTUBE": {
       "degree": 4,
-      "n_feasible": 6,
+      "n_feasible": 7,
       "n_total": 16,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
+      "hard_flips": [
+        [
+          "PRESS",
+          1,
+          0
+        ],
+        [
+          "DISCONNECT",
+          1,
+          0
+        ],
+        [
+          "VENTMACH",
+          1,
+          0
+        ],
+        [
+          "VENTLUNG",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
       "n_edges": 4,
       "directions": {
         "PRESS": "VENTTUBE->PRESS",
-        "DISCONNECT": "DISCONNECT->VENTTUBE",
+        "DISCONNECT": "VENTTUBE->DISCONNECT",
         "VENTMACH": "VENTTUBE->VENTMACH",
         "VENTLUNG": "VENTTUBE->VENTLUNG"
       }
     },
     "VENTALV": {
       "degree": 4,
-      "n_feasible": 6,
+      "n_feasible": 7,
       "n_total": 16,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
+      "hard_flips": [
+        [
+          "PVSAT",
+          1,
+          0
+        ],
+        [
+          "INTUBATION",
+          1,
+          0
+        ],
+        [
+          "VENTLUNG",
+          1,
+          0
+        ],
+        [
+          "ARTCO2",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
       "n_edges": 4,
       "directions": {
         "PVSAT": "VENTALV->PVSAT",
-        "INTUBATION": "INTUBATION->VENTALV",
+        "INTUBATION": "VENTALV->INTUBATION",
         "VENTLUNG": "VENTALV->VENTLUNG",
         "ARTCO2": "VENTALV->ARTCO2"
+      }
+    },
+    "ARTCO2": {
+      "degree": 4,
+      "n_feasible": 8,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "EXPCO2",
+          1,
+          0
+        ],
+        [
+          "PVSAT",
+          1,
+          0
+        ],
+        [
+          "VENTALV",
+          1,
+          0
+        ],
+        [
+          "CATECHOL",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 3,
+      "n_edges": 4,
+      "directions": {
+        "EXPCO2": "ARTCO2->EXPCO2",
+        "PVSAT": "ARTCO2->PVSAT",
+        "VENTALV": "ARTCO2->VENTALV",
+        "CATECHOL": "ARTCO2->CATECHOL"
+      }
+    },
+    "CATECHOL": {
+      "degree": 4,
+      "n_feasible": 10,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "TPR",
+          1,
+          0
+        ],
+        [
+          "SAO2",
+          1,
+          0
+        ],
+        [
+          "ARTCO2",
+          1,
+          0
+        ],
+        [
+          "HR",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 4,
+      "directions": {
+        "TPR": "CATECHOL->TPR",
+        "SAO2": "CATECHOL->SAO2",
+        "ARTCO2": "CATECHOL->ARTCO2",
+        "HR": "CATECHOL->HR"
       }
     },
     "LVFAILURE": {
       "degree": 3,
       "n_feasible": 4,
       "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
+      "hard_flips": [
+        [
+          "HISTORY",
+          1,
+          0
+        ],
+        [
+          "LVEDVOLUME",
+          1,
+          0
+        ],
+        [
+          "STROKEVOLUME",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 3,
       "n_edges": 3,
       "directions": {
-        "HISTORY": "HISTORY->LVFAILURE",
+        "HISTORY": "LVFAILURE->HISTORY",
         "LVEDVOLUME": "LVFAILURE->LVEDVOLUME",
         "STROKEVOLUME": "LVFAILURE->STROKEVOLUME"
       }
@@ -118,111 +290,179 @@
       "degree": 3,
       "n_feasible": 5,
       "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
+      "hard_flips": [
+        [
+          "HYPOVOLEMIA",
+          1,
+          0
+        ],
+        [
+          "LVFAILURE",
+          1,
+          0
+        ],
+        [
+          "CO",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
       "n_edges": 3,
       "directions": {
-        "HYPOVOLEMIA": "HYPOVOLEMIA->STROKEVOLUME",
-        "LVFAILURE": "LVFAILURE->STROKEVOLUME",
+        "HYPOVOLEMIA": "STROKEVOLUME->HYPOVOLEMIA",
+        "LVFAILURE": "STROKEVOLUME->LVFAILURE",
         "CO": "STROKEVOLUME->CO"
       }
     },
     "TPR": {
       "degree": 3,
-      "n_feasible": 5,
+      "n_feasible": 4,
       "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 2,
+      "hard_flips": [
+        [
+          "ANAPHYLAXIS",
+          1,
+          0
+        ],
+        [
+          "CATECHOL",
+          1,
+          0
+        ],
+        [
+          "BP",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
       "p2_correct": 2,
       "n_edges": 3,
       "directions": {
-        "ANAPHYLAXIS": "ANAPHYLAXIS->TPR",
-        "CATECHOL": "CATECHOL->TPR",
+        "ANAPHYLAXIS": "TPR->ANAPHYLAXIS",
+        "CATECHOL": "TPR->CATECHOL",
         "BP": "TPR->BP"
       }
     },
-    "PVSAT": {
+    "SAO2": {
       "degree": 3,
-      "n_feasible": 5,
+      "n_feasible": 8,
       "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
+      "hard_flips": [
+        [
+          "PVSAT",
+          1,
+          0
+        ],
+        [
+          "SHUNT",
+          1,
+          0
+        ],
+        [
+          "CATECHOL",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
       "n_edges": 3,
       "directions": {
-        "FIO2": "FIO2->PVSAT",
-        "SAO2": "PVSAT->SAO2",
-        "VENTALV": "VENTALV->PVSAT"
+        "PVSAT": "SAO2->PVSAT",
+        "SHUNT": "SAO2->SHUNT",
+        "CATECHOL": "SAO2->CATECHOL"
       }
     },
     "SHUNT": {
       "degree": 3,
-      "n_feasible": 6,
+      "n_feasible": 5,
       "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
+      "hard_flips": [
+        [
+          "SAO2",
+          1,
+          0
+        ],
+        [
+          "PULMEMBOLUS",
+          1,
+          0
+        ],
+        [
+          "INTUBATION",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
       "n_edges": 3,
       "directions": {
         "SAO2": "SHUNT->SAO2",
-        "PULMEMBOLUS": "PULMEMBOLUS->SHUNT",
-        "INTUBATION": "INTUBATION->SHUNT"
+        "PULMEMBOLUS": "SHUNT->PULMEMBOLUS",
+        "INTUBATION": "SHUNT->INTUBATION"
       }
     },
     "PRESS": {
       "degree": 3,
       "n_feasible": 8,
       "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
+      "hard_flips": [
+        [
+          "KINKEDTUBE",
+          1,
+          0
+        ],
+        [
+          "INTUBATION",
+          1,
+          0
+        ],
+        [
+          "VENTTUBE",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
       "n_edges": 3,
       "directions": {
-        "KINKEDTUBE": "KINKEDTUBE->PRESS",
-        "INTUBATION": "INTUBATION->PRESS",
-        "VENTTUBE": "VENTTUBE->PRESS"
-      }
-    },
-    "ARTCO2": {
-      "degree": 3,
-      "n_feasible": 4,
-      "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
-      "n_edges": 3,
-      "directions": {
-        "EXPCO2": "ARTCO2->EXPCO2",
-        "VENTALV": "VENTALV->ARTCO2",
-        "CATECHOL": "ARTCO2->CATECHOL"
-      }
-    },
-    "CATECHOL": {
-      "degree": 3,
-      "n_feasible": 5,
-      "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 1,
-      "p2_correct": 1,
-      "n_edges": 3,
-      "directions": {
-        "TPR": "CATECHOL->TPR",
-        "ARTCO2": "CATECHOL->ARTCO2",
-        "HR": "CATECHOL->HR"
+        "KINKEDTUBE": "PRESS->KINKEDTUBE",
+        "INTUBATION": "PRESS->INTUBATION",
+        "VENTTUBE": "PRESS->VENTTUBE"
       }
     },
     "CO": {
       "degree": 3,
       "n_feasible": 5,
       "n_total": 8,
-      "hard_flips": [],
-      "p1_correct": 3,
-      "p2_correct": 3,
+      "hard_flips": [
+        [
+          "STROKEVOLUME",
+          1,
+          0
+        ],
+        [
+          "HR",
+          1,
+          0
+        ],
+        [
+          "BP",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
       "n_edges": 3,
       "directions": {
-        "STROKEVOLUME": "STROKEVOLUME->CO",
-        "HR": "HR->CO",
+        "STROKEVOLUME": "CO->STROKEVOLUME",
+        "HR": "CO->HR",
         "BP": "CO->BP"
       }
     },
@@ -230,8 +470,19 @@
       "degree": 2,
       "n_feasible": 3,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
+      "hard_flips": [
+        [
+          "LVEDVOLUME",
+          1,
+          0
+        ],
+        [
+          "STROKEVOLUME",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
       "p2_correct": 2,
       "n_edges": 2,
       "directions": {
@@ -248,14 +499,19 @@
           "ERRLOWOUTPUT",
           1,
           0
+        ],
+        [
+          "HR",
+          1,
+          0
         ]
       ],
-      "p1_correct": 1,
-      "p2_correct": 1,
+      "p1_correct": 0,
+      "p2_correct": 0,
       "n_edges": 2,
       "directions": {
         "ERRLOWOUTPUT": "HRBP->ERRLOWOUTPUT",
-        "HR": "HR->HRBP"
+        "HR": "HRBP->HR"
       }
     },
     "HREKG": {
@@ -264,16 +520,21 @@
       "n_total": 4,
       "hard_flips": [
         [
+          "ERRCAUTER",
+          1,
+          0
+        ],
+        [
           "HR",
           1,
           0
         ]
       ],
-      "p1_correct": 1,
-      "p2_correct": 1,
+      "p1_correct": 0,
+      "p2_correct": 0,
       "n_edges": 2,
       "directions": {
-        "ERRCAUTER": "ERRCAUTER->HREKG",
+        "ERRCAUTER": "HREKG->ERRCAUTER",
         "HR": "HREKG->HR"
       }
     },
@@ -281,8 +542,19 @@
       "degree": 2,
       "n_feasible": 3,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
+      "hard_flips": [
+        [
+          "HREKG",
+          1,
+          0
+        ],
+        [
+          "HRSAT",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
       "p2_correct": 2,
       "n_edges": 2,
       "directions": {
@@ -294,60 +566,91 @@
       "degree": 2,
       "n_feasible": 4,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
+      "hard_flips": [
+        [
+          "ERRCAUTER",
+          1,
+          0
+        ],
+        [
+          "HR",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
       "n_edges": 2,
       "directions": {
-        "ERRCAUTER": "ERRCAUTER->HRSAT",
-        "HR": "HR->HRSAT"
+        "ERRCAUTER": "HRSAT->ERRCAUTER",
+        "HR": "HRSAT->HR"
       }
     },
     "EXPCO2": {
       "degree": 2,
       "n_feasible": 4,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
+      "hard_flips": [
+        [
+          "VENTLUNG",
+          1,
+          0
+        ],
+        [
+          "ARTCO2",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
       "n_edges": 2,
       "directions": {
-        "VENTLUNG": "VENTLUNG->EXPCO2",
-        "ARTCO2": "ARTCO2->EXPCO2"
+        "VENTLUNG": "EXPCO2->VENTLUNG",
+        "ARTCO2": "EXPCO2->ARTCO2"
       }
     },
     "MINVOL": {
       "degree": 2,
       "n_feasible": 4,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 1,
-      "p2_correct": 1,
+      "hard_flips": [
+        [
+          "INTUBATION",
+          1,
+          0
+        ],
+        [
+          "VENTLUNG",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
       "n_edges": 2,
       "directions": {
-        "INTUBATION": "INTUBATION->MINVOL",
+        "INTUBATION": "MINVOL->INTUBATION",
         "VENTLUNG": "MINVOL->VENTLUNG"
-      }
-    },
-    "SAO2": {
-      "degree": 2,
-      "n_feasible": 4,
-      "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
-      "n_edges": 2,
-      "directions": {
-        "PVSAT": "PVSAT->SAO2",
-        "SHUNT": "SHUNT->SAO2"
       }
     },
     "PULMEMBOLUS": {
       "degree": 2,
       "n_feasible": 3,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
+      "hard_flips": [
+        [
+          "PAP",
+          1,
+          0
+        ],
+        [
+          "SHUNT",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
       "p2_correct": 2,
       "n_edges": 2,
       "directions": {
@@ -359,12 +662,23 @@
       "degree": 2,
       "n_feasible": 3,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
+      "hard_flips": [
+        [
+          "MINVOLSET",
+          1,
+          0
+        ],
+        [
+          "VENTTUBE",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
       "n_edges": 2,
       "directions": {
-        "MINVOLSET": "MINVOLSET->VENTMACH",
+        "MINVOLSET": "VENTMACH->MINVOLSET",
         "VENTTUBE": "VENTMACH->VENTTUBE"
       }
     },
@@ -372,24 +686,35 @@
       "degree": 2,
       "n_feasible": 4,
       "n_total": 4,
-      "hard_flips": [],
-      "p1_correct": 2,
-      "p2_correct": 2,
+      "hard_flips": [
+        [
+          "TPR",
+          1,
+          0
+        ],
+        [
+          "CO",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
       "n_edges": 2,
       "directions": {
-        "TPR": "TPR->BP",
-        "CO": "CO->BP"
+        "TPR": "BP->TPR",
+        "CO": "BP->CO"
       }
     }
   },
   "summary": {
-    "total_edges": 76,
-    "phase1_correct": 66,
-    "phase2_correct": 66,
-    "phase1_accuracy": 86.8,
-    "phase2_accuracy": 86.8,
-    "delta_pp": 0.0,
-    "hard_flips": 2,
+    "total_edges": 80,
+    "phase1_correct": 18,
+    "phase2_correct": 44,
+    "phase1_accuracy": 22.5,
+    "phase2_accuracy": 55.0,
+    "delta_pp": 32.5,
+    "hard_flips": 62,
     "hard_flips_helped": 0,
     "hard_flips_hurt": 0,
     "infeasible_nodes": 0

@@ -1,0 +1,835 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_win95pts_10k_k10_debiased_s0/mve_results.json",
+    "network": "win95pts",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "PC2PRT": {
+      "degree": 7,
+      "n_feasible": 38,
+      "n_total": 128,
+      "hard_flips": [],
+      "p1_correct": 7,
+      "p2_correct": 7,
+      "n_edges": 7,
+      "directions": {
+        "NetPrint": "NetPrint->PC2PRT",
+        "PrtDataOut": "PrtDataOut->PC2PRT",
+        "LclOK": "LclOK->PC2PRT",
+        "DSApplctn": "DSApplctn->PC2PRT",
+        "DS_NTOK": "DS_NTOK->PC2PRT",
+        "PrtData": "PC2PRT->PrtData",
+        "Problem1": "PC2PRT->Problem1"
+      }
+    },
+    "PrtMem": {
+      "degree": 7,
+      "n_feasible": 9,
+      "n_total": 128,
+      "hard_flips": [],
+      "p1_correct": 7,
+      "p2_correct": 7,
+      "n_edges": 7,
+      "directions": {
+        "DeskPrntSpd": "PrtMem->DeskPrntSpd",
+        "CmpltPgPrntd": "PrtMem->CmpltPgPrntd",
+        "NnPSGrphc": "PrtMem->NnPSGrphc",
+        "PSGRAPHIC": "PrtMem->PSGRAPHIC",
+        "LclGrbld": "PrtMem->LclGrbld",
+        "NtGrbld": "PrtMem->NtGrbld",
+        "PrtStatMem": "PrtMem->PrtStatMem"
+      }
+    },
+    "GDIIN": {
+      "degree": 5,
+      "n_feasible": 20,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 5,
+      "directions": {
+        "AppOK": "AppOK->GDIIN",
+        "DataFile": "DataFile->GDIIN",
+        "PrtSpool": "PrtSpool->GDIIN",
+        "EMFOK": "GDIIN->EMFOK",
+        "GDIOUT": "GDIIN->GDIOUT"
+      }
+    },
+    "NtwrkCnfg": {
+      "degree": 5,
+      "n_feasible": 7,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 5,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "NetOK": "NtwrkCnfg->NetOK",
+        "NtGrbld": "NtwrkCnfg->NtGrbld",
+        "REPEAT": "NtwrkCnfg->REPEAT",
+        "PrtIcon": "NtwrkCnfg->PrtIcon",
+        "NtSpd": "NtwrkCnfg->NtSpd"
+      }
+    },
+    "PrtData": {
+      "degree": 5,
+      "n_feasible": 32,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "PrtOn": "PrtOn->PrtData",
+        "PC2PRT": "PC2PRT->PrtData",
+        "PrtTimeOut": "PrtTimeOut->PrtData",
+        "FllCrrptdBffr": "PrtData->FllCrrptdBffr",
+        "Problem1": "PrtData->Problem1"
+      }
+    },
+    "Problem1": {
+      "degree": 5,
+      "n_feasible": 32,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 5,
+      "directions": {
+        "PrtOn": "PrtOn->Problem1",
+        "PC2PRT": "PC2PRT->Problem1",
+        "PrtTimeOut": "PrtTimeOut->Problem1",
+        "FllCrrptdBffr": "FllCrrptdBffr->Problem1",
+        "PrtData": "PrtData->Problem1"
+      }
+    },
+    "CmpltPgPrntd": {
+      "degree": 5,
+      "n_feasible": 11,
+      "n_total": 32,
+      "hard_flips": [
+        [
+          "IncmpltPS",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 4,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "PrtMem": "PrtMem->CmpltPgPrntd",
+        "PgOrnttnOK": "PgOrnttnOK->CmpltPgPrntd",
+        "PrntngArOK": "PrntngArOK->CmpltPgPrntd",
+        "IncmpltPS": "CmpltPgPrntd->IncmpltPS",
+        "Problem3": "CmpltPgPrntd->Problem3"
+      }
+    },
+    "AppData": {
+      "degree": 4,
+      "n_feasible": 6,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "AppOK": "AppOK->AppData",
+        "DataFile": "DataFile->AppData",
+        "EMFOK": "AppData->EMFOK",
+        "DS_LCLOK": "AppData->DS_LCLOK"
+      }
+    },
+    "GDIOUT": {
+      "degree": 4,
+      "n_feasible": 9,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "PrtDriver": "PrtDriver->GDIOUT",
+        "GDIIN": "GDIIN->GDIOUT",
+        "DrvOK": "DrvOK->GDIOUT",
+        "PrtDataOut": "GDIOUT->PrtDataOut"
+      }
+    },
+    "PrtDataOut": {
+      "degree": 4,
+      "n_feasible": 6,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "PC2PRT",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
+      "p2_correct": 2,
+      "n_edges": 4,
+      "directions": {
+        "GDIOUT": "PrtDataOut->GDIOUT",
+        "PrtSel": "PrtDataOut->PrtSel",
+        "PC2PRT": "PrtDataOut->PC2PRT",
+        "PrtFile": "PrtDataOut->PrtFile"
+      }
+    },
+    "LclOK": {
+      "degree": 4,
+      "n_feasible": 9,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "PrtCbl",
+          1,
+          0
+        ],
+        [
+          "PrtPort",
+          1,
+          0
+        ],
+        [
+          "CblPrtHrdwrOK",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 4,
+      "directions": {
+        "PrtCbl": "LclOK->PrtCbl",
+        "PrtPort": "LclOK->PrtPort",
+        "CblPrtHrdwrOK": "LclOK->CblPrtHrdwrOK",
+        "PC2PRT": "LclOK->PC2PRT"
+      }
+    },
+    "DS_NTOK": {
+      "degree": 4,
+      "n_feasible": 16,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 4,
+      "directions": {
+        "PrtPath": "DS_NTOK->PrtPath",
+        "PTROFFLINE": "DS_NTOK->PTROFFLINE",
+        "PrtMpTPth": "DS_NTOK->PrtMpTPth",
+        "PC2PRT": "DS_NTOK->PC2PRT"
+      }
+    },
+    "NnPSGrphc": {
+      "degree": 4,
+      "n_feasible": 9,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "PrtMem": "PrtMem->NnPSGrphc",
+        "GrphcsRltdDrvrSttngs": "GrphcsRltdDrvrSttngs->NnPSGrphc",
+        "EPSGrphc": "EPSGrphc->NnPSGrphc",
+        "Problem4": "NnPSGrphc->Problem4"
+      }
+    },
+    "LclGrbld": {
+      "degree": 4,
+      "n_feasible": 10,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "PrtDriver": "PrtDriver->LclGrbld",
+        "CblPrtHrdwrOK": "CblPrtHrdwrOK->LclGrbld",
+        "PrtMem": "PrtMem->LclGrbld",
+        "GrbldOtpt": "LclGrbld->GrbldOtpt"
+      }
+    },
+    "NtGrbld": {
+      "degree": 4,
+      "n_feasible": 10,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "PrtDriver": "PrtDriver->NtGrbld",
+        "NtwrkCnfg": "NtwrkCnfg->NtGrbld",
+        "PrtMem": "PrtMem->NtGrbld",
+        "GrbldOtpt": "NtGrbld->GrbldOtpt"
+      }
+    },
+    "GrbldOtpt": {
+      "degree": 4,
+      "n_feasible": 7,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "LclGrbld",
+          1,
+          0
+        ],
+        [
+          "NtGrbld",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 4,
+      "directions": {
+        "LclGrbld": "GrbldOtpt->LclGrbld",
+        "NtGrbld": "GrbldOtpt->NtGrbld",
+        "GrbldPS": "GrbldOtpt->GrbldPS",
+        "Problem6": "GrbldOtpt->Problem6"
+      }
+    },
+    "PrtOn": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "PrtData": "PrtData->PrtOn",
+        "Problem1": "PrtOn->Problem1",
+        "PrtStatOff": "PrtOn->PrtStatOff"
+      }
+    },
+    "PrtDriver": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "GDIOUT": "PrtDriver->GDIOUT",
+        "LclGrbld": "PrtDriver->LclGrbld",
+        "NtGrbld": "PrtDriver->NtGrbld"
+      }
+    },
+    "EMFOK": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "GDIIN",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "AppData": "AppData->EMFOK",
+        "DskLocal": "DskLocal->EMFOK",
+        "GDIIN": "EMFOK->GDIIN"
+      }
+    },
+    "PTROFFLINE": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "DS_NTOK",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "NetOK": "NetOK->PTROFFLINE",
+        "DS_NTOK": "PTROFFLINE->DS_NTOK",
+        "PrtIcon": "PTROFFLINE->PrtIcon"
+      }
+    },
+    "NetOK": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "PrtPath": "PrtPath->NetOK",
+        "NtwrkCnfg": "NtwrkCnfg->NetOK",
+        "PTROFFLINE": "NetOK->PTROFFLINE"
+      }
+    },
+    "CblPrtHrdwrOK": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "LclOK": "CblPrtHrdwrOK->LclOK",
+        "LclGrbld": "CblPrtHrdwrOK->LclGrbld",
+        "REPEAT": "CblPrtHrdwrOK->REPEAT"
+      }
+    },
+    "DS_LCLOK": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "AppData": "AppData->DS_LCLOK",
+        "PrtCbl": "PrtCbl->DS_LCLOK",
+        "PrtPort": "PrtPort->DS_LCLOK"
+      }
+    },
+    "DeskPrntSpd": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "PrtMem": "PrtMem->DeskPrntSpd",
+        "PrntPrcssTm": "DeskPrntSpd->PrntPrcssTm",
+        "Problem2": "DeskPrntSpd->Problem2"
+      }
+    },
+    "PrtPScript": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "PSERRMEM": "PrtPScript->PSERRMEM",
+        "GrbldPS": "PrtPScript->GrbldPS",
+        "Problem6": "PrtPScript->Problem6"
+      }
+    },
+    "PSGRAPHIC": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "PrtMem": "PrtMem->PSGRAPHIC",
+        "GrphcsRltdDrvrSttngs": "GrphcsRltdDrvrSttngs->PSGRAPHIC",
+        "Problem4": "PSGRAPHIC->Problem4"
+      }
+    },
+    "TTOK": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "FntInstlltn": "FntInstlltn->TTOK",
+        "PrntrAccptsTrtyp": "PrntrAccptsTrtyp->TTOK",
+        "Problem5": "TTOK->Problem5"
+      }
+    },
+    "NnTTOK": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "ScrnFntNtPrntrFnt": "NnTTOK->ScrnFntNtPrntrFnt",
+        "FntInstlltn": "FntInstlltn->NnTTOK",
+        "Problem5": "NnTTOK->Problem5"
+      }
+    },
+    "PSERRMEM": {
+      "degree": 3,
+      "n_feasible": 6,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "AvlblVrtlMmry",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 3,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "PrtPScript": "PrtPScript->PSERRMEM",
+        "AvlblVrtlMmry": "PSERRMEM->AvlblVrtlMmry",
+        "TstpsTxt": "PSERRMEM->TstpsTxt"
+      }
+    },
+    "GrbldPS": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "PrtPScript": "PrtPScript->GrbldPS",
+        "GrbldOtpt": "GrbldPS->GrbldOtpt",
+        "Problem6": "GrbldPS->Problem6"
+      }
+    },
+    "Problem6": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "PrtPScript": "PrtPScript->Problem6",
+        "GrbldOtpt": "Problem6->GrbldOtpt",
+        "GrbldPS": "Problem6->GrbldPS"
+      }
+    },
+    "NtSpd": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "NtwrkCnfg": "NtwrkCnfg->NtSpd",
+        "PrtQueue": "PrtQueue->NtSpd",
+        "Problem2": "NtSpd->Problem2"
+      }
+    },
+    "Problem2": {
+      "degree": 3,
+      "n_feasible": 6,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "NtSpd",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 3,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "NetPrint": "NetPrint->Problem2",
+        "DeskPrntSpd": "DeskPrntSpd->Problem2",
+        "NtSpd": "Problem2->NtSpd"
+      }
+    },
+    "AppOK": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "AppData": "AppOK->AppData",
+        "GDIIN": "AppOK->GDIIN"
+      }
+    },
+    "DataFile": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "AppData": "DataFile->AppData",
+        "GDIIN": "DataFile->GDIIN"
+      }
+    },
+    "PrtSpool": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "GDIIN": "PrtSpool->GDIIN",
+        "AppDtGnTm": "PrtSpool->AppDtGnTm"
+      }
+    },
+    "NetPrint": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "PC2PRT": "NetPrint->PC2PRT",
+        "Problem2": "NetPrint->Problem2"
+      }
+    },
+    "PrtPath": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "NetOK": "PrtPath->NetOK",
+        "DS_NTOK": "PrtPath->DS_NTOK"
+      }
+    },
+    "PrtCbl": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "LclOK": "PrtCbl->LclOK",
+        "DS_LCLOK": "PrtCbl->DS_LCLOK"
+      }
+    },
+    "PrtPort": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "LclOK": "PrtPort->LclOK",
+        "DS_LCLOK": "PrtPort->DS_LCLOK"
+      }
+    },
+    "PrtTimeOut": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "PrtData": "PrtTimeOut->PrtData",
+        "Problem1": "PrtTimeOut->Problem1"
+      }
+    },
+    "FllCrrptdBffr": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "PrtData": "PrtData->FllCrrptdBffr",
+        "Problem1": "FllCrrptdBffr->Problem1"
+      }
+    },
+    "AppDtGnTm": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "PrtSpool": "PrtSpool->AppDtGnTm",
+        "HrglssDrtnAftrPrnt": "AppDtGnTm->HrglssDrtnAftrPrnt"
+      }
+    },
+    "GrphcsRltdDrvrSttngs": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "NnPSGrphc": "GrphcsRltdDrvrSttngs->NnPSGrphc",
+        "PSGRAPHIC": "GrphcsRltdDrvrSttngs->PSGRAPHIC"
+      }
+    },
+    "Problem4": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "NnPSGrphc": "NnPSGrphc->Problem4",
+        "PSGRAPHIC": "PSGRAPHIC->Problem4"
+      }
+    },
+    "FntInstlltn": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "TTOK": "FntInstlltn->TTOK",
+        "NnTTOK": "FntInstlltn->NnTTOK"
+      }
+    },
+    "Problem5": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "TTOK": "TTOK->Problem5",
+        "NnTTOK": "NnTTOK->Problem5"
+      }
+    },
+    "REPEAT": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "NtwrkCnfg": "NtwrkCnfg->REPEAT",
+        "CblPrtHrdwrOK": "CblPrtHrdwrOK->REPEAT"
+      }
+    },
+    "AvlblVrtlMmry": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "PSERRMEM": "AvlblVrtlMmry->PSERRMEM",
+        "TstpsTxt": "AvlblVrtlMmry->TstpsTxt"
+      }
+    },
+    "TstpsTxt": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "AvlblVrtlMmry": "TstpsTxt->AvlblVrtlMmry",
+        "PSERRMEM": "TstpsTxt->PSERRMEM"
+      }
+    },
+    "IncmpltPS": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "CmpltPgPrntd": "IncmpltPS->CmpltPgPrntd",
+        "Problem3": "IncmpltPS->Problem3"
+      }
+    },
+    "PrtIcon": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "NtwrkCnfg": "NtwrkCnfg->PrtIcon",
+        "PTROFFLINE": "PTROFFLINE->PrtIcon"
+      }
+    },
+    "Problem3": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "CmpltPgPrntd": "Problem3->CmpltPgPrntd",
+        "IncmpltPS": "IncmpltPS->Problem3"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 166,
+    "phase1_correct": 131,
+    "phase2_correct": 133,
+    "phase1_accuracy": 78.9,
+    "phase2_accuracy": 80.1,
+    "delta_pp": 1.2,
+    "hard_flips": 11,
+    "hard_flips_helped": 3,
+    "hard_flips_hurt": 2,
+    "infeasible_nodes": 0
+  }
+}

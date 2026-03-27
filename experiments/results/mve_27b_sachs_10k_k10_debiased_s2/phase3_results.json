@@ -146,43 +146,23 @@
     },
     "('PIP3', 'Plcg')": {
       "direction": "Plcg->PIP3",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "Plcg->PIP3",
-        "degree": "Plcg->PIP3",
-        "constraints": "Plcg->PIP3",
-        "hard_flip": "Plcg->PIP3"
-      },
-      "endpoints": [
-        {
-          "node": "PIP3",
-          "dir": "PIP3->Plcg",
-          "margin": 0.1111111111111111,
-          "degree": 2
-        },
-        {
-          "node": "Plcg",
-          "dir": "Plcg->PIP3",
-          "margin": 0.5,
-          "degree": 2
-        }
-      ]
+      "method": "agreement"
     }
   },
   "evaluation": {
     "correct": 15,
     "total": 17,
     "accuracy": 0.8823529411764706,
-    "agreements": 12,
-    "disagreements": 5,
+    "agreements": 13,
+    "disagreements": 4,
     "by_method": {
       "disagreement_confidence": {
-        "correct": 4,
-        "total": 5
+        "correct": 3,
+        "total": 4
       },
       "agreement": {
-        "correct": 11,
-        "total": 12
+        "correct": 12,
+        "total": 13
       }
     }
   },
@@ -191,16 +171,16 @@
       "correct": 15,
       "total": 17,
       "accuracy": 0.8823529411764706,
-      "agreements": 12,
-      "disagreements": 5,
+      "agreements": 13,
+      "disagreements": 4,
       "by_method": {
         "disagreement_confidence": {
-          "correct": 4,
-          "total": 5
+          "correct": 3,
+          "total": 4
         },
         "agreement": {
-          "correct": 11,
-          "total": 12
+          "correct": 12,
+          "total": 13
         }
       }
     },
@@ -208,16 +188,16 @@
       "correct": 15,
       "total": 17,
       "accuracy": 0.8823529411764706,
-      "agreements": 12,
-      "disagreements": 5,
+      "agreements": 13,
+      "disagreements": 4,
       "by_method": {
         "disagreement_confidence": {
-          "correct": 4,
-          "total": 5
+          "correct": 3,
+          "total": 4
         },
         "agreement": {
-          "correct": 11,
-          "total": 12
+          "correct": 12,
+          "total": 13
         }
       }
     },
@@ -225,16 +205,16 @@
       "correct": 15,
       "total": 17,
       "accuracy": 0.8823529411764706,
-      "agreements": 12,
-      "disagreements": 5,
+      "agreements": 13,
+      "disagreements": 4,
       "by_method": {
         "disagreement_confidence": {
-          "correct": 4,
-          "total": 5
+          "correct": 3,
+          "total": 4
         },
         "agreement": {
-          "correct": 11,
-          "total": 12
+          "correct": 12,
+          "total": 13
         }
       }
     }

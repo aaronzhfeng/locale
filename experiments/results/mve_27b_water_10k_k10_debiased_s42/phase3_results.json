@@ -1,0 +1,264 @@
+{
+  "reconciled": {
+    "('CKNI_12_15', 'CKNI_12_30')": {
+      "direction": "CKNI_12_15->CKNI_12_30",
+      "method": "agreement"
+    },
+    "('CKNI_12_30', 'CKNI_12_45')": {
+      "direction": "CKNI_12_30->CKNI_12_45",
+      "method": "single_endpoint",
+      "endpoint": "CKNI_12_30"
+    },
+    "('CBODD_12_45', 'CKNI_12_30')": {
+      "direction": "CKNI_12_30->CBODD_12_45",
+      "method": "agreement"
+    },
+    "('CKND_12_45', 'CKNI_12_30')": {
+      "direction": "CKNI_12_30->CKND_12_45",
+      "method": "agreement"
+    },
+    "('CKND_12_15', 'CKNN_12_30')": {
+      "direction": "CKND_12_15->CKNN_12_30",
+      "method": "agreement"
+    },
+    "('CKNN_12_15', 'CKNN_12_30')": {
+      "direction": "CKNN_12_15->CKNN_12_30",
+      "method": "agreement"
+    },
+    "('CKNN_12_30', 'CKNN_12_45')": {
+      "direction": "CKNN_12_30->CKNN_12_45",
+      "method": "agreement"
+    },
+    "('CKNN_12_30', 'CNON_12_45')": {
+      "direction": "CKNN_12_30->CNON_12_45",
+      "method": "agreement"
+    },
+    "('CNOD_12_15', 'CNON_12_30')": {
+      "direction": "CNOD_12_15->CNON_12_30",
+      "method": "agreement"
+    },
+    "('CKNN_12_15', 'CNON_12_30')": {
+      "direction": "CKNN_12_15->CNON_12_30",
+      "method": "agreement"
+    },
+    "('CNON_12_15', 'CNON_12_30')": {
+      "direction": "CNON_12_15->CNON_12_30",
+      "method": "single_endpoint",
+      "endpoint": "CNON_12_30"
+    },
+    "('CNON_12_30', 'CNON_12_45')": {
+      "direction": "CNON_12_30->CNON_12_45",
+      "method": "agreement"
+    },
+    "('CKNI_12_00', 'CKNI_12_15')": {
+      "direction": "CKNI_12_00->CKNI_12_15",
+      "method": "agreement"
+    },
+    "('CBODD_12_15', 'CKNI_12_00')": {
+      "direction": "CKNI_12_00->CBODD_12_15",
+      "method": "agreement"
+    },
+    "('CKND_12_15', 'CKNI_12_00')": {
+      "direction": "CKNI_12_00->CKND_12_15",
+      "method": "agreement"
+    },
+    "('CKND_12_45', 'CKNI_12_15')": {
+      "direction": "CKNI_12_15->CKND_12_45",
+      "method": "agreement"
+    },
+    "('CBODD_12_15', 'C_NI_12_00')": {
+      "direction": "C_NI_12_00->CBODD_12_15",
+      "method": "agreement"
+    },
+    "('CBODD_12_15', 'CBODD_12_30')": {
+      "direction": "CBODD_12_15->CBODD_12_30",
+      "method": "agreement"
+    },
+    "('CKND_12_15', 'CKND_12_30')": {
+      "direction": "CKND_12_15->CKND_12_30",
+      "method": "agreement"
+    },
+    "('C_NI_12_15', 'C_NI_12_30')": {
+      "direction": "C_NI_12_15->C_NI_12_30",
+      "method": "agreement"
+    },
+    "('C_NI_12_30', 'C_NI_12_45')": {
+      "direction": "C_NI_12_30->C_NI_12_45",
+      "method": "single_endpoint",
+      "endpoint": "C_NI_12_30"
+    },
+    "('CBODD_12_45', 'C_NI_12_30')": {
+      "direction": "C_NI_12_30->CBODD_12_45",
+      "method": "agreement"
+    },
+    "('CBODD_12_30', 'CBODD_12_45')": {
+      "direction": "CBODD_12_30->CBODD_12_45",
+      "method": "agreement"
+    },
+    "('CBODD_12_30', 'CBODN_12_45')": {
+      "direction": "CBODD_12_30->CBODN_12_45",
+      "method": "agreement"
+    },
+    "('CKND_12_30', 'CKND_12_45')": {
+      "direction": "CKND_12_30->CKND_12_45",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CKND_12_30->CKND_12_45",
+        "degree": "CKND_12_30->CKND_12_45",
+        "constraints": "CKND_12_30->CKND_12_45",
+        "hard_flip": "CKND_12_45->CKND_12_30"
+      },
+      "endpoints": [
+        {
+          "node": "CKND_12_30",
+          "dir": "CKND_12_30->CKND_12_45",
+          "margin": 1.0,
+          "degree": 3
+        },
+        {
+          "node": "CKND_12_45",
+          "dir": "CKND_12_45->CKND_12_30",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('CKND_12_30', 'CKNN_12_45')": {
+      "direction": "CKND_12_30->CKNN_12_45",
+      "method": "agreement"
+    },
+    "('CNOD_12_15', 'CNOD_12_30')": {
+      "direction": "CNOD_12_15->CNOD_12_30",
+      "method": "agreement"
+    },
+    "('CNOD_12_30', 'CNOD_12_45')": {
+      "direction": "CNOD_12_30->CNOD_12_45",
+      "method": "single_endpoint",
+      "endpoint": "CNOD_12_30"
+    },
+    "('CNOD_12_30', 'CNON_12_45')": {
+      "direction": "CNOD_12_30->CNON_12_45",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CNOD_12_30->CNON_12_45",
+        "degree": "CNOD_12_30->CNON_12_45",
+        "constraints": "CNOD_12_30->CNON_12_45",
+        "hard_flip": "CNON_12_45->CNOD_12_30"
+      },
+      "endpoints": [
+        {
+          "node": "CNOD_12_30",
+          "dir": "CNOD_12_30->CNON_12_45",
+          "margin": 0.4,
+          "degree": 3
+        },
+        {
+          "node": "CNON_12_45",
+          "dir": "CNON_12_45->CNOD_12_30",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('C_NI_12_00', 'C_NI_12_15')": {
+      "direction": "C_NI_12_00->C_NI_12_15",
+      "method": "agreement"
+    },
+    "('CBODN_12_15', 'CBODN_12_30')": {
+      "direction": "CBODN_12_15->CBODN_12_30",
+      "method": "single_endpoint",
+      "endpoint": "CBODN_12_30"
+    },
+    "('CBODN_12_30', 'CBODN_12_45')": {
+      "direction": "CBODN_12_30->CBODN_12_45",
+      "method": "agreement"
+    }
+  },
+  "evaluation": {
+    "correct": 31,
+    "total": 32,
+    "accuracy": 0.96875,
+    "agreements": 25,
+    "disagreements": 2,
+    "by_method": {
+      "agreement": {
+        "correct": 24,
+        "total": 25
+      },
+      "single_endpoint": {
+        "correct": 5,
+        "total": 5
+      },
+      "disagreement_confidence": {
+        "correct": 2,
+        "total": 2
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 31,
+      "total": 32,
+      "accuracy": 0.96875,
+      "agreements": 25,
+      "disagreements": 2,
+      "by_method": {
+        "agreement": {
+          "correct": 24,
+          "total": 25
+        },
+        "single_endpoint": {
+          "correct": 5,
+          "total": 5
+        },
+        "disagreement_confidence": {
+          "correct": 2,
+          "total": 2
+        }
+      }
+    },
+    "constraints": {
+      "correct": 31,
+      "total": 32,
+      "accuracy": 0.96875,
+      "agreements": 25,
+      "disagreements": 2,
+      "by_method": {
+        "agreement": {
+          "correct": 24,
+          "total": 25
+        },
+        "single_endpoint": {
+          "correct": 5,
+          "total": 5
+        },
+        "disagreement_confidence": {
+          "correct": 2,
+          "total": 2
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 29,
+      "total": 32,
+      "accuracy": 0.90625,
+      "agreements": 25,
+      "disagreements": 2,
+      "by_method": {
+        "agreement": {
+          "correct": 24,
+          "total": 25
+        },
+        "single_endpoint": {
+          "correct": 5,
+          "total": 5
+        },
+        "disagreement_confidence": {
+          "correct": 0,
+          "total": 2
+        }
+      }
+    }
+  },
+  "n_unique_edges": 32
+}

@@ -1,0 +1,383 @@
+{
+  "reconciled": {
+    "('Age', 'SocioEcon')": {
+      "direction": "SocioEcon->Age",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "SocioEcon->Age",
+        "degree": "SocioEcon->Age",
+        "constraints": "SocioEcon->Age",
+        "hard_flip": "SocioEcon->Age"
+      },
+      "endpoints": [
+        {
+          "node": "SocioEcon",
+          "dir": "SocioEcon->Age",
+          "margin": 0.8,
+          "degree": 7
+        },
+        {
+          "node": "Age",
+          "dir": "Age->SocioEcon",
+          "margin": 0.6,
+          "degree": 5
+        }
+      ]
+    },
+    "('RiskAversion', 'SocioEcon')": {
+      "direction": "SocioEcon->RiskAversion",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "SocioEcon->RiskAversion",
+        "degree": "SocioEcon->RiskAversion",
+        "constraints": "SocioEcon->RiskAversion",
+        "hard_flip": "RiskAversion->SocioEcon"
+      },
+      "endpoints": [
+        {
+          "node": "SocioEcon",
+          "dir": "SocioEcon->RiskAversion",
+          "margin": 1.0,
+          "degree": 7
+        },
+        {
+          "node": "RiskAversion",
+          "dir": "RiskAversion->SocioEcon",
+          "margin": 0.0,
+          "degree": 7
+        }
+      ]
+    },
+    "('SocioEcon', 'VehicleYear')": {
+      "direction": "SocioEcon->VehicleYear",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "SocioEcon->VehicleYear",
+        "degree": "SocioEcon->VehicleYear",
+        "constraints": "SocioEcon->VehicleYear",
+        "hard_flip": "VehicleYear->SocioEcon"
+      },
+      "endpoints": [
+        {
+          "node": "SocioEcon",
+          "dir": "SocioEcon->VehicleYear",
+          "margin": 1.0,
+          "degree": 7
+        },
+        {
+          "node": "VehicleYear",
+          "dir": "VehicleYear->SocioEcon",
+          "margin": 0.0,
+          "degree": 5
+        }
+      ]
+    },
+    "('MakeModel', 'SocioEcon')": {
+      "direction": "SocioEcon->MakeModel",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "SocioEcon->MakeModel",
+        "degree": "SocioEcon->MakeModel",
+        "constraints": "SocioEcon->MakeModel",
+        "hard_flip": "MakeModel->SocioEcon"
+      },
+      "endpoints": [
+        {
+          "node": "SocioEcon",
+          "dir": "SocioEcon->MakeModel",
+          "margin": 1.0,
+          "degree": 7
+        },
+        {
+          "node": "MakeModel",
+          "dir": "MakeModel->SocioEcon",
+          "margin": 0.0,
+          "degree": 5
+        }
+      ]
+    },
+    "('HomeBase', 'SocioEcon')": {
+      "direction": "SocioEcon->HomeBase",
+      "method": "agreement"
+    },
+    "('AntiTheft', 'SocioEcon')": {
+      "direction": "SocioEcon->AntiTheft",
+      "method": "agreement"
+    },
+    "('OtherCar', 'SocioEcon')": {
+      "direction": "SocioEcon->OtherCar",
+      "method": "single_endpoint",
+      "endpoint": "SocioEcon"
+    },
+    "('Age', 'RiskAversion')": {
+      "direction": "Age->RiskAversion",
+      "method": "agreement"
+    },
+    "('DrivQuality', 'RiskAversion')": {
+      "direction": "RiskAversion->DrivQuality",
+      "method": "agreement"
+    },
+    "('RiskAversion', 'SeniorTrain')": {
+      "direction": "RiskAversion->SeniorTrain",
+      "method": "agreement"
+    },
+    "('HomeBase', 'RiskAversion')": {
+      "direction": "RiskAversion->HomeBase",
+      "method": "agreement"
+    },
+    "('AntiTheft', 'RiskAversion')": {
+      "direction": "RiskAversion->AntiTheft",
+      "method": "agreement"
+    },
+    "('DrivHist', 'RiskAversion')": {
+      "direction": "RiskAversion->DrivHist",
+      "method": "agreement"
+    },
+    "('Age', 'GoodStudent')": {
+      "direction": "Age->GoodStudent",
+      "method": "agreement"
+    },
+    "('Age', 'DrivingSkill')": {
+      "direction": "Age->DrivingSkill",
+      "method": "agreement"
+    },
+    "('Age', 'SeniorTrain')": {
+      "direction": "Age->SeniorTrain",
+      "method": "agreement"
+    },
+    "('RuggedAuto', 'VehicleYear')": {
+      "direction": "VehicleYear->RuggedAuto",
+      "method": "agreement"
+    },
+    "('Antilock', 'VehicleYear')": {
+      "direction": "VehicleYear->Antilock",
+      "method": "agreement"
+    },
+    "('CarValue', 'VehicleYear')": {
+      "direction": "VehicleYear->CarValue",
+      "method": "agreement"
+    },
+    "('Airbag', 'VehicleYear')": {
+      "direction": "VehicleYear->Airbag",
+      "method": "agreement"
+    },
+    "('MakeModel', 'RuggedAuto')": {
+      "direction": "MakeModel->RuggedAuto",
+      "method": "agreement"
+    },
+    "('Antilock', 'MakeModel')": {
+      "direction": "MakeModel->Antilock",
+      "method": "agreement"
+    },
+    "('CarValue', 'MakeModel')": {
+      "direction": "MakeModel->CarValue",
+      "method": "agreement"
+    },
+    "('Airbag', 'MakeModel')": {
+      "direction": "MakeModel->Airbag",
+      "method": "agreement"
+    },
+    "('CarValue', 'Mileage')": {
+      "direction": "Mileage->CarValue",
+      "method": "single_endpoint",
+      "endpoint": "CarValue"
+    },
+    "('Antilock', 'CarValue')": {
+      "direction": "Antilock->CarValue",
+      "method": "agreement"
+    },
+    "('CarValue', 'ThisCarCost')": {
+      "direction": "CarValue->ThisCarCost",
+      "method": "agreement"
+    },
+    "('Cushioning', 'RuggedAuto')": {
+      "direction": "RuggedAuto->Cushioning",
+      "method": "agreement"
+    },
+    "('Airbag', 'RuggedAuto')": {
+      "direction": "RuggedAuto->Airbag",
+      "method": "agreement"
+    },
+    "('Accident', 'ThisCarDam')": {
+      "direction": "Accident->ThisCarDam",
+      "method": "agreement"
+    },
+    "('Accident', 'DrivQuality')": {
+      "direction": "DrivQuality->Accident",
+      "method": "agreement"
+    },
+    "('Accident', 'OtherCarCost')": {
+      "direction": "Accident->OtherCarCost",
+      "method": "agreement"
+    },
+    "('Accident', 'ILiCost')": {
+      "direction": "Accident->ILiCost",
+      "method": "single_endpoint",
+      "endpoint": "Accident"
+    },
+    "('DrivQuality', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivQuality",
+      "method": "agreement"
+    },
+    "('DrivingSkill', 'SeniorTrain')": {
+      "direction": "SeniorTrain->DrivingSkill",
+      "method": "agreement"
+    },
+    "('DrivHist', 'DrivingSkill')": {
+      "direction": "DrivingSkill->DrivHist",
+      "method": "agreement"
+    },
+    "('GoodStudent', 'SeniorTrain')": {
+      "direction": "GoodStudent->SeniorTrain",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "GoodStudent->SeniorTrain",
+        "degree": "GoodStudent->SeniorTrain",
+        "constraints": "GoodStudent->SeniorTrain",
+        "hard_flip": "GoodStudent->SeniorTrain"
+      },
+      "endpoints": [
+        {
+          "node": "SeniorTrain",
+          "dir": "GoodStudent->SeniorTrain",
+          "margin": 0.6,
+          "degree": 4
+        },
+        {
+          "node": "GoodStudent",
+          "dir": "SeniorTrain->GoodStudent",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    },
+    "('Airbag', 'Cushioning')": {
+      "direction": "Airbag->Cushioning",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Airbag->Cushioning",
+        "degree": "Airbag->Cushioning",
+        "constraints": "Airbag->Cushioning",
+        "hard_flip": "Airbag->Cushioning"
+      },
+      "endpoints": [
+        {
+          "node": "Airbag",
+          "dir": "Airbag->Cushioning",
+          "margin": 0.8,
+          "degree": 4
+        },
+        {
+          "node": "Cushioning",
+          "dir": "Cushioning->Airbag",
+          "margin": 0.2,
+          "degree": 3
+        }
+      ]
+    },
+    "('ThisCarCost', 'ThisCarDam')": {
+      "direction": "ThisCarDam->ThisCarCost",
+      "method": "agreement"
+    },
+    "('PropCost', 'ThisCarCost')": {
+      "direction": "ThisCarCost->PropCost",
+      "method": "agreement"
+    },
+    "('Cushioning', 'MedCost')": {
+      "direction": "Cushioning->MedCost",
+      "method": "single_endpoint",
+      "endpoint": "Cushioning"
+    },
+    "('OtherCarCost', 'PropCost')": {
+      "direction": "OtherCarCost->PropCost",
+      "method": "agreement"
+    }
+  },
+  "evaluation": {
+    "correct": 40,
+    "total": 42,
+    "accuracy": 0.9523809523809523,
+    "agreements": 32,
+    "disagreements": 6,
+    "by_method": {
+      "disagreement_confidence": {
+        "correct": 5,
+        "total": 6
+      },
+      "agreement": {
+        "correct": 31,
+        "total": 32
+      },
+      "single_endpoint": {
+        "correct": 4,
+        "total": 4
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 40,
+      "total": 42,
+      "accuracy": 0.9523809523809523,
+      "agreements": 32,
+      "disagreements": 6,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 5,
+          "total": 6
+        },
+        "agreement": {
+          "correct": 31,
+          "total": 32
+        },
+        "single_endpoint": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "constraints": {
+      "correct": 40,
+      "total": 42,
+      "accuracy": 0.9523809523809523,
+      "agreements": 32,
+      "disagreements": 6,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 5,
+          "total": 6
+        },
+        "agreement": {
+          "correct": 31,
+          "total": 32
+        },
+        "single_endpoint": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 37,
+      "total": 42,
+      "accuracy": 0.8809523809523809,
+      "agreements": 32,
+      "disagreements": 6,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 2,
+          "total": 6
+        },
+        "agreement": {
+          "correct": 31,
+          "total": 32
+        },
+        "single_endpoint": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    }
+  },
+  "n_unique_edges": 42
+}

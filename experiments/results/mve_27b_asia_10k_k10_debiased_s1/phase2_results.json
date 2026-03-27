@@ -1,7 +1,7 @@
 {
   "metadata": {
     "phase": 2,
-    "source": "/teamspace/studios/this_studio/auto_on/research-copilot/projects/locale/experiments/results/mve_27b_asia_10k_k10_debiased_s1/mve_results.json",
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_asia_10k_k10_debiased_s1/mve_results.json",
     "network": "asia",
     "soft_score_source": "ego",
     "collider_mode": "non-collider-only"
@@ -11,13 +11,24 @@
       "degree": 4,
       "n_feasible": 6,
       "n_total": 16,
-      "hard_flips": [],
-      "p1_correct": 4,
-      "p2_correct": 4,
+      "hard_flips": [
+        [
+          "tub",
+          1,
+          0
+        ],
+        [
+          "lung",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 2,
       "n_edges": 4,
       "directions": {
-        "tub": "tub->either",
-        "lung": "lung->either",
+        "tub": "either->tub",
+        "lung": "either->lung",
         "xray": "either->xray",
         "dysp": "either->dysp"
       }
@@ -77,12 +88,12 @@
   },
   "summary": {
     "total_edges": 12,
-    "phase1_correct": 12,
-    "phase2_correct": 12,
-    "phase1_accuracy": 100.0,
-    "phase2_accuracy": 100.0,
+    "phase1_correct": 10,
+    "phase2_correct": 10,
+    "phase1_accuracy": 83.3,
+    "phase2_accuracy": 83.3,
     "delta_pp": 0.0,
-    "hard_flips": 0,
+    "hard_flips": 2,
     "hard_flips_helped": 0,
     "hard_flips_hurt": 0,
     "infeasible_nodes": 0

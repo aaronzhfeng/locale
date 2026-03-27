@@ -1,0 +1,146 @@
+{
+  "method": "mosacd_baseline",
+  "network": "asia",
+  "n_samples": 10000,
+  "seed": 10,
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "enable_thinking": false,
+  "n_repeats": 5,
+  "pc_alpha": 0.05,
+  "skeleton": {
+    "n_nodes": 8,
+    "n_edges": 8,
+    "tp": 8,
+    "fp": 0,
+    "fn": 0,
+    "coverage": 1.0
+  },
+  "seeding": {
+    "total_queries": 80,
+    "n_consistent": 8,
+    "n_inconsistent": 0,
+    "n_undecided": 0,
+    "n_valid_seeds": 8,
+    "seed_accuracy": 1.0
+  },
+  "metrics": {
+    "tp": 8,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "shd": 0,
+    "n_directed": 8,
+    "n_undirected_remaining": 0
+  },
+  "elapsed_seconds": 127.63813805580139,
+  "all_votes": {
+    "either-lung": [
+      "lung->either",
+      "lung->either",
+      "lung->either",
+      "lung->either",
+      "lung->either",
+      "lung->either",
+      "lung->either",
+      "lung->either",
+      "lung->either",
+      "lung->either"
+    ],
+    "dysp-either": [
+      "either->dysp",
+      "either->dysp",
+      "either->dysp",
+      "either->dysp",
+      "either->dysp",
+      "either->dysp",
+      "either->dysp",
+      "either->dysp",
+      "either->dysp",
+      "either->dysp"
+    ],
+    "bronc-dysp": [
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp",
+      "bronc->dysp"
+    ],
+    "asia-tub": [
+      "asia->tub",
+      "asia->tub",
+      "asia->tub",
+      "asia->tub",
+      "asia->tub",
+      "asia->tub",
+      "asia->tub",
+      "asia->tub",
+      "asia->tub",
+      "asia->tub"
+    ],
+    "either-tub": [
+      "tub->either",
+      "tub->either",
+      "tub->either",
+      "tub->either",
+      "tub->either",
+      "tub->either",
+      "tub->either",
+      "tub->either",
+      "tub->either",
+      "tub->either"
+    ],
+    "lung-smoke": [
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung",
+      "smoke->lung"
+    ],
+    "bronc-smoke": [
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc",
+      "smoke->bronc"
+    ],
+    "either-xray": [
+      "either->xray",
+      "either->xray",
+      "either->xray",
+      "either->xray",
+      "either->xray",
+      "either->xray",
+      "either->xray",
+      "either->xray",
+      "either->xray",
+      "either->xray"
+    ]
+  },
+  "seeds": {
+    "either-lung": "lung->either",
+    "dysp-either": "either->dysp",
+    "bronc-dysp": "bronc->dysp",
+    "asia-tub": "asia->tub",
+    "either-tub": "tub->either",
+    "lung-smoke": "smoke->lung",
+    "bronc-smoke": "smoke->bronc",
+    "either-xray": "either->xray"
+  }
+}

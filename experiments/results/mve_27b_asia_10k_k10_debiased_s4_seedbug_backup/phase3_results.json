@@ -1,0 +1,165 @@
+{
+  "reconciled": {
+    "('either', 'tub')": {
+      "direction": "tub->either",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "tub->either",
+        "degree": "either->tub",
+        "constraints": "either->tub",
+        "hard_flip": "tub->either"
+      },
+      "endpoints": [
+        {
+          "node": "either",
+          "dir": "either->tub",
+          "margin": 0.2,
+          "degree": 4
+        },
+        {
+          "node": "tub",
+          "dir": "tub->either",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('either', 'lung')": {
+      "direction": "lung->either",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "lung->either",
+        "degree": "either->lung",
+        "constraints": "either->lung",
+        "hard_flip": "lung->either"
+      },
+      "endpoints": [
+        {
+          "node": "either",
+          "dir": "either->lung",
+          "margin": 0.2,
+          "degree": 4
+        },
+        {
+          "node": "lung",
+          "dir": "lung->either",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('either', 'xray')": {
+      "direction": "either->xray",
+      "method": "single_endpoint",
+      "endpoint": "either"
+    },
+    "('dysp', 'either')": {
+      "direction": "either->dysp",
+      "method": "agreement"
+    },
+    "('asia', 'tub')": {
+      "direction": "asia->tub",
+      "method": "single_endpoint",
+      "endpoint": "tub"
+    },
+    "('lung', 'smoke')": {
+      "direction": "smoke->lung",
+      "method": "agreement"
+    },
+    "('bronc', 'smoke')": {
+      "direction": "smoke->bronc",
+      "method": "agreement"
+    },
+    "('bronc', 'dysp')": {
+      "direction": "bronc->dysp",
+      "method": "agreement"
+    }
+  },
+  "evaluation": {
+    "correct": 8,
+    "total": 8,
+    "accuracy": 1.0,
+    "agreements": 4,
+    "disagreements": 2,
+    "by_method": {
+      "disagreement_confidence": {
+        "correct": 2,
+        "total": 2
+      },
+      "single_endpoint": {
+        "correct": 2,
+        "total": 2
+      },
+      "agreement": {
+        "correct": 4,
+        "total": 4
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 6,
+      "total": 8,
+      "accuracy": 0.75,
+      "agreements": 4,
+      "disagreements": 2,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 0,
+          "total": 2
+        },
+        "single_endpoint": {
+          "correct": 2,
+          "total": 2
+        },
+        "agreement": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "constraints": {
+      "correct": 6,
+      "total": 8,
+      "accuracy": 0.75,
+      "agreements": 4,
+      "disagreements": 2,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 0,
+          "total": 2
+        },
+        "single_endpoint": {
+          "correct": 2,
+          "total": 2
+        },
+        "agreement": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 8,
+      "total": 8,
+      "accuracy": 1.0,
+      "agreements": 4,
+      "disagreements": 2,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 2,
+          "total": 2
+        },
+        "single_endpoint": {
+          "correct": 2,
+          "total": 2
+        },
+        "agreement": {
+          "correct": 4,
+          "total": 4
+        }
+      }
+    }
+  },
+  "n_unique_edges": 8
+}

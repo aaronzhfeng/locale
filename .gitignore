@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 paper/
+.venv/
+.DS_Store
+__pycache__/

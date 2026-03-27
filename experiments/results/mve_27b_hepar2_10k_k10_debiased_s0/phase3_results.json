@@ -1,0 +1,463 @@
+{
+  "reconciled": {
+    "('Cirrhosis', 'fibrosis')": {
+      "direction": "fibrosis->Cirrhosis",
+      "method": "agreement"
+    },
+    "('Cirrhosis', 'Steatosis')": {
+      "direction": "Steatosis->Cirrhosis",
+      "method": "agreement"
+    },
+    "('Cirrhosis', 'edema')": {
+      "direction": "Cirrhosis->edema",
+      "method": "single_endpoint",
+      "endpoint": "Cirrhosis"
+    },
+    "('Cirrhosis', 'inr')": {
+      "direction": "Cirrhosis->inr",
+      "method": "agreement"
+    },
+    "('Cirrhosis', 'spleen')": {
+      "direction": "Cirrhosis->spleen",
+      "method": "single_endpoint",
+      "endpoint": "Cirrhosis"
+    },
+    "('Cirrhosis', 'spiders')": {
+      "direction": "Cirrhosis->spiders",
+      "method": "single_endpoint",
+      "endpoint": "Cirrhosis"
+    },
+    "('Cirrhosis', 'edge')": {
+      "direction": "Cirrhosis->edge",
+      "method": "single_endpoint",
+      "endpoint": "Cirrhosis"
+    },
+    "('Cirrhosis', 'irregular_liver')": {
+      "direction": "Cirrhosis->irregular_liver",
+      "method": "single_endpoint",
+      "endpoint": "Cirrhosis"
+    },
+    "('Cirrhosis', 'palms')": {
+      "direction": "Cirrhosis->palms",
+      "method": "single_endpoint",
+      "endpoint": "Cirrhosis"
+    },
+    "('Cirrhosis', 'carcinoma')": {
+      "direction": "Cirrhosis->carcinoma",
+      "method": "single_endpoint",
+      "endpoint": "Cirrhosis"
+    },
+    "('ChHepatitis', 'vh_amn')": {
+      "direction": "vh_amn->ChHepatitis",
+      "method": "agreement"
+    },
+    "('ChHepatitis', 'injections')": {
+      "direction": "injections->ChHepatitis",
+      "method": "agreement"
+    },
+    "('ChHepatitis', 'fibrosis')": {
+      "direction": "ChHepatitis->fibrosis",
+      "method": "agreement"
+    },
+    "('ChHepatitis', 'phosphatase')": {
+      "direction": "ChHepatitis->phosphatase",
+      "method": "agreement"
+    },
+    "('ChHepatitis', 'alt')": {
+      "direction": "ChHepatitis->alt",
+      "method": "single_endpoint",
+      "endpoint": "ChHepatitis"
+    },
+    "('ChHepatitis', 'ast')": {
+      "direction": "ChHepatitis->ast",
+      "method": "agreement"
+    },
+    "('ChHepatitis', 'hbsag')": {
+      "direction": "hbsag->ChHepatitis",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "hbsag->ChHepatitis",
+        "degree": "ChHepatitis->hbsag",
+        "constraints": "ChHepatitis->hbsag",
+        "hard_flip": "ChHepatitis->hbsag"
+      },
+      "endpoints": [
+        {
+          "node": "ChHepatitis",
+          "dir": "ChHepatitis->hbsag",
+          "margin": 0.0,
+          "degree": 8
+        },
+        {
+          "node": "hbsag",
+          "dir": "hbsag->ChHepatitis",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('ChHepatitis', 'hbeag')": {
+      "direction": "ChHepatitis->hbeag",
+      "method": "single_endpoint",
+      "endpoint": "ChHepatitis"
+    },
+    "('PBC', 'sex')": {
+      "direction": "sex->PBC",
+      "method": "agreement"
+    },
+    "('PBC', 'age')": {
+      "direction": "age->PBC",
+      "method": "agreement"
+    },
+    "('PBC', 'bilirubin')": {
+      "direction": "PBC->bilirubin",
+      "method": "agreement"
+    },
+    "('PBC', 'ama')": {
+      "direction": "PBC->ama",
+      "method": "single_endpoint",
+      "endpoint": "PBC"
+    },
+    "('ESR', 'PBC')": {
+      "direction": "PBC->ESR",
+      "method": "single_endpoint",
+      "endpoint": "PBC"
+    },
+    "('PBC', 'ggtp')": {
+      "direction": "PBC->ggtp",
+      "method": "agreement"
+    },
+    "('PBC', 'cholesterol')": {
+      "direction": "PBC->cholesterol",
+      "method": "single_endpoint",
+      "endpoint": "PBC"
+    },
+    "('bilirubin', 'gallstones')": {
+      "direction": "gallstones->bilirubin",
+      "method": "agreement"
+    },
+    "('Hyperbilirubinemia', 'bilirubin')": {
+      "direction": "bilirubin->Hyperbilirubinemia",
+      "method": "agreement"
+    },
+    "('bilirubin', 'itching')": {
+      "direction": "bilirubin->itching",
+      "method": "single_endpoint",
+      "endpoint": "bilirubin"
+    },
+    "('bilirubin', 'skin')": {
+      "direction": "bilirubin->skin",
+      "method": "single_endpoint",
+      "endpoint": "bilirubin"
+    },
+    "('bilirubin', 'jaundice')": {
+      "direction": "bilirubin->jaundice",
+      "method": "single_endpoint",
+      "endpoint": "bilirubin"
+    },
+    "('Hyperbilirubinemia', 'sex')": {
+      "direction": "sex->Hyperbilirubinemia",
+      "method": "agreement"
+    },
+    "('Hyperbilirubinemia', 'age')": {
+      "direction": "age->Hyperbilirubinemia",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "age->Hyperbilirubinemia",
+        "degree": "Hyperbilirubinemia->age",
+        "constraints": "Hyperbilirubinemia->age",
+        "hard_flip": "Hyperbilirubinemia->age"
+      },
+      "endpoints": [
+        {
+          "node": "Hyperbilirubinemia",
+          "dir": "Hyperbilirubinemia->age",
+          "margin": 0.4,
+          "degree": 5
+        },
+        {
+          "node": "age",
+          "dir": "age->Hyperbilirubinemia",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    },
+    "('Hyperbilirubinemia', 'hepatomegaly')": {
+      "direction": "hepatomegaly->Hyperbilirubinemia",
+      "method": "agreement"
+    },
+    "('Hyperbilirubinemia', 'ggtp')": {
+      "direction": "ggtp->Hyperbilirubinemia",
+      "method": "agreement"
+    },
+    "('hbsag', 'vh_amn')": {
+      "direction": "hbsag->vh_amn",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "hbsag->vh_amn",
+        "degree": "vh_amn->hbsag",
+        "constraints": "vh_amn->hbsag",
+        "hard_flip": "hbsag->vh_amn"
+      },
+      "endpoints": [
+        {
+          "node": "vh_amn",
+          "dir": "vh_amn->hbsag",
+          "margin": 0.2,
+          "degree": 4
+        },
+        {
+          "node": "hbsag",
+          "dir": "hbsag->vh_amn",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    },
+    "('hbsag_anti', 'vh_amn')": {
+      "direction": "vh_amn->hbsag_anti",
+      "method": "single_endpoint",
+      "endpoint": "vh_amn"
+    },
+    "('hbc_anti', 'vh_amn')": {
+      "direction": "vh_amn->hbc_anti",
+      "method": "single_endpoint",
+      "endpoint": "vh_amn"
+    },
+    "('choledocholithotomy', 'gallstones')": {
+      "direction": "gallstones->choledocholithotomy",
+      "method": "agreement"
+    },
+    "('fat', 'gallstones')": {
+      "direction": "gallstones->fat",
+      "method": "single_endpoint",
+      "endpoint": "gallstones"
+    },
+    "('amylase', 'gallstones')": {
+      "direction": "gallstones->amylase",
+      "method": "single_endpoint",
+      "endpoint": "gallstones"
+    },
+    "('hospital', 'injections')": {
+      "direction": "injections->hospital",
+      "method": "agreement"
+    },
+    "('injections', 'surgery')": {
+      "direction": "injections->surgery",
+      "method": "agreement"
+    },
+    "('choledocholithotomy', 'injections')": {
+      "direction": "injections->choledocholithotomy",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "injections->choledocholithotomy",
+        "degree": "injections->choledocholithotomy",
+        "constraints": "injections->choledocholithotomy",
+        "hard_flip": "injections->choledocholithotomy"
+      },
+      "endpoints": [
+        {
+          "node": "injections",
+          "dir": "injections->choledocholithotomy",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "choledocholithotomy",
+          "dir": "choledocholithotomy->injections",
+          "margin": 0.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('Steatosis', 'alcoholism')": {
+      "direction": "alcoholism->Steatosis",
+      "method": "agreement"
+    },
+    "('Steatosis', 'triglycerides')": {
+      "direction": "triglycerides->Steatosis",
+      "method": "agreement"
+    },
+    "('Steatosis', 'ast')": {
+      "direction": "Steatosis->ast",
+      "method": "agreement"
+    },
+    "('THepatitis', 'alcoholism')": {
+      "direction": "alcoholism->THepatitis",
+      "method": "agreement"
+    },
+    "('alcoholism', 'triglycerides')": {
+      "direction": "alcoholism->triglycerides",
+      "method": "agreement"
+    },
+    "('THepatitis', 'phosphatase')": {
+      "direction": "THepatitis->phosphatase",
+      "method": "agreement"
+    },
+    "('THepatitis', 'ast')": {
+      "direction": "THepatitis->ast",
+      "method": "agreement"
+    },
+    "('RHepatitis', 'fatigue')": {
+      "direction": "RHepatitis->fatigue",
+      "method": "single_endpoint",
+      "endpoint": "RHepatitis"
+    },
+    "('RHepatitis', 'phosphatase')": {
+      "direction": "RHepatitis->phosphatase",
+      "method": "agreement"
+    },
+    "('RHepatitis', 'anorexia')": {
+      "direction": "RHepatitis->anorexia",
+      "method": "single_endpoint",
+      "endpoint": "RHepatitis"
+    },
+    "('encephalopathy', 'urea')": {
+      "direction": "encephalopathy->urea",
+      "method": "single_endpoint",
+      "endpoint": "encephalopathy"
+    },
+    "('density', 'encephalopathy')": {
+      "direction": "encephalopathy->density",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "encephalopathy->density",
+        "degree": "encephalopathy->density",
+        "constraints": "encephalopathy->density",
+        "hard_flip": "encephalopathy->density"
+      },
+      "endpoints": [
+        {
+          "node": "encephalopathy",
+          "dir": "encephalopathy->density",
+          "margin": 1.0,
+          "degree": 3
+        },
+        {
+          "node": "density",
+          "dir": "density->encephalopathy",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    },
+    "('consciousness', 'encephalopathy')": {
+      "direction": "encephalopathy->consciousness",
+      "method": "agreement"
+    },
+    "('hospital', 'transfusion')": {
+      "direction": "hospital->transfusion",
+      "method": "agreement"
+    },
+    "('surgery', 'transfusion')": {
+      "direction": "surgery->transfusion",
+      "method": "agreement"
+    },
+    "('bleeding', 'inr')": {
+      "direction": "inr->bleeding",
+      "method": "agreement"
+    },
+    "('bleeding', 'platelet')": {
+      "direction": "platelet->bleeding",
+      "method": "single_endpoint",
+      "endpoint": "bleeding"
+    },
+    "('hepatalgia', 'hepatomegaly')": {
+      "direction": "hepatomegaly->hepatalgia",
+      "method": "single_endpoint",
+      "endpoint": "hepatomegaly"
+    },
+    "('consciousness', 'density')": {
+      "direction": "density->consciousness",
+      "method": "agreement"
+    }
+  },
+  "evaluation": {
+    "correct": 52,
+    "total": 62,
+    "accuracy": 0.8387096774193549,
+    "agreements": 33,
+    "disagreements": 5,
+    "by_method": {
+      "agreement": {
+        "correct": 26,
+        "total": 33
+      },
+      "single_endpoint": {
+        "correct": 24,
+        "total": 24
+      },
+      "disagreement_confidence": {
+        "correct": 2,
+        "total": 5
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 53,
+      "total": 62,
+      "accuracy": 0.8548387096774194,
+      "agreements": 33,
+      "disagreements": 5,
+      "by_method": {
+        "agreement": {
+          "correct": 26,
+          "total": 33
+        },
+        "single_endpoint": {
+          "correct": 24,
+          "total": 24
+        },
+        "disagreement_confidence": {
+          "correct": 3,
+          "total": 5
+        }
+      }
+    },
+    "constraints": {
+      "correct": 53,
+      "total": 62,
+      "accuracy": 0.8548387096774194,
+      "agreements": 33,
+      "disagreements": 5,
+      "by_method": {
+        "agreement": {
+          "correct": 26,
+          "total": 33
+        },
+        "single_endpoint": {
+          "correct": 24,
+          "total": 24
+        },
+        "disagreement_confidence": {
+          "correct": 3,
+          "total": 5
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 52,
+      "total": 62,
+      "accuracy": 0.8387096774193549,
+      "agreements": 33,
+      "disagreements": 5,
+      "by_method": {
+        "agreement": {
+          "correct": 26,
+          "total": 33
+        },
+        "single_endpoint": {
+          "correct": 24,
+          "total": 24
+        },
+        "disagreement_confidence": {
+          "correct": 2,
+          "total": 5
+        }
+      }
+    }
+  },
+  "n_unique_edges": 62
+}

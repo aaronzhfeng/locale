@@ -43,40 +43,20 @@
     },
     "('ChestXray', 'LungParench')": {
       "direction": "LungParench->ChestXray",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "LungParench->ChestXray",
-        "degree": "LungParench->ChestXray",
-        "constraints": "LungParench->ChestXray",
-        "hard_flip": "ChestXray->LungParench"
-      },
-      "endpoints": [
-        {
-          "node": "LungParench",
-          "dir": "LungParench->ChestXray",
-          "margin": 1.0,
-          "degree": 5
-        },
-        {
-          "node": "ChestXray",
-          "dir": "ChestXray->LungParench",
-          "margin": 0.0,
-          "degree": 3
-        }
-      ]
+      "method": "agreement"
     },
     "('Grunting', 'LungParench')": {
       "direction": "LungParench->Grunting",
       "method": "agreement"
     },
     "('HypoxiaInO2', 'LowerBodyO2')": {
-      "direction": "HypoxiaInO2->LowerBodyO2",
+      "direction": "LowerBodyO2->HypoxiaInO2",
       "method": "disagreement_confidence",
       "strategies": {
-        "confidence": "HypoxiaInO2->LowerBodyO2",
+        "confidence": "LowerBodyO2->HypoxiaInO2",
         "degree": "HypoxiaInO2->LowerBodyO2",
         "constraints": "HypoxiaInO2->LowerBodyO2",
-        "hard_flip": "HypoxiaInO2->LowerBodyO2"
+        "hard_flip": "LowerBodyO2->HypoxiaInO2"
       },
       "endpoints": [
         {
@@ -88,7 +68,7 @@
         {
           "node": "LowerBodyO2",
           "dir": "LowerBodyO2->HypoxiaInO2",
-          "margin": 0.4,
+          "margin": 0.8,
           "degree": 2
         }
       ]
@@ -121,7 +101,7 @@
         {
           "node": "LowerBodyO2",
           "dir": "LowerBodyO2->HypDistrib",
-          "margin": 0.4,
+          "margin": 0.8,
           "degree": 2
         }
       ]
@@ -163,7 +143,7 @@
         {
           "node": "HypDistrib",
           "dir": "HypDistrib->CardiacMixing",
-          "margin": 0.6,
+          "margin": 0.4,
           "degree": 3
         },
         {
@@ -181,27 +161,7 @@
     },
     "('ChestXray', 'LungFlow')": {
       "direction": "LungFlow->ChestXray",
-      "method": "disagreement_confidence",
-      "strategies": {
-        "confidence": "LungFlow->ChestXray",
-        "degree": "ChestXray->LungFlow",
-        "constraints": "ChestXray->LungFlow",
-        "hard_flip": "ChestXray->LungFlow"
-      },
-      "endpoints": [
-        {
-          "node": "ChestXray",
-          "dir": "ChestXray->LungFlow",
-          "margin": 0.0,
-          "degree": 3
-        },
-        {
-          "node": "LungFlow",
-          "dir": "LungFlow->ChestXray",
-          "margin": 1.0,
-          "degree": 2
-        }
-      ]
+      "method": "agreement"
     },
     "('Grunting', 'GruntingReport')": {
       "direction": "Grunting->GruntingReport",
@@ -209,28 +169,32 @@
       "endpoint": "Grunting"
     },
     "('Grunting', 'Sick')": {
-      "direction": "Grunting->Sick",
+      "direction": "Sick->Grunting",
       "method": "disagreement_confidence",
       "strategies": {
-        "confidence": "Grunting->Sick",
-        "degree": "Grunting->Sick",
+        "confidence": "Sick->Grunting",
+        "degree": "Sick->Grunting",
         "constraints": "Grunting->Sick",
-        "hard_flip": "Grunting->Sick"
+        "hard_flip": "Sick->Grunting"
       },
       "endpoints": [
         {
           "node": "Grunting",
           "dir": "Grunting->Sick",
-          "margin": 0.4,
+          "margin": 0.6,
           "degree": 3
         },
         {
           "node": "Sick",
           "dir": "Sick->Grunting",
-          "margin": 0.4,
+          "margin": 1.0,
           "degree": 3
         }
       ]
+    },
+    "('Age', 'LungFlow')": {
+      "direction": "Age->LungFlow",
+      "method": "agreement"
     },
     "('Age', 'Sick')": {
       "direction": "Age->Sick",
@@ -248,90 +212,90 @@
     }
   },
   "evaluation": {
-    "correct": 22,
-    "total": 25,
-    "accuracy": 0.88,
-    "agreements": 12,
-    "disagreements": 7,
+    "correct": 23,
+    "total": 26,
+    "accuracy": 0.8846153846153846,
+    "agreements": 15,
+    "disagreements": 5,
     "by_method": {
       "single_endpoint": {
         "correct": 6,
         "total": 6
       },
       "agreement": {
-        "correct": 10,
-        "total": 12
+        "correct": 13,
+        "total": 15
       },
       "disagreement_confidence": {
-        "correct": 6,
-        "total": 7
+        "correct": 4,
+        "total": 5
       }
     }
   },
   "alt_evaluations": {
     "degree": {
-      "correct": 20,
-      "total": 25,
-      "accuracy": 0.8,
-      "agreements": 12,
-      "disagreements": 7,
+      "correct": 23,
+      "total": 26,
+      "accuracy": 0.8846153846153846,
+      "agreements": 15,
+      "disagreements": 5,
       "by_method": {
         "single_endpoint": {
           "correct": 6,
           "total": 6
         },
         "agreement": {
-          "correct": 10,
-          "total": 12
+          "correct": 13,
+          "total": 15
         },
         "disagreement_confidence": {
           "correct": 4,
-          "total": 7
+          "total": 5
         }
       }
     },
     "constraints": {
-      "correct": 20,
-      "total": 25,
-      "accuracy": 0.8,
-      "agreements": 12,
-      "disagreements": 7,
+      "correct": 22,
+      "total": 26,
+      "accuracy": 0.8461538461538461,
+      "agreements": 15,
+      "disagreements": 5,
       "by_method": {
         "single_endpoint": {
           "correct": 6,
           "total": 6
         },
         "agreement": {
-          "correct": 10,
-          "total": 12
+          "correct": 13,
+          "total": 15
         },
         "disagreement_confidence": {
-          "correct": 4,
-          "total": 7
+          "correct": 3,
+          "total": 5
         }
       }
     },
     "hard_flip": {
-      "correct": 20,
-      "total": 25,
-      "accuracy": 0.8,
-      "agreements": 12,
-      "disagreements": 7,
+      "correct": 23,
+      "total": 26,
+      "accuracy": 0.8846153846153846,
+      "agreements": 15,
+      "disagreements": 5,
       "by_method": {
         "single_endpoint": {
           "correct": 6,
           "total": 6
         },
         "agreement": {
-          "correct": 10,
-          "total": 12
+          "correct": 13,
+          "total": 15
         },
         "disagreement_confidence": {
           "correct": 4,
-          "total": 7
+          "total": 5
         }
       }
     }
   },
-  "n_unique_edges": 25
+  "n_unique_edges": 26
 }

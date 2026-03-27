@@ -16,7 +16,7 @@
     "n_test_edges": 7,
     "n_skeleton_edges": 7,
     "n_gt_edges": 8,
-    "timestamp": "2026-03-11 21:48:41",
+    "timestamp": "2026-03-26 01:20:46",
     "disguised_names": false,
     "enable_thinking": false,
     "ego_prompt_version": "v1",
@@ -24,13 +24,13 @@
     "temp_ladder": false,
     "enriched": false,
     "debiased": true,
-    "pc_alpha": 0.05
+    "pc_alpha": 0.1
   },
   "summary": {
     "acc_per_edge": 1.0,
-    "acc_ego_graph": 0.9333333333333333,
-    "delta": -0.06666666666666665,
-    "delta_pp": -6.666666666666665,
+    "acc_ego_graph": 0.9166666666666666,
+    "delta": -0.08333333333333337,
+    "delta_pp": -8.333333333333337,
     "uncertain_per_edge": 0.0,
     "uncertain_ego_graph": 0.0,
     "queries_per_edge": 120,
@@ -88,7 +88,7 @@
             "lung",
             "dysp"
           ],
-          "separated_by": "either",
+          "separated_by": "either, smoke",
           "center_in_sep": true,
           "type": "non-collider"
         },
@@ -121,7 +121,7 @@
         ]
       ],
       "acc_per_edge": 1.0,
-      "acc_ego_graph": 0.8
+      "acc_ego_graph": 0.75
     },
     "smoke": {
       "degree": 2,
@@ -135,7 +135,7 @@
             "lung",
             "bronc"
           ],
-          "separated_by": "either",
+          "separated_by": "dysp, either",
           "center_in_sep": false,
           "type": "collider"
         }
@@ -225,7 +225,7 @@
             "bronc",
             "either"
           ],
-          "separated_by": "smoke",
+          "separated_by": "lung",
           "center_in_sep": false,
           "type": "collider"
         }
@@ -247,23 +247,13 @@
   "raw_results_a": [
     {
       "edge": [
-        "tub",
+        "lung",
         "either"
       ],
-      "predicted": "tub->either",
+      "predicted": "lung->either",
       "correct": true,
       "pass_idx": 0,
       "center_node": "either"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "tub"
     },
     {
       "edge": [
@@ -282,28 +272,18 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
       "pass_idx": 2,
       "center_node": "either"
     },
     {
       "edge": [
-        "lung",
-        "either"
+        "either",
+        "dysp"
       ],
-      "predicted": "lung->either",
+      "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 3,
-      "center_node": "lung"
+      "pass_idx": 1,
+      "center_node": "dysp"
     },
     {
       "edge": [
@@ -322,18 +302,38 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 2,
+      "pass_idx": 6,
       "center_node": "either"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "lung"
     },
     {
       "edge": [
         "either",
-        "dysp"
+        "xray"
       ],
-      "predicted": "either->dysp",
+      "predicted": "either->xray",
       "correct": true,
       "pass_idx": 1,
-      "center_node": "dysp"
+      "center_node": "xray"
     },
     {
       "edge": [
@@ -342,8 +342,8 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "either"
+      "pass_idx": 1,
+      "center_node": "lung"
     },
     {
       "edge": [
@@ -352,8 +352,8 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
+      "pass_idx": 5,
+      "center_node": "lung"
     },
     {
       "edge": [
@@ -367,13 +367,23 @@
     },
     {
       "edge": [
-        "lung",
-        "either"
+        "either",
+        "dysp"
       ],
-      "predicted": "lung->either",
+      "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 5,
-      "center_node": "lung"
+      "pass_idx": 3,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "either"
     },
     {
       "edge": [
@@ -388,12 +398,42 @@
     {
       "edge": [
         "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "either",
         "xray"
       ],
       "predicted": "either->xray",
       "correct": true,
-      "pass_idx": 2,
-      "center_node": "either"
+      "pass_idx": 7,
+      "center_node": "xray"
     },
     {
       "edge": [
@@ -404,6 +444,46 @@
       "correct": true,
       "pass_idx": 4,
       "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "xray"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "tub"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "dysp"
     },
     {
       "edge": [
@@ -427,152 +507,22 @@
     },
     {
       "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "xray"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "xray"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "xray"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "xray"
-    },
-    {
-      "edge": [
         "tub",
         "either"
       ],
       "predicted": "tub->either",
       "correct": true,
       "pass_idx": 8,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 0,
       "center_node": "either"
     },
     {
@@ -587,13 +537,13 @@
     },
     {
       "edge": [
-        "smoke",
-        "lung"
+        "lung",
+        "either"
       ],
-      "predicted": "smoke->lung",
+      "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 2,
-      "center_node": "smoke"
+      "pass_idx": 9,
+      "center_node": "lung"
     },
     {
       "edge": [
@@ -607,13 +557,13 @@
     },
     {
       "edge": [
-        "smoke",
-        "lung"
+        "either",
+        "dysp"
       ],
-      "predicted": "smoke->lung",
+      "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 3,
-      "center_node": "lung"
+      "pass_idx": 2,
+      "center_node": "either"
     },
     {
       "edge": [
@@ -627,6 +577,16 @@
     },
     {
       "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "either"
+    },
+    {
+      "edge": [
         "lung",
         "either"
       ],
@@ -637,13 +597,13 @@
     },
     {
       "edge": [
-        "lung",
-        "either"
+        "either",
+        "xray"
       ],
-      "predicted": "lung->either",
+      "predicted": "either->xray",
       "correct": true,
-      "pass_idx": 9,
-      "center_node": "lung"
+      "pass_idx": 5,
+      "center_node": "xray"
     },
     {
       "edge": [
@@ -652,38 +612,18 @@
       ],
       "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 8,
+      "pass_idx": 0,
       "center_node": "either"
     },
     {
       "edge": [
-        "smoke",
-        "lung"
+        "either",
+        "xray"
       ],
-      "predicted": "smoke->lung",
+      "predicted": "either->xray",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "smoke"
+      "pass_idx": 2,
+      "center_node": "either"
     },
     {
       "edge": [
@@ -698,9 +638,9 @@
     {
       "edge": [
         "smoke",
-        "bronc"
+        "lung"
       ],
-      "predicted": "smoke->bronc",
+      "predicted": "smoke->lung",
       "correct": true,
       "pass_idx": 2,
       "center_node": "smoke"
@@ -708,22 +648,12 @@
     {
       "edge": [
         "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
         "bronc"
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "bronc"
+      "pass_idx": 0,
+      "center_node": "smoke"
     },
     {
       "edge": [
@@ -742,17 +672,7 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 4,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 7,
+      "pass_idx": 3,
       "center_node": "lung"
     },
     {
@@ -768,12 +688,132 @@
     {
       "edge": [
         "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "smoke",
         "bronc"
       ],
       "predicted": "smoke->bronc",
       "correct": true,
       "pass_idx": 5,
       "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "lung"
     },
     {
       "edge": [
@@ -788,32 +828,72 @@
     {
       "edge": [
         "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
         "bronc"
       ],
       "predicted": "smoke->bronc",
       "correct": true,
       "pass_idx": 7,
       "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "smoke"
     },
     {
       "edge": [
@@ -827,23 +907,33 @@
     },
     {
       "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
         "lung",
         "either"
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 0,
+      "pass_idx": 4,
       "center_node": "lung"
     },
     {
       "edge": [
         "smoke",
-        "bronc"
+        "lung"
       ],
-      "predicted": "smoke->bronc",
+      "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 3,
-      "center_node": "bronc"
+      "pass_idx": 4,
+      "center_node": "lung"
     },
     {
       "edge": [
@@ -862,18 +952,8 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 0,
+      "pass_idx": 2,
       "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "smoke"
     },
     {
       "edge": [
@@ -892,7 +972,7 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 2,
+      "pass_idx": 6,
       "center_node": "lung"
     },
     {
@@ -902,8 +982,28 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 9,
       "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "smoke"
     },
     {
       "edge": [
@@ -922,77 +1022,17 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 2,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
       "pass_idx": 6,
       "center_node": "lung"
     },
     {
       "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
         "lung",
         "either"
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 7,
       "center_node": "either"
     },
     {
@@ -1001,39 +1041,49 @@
         "lung"
       ],
       "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
       "correct": true,
       "pass_idx": 3,
       "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "either"
     },
     {
       "edge": [
@@ -1047,46 +1097,6 @@
     },
     {
       "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
         "bronc",
         "dysp"
       ],
@@ -1112,15 +1122,15 @@
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 6,
+      "pass_idx": 4,
       "center_node": "bronc"
     },
     {
       "edge": [
-        "smoke",
-        "bronc"
+        "bronc",
+        "dysp"
       ],
-      "predicted": "smoke->bronc",
+      "predicted": "bronc->dysp",
       "correct": true,
       "pass_idx": 4,
       "center_node": "bronc"
@@ -1142,8 +1152,8 @@
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "smoke"
+      "pass_idx": 8,
+      "center_node": "bronc"
     },
     {
       "edge": [
@@ -1152,8 +1162,28 @@
       ],
       "predicted": "bronc->dysp",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 5,
       "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "smoke"
     },
     {
       "edge": [
@@ -1172,28 +1202,8 @@
       ],
       "predicted": "bronc->dysp",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 3,
       "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "bronc"
     },
     {
       "edge": [
@@ -1204,26 +1214,6 @@
       "correct": true,
       "pass_idx": 7,
       "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "either"
     },
     {
       "edge": [
@@ -1242,8 +1232,8 @@
       ],
       "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 2,
-      "center_node": "dysp"
+      "pass_idx": 1,
+      "center_node": "either"
     },
     {
       "edge": [
@@ -1251,6 +1241,16 @@
         "dysp"
       ],
       "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
       "correct": true,
       "pass_idx": 0,
       "center_node": "dysp"
@@ -1267,16 +1267,6 @@
     },
     {
       "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "either"
-    },
-    {
-      "edge": [
         "bronc",
         "dysp"
       ],
@@ -1284,56 +1274,6 @@
       "correct": true,
       "pass_idx": 8,
       "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "either"
     },
     {
       "edge": [
@@ -1347,6 +1287,56 @@
     },
     {
       "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "either"
+    },
+    {
+      "edge": [
         "either",
         "dysp"
       ],
@@ -1357,32 +1347,12 @@
     },
     {
       "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
         "either",
         "dysp"
       ],
       "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 8,
       "center_node": "dysp"
     },
     {
@@ -1397,13 +1367,13 @@
     },
     {
       "edge": [
-        "either",
+        "bronc",
         "dysp"
       ],
-      "predicted": "either->dysp",
+      "predicted": "bronc->dysp",
       "correct": true,
-      "pass_idx": 8,
-      "center_node": "dysp"
+      "pass_idx": 3,
+      "center_node": "bronc"
     },
     {
       "edge": [
@@ -1422,8 +1392,28 @@
       ],
       "predicted": "bronc->dysp",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "bronc"
+      "pass_idx": 4,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "dysp"
     },
     {
       "edge": [
@@ -1443,6 +1433,16 @@
       "predicted": "bronc->dysp",
       "correct": true,
       "pass_idx": 9,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 7,
       "center_node": "bronc"
     }
   ],
@@ -1454,7 +1454,7 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 1,
       "center_node": "lung"
     },
     {
@@ -1464,7 +1464,27 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 1,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 4,
       "center_node": "lung"
     },
     {
@@ -1514,7 +1534,7 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 1,
+      "pass_idx": 7,
       "center_node": "smoke"
     },
     {
@@ -1524,68 +1544,8 @@
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 1,
+      "pass_idx": 7,
       "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "lung"
     },
     {
       "edge": [
@@ -1614,7 +1574,7 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 8,
+      "pass_idx": 3,
       "center_node": "lung"
     },
     {
@@ -1624,28 +1584,8 @@
       ],
       "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 8,
+      "pass_idx": 3,
       "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "smoke"
     },
     {
       "edge": [
@@ -1674,18 +1614,38 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 9,
-      "center_node": "lung"
+      "pass_idx": 2,
+      "center_node": "smoke"
     },
     {
       "edge": [
-        "lung",
-        "either"
+        "smoke",
+        "bronc"
       ],
-      "predicted": "lung->either",
+      "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 9,
-      "center_node": "lung"
+      "pass_idx": 2,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "smoke"
     },
     {
       "edge": [
@@ -1714,27 +1674,7 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 2,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "lung"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 0,
+      "pass_idx": 1,
       "center_node": "smoke"
     },
     {
@@ -1744,7 +1684,7 @@
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 0,
+      "pass_idx": 1,
       "center_node": "smoke"
     },
     {
@@ -1754,7 +1694,7 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 2,
+      "pass_idx": 5,
       "center_node": "smoke"
     },
     {
@@ -1764,7 +1704,27 @@
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 2,
+      "pass_idx": 5,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 6,
       "center_node": "smoke"
     },
     {
@@ -1789,63 +1749,43 @@
     },
     {
       "edge": [
-        "smoke",
-        "lung"
+        "tub",
+        "either"
       ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "smoke"
+      "predicted": "either->tub",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "either"
     },
     {
       "edge": [
-        "smoke",
-        "bronc"
+        "lung",
+        "either"
       ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "smoke"
+      "predicted": "either->lung",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "either"
     },
     {
       "edge": [
-        "smoke",
-        "lung"
+        "either",
+        "xray"
       ],
-      "predicted": "smoke->lung",
+      "predicted": "either->xray",
       "correct": true,
       "pass_idx": 5,
-      "center_node": "smoke"
+      "center_node": "either"
     },
     {
       "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
+        "either",
         "dysp"
       ],
-      "predicted": "bronc->dysp",
+      "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "bronc"
+      "pass_idx": 5,
+      "center_node": "either"
     },
     {
       "edge": [
@@ -1854,38 +1794,18 @@
       ],
       "predicted": "smoke->lung",
       "correct": true,
-      "pass_idx": 4,
-      "center_node": "smoke"
+      "pass_idx": 9,
+      "center_node": "lung"
     },
     {
       "edge": [
-        "smoke",
-        "bronc"
+        "lung",
+        "either"
       ],
-      "predicted": "smoke->bronc",
+      "predicted": "lung->either",
       "correct": true,
-      "pass_idx": 4,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "lung"
-      ],
-      "predicted": "smoke->lung",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "smoke"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "smoke"
+      "pass_idx": 9,
+      "center_node": "lung"
     },
     {
       "edge": [
@@ -1974,7 +1894,7 @@
       ],
       "predicted": "either->tub",
       "correct": false,
-      "pass_idx": 5,
+      "pass_idx": 9,
       "center_node": "either"
     },
     {
@@ -1984,148 +1904,148 @@
       ],
       "predicted": "either->lung",
       "correct": false,
+      "pass_idx": 9,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
       "pass_idx": 5,
-      "center_node": "either"
+      "center_node": "lung"
     },
     {
       "edge": [
-        "either",
-        "xray"
+        "lung",
+        "either"
       ],
-      "predicted": "either->xray",
+      "predicted": "lung->either",
       "correct": true,
       "pass_idx": 5,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "either"
+      "center_node": "lung"
     },
     {
       "edge": [
@@ -2165,86 +2085,6 @@
       "predicted": "either->dysp",
       "correct": true,
       "pass_idx": 7,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "tub",
-        "either"
-      ],
-      "predicted": "tub->either",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "lung",
-        "either"
-      ],
-      "predicted": "lung->either",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "xray"
-      ],
-      "predicted": "either->xray",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "either"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 4,
       "center_node": "either"
     },
     {
@@ -2254,7 +2094,7 @@
       ],
       "predicted": "either->tub",
       "correct": false,
-      "pass_idx": 9,
+      "pass_idx": 2,
       "center_node": "either"
     },
     {
@@ -2264,7 +2104,7 @@
       ],
       "predicted": "either->lung",
       "correct": false,
-      "pass_idx": 9,
+      "pass_idx": 2,
       "center_node": "either"
     },
     {
@@ -2274,7 +2114,7 @@
       ],
       "predicted": "either->xray",
       "correct": true,
-      "pass_idx": 9,
+      "pass_idx": 2,
       "center_node": "either"
     },
     {
@@ -2284,12 +2124,192 @@
       ],
       "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 9,
+      "pass_idx": 2,
       "center_node": "either"
     },
     {
       "edge": [
         "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "lung"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "smoke",
+        "lung"
+      ],
+      "predicted": "smoke->lung",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "smoke"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
         "bronc"
       ],
       "predicted": "smoke->bronc",
@@ -2314,7 +2334,7 @@
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 8,
       "center_node": "bronc"
     },
     {
@@ -2324,8 +2344,68 @@
       ],
       "predicted": "bronc->dysp",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 8,
       "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "smoke",
+        "bronc"
+      ],
+      "predicted": "smoke->bronc",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "bronc"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "dysp"
     },
     {
       "edge": [
@@ -2374,7 +2454,7 @@
       ],
       "predicted": "bronc->dysp",
       "correct": true,
-      "pass_idx": 1,
+      "pass_idx": 5,
       "center_node": "dysp"
     },
     {
@@ -2384,7 +2464,7 @@
       ],
       "predicted": "either->dysp",
       "correct": true,
-      "pass_idx": 1,
+      "pass_idx": 5,
       "center_node": "dysp"
     },
     {
@@ -2394,7 +2474,7 @@
       ],
       "predicted": "smoke->bronc",
       "correct": true,
-      "pass_idx": 7,
+      "pass_idx": 9,
       "center_node": "bronc"
     },
     {
@@ -2404,27 +2484,7 @@
       ],
       "predicted": "bronc->dysp",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 6,
+      "pass_idx": 9,
       "center_node": "bronc"
     },
     {
@@ -2449,46 +2509,6 @@
     },
     {
       "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
         "bronc",
         "dysp"
       ],
@@ -2506,66 +2526,6 @@
       "correct": true,
       "pass_idx": 4,
       "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "smoke",
-        "bronc"
-      ],
-      "predicted": "smoke->bronc",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "bronc"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "bronc"
     },
     {
       "edge": [
@@ -2585,26 +2545,6 @@
       "predicted": "either->dysp",
       "correct": true,
       "pass_idx": 6,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "bronc",
-        "dysp"
-      ],
-      "predicted": "bronc->dysp",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "dysp"
-    },
-    {
-      "edge": [
-        "either",
-        "dysp"
-      ],
-      "predicted": "either->dysp",
-      "correct": true,
-      "pass_idx": 8,
       "center_node": "dysp"
     },
     {
@@ -2634,6 +2574,26 @@
       ],
       "predicted": "bronc->dysp",
       "correct": true,
+      "pass_idx": 8,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "bronc",
+        "dysp"
+      ],
+      "predicted": "bronc->dysp",
+      "correct": true,
       "pass_idx": 9,
       "center_node": "dysp"
     },
@@ -2646,6 +2606,46 @@
       "correct": true,
       "pass_idx": 9,
       "center_node": "dysp"
+    },
+    {
+      "edge": [
+        "tub",
+        "either"
+      ],
+      "predicted": "tub->either",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "lung",
+        "either"
+      ],
+      "predicted": "lung->either",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "xray"
+      ],
+      "predicted": "either->xray",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "either"
+    },
+    {
+      "edge": [
+        "either",
+        "dysp"
+      ],
+      "predicted": "either->dysp",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "either"
     }
   ]
 }

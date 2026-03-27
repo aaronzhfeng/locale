@@ -22,7 +22,7 @@
     "n_test_edges": 17,
     "n_skeleton_edges": 17,
     "n_gt_edges": 17,
-    "timestamp": "2026-03-11 21:37:57",
+    "timestamp": "2026-03-26 01:33:06",
     "disguised_names": false,
     "enable_thinking": false,
     "ego_prompt_version": "v1",
@@ -33,11 +33,11 @@
     "pc_alpha": 0.05
   },
   "summary": {
-    "acc_per_edge": 0.788235294117647,
-    "acc_ego_graph": 0.7264705882352941,
-    "delta": -0.061764705882352944,
-    "delta_pp": -6.176470588235294,
-    "uncertain_per_edge": 0.05588235294117647,
+    "acc_per_edge": 0.7911764705882353,
+    "acc_ego_graph": 0.7352941176470589,
+    "delta": -0.05588235294117638,
+    "delta_pp": -5.588235294117638,
+    "uncertain_per_edge": 0.08235294117647059,
     "uncertain_ego_graph": 0.011764705882352941,
     "queries_per_edge": 340,
     "queries_ego_graph": 110,
@@ -142,7 +142,7 @@
             "Jnk",
             "Mek"
           ],
-          "separated_by": "PKA, PKC",
+          "separated_by": "Erk, PKA, PKC, Raf",
           "center_in_sep": true,
           "type": "non-collider"
         },
@@ -213,7 +213,7 @@
           "Raf"
         ]
       ],
-      "acc_per_edge": 0.8428571428571429,
+      "acc_per_edge": 0.8285714285714286,
       "acc_ego_graph": 0.8571428571428571
     },
     "PKC": {
@@ -231,7 +231,7 @@
             "Jnk",
             "Mek"
           ],
-          "separated_by": "PKA, PKC",
+          "separated_by": "Erk, PKA, PKC, Raf",
           "center_in_sep": true,
           "type": "non-collider"
         },
@@ -344,7 +344,7 @@
         ]
       ],
       "acc_per_edge": 0.975,
-      "acc_ego_graph": 0.825
+      "acc_ego_graph": 0.95
     },
     "Erk": {
       "degree": 3,
@@ -378,7 +378,7 @@
           "Erk"
         ]
       ],
-      "acc_per_edge": 0.7333333333333333,
+      "acc_per_edge": 0.7,
       "acc_ego_graph": 0.6666666666666666
     },
     "Raf": {
@@ -404,7 +404,7 @@
         ]
       ],
       "acc_per_edge": 1.0,
-      "acc_ego_graph": 0.9333333333333333
+      "acc_ego_graph": 0.8
     },
     "Akt": {
       "degree": 2,
@@ -423,7 +423,7 @@
           "Akt"
         ]
       ],
-      "acc_per_edge": 0.65,
+      "acc_per_edge": 0.6,
       "acc_ego_graph": 0.0
     },
     "Jnk": {
@@ -444,7 +444,7 @@
         ]
       ],
       "acc_per_edge": 1.0,
-      "acc_ego_graph": 0.8
+      "acc_ego_graph": 1.0
     },
     "P38": {
       "degree": 2,
@@ -463,8 +463,8 @@
           "P38"
         ]
       ],
-      "acc_per_edge": 1.0,
-      "acc_ego_graph": 0.9
+      "acc_per_edge": 0.95,
+      "acc_ego_graph": 0.7
     },
     "PIP2": {
       "degree": 2,
@@ -484,7 +484,7 @@
         ]
       ],
       "acc_per_edge": 0.5,
-      "acc_ego_graph": 0.4
+      "acc_ego_graph": 0.45
     },
     "PIP3": {
       "degree": 2,
@@ -503,7 +503,7 @@
           "PIP3"
         ]
       ],
-      "acc_per_edge": 0.45,
+      "acc_per_edge": 0.5,
       "acc_ego_graph": 0.2
     },
     "Plcg": {
@@ -523,248 +523,18 @@
           "PIP3"
         ]
       ],
-      "acc_per_edge": 0.2,
-      "acc_ego_graph": 0.6
+      "acc_per_edge": 0.4,
+      "acc_ego_graph": 0.65
     }
   },
   "raw_results_a": [
     {
       "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
         "PKA",
         "Erk"
       ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
+      "predicted": "Erk->PKA",
       "correct": false,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
       "pass_idx": 0,
       "center_node": "PKA"
     },
@@ -780,20 +550,60 @@
     },
     {
       "edge": [
-        "PKA",
-        "Raf"
+        "PKC",
+        "PKA"
       ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Raf"
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "PKC"
     },
     {
       "edge": [
         "PKA",
-        "P38"
+        "Erk"
       ],
-      "predicted": "PKA->P38",
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
       "correct": true,
       "pass_idx": 0,
       "center_node": "PKA"
@@ -811,9 +621,59 @@
     {
       "edge": [
         "PKA",
-        "Jnk"
+        "Akt"
       ],
-      "predicted": "PKA->Jnk",
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
       "correct": true,
       "pass_idx": 4,
       "center_node": "PKA"
@@ -821,11 +681,81 @@
     {
       "edge": [
         "PKA",
-        "P38"
+        "Raf"
       ],
-      "predicted": "PKA->P38",
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
       "correct": true,
       "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 4,
       "center_node": "PKA"
     },
     {
@@ -845,8 +775,48 @@
       ],
       "predicted": "PKA->P38",
       "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
       "pass_idx": 3,
-      "center_node": "P38"
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -865,28 +835,38 @@
       ],
       "predicted": "PKA->Erk",
       "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
       "pass_idx": 5,
-      "center_node": "Erk"
+      "center_node": "PKC"
     },
     {
       "edge": [
         "PKA",
-        "Raf"
+        "P38"
       ],
-      "predicted": "PKA->Raf",
+      "predicted": "PKA->P38",
       "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 2,
       "center_node": "PKA"
     },
     {
       "edge": [
         "PKA",
-        "Akt"
+        "Erk"
       ],
-      "predicted": "PKA->Akt",
+      "predicted": "PKA->Erk",
       "correct": true,
       "pass_idx": 5,
-      "center_node": "Akt"
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -901,12 +881,52 @@
     {
       "edge": [
         "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
         "Raf"
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 5,
-      "center_node": "Raf"
+      "pass_idx": 4,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -921,9 +941,79 @@
     {
       "edge": [
         "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "P38->PKA",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKA",
         "Mek"
       ],
       "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
       "correct": true,
       "pass_idx": 6,
       "center_node": "PKA"
@@ -935,8 +1025,8 @@
       ],
       "predicted": "PKA->Erk",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
+      "pass_idx": 7,
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -955,8 +1045,18 @@
       ],
       "predicted": "PKA->Akt",
       "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKA"
+      "pass_idx": 7,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Jnk"
     },
     {
       "edge": [
@@ -965,57 +1065,27 @@
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
+      "pass_idx": 7,
+      "center_node": "Raf"
     },
     {
       "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
+        "PKC",
+        "PKA"
       ],
       "predicted": "uncertain",
       "correct": false,
       "pass_idx": 9,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 5,
       "center_node": "PKC"
     },
     {
       "edge": [
         "PKA",
-        "Jnk"
+        "Erk"
       ],
-      "predicted": "PKA->Jnk",
+      "predicted": "PKA->Erk",
       "correct": true,
-      "pass_idx": 5,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 6,
+      "pass_idx": 8,
       "center_node": "PKA"
     },
     {
@@ -1025,97 +1095,7 @@
       ],
       "predicted": "PKA->Akt",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
       "pass_idx": 8,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 6,
       "center_node": "PKA"
     },
     {
@@ -1140,6 +1120,16 @@
     },
     {
       "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
         "PKA",
         "Raf"
       ],
@@ -1147,66 +1137,6 @@
       "correct": true,
       "pass_idx": 8,
       "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 8,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 2,
-      "center_node": "PKC"
     },
     {
       "edge": [
@@ -1221,31 +1151,51 @@
     {
       "edge": [
         "PKA",
-        "Raf"
+        "Erk"
       ],
-      "predicted": "PKA->Raf",
+      "predicted": "PKA->Erk",
       "correct": true,
       "pass_idx": 9,
-      "center_node": "Raf"
+      "center_node": "Erk"
     },
     {
       "edge": [
-        "PKC",
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
         "Mek"
       ],
-      "predicted": "PKC->Mek",
+      "predicted": "PKA->Mek",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKC"
+      "pass_idx": 8,
+      "center_node": "PKA"
     },
     {
       "edge": [
-        "PKC",
-        "PKA"
+        "PKA",
+        "P38"
       ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 3,
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 8,
       "center_node": "PKA"
     },
     {
@@ -1261,51 +1211,21 @@
     {
       "edge": [
         "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
         "Jnk"
       ],
       "predicted": "PKC->Jnk",
       "correct": true,
       "pass_idx": 0,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 2,
       "center_node": "PKC"
     },
     {
@@ -1325,28 +1245,18 @@
       ],
       "predicted": "PKC->Mek",
       "correct": true,
-      "pass_idx": 2,
+      "pass_idx": 0,
       "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Raf"
     },
     {
       "edge": [
         "PKC",
         "PKA"
       ],
-      "predicted": "PKA->PKC",
+      "predicted": "uncertain",
       "correct": false,
-      "pass_idx": 0,
-      "center_node": "PKC"
+      "pass_idx": 1,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -1354,6 +1264,26 @@
         "P38"
       ],
       "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
       "correct": true,
       "pass_idx": 0,
       "center_node": "PKC"
@@ -1371,69 +1301,29 @@
     {
       "edge": [
         "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
         "Mek"
       ],
       "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
       "correct": true,
       "pass_idx": 1,
-      "center_node": "P38"
+      "center_node": "Mek"
     },
     {
       "edge": [
         "PKC",
-        "Jnk"
+        "PKA"
       ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 4,
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
       "center_node": "PKC"
     },
     {
       "edge": [
         "PKC",
-        "P38"
+        "Mek"
       ],
-      "predicted": "PKC->P38",
+      "predicted": "PKC->Mek",
       "correct": true,
       "pass_idx": 2,
       "center_node": "PKC"
@@ -1445,278 +1335,8 @@
       ],
       "predicted": "PKC->Raf",
       "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 1,
       "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 8,
-      "center_node": "PKC"
     },
     {
       "edge": [
@@ -1725,8 +1345,348 @@
       ],
       "predicted": "Mek->PKC",
       "correct": false,
-      "pass_idx": 0,
+      "pass_idx": 3,
       "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "P38"
     },
     {
       "edge": [
@@ -1745,28 +1705,8 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
       "pass_idx": 0,
       "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
     },
     {
       "edge": [
@@ -1780,13 +1720,73 @@
     },
     {
       "edge": [
-        "PKC",
-        "P38"
+        "Raf",
+        "Mek"
       ],
-      "predicted": "PKC->P38",
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
       "correct": true,
       "pass_idx": 9,
-      "center_node": "P38"
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -1820,16 +1820,6 @@
     },
     {
       "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
         "Raf",
         "Mek"
       ],
@@ -1837,36 +1827,6 @@
       "correct": true,
       "pass_idx": 2,
       "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Raf"
     },
     {
       "edge": [
@@ -1880,12 +1840,22 @@
     },
     {
       "edge": [
-        "Raf",
+        "PKC",
         "Mek"
       ],
-      "predicted": "Raf->Mek",
+      "predicted": "PKC->Mek",
       "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 2,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 2,
       "center_node": "Mek"
     },
     {
@@ -1915,8 +1885,28 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
+      "pass_idx": 4,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
       "pass_idx": 5,
-      "center_node": "Erk"
+      "center_node": "Raf"
     },
     {
       "edge": [
@@ -1930,13 +1920,13 @@
     },
     {
       "edge": [
-        "Raf",
-        "Mek"
+        "Mek",
+        "Erk"
       ],
-      "predicted": "Raf->Mek",
+      "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "Mek"
+      "pass_idx": 5,
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -1945,8 +1935,8 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 5,
-      "center_node": "Raf"
+      "pass_idx": 4,
+      "center_node": "Mek"
     },
     {
       "edge": [
@@ -1967,16 +1957,6 @@
       "correct": true,
       "pass_idx": 4,
       "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
     },
     {
       "edge": [
@@ -1995,8 +1975,18 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "Raf"
+      "pass_idx": 6,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "Mek"
     },
     {
       "edge": [
@@ -2010,13 +2000,33 @@
     },
     {
       "edge": [
-        "PKA",
+        "PKC",
         "Mek"
       ],
-      "predicted": "PKA->Mek",
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
       "correct": true,
       "pass_idx": 6,
       "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Raf"
     },
     {
       "edge": [
@@ -2035,8 +2045,18 @@
       ],
       "predicted": "PKC->Mek",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "Mek"
+      "pass_idx": 7,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -2060,36 +2080,6 @@
     },
     {
       "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
         "Raf",
         "Mek"
       ],
@@ -2105,8 +2095,8 @@
       ],
       "predicted": "PKA->Mek",
       "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKA"
+      "pass_idx": 8,
+      "center_node": "Mek"
     },
     {
       "edge": [
@@ -2130,13 +2120,23 @@
     },
     {
       "edge": [
-        "PKC",
-        "Mek"
+        "Mek",
+        "Erk"
       ],
-      "predicted": "PKC->Mek",
+      "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKC"
+      "pass_idx": 1,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Erk",
+        "Akt"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -2150,22 +2150,42 @@
     },
     {
       "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "Mek->PKA",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
         "Erk",
         "Akt"
       ],
-      "predicted": "Erk->Akt",
-      "correct": true,
+      "predicted": "Akt->Erk",
+      "correct": false,
       "pass_idx": 1,
       "center_node": "Akt"
     },
     {
       "edge": [
-        "Erk",
-        "Akt"
+        "PKA",
+        "Erk"
       ],
-      "predicted": "Akt->Erk",
-      "correct": false,
-      "pass_idx": 2,
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 0,
       "center_node": "Erk"
     },
     {
@@ -2185,8 +2205,8 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "Mek"
+      "pass_idx": 2,
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -2195,17 +2215,17 @@
       ],
       "predicted": "PKA->Erk",
       "correct": true,
-      "pass_idx": 0,
+      "pass_idx": 2,
       "center_node": "Erk"
     },
     {
       "edge": [
-        "Mek",
-        "Erk"
+        "Erk",
+        "Akt"
       ],
-      "predicted": "Mek->Erk",
+      "predicted": "Erk->Akt",
       "correct": true,
-      "pass_idx": 2,
+      "pass_idx": 4,
       "center_node": "Erk"
     },
     {
@@ -2230,12 +2250,92 @@
     },
     {
       "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
         "Erk",
         "Akt"
       ],
-      "predicted": "Akt->Erk",
+      "predicted": "uncertain",
       "correct": false,
+      "pass_idx": 6,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "Erk",
+        "Akt"
+      ],
+      "predicted": "Erk->Akt",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
       "pass_idx": 4,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 6,
       "center_node": "Erk"
     },
     {
@@ -2245,7 +2345,7 @@
       ],
       "predicted": "uncertain",
       "correct": false,
-      "pass_idx": 7,
+      "pass_idx": 9,
       "center_node": "Akt"
     },
     {
@@ -2255,7 +2355,7 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 7,
       "center_node": "Mek"
     },
     {
@@ -2265,47 +2365,17 @@
       ],
       "predicted": "Erk->Akt",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 7,
       "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Mek"
     },
     {
       "edge": [
         "Erk",
         "Akt"
       ],
-      "predicted": "Akt->Erk",
+      "predicted": "uncertain",
       "correct": false,
-      "pass_idx": 6,
+      "pass_idx": 8,
       "center_node": "Erk"
     },
     {
@@ -2314,99 +2384,39 @@
         "Erk"
       ],
       "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
       "correct": true,
       "pass_idx": 7,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Erk",
-        "Akt"
-      ],
-      "predicted": "Erk->Akt",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Erk",
-        "Akt"
-      ],
-      "predicted": "Erk->Akt",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 5,
       "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Erk"
     },
     {
       "edge": [
@@ -2420,13 +2430,13 @@
     },
     {
       "edge": [
-        "PKA",
-        "Erk"
+        "Raf",
+        "Mek"
       ],
-      "predicted": "PKA->Erk",
+      "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
+      "pass_idx": 1,
+      "center_node": "Mek"
     },
     {
       "edge": [
@@ -2447,46 +2457,6 @@
       "correct": true,
       "pass_idx": 0,
       "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
     },
     {
       "edge": [
@@ -2505,8 +2475,8 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 3,
-      "center_node": "Mek"
+      "pass_idx": 2,
+      "center_node": "Raf"
     },
     {
       "edge": [
@@ -2515,7 +2485,17 @@
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 2,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 0,
       "center_node": "Raf"
     },
     {
@@ -2545,8 +2525,8 @@
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
+      "pass_idx": 2,
+      "center_node": "Raf"
     },
     {
       "edge": [
@@ -2555,48 +2535,18 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 3,
       "center_node": "Mek"
     },
     {
       "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
         "PKA",
         "Raf"
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 3,
       "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Raf"
     },
     {
       "edge": [
@@ -2610,6 +2560,66 @@
     },
     {
       "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
         "Raf",
         "Mek"
       ],
@@ -2625,8 +2635,8 @@
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
+      "pass_idx": 6,
+      "center_node": "Raf"
     },
     {
       "edge": [
@@ -2644,46 +2654,16 @@
         "Raf"
       ],
       "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
       "correct": true,
       "pass_idx": 8,
       "center_node": "Raf"
     },
     {
       "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
         "Erk",
         "Akt"
       ],
-      "predicted": "Akt->Erk",
+      "predicted": "uncertain",
       "correct": false,
       "pass_idx": 0,
       "center_node": "Akt"
@@ -2695,8 +2675,28 @@
       ],
       "predicted": "PKC->Raf",
       "correct": true,
+      "pass_idx": 8,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
       "pass_idx": 7,
       "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Mek"
     },
     {
       "edge": [
@@ -2704,6 +2704,16 @@
         "Raf"
       ],
       "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
       "correct": true,
       "pass_idx": 8,
       "center_node": "Raf"
@@ -2720,17 +2730,17 @@
     },
     {
       "edge": [
-        "PKC",
-        "Raf"
+        "Erk",
+        "Akt"
       ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Raf"
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "Akt"
     },
     {
       "edge": [
-        "Erk",
+        "PKA",
         "Akt"
       ],
       "predicted": "uncertain",
@@ -2743,10 +2753,10 @@
         "Erk",
         "Akt"
       ],
-      "predicted": "Akt->Erk",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "Erk"
+      "predicted": "Erk->Akt",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Akt"
     },
     {
       "edge": [
@@ -2755,8 +2765,8 @@
       ],
       "predicted": "PKA->Akt",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "Akt"
+      "pass_idx": 1,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -2770,6 +2780,16 @@
     },
     {
       "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
         "Erk",
         "Akt"
       ],
@@ -2780,23 +2800,13 @@
     },
     {
       "edge": [
-        "PKA",
+        "Erk",
         "Akt"
       ],
-      "predicted": "PKA->Akt",
+      "predicted": "Erk->Akt",
       "correct": true,
       "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Akt"
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -2805,8 +2815,8 @@
       ],
       "predicted": "Akt->Erk",
       "correct": false,
-      "pass_idx": 4,
-      "center_node": "Akt"
+      "pass_idx": 5,
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -2823,9 +2833,9 @@
         "Erk",
         "Akt"
       ],
-      "predicted": "Akt->Erk",
+      "predicted": "uncertain",
       "correct": false,
-      "pass_idx": 5,
+      "pass_idx": 7,
       "center_node": "Erk"
     },
     {
@@ -2833,8 +2843,8 @@
         "Erk",
         "Akt"
       ],
-      "predicted": "Akt->Erk",
-      "correct": false,
+      "predicted": "Erk->Akt",
+      "correct": true,
       "pass_idx": 6,
       "center_node": "Akt"
     },
@@ -2843,20 +2853,10 @@
         "PKA",
         "Akt"
       ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "Erk",
-        "Akt"
-      ],
-      "predicted": "Akt->Erk",
+      "predicted": "uncertain",
       "correct": false,
-      "pass_idx": 7,
-      "center_node": "Erk"
+      "pass_idx": 8,
+      "center_node": "Akt"
     },
     {
       "edge": [
@@ -2873,20 +2873,40 @@
         "Erk",
         "Akt"
       ],
-      "predicted": "Erk->Akt",
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
       "correct": true,
-      "pass_idx": 9,
-      "center_node": "Erk"
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
     },
     {
       "edge": [
         "Erk",
         "Akt"
       ],
-      "predicted": "Erk->Akt",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Akt"
+      "predicted": "Akt->Erk",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -2905,28 +2925,18 @@
       ],
       "predicted": "PKA->Akt",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
       "pass_idx": 9,
       "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Jnk"
     },
     {
       "edge": [
@@ -2936,6 +2946,116 @@
       "predicted": "PKA->Jnk",
       "correct": true,
       "pass_idx": 0,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 6,
       "center_node": "Jnk"
     },
     {
@@ -2945,126 +3065,6 @@
       ],
       "predicted": "Jnk->PKA",
       "correct": false,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
       "pass_idx": 7,
       "center_node": "PKA"
     },
@@ -3077,36 +3077,6 @@
       "correct": true,
       "pass_idx": 7,
       "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Jnk"
     },
     {
       "edge": [
@@ -3125,158 +3095,38 @@
       ],
       "predicted": "PKC->Jnk",
       "correct": true,
+      "pass_idx": 8,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
       "pass_idx": 9,
       "center_node": "PKC"
     },
     {
       "edge": [
         "PKA",
-        "P38"
+        "Jnk"
       ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
+      "predicted": "PKA->Jnk",
       "correct": true,
       "pass_idx": 8,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
+      "center_node": "Jnk"
     },
     {
       "edge": [
@@ -3284,49 +3134,9 @@
         "P38"
       ],
       "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
       "correct": true,
       "pass_idx": 0,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "Plcg"
+      "center_node": "P38"
     },
     {
       "edge": [
@@ -3335,8 +3145,178 @@
       ],
       "predicted": "P38->PKA",
       "correct": false,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
       "pass_idx": 9,
       "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PIP2"
     },
     {
       "edge": [
@@ -3350,13 +3330,23 @@
     },
     {
       "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
         "Plcg",
         "PIP2"
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 2,
-      "center_node": "PIP2"
+      "pass_idx": 1,
+      "center_node": "Plcg"
     },
     {
       "edge": [
@@ -3383,8 +3373,18 @@
         "Plcg",
         "PIP2"
       ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
       "pass_idx": 3,
       "center_node": "Plcg"
     },
@@ -3400,31 +3400,11 @@
     },
     {
       "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 3,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
         "Plcg",
         "PIP2"
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 4,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
       "pass_idx": 4,
       "center_node": "PIP2"
     },
@@ -3445,8 +3425,38 @@
       ],
       "predicted": "PIP2->PIP3",
       "correct": false,
-      "pass_idx": 5,
+      "pass_idx": 3,
       "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "PIP2->Plcg",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PIP2"
     },
     {
       "edge": [
@@ -3460,13 +3470,143 @@
     },
     {
       "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
         "Plcg",
         "PIP2"
       ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
+      "predicted": "PIP2->Plcg",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
       "pass_idx": 8,
       "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "PIP3->Plcg",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Plcg"
     },
     {
       "edge": [
@@ -3475,78 +3615,8 @@
       ],
       "predicted": "uncertain",
       "correct": false,
-      "pass_idx": 3,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
       "pass_idx": 7,
       "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 6,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 8,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "PIP3"
     },
     {
       "edge": [
@@ -3555,57 +3625,17 @@
       ],
       "predicted": "Plcg->PIP3",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 0,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
       "pass_idx": 4,
       "center_node": "PIP3"
     },
     {
       "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
         "PIP3",
         "PIP2"
       ],
       "predicted": "PIP2->PIP3",
       "correct": false,
-      "pass_idx": 2,
+      "pass_idx": 4,
       "center_node": "PIP3"
     },
     {
@@ -3620,26 +3650,6 @@
     },
     {
       "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 4,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 3,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
         "Plcg",
         "PIP3"
       ],
@@ -3647,26 +3657,6 @@
       "correct": true,
       "pass_idx": 6,
       "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 6,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "Plcg"
     },
     {
       "edge": [
@@ -3680,6 +3670,16 @@
     },
     {
       "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
         "Plcg",
         "PIP3"
       ],
@@ -3690,13 +3690,13 @@
     },
     {
       "edge": [
-        "PIP3",
-        "PIP2"
+        "Plcg",
+        "PIP3"
       ],
-      "predicted": "PIP2->PIP3",
+      "predicted": "PIP3->Plcg",
       "correct": false,
-      "pass_idx": 7,
-      "center_node": "PIP2"
+      "pass_idx": 9,
+      "center_node": "Plcg"
     },
     {
       "edge": [
@@ -3707,36 +3707,6 @@
       "correct": false,
       "pass_idx": 8,
       "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "PIP2"
     },
     {
       "edge": [
@@ -3750,6 +3720,16 @@
     },
     {
       "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
         "Plcg",
         "PIP3"
       ],
@@ -3760,6 +3740,16 @@
     },
     {
       "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
         "Plcg",
         "PIP2"
       ],
@@ -3767,6 +3757,16 @@
       "correct": true,
       "pass_idx": 1,
       "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Plcg"
     },
     {
       "edge": [
@@ -3791,6 +3791,26 @@
     {
       "edge": [
         "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
         "PIP3"
       ],
       "predicted": "PIP3->Plcg",
@@ -3801,46 +3821,6 @@
     {
       "edge": [
         "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
-      "pass_idx": 4,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
         "PIP3"
       ],
       "predicted": "PIP3->Plcg",
@@ -3855,8 +3835,8 @@
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 5,
-      "center_node": "PIP2"
+      "pass_idx": 4,
+      "center_node": "Plcg"
     },
     {
       "edge": [
@@ -3865,8 +3845,18 @@
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 7,
+      "pass_idx": 5,
       "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PIP3"
     },
     {
       "edge": [
@@ -3883,17 +3873,7 @@
         "Plcg",
         "PIP3"
       ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
+      "predicted": "uncertain",
       "correct": false,
       "pass_idx": 8,
       "center_node": "Plcg"
@@ -3905,7 +3885,7 @@
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 9,
+      "pass_idx": 7,
       "center_node": "PIP2"
     },
     {
@@ -3913,8 +3893,18 @@
         "Plcg",
         "PIP3"
       ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
       "pass_idx": 8,
       "center_node": "Plcg"
     },
@@ -3927,6 +3917,16 @@
       "correct": true,
       "pass_idx": 9,
       "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PIP2"
     }
   ],
   "raw_results_b": [
@@ -3962,46 +3962,6 @@
     },
     {
       "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
         "Erk",
         "Akt"
       ],
@@ -4037,46 +3997,6 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 2,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
       "pass_idx": 1,
       "center_node": "Mek"
     },
@@ -4118,6 +4038,206 @@
       "predicted": "Mek->Erk",
       "correct": true,
       "pass_idx": 5,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 9,
       "center_node": "Mek"
     },
     {
@@ -4127,137 +4247,7 @@
       ],
       "predicted": "Mek->PKA",
       "correct": false,
-      "pass_idx": 5,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "Mek->PKA",
-      "correct": false,
-      "pass_idx": 3,
+      "pass_idx": 9,
       "center_node": "Mek"
     },
     {
@@ -4267,46 +4257,6 @@
       ],
       "predicted": "Mek->PKC",
       "correct": false,
-      "pass_idx": 3,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "Mek->PKA",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "Mek"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
       "pass_idx": 9,
       "center_node": "Mek"
     },
@@ -4322,23 +4272,163 @@
     },
     {
       "edge": [
-        "Mek",
-        "Erk"
+        "PKC",
+        "Jnk"
       ],
-      "predicted": "Mek->Erk",
+      "predicted": "PKC->Jnk",
       "correct": true,
-      "pass_idx": 7,
-      "center_node": "Mek"
+      "pass_idx": 5,
+      "center_node": "PKC"
     },
     {
       "edge": [
-        "PKA",
+        "PKC",
         "Mek"
       ],
-      "predicted": "PKA->Mek",
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
       "correct": true,
       "pass_idx": 7,
-      "center_node": "Mek"
+      "center_node": "PKC"
     },
     {
       "edge": [
@@ -4348,6 +4438,426 @@
       "predicted": "PKC->Mek",
       "correct": true,
       "pass_idx": 7,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 0,
       "center_node": "Mek"
     },
     {
@@ -4357,8 +4867,78 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 7,
+      "pass_idx": 0,
       "center_node": "Mek"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -4367,7 +4947,7 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 2,
       "center_node": "Mek"
     },
     {
@@ -4377,7 +4957,7 @@
       ],
       "predicted": "PKA->Mek",
       "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 2,
       "center_node": "Mek"
     },
     {
@@ -4387,7 +4967,7 @@
       ],
       "predicted": "PKC->Mek",
       "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 2,
       "center_node": "Mek"
     },
     {
@@ -4397,58 +4977,78 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 2,
       "center_node": "Mek"
     },
     {
       "edge": [
-        "PKC",
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
         "Jnk"
       ],
-      "predicted": "PKC->Jnk",
+      "predicted": "PKA->Jnk",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKC"
+      "pass_idx": 4,
+      "center_node": "PKA"
     },
     {
       "edge": [
-        "PKC",
+        "PKA",
         "Mek"
       ],
-      "predicted": "PKC->Mek",
+      "predicted": "PKA->Mek",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKC"
+      "pass_idx": 4,
+      "center_node": "PKA"
     },
     {
       "edge": [
-        "PKC",
+        "PKA",
         "P38"
       ],
-      "predicted": "PKC->P38",
+      "predicted": "PKA->P38",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKC"
+      "pass_idx": 4,
+      "center_node": "PKA"
     },
     {
       "edge": [
         "PKC",
         "PKA"
       ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKC"
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "PKA"
     },
     {
       "edge": [
-        "PKC",
+        "PKA",
         "Raf"
       ],
-      "predicted": "PKC->Raf",
+      "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKC"
+      "pass_idx": 4,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -4457,7 +5057,7 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 8,
+      "pass_idx": 6,
       "center_node": "Mek"
     },
     {
@@ -4465,9 +5065,9 @@
         "PKA",
         "Mek"
       ],
-      "predicted": "Mek->PKA",
-      "correct": false,
-      "pass_idx": 8,
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 6,
       "center_node": "Mek"
     },
     {
@@ -4475,9 +5075,9 @@
         "PKC",
         "Mek"
       ],
-      "predicted": "Mek->PKC",
-      "correct": false,
-      "pass_idx": 8,
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 6,
       "center_node": "Mek"
     },
     {
@@ -4485,553 +5085,13 @@
         "Raf",
         "Mek"
       ],
-      "predicted": "Mek->Raf",
-      "correct": false,
-      "pass_idx": 8,
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 6,
       "center_node": "Mek"
     },
     {
       "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Mek"
-      ],
-      "predicted": "PKC->Mek",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKC->PKA",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKC"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
         "PKA",
         "Akt"
       ],
@@ -5098,426 +5158,6 @@
       "predicted": "PKA->Raf",
       "correct": true,
       "pass_idx": 8,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 7,
       "center_node": "PKA"
     },
     {
@@ -5549,76 +5189,6 @@
       "correct": false,
       "pass_idx": 2,
       "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "PKA->Akt",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "PKA->Erk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Mek"
-      ],
-      "predicted": "PKA->Mek",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKC",
-        "PKA"
-      ],
-      "predicted": "PKA->PKC",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "PKA"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "PKA"
     },
     {
       "edge": [
@@ -5685,20 +5255,30 @@
         "Erk",
         "Akt"
       ],
-      "predicted": "Akt->Erk",
-      "correct": false,
-      "pass_idx": 1,
-      "center_node": "Akt"
+      "predicted": "Erk->Akt",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Erk"
     },
     {
       "edge": [
         "PKA",
-        "Akt"
+        "Erk"
       ],
-      "predicted": "uncertain",
+      "predicted": "Erk->PKA",
       "correct": false,
-      "pass_idx": 1,
-      "center_node": "Akt"
+      "pass_idx": 5,
+      "center_node": "Erk"
     },
     {
       "edge": [
@@ -5732,23 +5312,43 @@
     },
     {
       "edge": [
-        "Raf",
-        "Mek"
+        "PKC",
+        "Jnk"
       ],
-      "predicted": "Raf->Mek",
+      "predicted": "PKC->Jnk",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "Raf"
+      "pass_idx": 4,
+      "center_node": "PKC"
     },
     {
       "edge": [
-        "PKA",
-        "Raf"
+        "PKC",
+        "Mek"
       ],
-      "predicted": "PKA->Raf",
+      "predicted": "PKC->Mek",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "Raf"
+      "pass_idx": 4,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PKC"
     },
     {
       "edge": [
@@ -5757,28 +5357,48 @@
       ],
       "predicted": "PKC->Raf",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "Raf"
+      "pass_idx": 4,
+      "center_node": "PKC"
     },
     {
       "edge": [
-        "Raf",
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
         "Mek"
       ],
-      "predicted": "Raf->Mek",
+      "predicted": "PKC->Mek",
       "correct": true,
       "pass_idx": 0,
-      "center_node": "Raf"
+      "center_node": "PKC"
     },
     {
       "edge": [
-        "PKA",
-        "Raf"
+        "PKC",
+        "P38"
       ],
-      "predicted": "PKA->Raf",
+      "predicted": "PKC->P38",
       "correct": true,
       "pass_idx": 0,
-      "center_node": "Raf"
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "PKC"
     },
     {
       "edge": [
@@ -5788,7 +5408,7 @@
       "predicted": "PKC->Raf",
       "correct": true,
       "pass_idx": 0,
-      "center_node": "Raf"
+      "center_node": "PKC"
     },
     {
       "edge": [
@@ -5797,7 +5417,7 @@
       ],
       "predicted": "Erk->Akt",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 7,
       "center_node": "Erk"
     },
     {
@@ -5807,7 +5427,7 @@
       ],
       "predicted": "Mek->Erk",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 7,
       "center_node": "Erk"
     },
     {
@@ -5817,8 +5437,238 @@
       ],
       "predicted": "Erk->PKA",
       "correct": false,
-      "pass_idx": 5,
+      "pass_idx": 7,
       "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "Erk",
+        "Akt"
+      ],
+      "predicted": "Erk->Akt",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "Erk->PKA",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Erk",
+        "Akt"
+      ],
+      "predicted": "Erk->Akt",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "Mek",
+        "Erk"
+      ],
+      "predicted": "Mek->Erk",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "Erk->PKA",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "Erk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Mek"
+      ],
+      "predicted": "PKC->Mek",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKC->PKA",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKC"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Raf"
     },
     {
       "edge": [
@@ -5845,60 +5695,50 @@
         "Erk",
         "Akt"
       ],
-      "predicted": "Erk->Akt",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Erk"
+      "predicted": "Akt->Erk",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Akt"
     },
     {
       "edge": [
         "PKA",
-        "Erk"
-      ],
-      "predicted": "Erk->PKA",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Erk",
         "Akt"
       ],
-      "predicted": "Erk->Akt",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Erk"
+      "predicted": "Akt->PKA",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Akt"
     },
     {
       "edge": [
-        "Mek",
-        "Erk"
+        "Raf",
+        "Mek"
       ],
-      "predicted": "Mek->Erk",
+      "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 9,
-      "center_node": "Erk"
+      "pass_idx": 6,
+      "center_node": "Raf"
     },
     {
       "edge": [
         "PKA",
-        "Erk"
+        "Raf"
       ],
-      "predicted": "Erk->PKA",
-      "correct": false,
-      "pass_idx": 9,
-      "center_node": "Erk"
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "Raf"
     },
     {
       "edge": [
@@ -5922,93 +5762,23 @@
     },
     {
       "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
         "Erk",
         "Akt"
       ],
-      "predicted": "Erk->Akt",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Mek",
-        "Erk"
-      ],
-      "predicted": "Mek->Erk",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Erk"
-      ],
-      "predicted": "Erk->PKA",
+      "predicted": "Akt->Erk",
       "correct": false,
-      "pass_idx": 8,
-      "center_node": "Erk"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
       "pass_idx": 4,
-      "center_node": "Raf"
+      "center_node": "Akt"
     },
     {
       "edge": [
         "PKA",
-        "Raf"
+        "Akt"
       ],
-      "predicted": "PKA->Raf",
-      "correct": true,
+      "predicted": "Akt->PKA",
+      "correct": false,
       "pass_idx": 4,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Raf"
+      "center_node": "Akt"
     },
     {
       "edge": [
@@ -6017,7 +5787,7 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 4,
       "center_node": "Raf"
     },
     {
@@ -6027,7 +5797,7 @@
       ],
       "predicted": "Raf->PKA",
       "correct": false,
-      "pass_idx": 3,
+      "pass_idx": 4,
       "center_node": "Raf"
     },
     {
@@ -6037,67 +5807,147 @@
       ],
       "predicted": "Raf->PKC",
       "correct": false,
-      "pass_idx": 3,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "Erk",
-        "Akt"
-      ],
-      "predicted": "Akt->Erk",
-      "correct": false,
-      "pass_idx": 3,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "Akt->PKA",
-      "correct": false,
-      "pass_idx": 3,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "Erk",
-        "Akt"
-      ],
-      "predicted": "Akt->Erk",
-      "correct": false,
       "pass_idx": 4,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "PKC->Raf",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "Raf",
+        "Mek"
+      ],
+      "predicted": "Raf->Mek",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "Raf->PKA",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Raf"
+      ],
+      "predicted": "Raf->PKC",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "Raf"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "Erk",
+        "Akt"
+      ],
+      "predicted": "Akt->Erk",
+      "correct": false,
+      "pass_idx": 3,
       "center_node": "Akt"
     },
     {
@@ -6107,7 +5957,7 @@
       ],
       "predicted": "Akt->PKA",
       "correct": false,
-      "pass_idx": 4,
+      "pass_idx": 3,
       "center_node": "Akt"
     },
     {
@@ -6117,7 +5967,7 @@
       ],
       "predicted": "Raf->Mek",
       "correct": true,
-      "pass_idx": 6,
+      "pass_idx": 8,
       "center_node": "Raf"
     },
     {
@@ -6127,7 +5977,7 @@
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 6,
+      "pass_idx": 8,
       "center_node": "Raf"
     },
     {
@@ -6137,37 +5987,7 @@
       ],
       "predicted": "PKC->Raf",
       "correct": true,
-      "pass_idx": 6,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "Raf",
-        "Mek"
-      ],
-      "predicted": "Raf->Mek",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Raf"
-      ],
-      "predicted": "PKA->Raf",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 7,
+      "pass_idx": 8,
       "center_node": "Raf"
     },
     {
@@ -6192,13 +6012,63 @@
     },
     {
       "edge": [
-        "Raf",
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
         "Mek"
       ],
-      "predicted": "Raf->Mek",
+      "predicted": "PKA->Mek",
       "correct": true,
-      "pass_idx": 8,
-      "center_node": "Raf"
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -6207,38 +6077,8 @@
       ],
       "predicted": "PKA->Raf",
       "correct": true,
-      "pass_idx": 8,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Raf"
-      ],
-      "predicted": "PKC->Raf",
-      "correct": true,
-      "pass_idx": 8,
-      "center_node": "Raf"
-    },
-    {
-      "edge": [
-        "Erk",
-        "Akt"
-      ],
-      "predicted": "Akt->Erk",
-      "correct": false,
       "pass_idx": 7,
-      "center_node": "Akt"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Akt"
-      ],
-      "predicted": "Akt->PKA",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "Akt"
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -6262,6 +6102,96 @@
     },
     {
       "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "Erk",
+        "Akt"
+      ],
+      "predicted": "Akt->Erk",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "Akt->PKA",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "Akt"
+    },
+    {
+      "edge": [
         "Raf",
         "Mek"
       ],
@@ -6275,8 +6205,8 @@
         "PKA",
         "Raf"
       ],
-      "predicted": "PKA->Raf",
-      "correct": true,
+      "predicted": "Raf->PKA",
+      "correct": false,
       "pass_idx": 9,
       "center_node": "Raf"
     },
@@ -6285,8 +6215,8 @@
         "PKC",
         "Raf"
       ],
-      "predicted": "PKC->Raf",
-      "correct": true,
+      "predicted": "Raf->PKC",
+      "correct": false,
       "pass_idx": 9,
       "center_node": "Raf"
     },
@@ -6297,7 +6227,7 @@
       ],
       "predicted": "Akt->Erk",
       "correct": false,
-      "pass_idx": 8,
+      "pass_idx": 9,
       "center_node": "Akt"
     },
     {
@@ -6307,7 +6237,7 @@
       ],
       "predicted": "Akt->PKA",
       "correct": false,
-      "pass_idx": 8,
+      "pass_idx": 9,
       "center_node": "Akt"
     },
     {
@@ -6317,7 +6247,7 @@
       ],
       "predicted": "Akt->Erk",
       "correct": false,
-      "pass_idx": 9,
+      "pass_idx": 8,
       "center_node": "Akt"
     },
     {
@@ -6327,8 +6257,78 @@
       ],
       "predicted": "Akt->PKA",
       "correct": false,
-      "pass_idx": 9,
+      "pass_idx": 8,
       "center_node": "Akt"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Akt"
+      ],
+      "predicted": "PKA->Akt",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Erk"
+      ],
+      "predicted": "PKA->Erk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Mek"
+      ],
+      "predicted": "PKA->Mek",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKC",
+        "PKA"
+      ],
+      "predicted": "PKA->PKC",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "PKA"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Raf"
+      ],
+      "predicted": "PKA->Raf",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PKA"
     },
     {
       "edge": [
@@ -6348,6 +6348,26 @@
       "predicted": "PKC->Jnk",
       "correct": true,
       "pass_idx": 0,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 2,
       "center_node": "Jnk"
     },
     {
@@ -6377,6 +6397,26 @@
       ],
       "predicted": "PKA->Jnk",
       "correct": true,
+      "pass_idx": 3,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
       "pass_idx": 4,
       "center_node": "Jnk"
     },
@@ -6397,7 +6437,7 @@
       ],
       "predicted": "PKA->Jnk",
       "correct": true,
-      "pass_idx": 3,
+      "pass_idx": 5,
       "center_node": "Jnk"
     },
     {
@@ -6407,27 +6447,7 @@
       ],
       "predicted": "PKC->Jnk",
       "correct": true,
-      "pass_idx": 3,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "Jnk->PKA",
-      "correct": false,
-      "pass_idx": 2,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "Jnk->PKC",
-      "correct": false,
-      "pass_idx": 2,
+      "pass_idx": 5,
       "center_node": "Jnk"
     },
     {
@@ -6437,7 +6457,7 @@
       ],
       "predicted": "PKA->Jnk",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 8,
       "center_node": "Jnk"
     },
     {
@@ -6447,7 +6467,27 @@
       ],
       "predicted": "PKC->Jnk",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 8,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKA",
+        "Jnk"
+      ],
+      "predicted": "PKA->Jnk",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "Jnk"
+    },
+    {
+      "edge": [
+        "PKC",
+        "Jnk"
+      ],
+      "predicted": "PKC->Jnk",
+      "correct": true,
+      "pass_idx": 9,
       "center_node": "Jnk"
     },
     {
@@ -6493,70 +6533,10 @@
     {
       "edge": [
         "PKA",
-        "Jnk"
+        "P38"
       ],
-      "predicted": "Jnk->PKA",
+      "predicted": "P38->PKA",
       "correct": false,
-      "pass_idx": 8,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "Jnk->PKC",
-      "correct": false,
-      "pass_idx": 8,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "Jnk"
-      ],
-      "predicted": "PKA->Jnk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKC",
-        "Jnk"
-      ],
-      "predicted": "PKC->Jnk",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Jnk"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
       "pass_idx": 0,
       "center_node": "P38"
     },
@@ -6565,8 +6545,8 @@
         "PKC",
         "P38"
       ],
-      "predicted": "PKC->P38",
-      "correct": true,
+      "predicted": "P38->PKC",
+      "correct": false,
       "pass_idx": 0,
       "center_node": "P38"
     },
@@ -6597,6 +6577,26 @@
       ],
       "predicted": "PKA->P38",
       "correct": true,
+      "pass_idx": 3,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
       "pass_idx": 2,
       "center_node": "P38"
     },
@@ -6617,7 +6617,7 @@
       ],
       "predicted": "PKA->P38",
       "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 9,
       "center_node": "P38"
     },
     {
@@ -6627,47 +6627,7 @@
       ],
       "predicted": "PKC->P38",
       "correct": true,
-      "pass_idx": 4,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 7,
+      "pass_idx": 9,
       "center_node": "P38"
     },
     {
@@ -6692,6 +6652,66 @@
     },
     {
       "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "P38->PKA",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "P38->PKC",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKA",
+        "P38"
+      ],
+      "predicted": "PKA->P38",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
+        "PKC",
+        "P38"
+      ],
+      "predicted": "PKC->P38",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "P38"
+    },
+    {
+      "edge": [
         "PIP3",
         "PIP2"
       ],
@@ -6705,8 +6725,8 @@
         "Plcg",
         "PIP2"
       ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
+      "predicted": "Plcg->PIP2",
+      "correct": true,
       "pass_idx": 0,
       "center_node": "PIP2"
     },
@@ -6752,26 +6772,6 @@
     },
     {
       "edge": [
-        "PKA",
-        "P38"
-      ],
-      "predicted": "PKA->P38",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
-        "PKC",
-        "P38"
-      ],
-      "predicted": "PKC->P38",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "P38"
-    },
-    {
-      "edge": [
         "PIP3",
         "PIP2"
       ],
@@ -6797,7 +6797,67 @@
       ],
       "predicted": "PIP2->PIP3",
       "correct": false,
+      "pass_idx": 3,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
       "pass_idx": 6,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 7,
       "center_node": "PIP2"
     },
     {
@@ -6807,67 +6867,7 @@
       ],
       "predicted": "PIP2->Plcg",
       "correct": false,
-      "pass_idx": 6,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 3,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 5,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 5,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 4,
-      "center_node": "PIP2"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 4,
+      "pass_idx": 7,
       "center_node": "PIP2"
     },
     {
@@ -6897,7 +6897,7 @@
       ],
       "predicted": "PIP2->PIP3",
       "correct": false,
-      "pass_idx": 7,
+      "pass_idx": 5,
       "center_node": "PIP2"
     },
     {
@@ -6907,7 +6907,7 @@
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 7,
+      "pass_idx": 5,
       "center_node": "PIP2"
     },
     {
@@ -6929,6 +6929,46 @@
       "correct": true,
       "pass_idx": 8,
       "center_node": "PIP2"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "PIP3->Plcg",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "PIP3"
     },
     {
       "edge": [
@@ -6957,46 +6997,6 @@
       ],
       "predicted": "PIP2->PIP3",
       "correct": false,
-      "pass_idx": 1,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 0,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "uncertain",
-      "correct": false,
-      "pass_idx": 0,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
       "pass_idx": 4,
       "center_node": "PIP3"
     },
@@ -7017,107 +7017,7 @@
       ],
       "predicted": "PIP2->PIP3",
       "correct": false,
-      "pass_idx": 2,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 5,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
-      "pass_idx": 5,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
       "pass_idx": 3,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 3,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 8,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
-      "pass_idx": 8,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "PIP3"
-    },
-    {
-      "edge": [
-        "PIP3",
-        "PIP2"
-      ],
-      "predicted": "PIP2->PIP3",
-      "correct": false,
-      "pass_idx": 6,
       "center_node": "PIP3"
     },
     {
@@ -7127,6 +7027,146 @@
       ],
       "predicted": "uncertain",
       "correct": false,
+      "pass_idx": 3,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "PIP2->Plcg",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "PIP2->Plcg",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "PIP2->Plcg",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "PIP3",
+        "PIP2"
+      ],
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "PIP3"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
       "pass_idx": 6,
       "center_node": "PIP3"
     },
@@ -7157,67 +7197,7 @@
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 1,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 1,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
       "pass_idx": 4,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 4,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
-      "pass_idx": 2,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 2,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 3,
       "center_node": "Plcg"
     },
     {
@@ -7227,58 +7207,18 @@
       ],
       "predicted": "PIP3->Plcg",
       "correct": false,
-      "pass_idx": 3,
+      "pass_idx": 4,
       "center_node": "Plcg"
     },
     {
       "edge": [
-        "Plcg",
+        "PIP3",
         "PIP2"
       ],
-      "predicted": "PIP2->Plcg",
-      "correct": false,
-      "pass_idx": 6,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 6,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 7,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP3"
-      ],
-      "predicted": "PIP3->Plcg",
-      "correct": false,
-      "pass_idx": 7,
-      "center_node": "Plcg"
-    },
-    {
-      "edge": [
-        "Plcg",
-        "PIP2"
-      ],
-      "predicted": "PIP2->Plcg",
+      "predicted": "PIP2->PIP3",
       "correct": false,
       "pass_idx": 8,
-      "center_node": "Plcg"
+      "center_node": "PIP3"
     },
     {
       "edge": [
@@ -7288,27 +7228,27 @@
       "predicted": "Plcg->PIP3",
       "correct": true,
       "pass_idx": 8,
-      "center_node": "Plcg"
+      "center_node": "PIP3"
     },
     {
       "edge": [
-        "Plcg",
+        "PIP3",
         "PIP2"
       ],
-      "predicted": "Plcg->PIP2",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Plcg"
+      "predicted": "PIP2->PIP3",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "PIP3"
     },
     {
       "edge": [
         "Plcg",
         "PIP3"
       ],
-      "predicted": "Plcg->PIP3",
-      "correct": true,
-      "pass_idx": 9,
-      "center_node": "Plcg"
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "PIP3"
     },
     {
       "edge": [
@@ -7317,7 +7257,7 @@
       ],
       "predicted": "Plcg->PIP2",
       "correct": true,
-      "pass_idx": 5,
+      "pass_idx": 7,
       "center_node": "Plcg"
     },
     {
@@ -7327,7 +7267,67 @@
       ],
       "predicted": "uncertain",
       "correct": false,
-      "pass_idx": 5,
+      "pass_idx": 7,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "Plcg->PIP2",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "PIP2->Plcg",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP2"
+      ],
+      "predicted": "PIP2->Plcg",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "Plcg"
+    },
+    {
+      "edge": [
+        "Plcg",
+        "PIP3"
+      ],
+      "predicted": "Plcg->PIP3",
+      "correct": true,
+      "pass_idx": 9,
       "center_node": "Plcg"
     }
   ]

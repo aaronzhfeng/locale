@@ -1,0 +1,317 @@
+{
+  "reconciled": {
+    "('BirthAsphyxia', 'Disease')": {
+      "direction": "Disease->BirthAsphyxia",
+      "method": "single_endpoint",
+      "endpoint": "Disease"
+    },
+    "('Age', 'Disease')": {
+      "direction": "Age->Disease",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Age->Disease",
+        "degree": "Disease->Age",
+        "constraints": "Disease->Age",
+        "hard_flip": "Disease->Age"
+      },
+      "endpoints": [
+        {
+          "node": "Disease",
+          "dir": "Disease->Age",
+          "margin": 0.0,
+          "degree": 8
+        },
+        {
+          "node": "Age",
+          "dir": "Age->Disease",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    },
+    "('Disease', 'LVH')": {
+      "direction": "Disease->LVH",
+      "method": "agreement"
+    },
+    "('Disease', 'DuctFlow')": {
+      "direction": "Disease->DuctFlow",
+      "method": "agreement"
+    },
+    "('CardiacMixing', 'Disease')": {
+      "direction": "Disease->CardiacMixing",
+      "method": "agreement"
+    },
+    "('Disease', 'LungParench')": {
+      "direction": "Disease->LungParench",
+      "method": "agreement"
+    },
+    "('Disease', 'LungFlow')": {
+      "direction": "Disease->LungFlow",
+      "method": "agreement"
+    },
+    "('Disease', 'Sick')": {
+      "direction": "Disease->Sick",
+      "method": "agreement"
+    },
+    "('HypoxiaInO2', 'LungParench')": {
+      "direction": "LungParench->HypoxiaInO2",
+      "method": "agreement"
+    },
+    "('CO2', 'LungParench')": {
+      "direction": "LungParench->CO2",
+      "method": "agreement"
+    },
+    "('ChestXray', 'LungParench')": {
+      "direction": "LungParench->ChestXray",
+      "method": "agreement"
+    },
+    "('Grunting', 'LungParench')": {
+      "direction": "LungParench->Grunting",
+      "method": "agreement"
+    },
+    "('HypoxiaInO2', 'LowerBodyO2')": {
+      "direction": "HypoxiaInO2->LowerBodyO2",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "HypoxiaInO2->LowerBodyO2",
+        "degree": "HypoxiaInO2->LowerBodyO2",
+        "constraints": "HypoxiaInO2->LowerBodyO2",
+        "hard_flip": "HypoxiaInO2->LowerBodyO2"
+      },
+      "endpoints": [
+        {
+          "node": "HypoxiaInO2",
+          "dir": "HypoxiaInO2->LowerBodyO2",
+          "margin": 0.6,
+          "degree": 4
+        },
+        {
+          "node": "LowerBodyO2",
+          "dir": "LowerBodyO2->HypoxiaInO2",
+          "margin": 0.4,
+          "degree": 2
+        }
+      ]
+    },
+    "('HypoxiaInO2', 'RUQO2')": {
+      "direction": "HypoxiaInO2->RUQO2",
+      "method": "single_endpoint",
+      "endpoint": "HypoxiaInO2"
+    },
+    "('CardiacMixing', 'HypoxiaInO2')": {
+      "direction": "CardiacMixing->HypoxiaInO2",
+      "method": "agreement"
+    },
+    "('HypDistrib', 'LowerBodyO2')": {
+      "direction": "HypDistrib->LowerBodyO2",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "HypDistrib->LowerBodyO2",
+        "degree": "HypDistrib->LowerBodyO2",
+        "constraints": "HypDistrib->LowerBodyO2",
+        "hard_flip": "HypDistrib->LowerBodyO2"
+      },
+      "endpoints": [
+        {
+          "node": "HypDistrib",
+          "dir": "HypDistrib->LowerBodyO2",
+          "margin": 1.0,
+          "degree": 3
+        },
+        {
+          "node": "LowerBodyO2",
+          "dir": "LowerBodyO2->HypDistrib",
+          "margin": 0.4,
+          "degree": 2
+        }
+      ]
+    },
+    "('DuctFlow', 'HypDistrib')": {
+      "direction": "DuctFlow->HypDistrib",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "DuctFlow->HypDistrib",
+        "degree": "HypDistrib->DuctFlow",
+        "constraints": "HypDistrib->DuctFlow",
+        "hard_flip": "DuctFlow->HypDistrib"
+      },
+      "endpoints": [
+        {
+          "node": "HypDistrib",
+          "dir": "HypDistrib->DuctFlow",
+          "margin": 0.6,
+          "degree": 3
+        },
+        {
+          "node": "DuctFlow",
+          "dir": "DuctFlow->HypDistrib",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('CardiacMixing', 'HypDistrib')": {
+      "direction": "CardiacMixing->HypDistrib",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CardiacMixing->HypDistrib",
+        "degree": "CardiacMixing->HypDistrib",
+        "constraints": "CardiacMixing->HypDistrib",
+        "hard_flip": "CardiacMixing->HypDistrib"
+      },
+      "endpoints": [
+        {
+          "node": "HypDistrib",
+          "dir": "HypDistrib->CardiacMixing",
+          "margin": 0.4,
+          "degree": 3
+        },
+        {
+          "node": "CardiacMixing",
+          "dir": "CardiacMixing->HypDistrib",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('ChestXray', 'XrayReport')": {
+      "direction": "ChestXray->XrayReport",
+      "method": "single_endpoint",
+      "endpoint": "ChestXray"
+    },
+    "('ChestXray', 'LungFlow')": {
+      "direction": "LungFlow->ChestXray",
+      "method": "agreement"
+    },
+    "('Grunting', 'GruntingReport')": {
+      "direction": "Grunting->GruntingReport",
+      "method": "single_endpoint",
+      "endpoint": "Grunting"
+    },
+    "('Grunting', 'Sick')": {
+      "direction": "Grunting->Sick",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Grunting->Sick",
+        "degree": "Grunting->Sick",
+        "constraints": "Grunting->Sick",
+        "hard_flip": "Grunting->Sick"
+      },
+      "endpoints": [
+        {
+          "node": "Grunting",
+          "dir": "Grunting->Sick",
+          "margin": 0.6,
+          "degree": 3
+        },
+        {
+          "node": "Sick",
+          "dir": "Sick->Grunting",
+          "margin": 0.6,
+          "degree": 3
+        }
+      ]
+    },
+    "('Age', 'Sick')": {
+      "direction": "Age->Sick",
+      "method": "agreement"
+    },
+    "('CO2', 'CO2Report')": {
+      "direction": "CO2->CO2Report",
+      "method": "single_endpoint",
+      "endpoint": "CO2"
+    },
+    "('LVH', 'LVHreport')": {
+      "direction": "LVH->LVHreport",
+      "method": "single_endpoint",
+      "endpoint": "LVH"
+    }
+  },
+  "evaluation": {
+    "correct": 21,
+    "total": 25,
+    "accuracy": 0.84,
+    "agreements": 13,
+    "disagreements": 6,
+    "by_method": {
+      "single_endpoint": {
+        "correct": 5,
+        "total": 6
+      },
+      "disagreement_confidence": {
+        "correct": 4,
+        "total": 6
+      },
+      "agreement": {
+        "correct": 12,
+        "total": 13
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 21,
+      "total": 25,
+      "accuracy": 0.84,
+      "agreements": 13,
+      "disagreements": 6,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 5,
+          "total": 6
+        },
+        "disagreement_confidence": {
+          "correct": 4,
+          "total": 6
+        },
+        "agreement": {
+          "correct": 12,
+          "total": 13
+        }
+      }
+    },
+    "constraints": {
+      "correct": 21,
+      "total": 25,
+      "accuracy": 0.84,
+      "agreements": 13,
+      "disagreements": 6,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 5,
+          "total": 6
+        },
+        "disagreement_confidence": {
+          "correct": 4,
+          "total": 6
+        },
+        "agreement": {
+          "correct": 12,
+          "total": 13
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 22,
+      "total": 25,
+      "accuracy": 0.88,
+      "agreements": 13,
+      "disagreements": 6,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 5,
+          "total": 6
+        },
+        "disagreement_confidence": {
+          "correct": 5,
+          "total": 6
+        },
+        "agreement": {
+          "correct": 12,
+          "total": 13
+        }
+      }
+    }
+  },
+  "n_unique_edges": 25
+}

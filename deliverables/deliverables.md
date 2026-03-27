@@ -19,5 +19,27 @@
 ## Report
 Not started.
 
-## Paper
-Not started.
+## Paper (NeurIPS 2026 format, 6-page body)
+
+| Item | Status | Path |
+|------|--------|------|
+| main.tex | Draft complete (6pp body + appendix) | `paper/main.tex` |
+| neurips_2026.sty | Copied from template | `paper/neurips_2026.sty` |
+| checklist.tex | Template (all TODOs) | `paper/checklist.tex` |
+| references.bib | Stub placeholders only | `paper/references.bib` |
+| citations_to_find.txt | 18 papers listed | `paper/citations_to_find.txt` |
+| figures/ | Empty (scripts needed) | `paper/figures/` |
+| PDF | Not compiled (no pdflatex on this machine) | — |
+
+### Blocking items
+- **Bibliography**: all 18 bib entries are PLACEHOLDER stubs. Human must verify on Google Scholar and replace. Then run `check_bib_hallucinations.py --strict` from brainstorm-00-core.
+- **Compilation**: needs `pdflatex` + `bibtex` installed. Sequence: `pdflatex main && bibtex main && pdflatex main && pdflatex main`.
+- **Checklist**: NeurIPS checklist (checklist.tex) is all TODOs — must be filled before submission.
+- **Figures**: no figures yet. Pipeline diagram, NCO bar chart, and context sensitivity plot would strengthen the paper.
+
+### Data provenance
+All numbers in tables trace to experiment results:
+- Table 1 (12-seed F1): XN-030 experiment note
+- Table 2 (NCO validation): XN-022 experiment note
+- Table 3 (phase ablation): generate_paper_tables.py + phase4_results_nco.json files
+- Appendix tables: XN-029 (context), XN-022 (per-network NCO), generate_paper_tables.py (queries)

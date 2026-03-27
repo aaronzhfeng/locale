@@ -1,0 +1,820 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/mve_27b_hepar2_10k_k10_debiased_s2/mve_results.json",
+    "network": "hepar2",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "Cirrhosis": {
+      "degree": 10,
+      "n_feasible": 16,
+      "n_total": 1024,
+      "hard_flips": [],
+      "p1_correct": 10,
+      "p2_correct": 10,
+      "n_edges": 10,
+      "directions": {
+        "fibrosis": "fibrosis->Cirrhosis",
+        "Steatosis": "Steatosis->Cirrhosis",
+        "edema": "Cirrhosis->edema",
+        "inr": "Cirrhosis->inr",
+        "spleen": "Cirrhosis->spleen",
+        "spiders": "Cirrhosis->spiders",
+        "edge": "Cirrhosis->edge",
+        "irregular_liver": "Cirrhosis->irregular_liver",
+        "palms": "Cirrhosis->palms",
+        "carcinoma": "Cirrhosis->carcinoma"
+      }
+    },
+    "ChHepatitis": {
+      "degree": 9,
+      "n_feasible": 136,
+      "n_total": 512,
+      "hard_flips": [],
+      "p1_correct": 8,
+      "p2_correct": 8,
+      "n_edges": 9,
+      "directions": {
+        "vh_amn": "ChHepatitis->vh_amn",
+        "injections": "injections->ChHepatitis",
+        "fibrosis": "ChHepatitis->fibrosis",
+        "phosphatase": "ChHepatitis->phosphatase",
+        "ESR": "ChHepatitis->ESR",
+        "alt": "ChHepatitis->alt",
+        "ast": "ChHepatitis->ast",
+        "hbsag": "ChHepatitis->hbsag",
+        "hbeag": "ChHepatitis->hbeag"
+      }
+    },
+    "PBC": {
+      "degree": 7,
+      "n_feasible": 9,
+      "n_total": 128,
+      "hard_flips": [],
+      "p1_correct": 7,
+      "p2_correct": 7,
+      "n_edges": 7,
+      "directions": {
+        "sex": "sex->PBC",
+        "age": "age->PBC",
+        "bilirubin": "PBC->bilirubin",
+        "ama": "PBC->ama",
+        "ESR": "PBC->ESR",
+        "ggtp": "PBC->ggtp",
+        "cholesterol": "PBC->cholesterol"
+      }
+    },
+    "bilirubin": {
+      "degree": 6,
+      "n_feasible": 16,
+      "n_total": 64,
+      "hard_flips": [
+        [
+          "gallstones",
+          1,
+          0
+        ],
+        [
+          "PBC",
+          1,
+          0
+        ],
+        [
+          "Hyperbilirubinemia",
+          1,
+          0
+        ],
+        [
+          "itching",
+          1,
+          0
+        ],
+        [
+          "skin",
+          1,
+          0
+        ],
+        [
+          "jaundice",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 3,
+      "n_edges": 6,
+      "directions": {
+        "gallstones": "bilirubin->gallstones",
+        "PBC": "bilirubin->PBC",
+        "Hyperbilirubinemia": "bilirubin->Hyperbilirubinemia",
+        "itching": "bilirubin->itching",
+        "skin": "bilirubin->skin",
+        "jaundice": "bilirubin->jaundice"
+      }
+    },
+    "gallstones": {
+      "degree": 5,
+      "n_feasible": 17,
+      "n_total": 32,
+      "hard_flips": [
+        [
+          "choledocholithotomy",
+          1,
+          0
+        ],
+        [
+          "bilirubin",
+          1,
+          0
+        ],
+        [
+          "fat",
+          1,
+          0
+        ],
+        [
+          "pressure_ruq",
+          1,
+          0
+        ],
+        [
+          "amylase",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "choledocholithotomy": "gallstones->choledocholithotomy",
+        "bilirubin": "gallstones->bilirubin",
+        "fat": "gallstones->fat",
+        "pressure_ruq": "gallstones->pressure_ruq",
+        "amylase": "gallstones->amylase"
+      }
+    },
+    "Steatosis": {
+      "degree": 5,
+      "n_feasible": 12,
+      "n_total": 32,
+      "hard_flips": [
+        [
+          "alcoholism",
+          1,
+          0
+        ],
+        [
+          "Cirrhosis",
+          1,
+          0
+        ],
+        [
+          "triglycerides",
+          1,
+          0
+        ],
+        [
+          "alt",
+          1,
+          0
+        ],
+        [
+          "ast",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "alcoholism": "Steatosis->alcoholism",
+        "Cirrhosis": "Steatosis->Cirrhosis",
+        "triglycerides": "Steatosis->triglycerides",
+        "alt": "Steatosis->alt",
+        "ast": "Steatosis->ast"
+      }
+    },
+    "vh_amn": {
+      "degree": 4,
+      "n_feasible": 12,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "ChHepatitis",
+          1,
+          0
+        ],
+        [
+          "hbsag",
+          1,
+          0
+        ],
+        [
+          "hbsag_anti",
+          1,
+          0
+        ],
+        [
+          "hbc_anti",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "ChHepatitis": "vh_amn->ChHepatitis",
+        "hbsag": "vh_amn->hbsag",
+        "hbsag_anti": "vh_amn->hbsag_anti",
+        "hbc_anti": "vh_amn->hbc_anti"
+      }
+    },
+    "injections": {
+      "degree": 4,
+      "n_feasible": 12,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "hospital",
+          1,
+          0
+        ],
+        [
+          "surgery",
+          1,
+          0
+        ],
+        [
+          "choledocholithotomy",
+          1,
+          0
+        ],
+        [
+          "ChHepatitis",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 4,
+      "directions": {
+        "hospital": "injections->hospital",
+        "surgery": "injections->surgery",
+        "choledocholithotomy": "injections->choledocholithotomy",
+        "ChHepatitis": "injections->ChHepatitis"
+      }
+    },
+    "Hyperbilirubinemia": {
+      "degree": 4,
+      "n_feasible": 8,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "age",
+          1,
+          0
+        ],
+        [
+          "bilirubin",
+          1,
+          0
+        ],
+        [
+          "hepatomegaly",
+          1,
+          0
+        ],
+        [
+          "ggtp",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 3,
+      "n_edges": 4,
+      "directions": {
+        "age": "Hyperbilirubinemia->age",
+        "bilirubin": "Hyperbilirubinemia->bilirubin",
+        "hepatomegaly": "Hyperbilirubinemia->hepatomegaly",
+        "ggtp": "Hyperbilirubinemia->ggtp"
+      }
+    },
+    "RHepatitis": {
+      "degree": 4,
+      "n_feasible": 12,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "fatigue",
+          1,
+          0
+        ],
+        [
+          "phosphatase",
+          1,
+          0
+        ],
+        [
+          "ast",
+          1,
+          0
+        ],
+        [
+          "anorexia",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "fatigue": "RHepatitis->fatigue",
+        "phosphatase": "RHepatitis->phosphatase",
+        "ast": "RHepatitis->ast",
+        "anorexia": "RHepatitis->anorexia"
+      }
+    },
+    "ast": {
+      "degree": 4,
+      "n_feasible": 16,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "THepatitis",
+          1,
+          0
+        ],
+        [
+          "ChHepatitis",
+          1,
+          0
+        ],
+        [
+          "Steatosis",
+          1,
+          0
+        ],
+        [
+          "RHepatitis",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 4,
+      "directions": {
+        "THepatitis": "ast->THepatitis",
+        "ChHepatitis": "ast->ChHepatitis",
+        "Steatosis": "ast->Steatosis",
+        "RHepatitis": "ast->RHepatitis"
+      }
+    },
+    "THepatitis": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "alcoholism",
+          1,
+          0
+        ],
+        [
+          "phosphatase",
+          1,
+          0
+        ],
+        [
+          "ast",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "alcoholism": "THepatitis->alcoholism",
+        "phosphatase": "THepatitis->phosphatase",
+        "ast": "THepatitis->ast"
+      }
+    },
+    "phosphatase": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "THepatitis",
+          1,
+          0
+        ],
+        [
+          "ChHepatitis",
+          1,
+          0
+        ],
+        [
+          "RHepatitis",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 3,
+      "directions": {
+        "THepatitis": "phosphatase->THepatitis",
+        "ChHepatitis": "phosphatase->ChHepatitis",
+        "RHepatitis": "phosphatase->RHepatitis"
+      }
+    },
+    "encephalopathy": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "urea",
+          1,
+          0
+        ],
+        [
+          "density",
+          1,
+          0
+        ],
+        [
+          "consciousness",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "urea": "encephalopathy->urea",
+        "density": "encephalopathy->density",
+        "consciousness": "encephalopathy->consciousness"
+      }
+    },
+    "alcoholism": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "THepatitis",
+          1,
+          0
+        ],
+        [
+          "Steatosis",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "THepatitis": "alcoholism->THepatitis",
+        "Steatosis": "alcoholism->Steatosis"
+      }
+    },
+    "hospital": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "injections",
+          1,
+          0
+        ],
+        [
+          "transfusion",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "injections": "hospital->injections",
+        "transfusion": "hospital->transfusion"
+      }
+    },
+    "surgery": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "injections",
+          1,
+          0
+        ],
+        [
+          "transfusion",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "injections": "surgery->injections",
+        "transfusion": "surgery->transfusion"
+      }
+    },
+    "choledocholithotomy": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "gallstones",
+          1,
+          0
+        ],
+        [
+          "injections",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "gallstones": "choledocholithotomy->gallstones",
+        "injections": "choledocholithotomy->injections"
+      }
+    },
+    "transfusion": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "hospital",
+          1,
+          0
+        ],
+        [
+          "surgery",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "hospital": "transfusion->hospital",
+        "surgery": "transfusion->surgery"
+      }
+    },
+    "age": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "PBC",
+          1,
+          0
+        ],
+        [
+          "Hyperbilirubinemia",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "PBC": "age->PBC",
+        "Hyperbilirubinemia": "age->Hyperbilirubinemia"
+      }
+    },
+    "fibrosis": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "ChHepatitis",
+          1,
+          0
+        ],
+        [
+          "Cirrhosis",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "ChHepatitis": "fibrosis->ChHepatitis",
+        "Cirrhosis": "fibrosis->Cirrhosis"
+      }
+    },
+    "inr": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "Cirrhosis",
+          1,
+          0
+        ],
+        [
+          "bleeding",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "Cirrhosis": "inr->Cirrhosis",
+        "bleeding": "inr->bleeding"
+      }
+    },
+    "bleeding": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "platelet",
+          1,
+          0
+        ],
+        [
+          "inr",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "platelet": "bleeding->platelet",
+        "inr": "bleeding->inr"
+      }
+    },
+    "hepatomegaly": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "Hyperbilirubinemia",
+          1,
+          0
+        ],
+        [
+          "hepatalgia",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "Hyperbilirubinemia": "hepatomegaly->Hyperbilirubinemia",
+        "hepatalgia": "hepatomegaly->hepatalgia"
+      }
+    },
+    "ESR": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "ChHepatitis",
+          1,
+          0
+        ],
+        [
+          "PBC",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "ChHepatitis": "ESR->ChHepatitis",
+        "PBC": "ESR->PBC"
+      }
+    },
+    "alt": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "ChHepatitis",
+          1,
+          0
+        ],
+        [
+          "Steatosis",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "ChHepatitis": "alt->ChHepatitis",
+        "Steatosis": "alt->Steatosis"
+      }
+    },
+    "ggtp": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "PBC",
+          1,
+          0
+        ],
+        [
+          "Hyperbilirubinemia",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "PBC": "ggtp->PBC",
+        "Hyperbilirubinemia": "ggtp->Hyperbilirubinemia"
+      }
+    },
+    "hbsag": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "vh_amn",
+          1,
+          0
+        ],
+        [
+          "ChHepatitis",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "vh_amn": "hbsag->vh_amn",
+        "ChHepatitis": "hbsag->ChHepatitis"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 99,
+    "phase1_correct": 25,
+    "phase2_correct": 66,
+    "phase1_accuracy": 25.3,
+    "phase2_accuracy": 66.7,
+    "delta_pp": 41.4,
+    "hard_flips": 73,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

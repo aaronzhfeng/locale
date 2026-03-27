@@ -1,0 +1,948 @@
+{
+  "reconciled": {
+    "('NetPrint', 'PC2PRT')": {
+      "direction": "NetPrint->PC2PRT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "NetPrint->PC2PRT",
+        "degree": "PC2PRT->NetPrint",
+        "constraints": "PC2PRT->NetPrint",
+        "hard_flip": "PC2PRT->NetPrint"
+      },
+      "endpoints": [
+        {
+          "node": "PC2PRT",
+          "dir": "PC2PRT->NetPrint",
+          "margin": 0.0,
+          "degree": 7
+        },
+        {
+          "node": "NetPrint",
+          "dir": "NetPrint->PC2PRT",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    },
+    "('PC2PRT', 'PrtDataOut')": {
+      "direction": "PrtDataOut->PC2PRT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PrtDataOut->PC2PRT",
+        "degree": "PC2PRT->PrtDataOut",
+        "constraints": "PC2PRT->PrtDataOut",
+        "hard_flip": "PC2PRT->PrtDataOut"
+      },
+      "endpoints": [
+        {
+          "node": "PC2PRT",
+          "dir": "PC2PRT->PrtDataOut",
+          "margin": 0.0,
+          "degree": 7
+        },
+        {
+          "node": "PrtDataOut",
+          "dir": "PrtDataOut->PC2PRT",
+          "margin": 0.6,
+          "degree": 4
+        }
+      ]
+    },
+    "('NetOK', 'PC2PRT')": {
+      "direction": "NetOK->PC2PRT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "NetOK->PC2PRT",
+        "degree": "PC2PRT->NetOK",
+        "constraints": "PC2PRT->NetOK",
+        "hard_flip": "PC2PRT->NetOK"
+      },
+      "endpoints": [
+        {
+          "node": "PC2PRT",
+          "dir": "PC2PRT->NetOK",
+          "margin": 0.0,
+          "degree": 7
+        },
+        {
+          "node": "NetOK",
+          "dir": "NetOK->PC2PRT",
+          "margin": 1.0,
+          "degree": 4
+        }
+      ]
+    },
+    "('LclOK', 'PC2PRT')": {
+      "direction": "LclOK->PC2PRT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "LclOK->PC2PRT",
+        "degree": "PC2PRT->LclOK",
+        "constraints": "PC2PRT->LclOK",
+        "hard_flip": "PC2PRT->LclOK"
+      },
+      "endpoints": [
+        {
+          "node": "PC2PRT",
+          "dir": "PC2PRT->LclOK",
+          "margin": 0.0,
+          "degree": 7
+        },
+        {
+          "node": "LclOK",
+          "dir": "LclOK->PC2PRT",
+          "margin": 0.4,
+          "degree": 4
+        }
+      ]
+    },
+    "('DSApplctn', 'PC2PRT')": {
+      "direction": "PC2PRT->DSApplctn",
+      "method": "single_endpoint",
+      "endpoint": "PC2PRT"
+    },
+    "('PC2PRT', 'PrtData')": {
+      "direction": "PC2PRT->PrtData",
+      "method": "agreement"
+    },
+    "('PC2PRT', 'Problem1')": {
+      "direction": "PC2PRT->Problem1",
+      "method": "agreement"
+    },
+    "('DeskPrntSpd', 'PrtMem')": {
+      "direction": "PrtMem->DeskPrntSpd",
+      "method": "agreement"
+    },
+    "('CmpltPgPrntd', 'PrtMem')": {
+      "direction": "PrtMem->CmpltPgPrntd",
+      "method": "agreement"
+    },
+    "('NnPSGrphc', 'PrtMem')": {
+      "direction": "PrtMem->NnPSGrphc",
+      "method": "agreement"
+    },
+    "('PSGRAPHIC', 'PrtMem')": {
+      "direction": "PrtMem->PSGRAPHIC",
+      "method": "agreement"
+    },
+    "('NtGrbld', 'PrtMem')": {
+      "direction": "PrtMem->NtGrbld",
+      "method": "agreement"
+    },
+    "('PrtMem', 'PrtStatMem')": {
+      "direction": "PrtMem->PrtStatMem",
+      "method": "single_endpoint",
+      "endpoint": "PrtMem"
+    },
+    "('PrtData', 'PrtOn')": {
+      "direction": "PrtOn->PrtData",
+      "method": "agreement"
+    },
+    "('PrtData', 'PrtTimeOut')": {
+      "direction": "PrtTimeOut->PrtData",
+      "method": "agreement"
+    },
+    "('FllCrrptdBffr', 'PrtData')": {
+      "direction": "PrtData->FllCrrptdBffr",
+      "method": "agreement"
+    },
+    "('PrtData', 'TnrSpply')": {
+      "direction": "PrtData->TnrSpply",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PrtData->TnrSpply",
+        "degree": "TnrSpply->PrtData",
+        "constraints": "TnrSpply->PrtData",
+        "hard_flip": "PrtData->TnrSpply"
+      },
+      "endpoints": [
+        {
+          "node": "PrtData",
+          "dir": "TnrSpply->PrtData",
+          "margin": 0.6,
+          "degree": 6
+        },
+        {
+          "node": "TnrSpply",
+          "dir": "PrtData->TnrSpply",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('Problem1', 'PrtData')": {
+      "direction": "PrtData->Problem1",
+      "method": "agreement"
+    },
+    "('Problem1', 'PrtOn')": {
+      "direction": "PrtOn->Problem1",
+      "method": "agreement"
+    },
+    "('Problem1', 'PrtTimeOut')": {
+      "direction": "PrtTimeOut->Problem1",
+      "method": "agreement"
+    },
+    "('FllCrrptdBffr', 'Problem1')": {
+      "direction": "FllCrrptdBffr->Problem1",
+      "method": "agreement"
+    },
+    "('Problem1', 'TnrSpply')": {
+      "direction": "TnrSpply->Problem1",
+      "method": "agreement"
+    },
+    "('AppOK', 'GDIIN')": {
+      "direction": "AppOK->GDIIN",
+      "method": "agreement"
+    },
+    "('DataFile', 'GDIIN')": {
+      "direction": "DataFile->GDIIN",
+      "method": "agreement"
+    },
+    "('GDIIN', 'PrtSpool')": {
+      "direction": "PrtSpool->GDIIN",
+      "method": "agreement"
+    },
+    "('EMFOK', 'GDIIN')": {
+      "direction": "EMFOK->GDIIN",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "EMFOK->GDIIN",
+        "degree": "GDIIN->EMFOK",
+        "constraints": "GDIIN->EMFOK",
+        "hard_flip": "EMFOK->GDIIN"
+      },
+      "endpoints": [
+        {
+          "node": "GDIIN",
+          "dir": "GDIIN->EMFOK",
+          "margin": 0.4,
+          "degree": 5
+        },
+        {
+          "node": "EMFOK",
+          "dir": "EMFOK->GDIIN",
+          "margin": 0.8,
+          "degree": 3
+        }
+      ]
+    },
+    "('GDIIN', 'GDIOUT')": {
+      "direction": "GDIIN->GDIOUT",
+      "method": "agreement"
+    },
+    "('NetOK', 'NtwrkCnfg')": {
+      "direction": "NtwrkCnfg->NetOK",
+      "method": "agreement"
+    },
+    "('NtGrbld', 'NtwrkCnfg')": {
+      "direction": "NtwrkCnfg->NtGrbld",
+      "method": "agreement"
+    },
+    "('NtwrkCnfg', 'REPEAT')": {
+      "direction": "NtwrkCnfg->REPEAT",
+      "method": "agreement"
+    },
+    "('NtwrkCnfg', 'PrtIcon')": {
+      "direction": "NtwrkCnfg->PrtIcon",
+      "method": "agreement"
+    },
+    "('NtSpd', 'NtwrkCnfg')": {
+      "direction": "NtwrkCnfg->NtSpd",
+      "method": "agreement"
+    },
+    "('CmpltPgPrntd', 'PgOrnttnOK')": {
+      "direction": "PgOrnttnOK->CmpltPgPrntd",
+      "method": "agreement"
+    },
+    "('CmpltPgPrntd', 'PrntngArOK')": {
+      "direction": "PrntngArOK->CmpltPgPrntd",
+      "method": "single_endpoint",
+      "endpoint": "CmpltPgPrntd"
+    },
+    "('CmpltPgPrntd', 'IncmpltPS')": {
+      "direction": "IncmpltPS->CmpltPgPrntd",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "IncmpltPS->CmpltPgPrntd",
+        "degree": "CmpltPgPrntd->IncmpltPS",
+        "constraints": "CmpltPgPrntd->IncmpltPS",
+        "hard_flip": "CmpltPgPrntd->IncmpltPS"
+      },
+      "endpoints": [
+        {
+          "node": "CmpltPgPrntd",
+          "dir": "CmpltPgPrntd->IncmpltPS",
+          "margin": 0.4,
+          "degree": 5
+        },
+        {
+          "node": "IncmpltPS",
+          "dir": "IncmpltPS->CmpltPgPrntd",
+          "margin": 0.8,
+          "degree": 2
+        }
+      ]
+    },
+    "('CmpltPgPrntd', 'Problem3')": {
+      "direction": "CmpltPgPrntd->Problem3",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CmpltPgPrntd->Problem3",
+        "degree": "CmpltPgPrntd->Problem3",
+        "constraints": "CmpltPgPrntd->Problem3",
+        "hard_flip": "Problem3->CmpltPgPrntd"
+      },
+      "endpoints": [
+        {
+          "node": "CmpltPgPrntd",
+          "dir": "CmpltPgPrntd->Problem3",
+          "margin": 1.0,
+          "degree": 5
+        },
+        {
+          "node": "Problem3",
+          "dir": "Problem3->CmpltPgPrntd",
+          "margin": 0.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('GDIOUT', 'PrtDataOut')": {
+      "direction": "PrtDataOut->GDIOUT",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PrtDataOut->GDIOUT",
+        "degree": "PrtDataOut->GDIOUT",
+        "constraints": "PrtDataOut->GDIOUT",
+        "hard_flip": "GDIOUT->PrtDataOut"
+      },
+      "endpoints": [
+        {
+          "node": "PrtDataOut",
+          "dir": "PrtDataOut->GDIOUT",
+          "margin": 0.6,
+          "degree": 4
+        },
+        {
+          "node": "GDIOUT",
+          "dir": "GDIOUT->PrtDataOut",
+          "margin": 0.4,
+          "degree": 3
+        }
+      ]
+    },
+    "('PrtDataOut', 'PrtSel')": {
+      "direction": "PrtDataOut->PrtSel",
+      "method": "single_endpoint",
+      "endpoint": "PrtDataOut"
+    },
+    "('PrtDataOut', 'PrtFile')": {
+      "direction": "PrtDataOut->PrtFile",
+      "method": "single_endpoint",
+      "endpoint": "PrtDataOut"
+    },
+    "('NetOK', 'PrtPath')": {
+      "direction": "PrtPath->NetOK",
+      "method": "agreement"
+    },
+    "('NetOK', 'PTROFFLINE')": {
+      "direction": "NetOK->PTROFFLINE",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "NetOK->PTROFFLINE",
+        "degree": "NetOK->PTROFFLINE",
+        "constraints": "NetOK->PTROFFLINE",
+        "hard_flip": "PTROFFLINE->NetOK"
+      },
+      "endpoints": [
+        {
+          "node": "NetOK",
+          "dir": "NetOK->PTROFFLINE",
+          "margin": 1.0,
+          "degree": 4
+        },
+        {
+          "node": "PTROFFLINE",
+          "dir": "PTROFFLINE->NetOK",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('CblPrtHrdwrOK', 'LclOK')": {
+      "direction": "CblPrtHrdwrOK->LclOK",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "CblPrtHrdwrOK->LclOK",
+        "degree": "CblPrtHrdwrOK->LclOK",
+        "constraints": "CblPrtHrdwrOK->LclOK",
+        "hard_flip": "CblPrtHrdwrOK->LclOK"
+      },
+      "endpoints": [
+        {
+          "node": "CblPrtHrdwrOK",
+          "dir": "CblPrtHrdwrOK->LclOK",
+          "margin": 0.8,
+          "degree": 4
+        },
+        {
+          "node": "LclOK",
+          "dir": "LclOK->CblPrtHrdwrOK",
+          "margin": 0.2,
+          "degree": 4
+        }
+      ]
+    },
+    "('CblPrtHrdwrOK', 'DS_LCLOK')": {
+      "direction": "CblPrtHrdwrOK->DS_LCLOK",
+      "method": "agreement"
+    },
+    "('CblPrtHrdwrOK', 'LclGrbld')": {
+      "direction": "CblPrtHrdwrOK->LclGrbld",
+      "method": "agreement"
+    },
+    "('CblPrtHrdwrOK', 'REPEAT')": {
+      "direction": "CblPrtHrdwrOK->REPEAT",
+      "method": "agreement"
+    },
+    "('LclOK', 'PrtCbl')": {
+      "direction": "PrtCbl->LclOK",
+      "method": "agreement"
+    },
+    "('LclOK', 'PrtPort')": {
+      "direction": "PrtPort->LclOK",
+      "method": "single_endpoint",
+      "endpoint": "LclOK"
+    },
+    "('GrphcsRltdDrvrSttngs', 'NnPSGrphc')": {
+      "direction": "GrphcsRltdDrvrSttngs->NnPSGrphc",
+      "method": "agreement"
+    },
+    "('EPSGrphc', 'NnPSGrphc')": {
+      "direction": "EPSGrphc->NnPSGrphc",
+      "method": "single_endpoint",
+      "endpoint": "NnPSGrphc"
+    },
+    "('NnPSGrphc', 'Problem4')": {
+      "direction": "NnPSGrphc->Problem4",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "NnPSGrphc->Problem4",
+        "degree": "NnPSGrphc->Problem4",
+        "constraints": "NnPSGrphc->Problem4",
+        "hard_flip": "Problem4->NnPSGrphc"
+      },
+      "endpoints": [
+        {
+          "node": "NnPSGrphc",
+          "dir": "NnPSGrphc->Problem4",
+          "margin": 1.0,
+          "degree": 4
+        },
+        {
+          "node": "Problem4",
+          "dir": "Problem4->NnPSGrphc",
+          "margin": 0.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('NtGrbld', 'PrtDriver')": {
+      "direction": "PrtDriver->NtGrbld",
+      "method": "agreement"
+    },
+    "('GrbldOtpt', 'NtGrbld')": {
+      "direction": "NtGrbld->GrbldOtpt",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "NtGrbld->GrbldOtpt",
+        "degree": "NtGrbld->GrbldOtpt",
+        "constraints": "NtGrbld->GrbldOtpt",
+        "hard_flip": "NtGrbld->GrbldOtpt"
+      },
+      "endpoints": [
+        {
+          "node": "NtGrbld",
+          "dir": "NtGrbld->GrbldOtpt",
+          "margin": 1.0,
+          "degree": 4
+        },
+        {
+          "node": "GrbldOtpt",
+          "dir": "GrbldOtpt->NtGrbld",
+          "margin": 0.2,
+          "degree": 4
+        }
+      ]
+    },
+    "('GrbldOtpt', 'LclGrbld')": {
+      "direction": "LclGrbld->GrbldOtpt",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "LclGrbld->GrbldOtpt",
+        "degree": "GrbldOtpt->LclGrbld",
+        "constraints": "GrbldOtpt->LclGrbld",
+        "hard_flip": "LclGrbld->GrbldOtpt"
+      },
+      "endpoints": [
+        {
+          "node": "GrbldOtpt",
+          "dir": "GrbldOtpt->LclGrbld",
+          "margin": 0.2,
+          "degree": 4
+        },
+        {
+          "node": "LclGrbld",
+          "dir": "LclGrbld->GrbldOtpt",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('GrbldOtpt', 'GrbldPS')": {
+      "direction": "GrbldPS->GrbldOtpt",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "GrbldPS->GrbldOtpt",
+        "degree": "GrbldOtpt->GrbldPS",
+        "constraints": "GrbldOtpt->GrbldPS",
+        "hard_flip": "GrbldPS->GrbldOtpt"
+      },
+      "endpoints": [
+        {
+          "node": "GrbldOtpt",
+          "dir": "GrbldOtpt->GrbldPS",
+          "margin": 0.4,
+          "degree": 4
+        },
+        {
+          "node": "GrbldPS",
+          "dir": "GrbldPS->GrbldOtpt",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('GrbldOtpt', 'Problem6')": {
+      "direction": "Problem6->GrbldOtpt",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "Problem6->GrbldOtpt",
+        "degree": "GrbldOtpt->Problem6",
+        "constraints": "GrbldOtpt->Problem6",
+        "hard_flip": "Problem6->GrbldOtpt"
+      },
+      "endpoints": [
+        {
+          "node": "GrbldOtpt",
+          "dir": "GrbldOtpt->Problem6",
+          "margin": 0.6,
+          "degree": 4
+        },
+        {
+          "node": "Problem6",
+          "dir": "Problem6->GrbldOtpt",
+          "margin": 0.8,
+          "degree": 3
+        }
+      ]
+    },
+    "('AvlblVrtlMmry', 'TstpsTxt')": {
+      "direction": "AvlblVrtlMmry->TstpsTxt",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "AvlblVrtlMmry->TstpsTxt",
+        "degree": "TstpsTxt->AvlblVrtlMmry",
+        "constraints": "TstpsTxt->AvlblVrtlMmry",
+        "hard_flip": "TstpsTxt->AvlblVrtlMmry"
+      },
+      "endpoints": [
+        {
+          "node": "TstpsTxt",
+          "dir": "TstpsTxt->AvlblVrtlMmry",
+          "margin": 0.0,
+          "degree": 4
+        },
+        {
+          "node": "AvlblVrtlMmry",
+          "dir": "AvlblVrtlMmry->TstpsTxt",
+          "margin": 1.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('PSERRMEM', 'TstpsTxt')": {
+      "direction": "TstpsTxt->PSERRMEM",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "TstpsTxt->PSERRMEM",
+        "degree": "TstpsTxt->PSERRMEM",
+        "constraints": "TstpsTxt->PSERRMEM",
+        "hard_flip": "PSERRMEM->TstpsTxt"
+      },
+      "endpoints": [
+        {
+          "node": "TstpsTxt",
+          "dir": "TstpsTxt->PSERRMEM",
+          "margin": 0.4,
+          "degree": 4
+        },
+        {
+          "node": "PSERRMEM",
+          "dir": "PSERRMEM->TstpsTxt",
+          "margin": 0.0,
+          "degree": 3
+        }
+      ]
+    },
+    "('GrbldPS', 'TstpsTxt')": {
+      "direction": "TstpsTxt->GrbldPS",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "TstpsTxt->GrbldPS",
+        "degree": "TstpsTxt->GrbldPS",
+        "constraints": "TstpsTxt->GrbldPS",
+        "hard_flip": "TstpsTxt->GrbldPS"
+      },
+      "endpoints": [
+        {
+          "node": "TstpsTxt",
+          "dir": "TstpsTxt->GrbldPS",
+          "margin": 1.0,
+          "degree": 4
+        },
+        {
+          "node": "GrbldPS",
+          "dir": "GrbldPS->TstpsTxt",
+          "margin": 0.4,
+          "degree": 3
+        }
+      ]
+    },
+    "('Problem6', 'TstpsTxt')": {
+      "direction": "TstpsTxt->Problem6",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "TstpsTxt->Problem6",
+        "degree": "TstpsTxt->Problem6",
+        "constraints": "TstpsTxt->Problem6",
+        "hard_flip": "TstpsTxt->Problem6"
+      },
+      "endpoints": [
+        {
+          "node": "TstpsTxt",
+          "dir": "TstpsTxt->Problem6",
+          "margin": 1.0,
+          "degree": 4
+        },
+        {
+          "node": "Problem6",
+          "dir": "Problem6->TstpsTxt",
+          "margin": 0.8,
+          "degree": 3
+        }
+      ]
+    },
+    "('AppData', 'AppOK')": {
+      "direction": "AppOK->AppData",
+      "method": "agreement"
+    },
+    "('AppData', 'DataFile')": {
+      "direction": "AppData->DataFile",
+      "method": "agreement"
+    },
+    "('AppData', 'EMFOK')": {
+      "direction": "AppData->EMFOK",
+      "method": "agreement"
+    },
+    "('AppDtGnTm', 'PrtSpool')": {
+      "direction": "PrtSpool->AppDtGnTm",
+      "method": "agreement"
+    },
+    "('PgOrnttnOK', 'PrtSpool')": {
+      "direction": "PrtSpool->PgOrnttnOK",
+      "method": "agreement"
+    },
+    "('PrtOn', 'PrtStatOff')": {
+      "direction": "PrtOn->PrtStatOff",
+      "method": "single_endpoint",
+      "endpoint": "PrtOn"
+    },
+    "('GDIOUT', 'PrtDriver')": {
+      "direction": "PrtDriver->GDIOUT",
+      "method": "agreement"
+    },
+    "('LclGrbld', 'PrtDriver')": {
+      "direction": "PrtDriver->LclGrbld",
+      "method": "agreement"
+    },
+    "('DskLocal', 'EMFOK')": {
+      "direction": "DskLocal->EMFOK",
+      "method": "single_endpoint",
+      "endpoint": "EMFOK"
+    },
+    "('DS_NTOK', 'PTROFFLINE')": {
+      "direction": "PTROFFLINE->DS_NTOK",
+      "method": "agreement"
+    },
+    "('PTROFFLINE', 'PrtIcon')": {
+      "direction": "PTROFFLINE->PrtIcon",
+      "method": "agreement"
+    },
+    "('DS_NTOK', 'PrtPath')": {
+      "direction": "PrtPath->DS_NTOK",
+      "method": "agreement"
+    },
+    "('DS_NTOK', 'PrtMpTPth')": {
+      "direction": "PrtMpTPth->DS_NTOK",
+      "method": "single_endpoint",
+      "endpoint": "DS_NTOK"
+    },
+    "('FllCrrptdBffr', 'PrtIcon')": {
+      "direction": "FllCrrptdBffr->PrtIcon",
+      "method": "agreement"
+    },
+    "('PrtStatToner', 'TnrSpply')": {
+      "direction": "TnrSpply->PrtStatToner",
+      "method": "single_endpoint",
+      "endpoint": "TnrSpply"
+    },
+    "('DeskPrntSpd', 'PrntPrcssTm')": {
+      "direction": "DeskPrntSpd->PrntPrcssTm",
+      "method": "single_endpoint",
+      "endpoint": "DeskPrntSpd"
+    },
+    "('DeskPrntSpd', 'Problem2')": {
+      "direction": "DeskPrntSpd->Problem2",
+      "method": "agreement"
+    },
+    "('GrphcsRltdDrvrSttngs', 'PSGRAPHIC')": {
+      "direction": "GrphcsRltdDrvrSttngs->PSGRAPHIC",
+      "method": "agreement"
+    },
+    "('PSGRAPHIC', 'Problem4')": {
+      "direction": "PSGRAPHIC->Problem4",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "PSGRAPHIC->Problem4",
+        "degree": "PSGRAPHIC->Problem4",
+        "constraints": "PSGRAPHIC->Problem4",
+        "hard_flip": "Problem4->PSGRAPHIC"
+      },
+      "endpoints": [
+        {
+          "node": "PSGRAPHIC",
+          "dir": "PSGRAPHIC->Problem4",
+          "margin": 1.0,
+          "degree": 3
+        },
+        {
+          "node": "Problem4",
+          "dir": "Problem4->PSGRAPHIC",
+          "margin": 0.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('FntInstlltn', 'TTOK')": {
+      "direction": "FntInstlltn->TTOK",
+      "method": "agreement"
+    },
+    "('PrntrAccptsTrtyp', 'TTOK')": {
+      "direction": "PrntrAccptsTrtyp->TTOK",
+      "method": "single_endpoint",
+      "endpoint": "TTOK"
+    },
+    "('Problem5', 'TTOK')": {
+      "direction": "TTOK->Problem5",
+      "method": "agreement"
+    },
+    "('NnTTOK', 'ScrnFntNtPrntrFnt')": {
+      "direction": "NnTTOK->ScrnFntNtPrntrFnt",
+      "method": "single_endpoint",
+      "endpoint": "NnTTOK"
+    },
+    "('FntInstlltn', 'NnTTOK')": {
+      "direction": "FntInstlltn->NnTTOK",
+      "method": "agreement"
+    },
+    "('NnTTOK', 'Problem5')": {
+      "direction": "NnTTOK->Problem5",
+      "method": "agreement"
+    },
+    "('Problem5', 'TrTypFnts')": {
+      "direction": "TrTypFnts->Problem5",
+      "method": "single_endpoint",
+      "endpoint": "Problem5"
+    },
+    "('AvlblVrtlMmry', 'PrtPScript')": {
+      "direction": "PrtPScript->AvlblVrtlMmry",
+      "method": "agreement"
+    },
+    "('AvlblVrtlMmry', 'PSERRMEM')": {
+      "direction": "AvlblVrtlMmry->PSERRMEM",
+      "method": "agreement"
+    },
+    "('PSERRMEM', 'PrtPScript')": {
+      "direction": "PrtPScript->PSERRMEM",
+      "method": "agreement"
+    },
+    "('GrbldPS', 'Problem6')": {
+      "direction": "GrbldPS->Problem6",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "GrbldPS->Problem6",
+        "degree": "GrbldPS->Problem6",
+        "constraints": "GrbldPS->Problem6",
+        "hard_flip": "GrbldPS->Problem6"
+      },
+      "endpoints": [
+        {
+          "node": "GrbldPS",
+          "dir": "GrbldPS->Problem6",
+          "margin": 0.6,
+          "degree": 3
+        },
+        {
+          "node": "Problem6",
+          "dir": "Problem6->GrbldPS",
+          "margin": 0.6,
+          "degree": 3
+        }
+      ]
+    },
+    "('NtSpd', 'PrtQueue')": {
+      "direction": "PrtQueue->NtSpd",
+      "method": "single_endpoint",
+      "endpoint": "NtSpd"
+    },
+    "('NtSpd', 'Problem2')": {
+      "direction": "NtSpd->Problem2",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "NtSpd->Problem2",
+        "degree": "NtSpd->Problem2",
+        "constraints": "NtSpd->Problem2",
+        "hard_flip": "Problem2->NtSpd"
+      },
+      "endpoints": [
+        {
+          "node": "NtSpd",
+          "dir": "NtSpd->Problem2",
+          "margin": 1.0,
+          "degree": 3
+        },
+        {
+          "node": "Problem2",
+          "dir": "Problem2->NtSpd",
+          "margin": 0.8,
+          "degree": 3
+        }
+      ]
+    },
+    "('NetPrint', 'Problem2')": {
+      "direction": "NetPrint->Problem2",
+      "method": "agreement"
+    },
+    "('DS_LCLOK', 'PrtCbl')": {
+      "direction": "PrtCbl->DS_LCLOK",
+      "method": "agreement"
+    },
+    "('AppDtGnTm', 'HrglssDrtnAftrPrnt')": {
+      "direction": "AppDtGnTm->HrglssDrtnAftrPrnt",
+      "method": "single_endpoint",
+      "endpoint": "AppDtGnTm"
+    },
+    "('IncmpltPS', 'Problem3')": {
+      "direction": "IncmpltPS->Problem3",
+      "method": "agreement"
+    }
+  },
+  "evaluation": {
+    "correct": 76,
+    "total": 95,
+    "accuracy": 0.8,
+    "agreements": 55,
+    "disagreements": 23,
+    "by_method": {
+      "disagreement_confidence": {
+        "correct": 14,
+        "total": 23
+      },
+      "single_endpoint": {
+        "correct": 13,
+        "total": 17
+      },
+      "agreement": {
+        "correct": 49,
+        "total": 55
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 73,
+      "total": 95,
+      "accuracy": 0.7684210526315789,
+      "agreements": 55,
+      "disagreements": 23,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 11,
+          "total": 23
+        },
+        "single_endpoint": {
+          "correct": 13,
+          "total": 17
+        },
+        "agreement": {
+          "correct": 49,
+          "total": 55
+        }
+      }
+    },
+    "constraints": {
+      "correct": 73,
+      "total": 95,
+      "accuracy": 0.7684210526315789,
+      "agreements": 55,
+      "disagreements": 23,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 11,
+          "total": 23
+        },
+        "single_endpoint": {
+          "correct": 13,
+          "total": 17
+        },
+        "agreement": {
+          "correct": 49,
+          "total": 55
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 71,
+      "total": 95,
+      "accuracy": 0.7473684210526316,
+      "agreements": 55,
+      "disagreements": 23,
+      "by_method": {
+        "disagreement_confidence": {
+          "correct": 9,
+          "total": 23
+        },
+        "single_endpoint": {
+          "correct": 13,
+          "total": 17
+        },
+        "agreement": {
+          "correct": 49,
+          "total": 55
+        }
+      }
+    }
+  },
+  "n_unique_edges": 95
+}

@@ -1,0 +1,527 @@
+{
+  "metadata": {
+    "network": "cancer",
+    "model": "Qwen/Qwen3.5-27B-FP8",
+    "temperature": 0.7,
+    "k_passes": 5,
+    "n_samples": 10000,
+    "seed": 42,
+    "test_nodes": [
+      "Cancer"
+    ],
+    "n_test_edges": 4,
+    "n_skeleton_edges": 4,
+    "n_gt_edges": 4,
+    "timestamp": "2026-03-26 15:15:43",
+    "disguised_names": false,
+    "enable_thinking": false,
+    "ego_prompt_version": "v1",
+    "contrastive_pe": false,
+    "temp_ladder": false,
+    "enriched": false,
+    "debiased": true,
+    "pc_alpha": 0.05
+  },
+  "summary": {
+    "acc_per_edge": 1.0,
+    "acc_ego_graph": 1.0,
+    "delta": 0.0,
+    "delta_pp": 0.0,
+    "uncertain_per_edge": 0.0,
+    "uncertain_ego_graph": 0.0,
+    "queries_per_edge": 20,
+    "queries_ego_graph": 5,
+    "verdict": "MARGINAL \u2014 Re-examine approach. Consider cost angle."
+  },
+  "per_node": {
+    "Cancer": {
+      "degree": 4,
+      "neighbors": [
+        "Pollution",
+        "Smoker",
+        "Xray",
+        "Dyspnoea"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "Pollution",
+            "Smoker"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "Pollution",
+            "Xray"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "Pollution",
+            "Dyspnoea"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "Smoker",
+            "Xray"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "Smoker",
+            "Dyspnoea"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "Xray",
+            "Dyspnoea"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "Pollution",
+          "Cancer"
+        ],
+        [
+          "Smoker",
+          "Cancer"
+        ],
+        [
+          "Cancer",
+          "Xray"
+        ],
+        [
+          "Cancer",
+          "Dyspnoea"
+        ]
+      ],
+      "acc_per_edge": 1.0,
+      "acc_ego_graph": 1.0
+    }
+  },
+  "raw_results_a": [
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Pollution"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Pollution"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Xray"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Xray"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Smoker"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Smoker"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Dyspnoea"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Dyspnoea"
+    }
+  ],
+  "raw_results_b": [
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Pollution",
+        "Cancer"
+      ],
+      "predicted": "Pollution->Cancer",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Smoker",
+        "Cancer"
+      ],
+      "predicted": "Smoker->Cancer",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Xray"
+      ],
+      "predicted": "Cancer->Xray",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    },
+    {
+      "edge": [
+        "Cancer",
+        "Dyspnoea"
+      ],
+      "predicted": "Cancer->Dyspnoea",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "Cancer"
+    }
+  ]
+}
