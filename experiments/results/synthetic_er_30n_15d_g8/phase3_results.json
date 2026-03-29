@@ -1,0 +1,254 @@
+{
+  "reconciled": {
+    "('X_6', 'X_8')": {
+      "direction": "X_8->X_6",
+      "method": "single_endpoint",
+      "endpoint": "X_8"
+    },
+    "('X_5', 'X_8')": {
+      "direction": "X_8->X_5",
+      "method": "single_endpoint",
+      "endpoint": "X_8"
+    },
+    "('X_25', 'X_8')": {
+      "direction": "X_25->X_8",
+      "method": "single_endpoint",
+      "endpoint": "X_8"
+    },
+    "('X_12', 'X_27')": {
+      "direction": "X_12->X_27",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "X_12->X_27",
+        "degree": "X_12->X_27",
+        "constraints": "X_12->X_27",
+        "hard_flip": "X_12->X_27"
+      },
+      "endpoints": [
+        {
+          "node": "X_12",
+          "dir": "X_12->X_27",
+          "margin": 1.0,
+          "degree": 2
+        },
+        {
+          "node": "X_27",
+          "dir": "X_27->X_12",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    },
+    "('X_12', 'X_17')": {
+      "direction": "X_12->X_17",
+      "method": "single_endpoint",
+      "endpoint": "X_12"
+    },
+    "('X_10', 'X_2')": {
+      "direction": "X_10->X_2",
+      "method": "single_endpoint",
+      "endpoint": "X_10"
+    },
+    "('X_10', 'X_27')": {
+      "direction": "X_10->X_27",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "X_10->X_27",
+        "degree": "X_10->X_27",
+        "constraints": "X_10->X_27",
+        "hard_flip": "X_10->X_27"
+      },
+      "endpoints": [
+        {
+          "node": "X_10",
+          "dir": "X_10->X_27",
+          "margin": 1.0,
+          "degree": 2
+        },
+        {
+          "node": "X_27",
+          "dir": "X_27->X_10",
+          "margin": 0.6,
+          "degree": 2
+        }
+      ]
+    },
+    "('X_0', 'X_3')": {
+      "direction": "X_3->X_0",
+      "method": "single_endpoint",
+      "endpoint": "X_3"
+    },
+    "('X_26', 'X_3')": {
+      "direction": "X_3->X_26",
+      "method": "single_endpoint",
+      "endpoint": "X_3"
+    },
+    "('X_22', 'X_28')": {
+      "direction": "X_22->X_28",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "X_22->X_28",
+        "degree": "X_22->X_28",
+        "constraints": "X_22->X_28",
+        "hard_flip": "X_22->X_28"
+      },
+      "endpoints": [
+        {
+          "node": "X_22",
+          "dir": "X_22->X_28",
+          "margin": 1.0,
+          "degree": 2
+        },
+        {
+          "node": "X_28",
+          "dir": "X_28->X_22",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('X_19', 'X_22')": {
+      "direction": "X_22->X_19",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "X_22->X_19",
+        "degree": "X_22->X_19",
+        "constraints": "X_22->X_19",
+        "hard_flip": "X_22->X_19"
+      },
+      "endpoints": [
+        {
+          "node": "X_22",
+          "dir": "X_22->X_19",
+          "margin": 1.0,
+          "degree": 2
+        },
+        {
+          "node": "X_19",
+          "dir": "X_19->X_22",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('X_28', 'X_29')": {
+      "direction": "X_28->X_29",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "X_28->X_29",
+        "degree": "X_28->X_29",
+        "constraints": "X_28->X_29",
+        "hard_flip": "X_28->X_29"
+      },
+      "endpoints": [
+        {
+          "node": "X_28",
+          "dir": "X_28->X_29",
+          "margin": 1.0,
+          "degree": 2
+        },
+        {
+          "node": "X_29",
+          "dir": "X_29->X_28",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    },
+    "('X_19', 'X_29')": {
+      "direction": "X_19->X_29",
+      "method": "disagreement_confidence",
+      "strategies": {
+        "confidence": "X_19->X_29",
+        "degree": "X_19->X_29",
+        "constraints": "X_19->X_29",
+        "hard_flip": "X_19->X_29"
+      },
+      "endpoints": [
+        {
+          "node": "X_19",
+          "dir": "X_19->X_29",
+          "margin": 1.0,
+          "degree": 2
+        },
+        {
+          "node": "X_29",
+          "dir": "X_29->X_19",
+          "margin": 1.0,
+          "degree": 2
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "correct": 7,
+    "total": 13,
+    "accuracy": 0.5384615384615384,
+    "agreements": 0,
+    "disagreements": 6,
+    "by_method": {
+      "single_endpoint": {
+        "correct": 3,
+        "total": 7
+      },
+      "disagreement_confidence": {
+        "correct": 4,
+        "total": 6
+      }
+    }
+  },
+  "alt_evaluations": {
+    "degree": {
+      "correct": 7,
+      "total": 13,
+      "accuracy": 0.5384615384615384,
+      "agreements": 0,
+      "disagreements": 6,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 3,
+          "total": 7
+        },
+        "disagreement_confidence": {
+          "correct": 4,
+          "total": 6
+        }
+      }
+    },
+    "constraints": {
+      "correct": 7,
+      "total": 13,
+      "accuracy": 0.5384615384615384,
+      "agreements": 0,
+      "disagreements": 6,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 3,
+          "total": 7
+        },
+        "disagreement_confidence": {
+          "correct": 4,
+          "total": 6
+        }
+      }
+    },
+    "hard_flip": {
+      "correct": 7,
+      "total": 13,
+      "accuracy": 0.5384615384615384,
+      "agreements": 0,
+      "disagreements": 6,
+      "by_method": {
+        "single_endpoint": {
+          "correct": 3,
+          "total": 7
+        },
+        "disagreement_confidence": {
+          "correct": 4,
+          "total": 6
+        }
+      }
+    }
+  },
+  "n_unique_edges": 13
+}

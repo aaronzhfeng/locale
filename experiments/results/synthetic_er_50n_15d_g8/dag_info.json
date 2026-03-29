@@ -1,0 +1,520 @@
+{
+  "n_nodes": 50,
+  "avg_degree": 1.5,
+  "graph_seed": 8,
+  "n_edges": 39,
+  "edges": [
+    [
+      "X_38",
+      "X_32"
+    ],
+    [
+      "X_1",
+      "X_3"
+    ],
+    [
+      "X_30",
+      "X_7"
+    ],
+    [
+      "X_17",
+      "X_42"
+    ],
+    [
+      "X_35",
+      "X_21"
+    ],
+    [
+      "X_21",
+      "X_26"
+    ],
+    [
+      "X_31",
+      "X_20"
+    ],
+    [
+      "X_37",
+      "X_41"
+    ],
+    [
+      "X_0",
+      "X_1"
+    ],
+    [
+      "X_48",
+      "X_31"
+    ],
+    [
+      "X_0",
+      "X_35"
+    ],
+    [
+      "X_42",
+      "X_14"
+    ],
+    [
+      "X_34",
+      "X_19"
+    ],
+    [
+      "X_7",
+      "X_9"
+    ],
+    [
+      "X_36",
+      "X_3"
+    ],
+    [
+      "X_7",
+      "X_5"
+    ],
+    [
+      "X_16",
+      "X_15"
+    ],
+    [
+      "X_0",
+      "X_13"
+    ],
+    [
+      "X_0",
+      "X_21"
+    ],
+    [
+      "X_44",
+      "X_6"
+    ],
+    [
+      "X_48",
+      "X_16"
+    ],
+    [
+      "X_9",
+      "X_10"
+    ],
+    [
+      "X_45",
+      "X_38"
+    ],
+    [
+      "X_13",
+      "X_20"
+    ],
+    [
+      "X_16",
+      "X_9"
+    ],
+    [
+      "X_29",
+      "X_20"
+    ],
+    [
+      "X_38",
+      "X_14"
+    ],
+    [
+      "X_39",
+      "X_5"
+    ],
+    [
+      "X_30",
+      "X_8"
+    ],
+    [
+      "X_31",
+      "X_13"
+    ],
+    [
+      "X_44",
+      "X_14"
+    ],
+    [
+      "X_1",
+      "X_24"
+    ],
+    [
+      "X_24",
+      "X_3"
+    ],
+    [
+      "X_7",
+      "X_26"
+    ],
+    [
+      "X_34",
+      "X_3"
+    ],
+    [
+      "X_11",
+      "X_35"
+    ],
+    [
+      "X_39",
+      "X_7"
+    ],
+    [
+      "X_9",
+      "X_8"
+    ],
+    [
+      "X_42",
+      "X_6"
+    ]
+  ],
+  "nodes": [
+    "X_0",
+    "X_1",
+    "X_2",
+    "X_3",
+    "X_4",
+    "X_5",
+    "X_6",
+    "X_7",
+    "X_8",
+    "X_9",
+    "X_10",
+    "X_11",
+    "X_12",
+    "X_13",
+    "X_14",
+    "X_15",
+    "X_16",
+    "X_17",
+    "X_18",
+    "X_19",
+    "X_20",
+    "X_21",
+    "X_22",
+    "X_23",
+    "X_24",
+    "X_25",
+    "X_26",
+    "X_27",
+    "X_28",
+    "X_29",
+    "X_30",
+    "X_31",
+    "X_32",
+    "X_33",
+    "X_34",
+    "X_35",
+    "X_36",
+    "X_37",
+    "X_38",
+    "X_39",
+    "X_40",
+    "X_41",
+    "X_42",
+    "X_43",
+    "X_44",
+    "X_45",
+    "X_46",
+    "X_47",
+    "X_48",
+    "X_49"
+  ],
+  "var_states": {
+    "X_0": [
+      "s0",
+      "s1"
+    ],
+    "X_1": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_2": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_3": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_4": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_5": [
+      "s0",
+      "s1"
+    ],
+    "X_6": [
+      "s0",
+      "s1"
+    ],
+    "X_7": [
+      "s0",
+      "s1"
+    ],
+    "X_8": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_9": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_10": [
+      "s0",
+      "s1"
+    ],
+    "X_11": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_12": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_13": [
+      "s0",
+      "s1"
+    ],
+    "X_14": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_15": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_16": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_17": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_18": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_19": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_20": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_21": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_22": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_23": [
+      "s0",
+      "s1"
+    ],
+    "X_24": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_25": [
+      "s0",
+      "s1"
+    ],
+    "X_26": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_27": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_28": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_29": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_30": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_31": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_32": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_33": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_34": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_35": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_36": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_37": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_38": [
+      "s0",
+      "s1"
+    ],
+    "X_39": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_40": [
+      "s0",
+      "s1"
+    ],
+    "X_41": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_42": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_43": [
+      "s0",
+      "s1"
+    ],
+    "X_44": [
+      "s0",
+      "s1"
+    ],
+    "X_45": [
+      "s0",
+      "s1"
+    ],
+    "X_46": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_47": [
+      "s0",
+      "s1"
+    ],
+    "X_48": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_49": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ]
+  },
+  "descriptions": {
+    "X_0": "Categorical variable with states {s0, s1}",
+    "X_1": "Categorical variable with states {s0, s1, s2}",
+    "X_2": "Categorical variable with states {s0, s1, s2}",
+    "X_3": "Categorical variable with states {s0, s1, s2}",
+    "X_4": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_5": "Categorical variable with states {s0, s1}",
+    "X_6": "Categorical variable with states {s0, s1}",
+    "X_7": "Categorical variable with states {s0, s1}",
+    "X_8": "Categorical variable with states {s0, s1, s2}",
+    "X_9": "Categorical variable with states {s0, s1, s2}",
+    "X_10": "Categorical variable with states {s0, s1}",
+    "X_11": "Categorical variable with states {s0, s1, s2}",
+    "X_12": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_13": "Categorical variable with states {s0, s1}",
+    "X_14": "Categorical variable with states {s0, s1, s2}",
+    "X_15": "Categorical variable with states {s0, s1, s2}",
+    "X_16": "Categorical variable with states {s0, s1, s2}",
+    "X_17": "Categorical variable with states {s0, s1, s2}",
+    "X_18": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_19": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_20": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_21": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_22": "Categorical variable with states {s0, s1, s2}",
+    "X_23": "Categorical variable with states {s0, s1}",
+    "X_24": "Categorical variable with states {s0, s1, s2}",
+    "X_25": "Categorical variable with states {s0, s1}",
+    "X_26": "Categorical variable with states {s0, s1, s2}",
+    "X_27": "Categorical variable with states {s0, s1, s2}",
+    "X_28": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_29": "Categorical variable with states {s0, s1, s2}",
+    "X_30": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_31": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_32": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_33": "Categorical variable with states {s0, s1, s2}",
+    "X_34": "Categorical variable with states {s0, s1, s2}",
+    "X_35": "Categorical variable with states {s0, s1, s2}",
+    "X_36": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_37": "Categorical variable with states {s0, s1, s2}",
+    "X_38": "Categorical variable with states {s0, s1}",
+    "X_39": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_40": "Categorical variable with states {s0, s1}",
+    "X_41": "Categorical variable with states {s0, s1, s2}",
+    "X_42": "Categorical variable with states {s0, s1, s2}",
+    "X_43": "Categorical variable with states {s0, s1}",
+    "X_44": "Categorical variable with states {s0, s1}",
+    "X_45": "Categorical variable with states {s0, s1}",
+    "X_46": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_47": "Categorical variable with states {s0, s1}",
+    "X_48": "Categorical variable with states {s0, s1, s2}",
+    "X_49": "Categorical variable with states {s0, s1, s2, s3}"
+  }
+}

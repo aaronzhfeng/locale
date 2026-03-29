@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#333"/>
+    </marker>
+    <marker id="arr-b" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5 Z" fill="#2962FF"/>
+    </marker>
+    <marker id="arr-w" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="white"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="380" fill="white"/>
+
+  <!-- ===== Phase badges row ===== -->
+  <rect x="18" y="8" width="28" height="18" rx="3" fill="#546E7A"/>
+  <text x="32" y="21" text-anchor="middle" fill="white" font-size="10" font-weight="bold">P0</text>
+
+  <rect x="220" y="8" width="28" height="18" rx="3" fill="#1565C0"/>
+  <text x="234" y="21" text-anchor="middle" fill="white" font-size="10" font-weight="bold">P1</text>
+
+  <rect x="470" y="8" width="28" height="18" rx="3" fill="#1565C0"/>
+  <text x="484" y="21" text-anchor="middle" fill="white" font-size="10" font-weight="bold">P2</text>
+
+  <rect x="720" y="8" width="28" height="18" rx="3" fill="#1565C0"/>
+  <text x="734" y="21" text-anchor="middle" fill="white" font-size="10" font-weight="bold">P3</text>
+
+  <rect x="950" y="8" width="28" height="18" rx="3" fill="#1565C0"/>
+  <text x="964" y="21" text-anchor="middle" fill="white" font-size="10" font-weight="bold">P4</text>
+
+  <!-- ===== Phase titles row ===== -->
+  <text x="100" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Phase 0:</text>
+  <text x="100" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Skeleton</text>
+
+  <text x="335" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Phase 1:</text>
+  <text x="335" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Ego-Graph Scoring</text>
+
+  <text x="585" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Phase 2: NCO</text>
+  <text x="585" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Constraint Compilation</text>
+
+  <text x="825" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Phase 3:</text>
+  <text x="825" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Reconciliation</text>
+
+  <text x="1070" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Phase 4:</text>
+  <text x="1070" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Safety Valve</text>
+
+  <!-- Horizontal line under titles -->
+  <line x1="10" y1="72" x2="1190" y2="72" stroke="#CFD8DC" stroke-width="1"/>
+
+  <!-- ===== PHASE 0 CONTENT ===== -->
+  <g transform="translate(15, 80)">
+    <!-- Observational Data box -->
+    <rect x="10" y="8" width="140" height="35" rx="4" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+    <text x="80" y="22" text-anchor="middle" font-size="10" fill="#1565C0">Observational</text>
+    <text x="80" y="35" text-anchor="middle" font-size="10" fill="#1565C0">Data (X)</text>
+
+    <!-- Arrow down -->
+    <line x1="80" y1="45" x2="80" y2="58" stroke="#333" stroke-width="1.2" marker-end="url(#arr)"/>
+
+    <!-- PC-stable box -->
+    <rect x="5" y="62" width="150" height="32" rx="4" fill="#1565C0"/>
+    <text x="80" y="77" text-anchor="middle" font-size="10" fill="white" font-weight="bold">PC-stable</text>
+    <text x="80" y="89" text-anchor="middle" font-size="9" fill="#BBDEFB">(α=0.05)</text>
+
+    <!-- Arrow down -->
+    <line x1="80" y1="96" x2="80" y2="110" stroke="#333" stroke-width="1.2" marker-end="url(#arr)"/>
+
+    <!-- Skeleton output graph -->
+    <g transform="translate(80, 148)">
+      <circle cx="0" cy="-18" r="5" fill="white" stroke="#546E7A" stroke-width="1.2"/>
+      <circle cx="-22" cy="-3" r="5" fill="white" stroke="#546E7A" stroke-width="1.2"/>
+      <circle cx="22" cy="-3" r="5" fill="white" stroke="#546E7A" stroke-width="1.2"/>
+      <circle cx="-14" cy="18" r="5" fill="white" stroke="#546E7A" stroke-width="1.2"/>
+      <circle cx="14" cy="18" r="5" fill="white" stroke="#546E7A" stroke-width="1.2"/>
+      <line x1="0" y1="-13" x2="-19" y2="-6" stroke="#546E7A" stroke-width="1.2"/>
+      <line x1="0" y1="-13" x2="19" y2="-6" stroke="#546E7A" stroke-width="1.2"/>
+      <line x1="-19" y1="0" x2="-14" y2="13" stroke="#546E7A" stroke-width="1.2"/>
+      <line x1="19" y1="0" x2="14" y2="13" stroke="#546E7A" stroke-width="1.2"/>
+      <line x1="-17" y1="-3" x2="17" y2="-3" stroke="#546E7A" stroke-width="1.2"/>
+    </g>
+
+    <text x="80" y="182" text-anchor="middle" font-size="9" fill="#546E7A">Skeleton Ĝ</text>
+    <text x="80" y="193" text-anchor="middle" font-size="9" fill="#546E7A">+ Separating Sets</text>
+  </g>
+
+  <!-- ===== Arrow P0 → P1 ===== -->
+  <path d="M185,175 L215,175" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== PHASE 1 CONTENT ===== -->
+  <g transform="translate(220, 80)">
+    <!-- CI facts annotations -->
+    <text x="40" y="8" font-size="7.5" fill="#546E7A" font-style="italic">→ CI facts +</text>
+    <text x="40" y="17" font-size="7.5" fill="#546E7A" font-style="italic">  of neighbors</text>
+    <text x="150" y="8" font-size="7.5" fill="#546E7A" font-style="italic">CI facts + d</text>
+    <text x="150" y="17" font-size="7.5" fill="#546E7A" font-style="italic">of neighbors</text>
+
+    <!-- Ego graph - center node blue, neighbors white -->
+    <g transform="translate(115, 70)">
+      <!-- Center node -->
+      <circle cx="0" cy="0" r="12" fill="#1565C0" stroke="#0D47A1" stroke-width="1.2"/>
+      <text x="0" y="4" text-anchor="middle" font-size="9" fill="white" font-weight="bold">v</text>
+
+      <!-- Neighbor nodes -->
+      <circle cx="-42" cy="-30" r="9" fill="white" stroke="#90CAF9" stroke-width="1.5"/>
+      <circle cx="42" cy="-30" r="9" fill="white" stroke="#90CAF9" stroke-width="1.5"/>
+      <circle cx="-48" cy="28" r="9" fill="white" stroke="#90CAF9" stroke-width="1.5"/>
+      <circle cx="48" cy="28" r="9" fill="white" stroke="#90CAF9" stroke-width="1.5"/>
+
+      <!-- Edges from center to neighbors (blue) -->
+      <line x1="-9" y1="-7" x2="-33" y2="-24" stroke="#2962FF" stroke-width="1.5"/>
+      <line x1="9" y1="-7" x2="33" y2="-24" stroke="#2962FF" stroke-width="1.5"/>
+      <line x1="-9" y1="7" x2="-39" y2="22" stroke="#2962FF" stroke-width="1.5"/>
+      <line x1="9" y1="7" x2="39" y2="22" stroke="#2962FF" stroke-width="1.5"/>
+
+      <!-- Neighbor-neighbor edges (gray dashed) -->
+      <line x1="-35" y1="-24" x2="35" y2="-24" stroke="#B0BEC5" stroke-width="0.8" stroke-dasharray="3,2"/>
+      <line x1="-42" y1="22" x2="42" y2="22" stroke="#B0BEC5" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+      <!-- Small confidence labels -->
+      <text x="-28" y="-8" font-size="7" fill="#2962FF">0.7</text>
+      <text x="20" y="-8" font-size="7" fill="#2962FF">0.9</text>
+      <text x="-32" y="12" font-size="7" fill="#2962FF">0.5</text>
+      <text x="24" y="12" font-size="7" fill="#2962FF">0.8</text>
+    </g>
+
+    <!-- LLM box -->
+    <rect x="15" y="115" width="195" height="30" rx="4" fill="#1565C0"/>
+    <text x="112" y="130" text-anchor="middle" font-size="10" fill="white" font-weight="bold">LLM (Qwen 27B)</text>
+    <text x="112" y="141" text-anchor="middle" font-size="8" fill="#BBDEFB">K=10 shuffled votes</text>
+
+    <!-- Bottom annotation -->
+    <text x="112" y="168" text-anchor="middle" font-size="9" fill="#263238" font-weight="bold">ONE query covers ALL</text>
+    <text x="112" y="180" text-anchor="middle" font-size="9" fill="#263238" font-weight="bold">edges and center node</text>
+  </g>
+
+  <!-- ===== Arrow P1 → P2 ===== -->
+  <path d="M448,175 L472,175" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== PHASE 2 CONTENT ===== -->
+  <g transform="translate(478, 80)">
+    <!-- Non-collider (top) -->
+    <g transform="translate(8, 5)">
+      <circle cx="20" cy="15" r="8" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+      <text x="20" y="18" text-anchor="middle" font-size="7" fill="#1565C0">A</text>
+      <circle cx="80" cy="15" r="8" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+      <text x="80" y="18" text-anchor="middle" font-size="7" fill="#1565C0">B</text>
+      <circle cx="140" cy="15" r="8" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+      <text x="140" y="18" text-anchor="middle" font-size="7" fill="#1565C0">C</text>
+      <line x1="28" y1="15" x2="72" y2="15" stroke="#546E7A" stroke-width="1.2"/>
+      <line x1="88" y1="15" x2="132" y2="15" stroke="#546E7A" stroke-width="1.2"/>
+    </g>
+    <text x="105" y="42" text-anchor="middle" font-size="9" fill="#2E7D32">w ∈ Sep → non-collider</text>
+    <text x="180" y="42" font-size="12" fill="#2E7D32" font-weight="bold">✓</text>
+
+    <!-- Weighted Max-2SAT box -->
+    <rect x="8" y="55" width="195" height="35" rx="4" fill="#1565C0"/>
+    <text x="105" y="72" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Weighted</text>
+    <text x="105" y="85" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Max-2SAT</text>
+
+    <!-- Collider (bottom, crossed out) -->
+    <g transform="translate(8, 105)">
+      <circle cx="20" cy="15" r="8" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1"/>
+      <text x="20" y="18" text-anchor="middle" font-size="7" fill="#C62828">A</text>
+      <circle cx="80" cy="15" r="8" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1"/>
+      <text x="80" y="18" text-anchor="middle" font-size="7" fill="#C62828">B</text>
+      <circle cx="140" cy="15" r="8" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1"/>
+      <text x="140" y="18" text-anchor="middle" font-size="7" fill="#C62828">C</text>
+      <line x1="28" y1="15" x2="72" y2="15" stroke="#EF9A9A" stroke-width="1.2"/>
+      <line x1="88" y1="15" x2="132" y2="15" stroke="#EF9A9A" stroke-width="1.2"/>
+      <!-- arrows converging for collider -->
+      <path d="M28,11 L40,11" stroke="#C62828" stroke-width="1" marker-end="url(#arr)"/>
+      <path d="M132,11 L120,11" stroke="#C62828" stroke-width="1"/>
+    </g>
+    <text x="105" y="140" text-anchor="middle" font-size="9" fill="#C62828">w ∉ Sep → collider</text>
+    <text x="180" y="140" font-size="12" fill="#C62828" font-weight="bold">✗</text>
+
+    <!-- Bottom annotation -->
+    <text x="105" y="162" text-anchor="middle" font-size="8" fill="#263238" font-weight="bold">NCO: keep only non-collider constraints</text>
+    <text x="105" y="174" text-anchor="middle" font-size="8" fill="#546E7A">(97.9% of errors are false colliders)</text>
+  </g>
+
+  <!-- ===== Arrow P2 → P3 ===== -->
+  <path d="M698,175 L722,175" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== PHASE 3 CONTENT ===== -->
+  <g transform="translate(728, 80)">
+    <!-- Two small ego-graph icons converging -->
+    <!-- Ego u -->
+    <g transform="translate(45, 35)">
+      <circle cx="0" cy="0" r="9" fill="#1565C0" stroke="#0D47A1" stroke-width="1"/>
+      <text x="0" y="3" text-anchor="middle" font-size="7" fill="white" font-weight="bold">u</text>
+      <circle cx="-16" cy="-14" r="4" fill="white" stroke="#90CAF9" stroke-width="0.8"/>
+      <circle cx="16" cy="-14" r="4" fill="white" stroke="#90CAF9" stroke-width="0.8"/>
+      <circle cx="0" cy="18" r="4" fill="white" stroke="#90CAF9" stroke-width="0.8"/>
+      <line x1="-5" y1="-6" x2="-13" y2="-11" stroke="#2962FF" stroke-width="0.8"/>
+      <line x1="5" y1="-6" x2="13" y2="-11" stroke="#2962FF" stroke-width="0.8"/>
+      <line x1="0" y1="9" x2="0" y2="14" stroke="#2962FF" stroke-width="0.8"/>
+    </g>
+
+    <!-- Edge label {u,v} -->
+    <rect x="70" y="18" width="55" height="22" rx="3" fill="#E3F2FD" stroke="#90CAF9" stroke-width="0.8"/>
+    <text x="97" y="33" text-anchor="middle" font-size="9" fill="#1565C0">{u,v}</text>
+
+    <!-- Ego v -->
+    <g transform="translate(150, 35)">
+      <circle cx="0" cy="0" r="9" fill="#1565C0" stroke="#0D47A1" stroke-width="1"/>
+      <text x="0" y="3" text-anchor="middle" font-size="7" fill="white" font-weight="bold">v</text>
+      <circle cx="-16" cy="-14" r="4" fill="white" stroke="#90CAF9" stroke-width="0.8"/>
+      <circle cx="16" cy="-14" r="4" fill="white" stroke="#90CAF9" stroke-width="0.8"/>
+      <circle cx="0" cy="18" r="4" fill="white" stroke="#90CAF9" stroke-width="0.8"/>
+      <line x1="-5" y1="-6" x2="-13" y2="-11" stroke="#2962FF" stroke-width="0.8"/>
+      <line x1="5" y1="-6" x2="13" y2="-11" stroke="#2962FF" stroke-width="0.8"/>
+      <line x1="0" y1="9" x2="0" y2="14" stroke="#2962FF" stroke-width="0.8"/>
+    </g>
+
+    <!-- Arrows converging to result -->
+    <line x1="55" y1="55" x2="75" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
+    <line x1="140" y1="55" x2="120" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
+
+    <!-- Confidence vote box -->
+    <rect x="8" y="82" width="180" height="30" rx="4" fill="#1565C0"/>
+    <text x="98" y="98" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Confidence-weighted</text>
+    <text x="98" y="109" text-anchor="middle" font-size="10" fill="white" font-weight="bold">majority vote</text>
+
+    <!-- Result arrow with confidence -->
+    <line x1="98" y1="114" x2="98" y2="132" stroke="#333" stroke-width="1.2" marker-end="url(#arr)"/>
+    <text x="115" y="128" font-size="8" fill="#546E7A">0.5</text>
+
+    <!-- Result: directed edge -->
+    <rect x="50" y="135" width="95" height="22" rx="3" fill="white" stroke="#1565C0" stroke-width="1"/>
+    <text x="98" y="150" text-anchor="middle" font-size="10" fill="#1565C0" font-weight="bold">u → v</text>
+
+    <!-- Bottom text -->
+    <text x="98" y="178" text-anchor="middle" font-size="8" fill="#546E7A">Dual-endpoint</text>
+    <text x="98" y="189" text-anchor="middle" font-size="8" fill="#546E7A">reconciliation</text>
+  </g>
+
+  <!-- ===== Arrow P3 → P4 ===== -->
+  <path d="M932,175 L958,175" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===== PHASE 4 CONTENT ===== -->
+  <g transform="translate(963, 80)">
+    <!-- Accept condition text -->
+    <text x="100" y="20" text-anchor="middle" font-size="11" fill="#263238">Accept iff</text>
+    <text x="100" y="38" text-anchor="middle" font-size="13" fill="#1565C0" font-weight="bold">F₁ ≥ Phase 1 F₁</text>
+
+    <!-- Gate icon -->
+    <rect x="35" y="50" width="130" height="35" rx="4" fill="#E8F5E9" stroke="#66BB6A" stroke-width="1.2"/>
+    <text x="100" y="64" text-anchor="middle" font-size="9" fill="#2E7D32" font-weight="bold">✓ Accept orientation</text>
+    <text x="100" y="78" text-anchor="middle" font-size="9" fill="#2E7D32">if monotonic</text>
+
+    <rect x="35" y="92" width="130" height="30" rx="4" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1.2"/>
+    <text x="100" y="107" text-anchor="middle" font-size="9" fill="#C62828" font-weight="bold">✗ Revert to Phase 1</text>
+    <text x="100" y="118" text-anchor="middle" font-size="9" fill="#C62828">if F₁ drops</text>
+
+    <!-- Output: directed graph -->
+    <g transform="translate(100, 165)">
+      <circle cx="0" cy="-16" r="5" fill="#1565C0" stroke="#0D47A1" stroke-width="0.8"/>
+      <circle cx="-22" cy="2" r="5" fill="#1565C0" stroke="#0D47A1" stroke-width="0.8"/>
+      <circle cx="22" cy="2" r="5" fill="#1565C0" stroke="#0D47A1" stroke-width="0.8"/>
+      <circle cx="-14" cy="20" r="5" fill="#1565C0" stroke="#0D47A1" stroke-width="0.8"/>
+      <circle cx="14" cy="20" r="5" fill="#1565C0" stroke="#0D47A1" stroke-width="0.8"/>
+      <line x1="-3" y1="-12" x2="-18" y2="-1" stroke="#0D47A1" stroke-width="1.2" marker-end="url(#arr-b)"/>
+      <line x1="3" y1="-12" x2="18" y2="-1" stroke="#0D47A1" stroke-width="1.2" marker-end="url(#arr-b)"/>
+      <line x1="-20" y1="6" x2="-16" y2="15" stroke="#0D47A1" stroke-width="1.2" marker-end="url(#arr-b)"/>
+      <line x1="20" y1="6" x2="16" y2="15" stroke="#0D47A1" stroke-width="1.2" marker-end="url(#arr-b)"/>
+      <line x1="-17" y1="2" x2="17" y2="2" stroke="#0D47A1" stroke-width="1.2" marker-end="url(#arr-b)"/>
+    </g>
+
+    <text x="100" y="200" text-anchor="middle" font-size="9" fill="#263238" font-weight="bold">Selectively</text>
+    <text x="100" y="212" text-anchor="middle" font-size="9" fill="#263238" font-weight="bold">Oriented Graph</text>
+  </g>
+
+  <!-- ===== Vertical separators ===== -->
+  <line x1="205" y1="72" x2="205" y2="300" stroke="#ECEFF1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="460" y1="72" x2="460" y2="300" stroke="#ECEFF1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="710" y1="72" x2="710" y2="300" stroke="#ECEFF1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="948" y1="72" x2="948" y2="300" stroke="#ECEFF1" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- ===== Bottom bar ===== -->
+  <rect x="10" y="310" width="1180" height="55" rx="5" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="0.8"/>
+
+  <!-- Spectrum labels -->
+  <text x="100" y="332" text-anchor="middle" font-size="9" fill="#78909C">Per-edge</text>
+  <text x="100" y="344" text-anchor="middle" font-size="9" fill="#78909C">(MosaCD)</text>
+
+  <!-- Center: LOCALE positioning -->
+  <rect x="350" y="318" width="280" height="26" rx="13" fill="#E3F2FD" stroke="#90CAF9" stroke-width="0.8"/>
+  <text x="490" y="336" text-anchor="middle" font-size="11" fill="#1565C0" font-weight="bold">LOCALE: ego-graph middle ground</text>
+
+  <text x="1050" y="332" text-anchor="middle" font-size="9" fill="#78909C">Whole-graph</text>
+  <text x="1050" y="344" text-anchor="middle" font-size="9" fill="#78909C">(CausalFusion)</text>
+
+  <!-- Arrows showing spectrum -->
+  <line x1="200" y1="335" x2="345" y2="335" stroke="#90CAF9" stroke-width="1.5" marker-end="url(#arr-b)"/>
+  <line x1="940" y1="335" x2="635" y2="335" stroke="#90CAF9" stroke-width="1.5" marker-end="url(#arr-b)"/>
+</svg>

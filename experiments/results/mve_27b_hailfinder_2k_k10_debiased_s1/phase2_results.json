@@ -1,0 +1,551 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "experiments/results/mve_27b_hailfinder_2k_k10_debiased_s1/mve_results.json",
+    "network": "hailfinder",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "CombVerMo": {
+      "degree": 5,
+      "n_feasible": 32,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 5,
+      "directions": {
+        "N0_7muVerMo": "CombVerMo->N0_7muVerMo",
+        "SubjVertMo": "CombVerMo->SubjVertMo",
+        "QGVertMotion": "CombVerMo->QGVertMotion",
+        "AreaMeso_ALS": "CombVerMo->AreaMeso_ALS",
+        "AreaMoDryAir": "CombVerMo->AreaMoDryAir"
+      }
+    },
+    "AreaMeso_ALS": {
+      "degree": 5,
+      "n_feasible": 20,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "N0_7muVerMo": "AreaMeso_ALS->N0_7muVerMo",
+        "SubjVertMo": "AreaMeso_ALS->SubjVertMo",
+        "QGVertMotion": "AreaMeso_ALS->QGVertMotion",
+        "CombVerMo": "AreaMeso_ALS->CombVerMo",
+        "AreaMoDryAir": "AreaMeso_ALS->AreaMoDryAir"
+      }
+    },
+    "InsInMt": {
+      "degree": 5,
+      "n_feasible": 10,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "CldShadeOth": "InsInMt->CldShadeOth",
+        "AMInstabMt": "AMInstabMt->InsInMt",
+        "OutflowFrMt": "InsInMt->OutflowFrMt",
+        "CldShadeConv": "InsInMt->CldShadeConv",
+        "MountainFcst": "InsInMt->MountainFcst"
+      }
+    },
+    "ScenRelAMIns": {
+      "degree": 5,
+      "n_feasible": 12,
+      "n_total": 32,
+      "hard_flips": [
+        [
+          "Dewpoints",
+          1,
+          0
+        ],
+        [
+          "WindFieldPln",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 4,
+      "n_edges": 5,
+      "directions": {
+        "Scenario": "Scenario->ScenRelAMIns",
+        "ScnRelPlFcst": "ScenRelAMIns->ScnRelPlFcst",
+        "Dewpoints": "ScenRelAMIns->Dewpoints",
+        "SfcWndShfDis": "SfcWndShfDis->ScenRelAMIns",
+        "WindFieldPln": "ScenRelAMIns->WindFieldPln"
+      }
+    },
+    "AreaMoDryAir": {
+      "degree": 4,
+      "n_feasible": 10,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 4,
+      "directions": {
+        "CombVerMo": "AreaMoDryAir->CombVerMo",
+        "AreaMeso_ALS": "AreaMoDryAir->AreaMeso_ALS",
+        "CombMoisture": "AreaMoDryAir->CombMoisture",
+        "CldShadeOth": "AreaMoDryAir->CldShadeOth"
+      }
+    },
+    "InsChange": {
+      "degree": 4,
+      "n_feasible": 12,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "InsSclInScen",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 3,
+      "n_edges": 4,
+      "directions": {
+        "CompPlFcst": "InsChange->CompPlFcst",
+        "CapChange": "InsChange->CapChange",
+        "LoLevMoistAd": "LoLevMoistAd->InsChange",
+        "InsSclInScen": "InsChange->InsSclInScen"
+      }
+    },
+    "SfcWndShfDis": {
+      "degree": 4,
+      "n_feasible": 7,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "Scenario": "Scenario->SfcWndShfDis",
+        "ScenRelAMCIN": "SfcWndShfDis->ScenRelAMCIN",
+        "ScenRelAMIns": "SfcWndShfDis->ScenRelAMIns",
+        "ScnRelPlFcst": "SfcWndShfDis->ScnRelPlFcst"
+      }
+    },
+    "WindAloft": {
+      "degree": 4,
+      "n_feasible": 6,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "Scenario",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 4,
+      "directions": {
+        "Scenario": "WindAloft->Scenario",
+        "ScenRel3_4": "WindAloft->ScenRel3_4",
+        "ScnRelPlFcst": "WindAloft->ScnRelPlFcst",
+        "RHRatio": "WindAloft->RHRatio"
+      }
+    },
+    "CombMoisture": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "AreaMoDryAir",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 2,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "SatContMoist": "SatContMoist->CombMoisture",
+        "RaoContMoist": "RaoContMoist->CombMoisture",
+        "AreaMoDryAir": "CombMoisture->AreaMoDryAir"
+      }
+    },
+    "CombClouds": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "VISCloudCov": "CombClouds->VISCloudCov",
+        "IRCloudCover": "CombClouds->IRCloudCover",
+        "CldShadeOth": "CombClouds->CldShadeOth"
+      }
+    },
+    "CldShadeOth": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "CombClouds",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "AreaMoDryAir": "AreaMoDryAir->CldShadeOth",
+        "CombClouds": "CldShadeOth->CombClouds",
+        "InsInMt": "InsInMt->CldShadeOth"
+      }
+    },
+    "OutflowFrMt": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "InsInMt": "InsInMt->OutflowFrMt",
+        "WndHodograph": "WndHodograph->OutflowFrMt",
+        "Boundaries": "OutflowFrMt->Boundaries"
+      }
+    },
+    "CompPlFcst": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 3,
+      "directions": {
+        "CapChange": "CapChange->CompPlFcst",
+        "InsChange": "InsChange->CompPlFcst",
+        "CapInScen": "CapInScen->CompPlFcst"
+      }
+    },
+    "CapChange": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "InsChange",
+          1,
+          0
+        ],
+        [
+          "CapInScen",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "CompPlFcst": "CapChange->CompPlFcst",
+        "InsChange": "CapChange->InsChange",
+        "CapInScen": "CapChange->CapInScen"
+      }
+    },
+    "Scenario": {
+      "degree": 3,
+      "n_feasible": 6,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "ScenRelAMIns": "Scenario->ScenRelAMIns",
+        "SfcWndShfDis": "Scenario->SfcWndShfDis",
+        "WindAloft": "Scenario->WindAloft"
+      }
+    },
+    "ScenRelAMCIN": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 3,
+      "directions": {
+        "SfcWndShfDis": "SfcWndShfDis->ScenRelAMCIN",
+        "TempDis": "TempDis->ScenRelAMCIN",
+        "WindFieldPln": "WindFieldPln->ScenRelAMCIN"
+      }
+    },
+    "CapInScen": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "CompPlFcst": "CapInScen->CompPlFcst",
+        "CapChange": "CapInScen->CapChange",
+        "AMCINInScen": "CapInScen->AMCINInScen"
+      }
+    },
+    "AMInsWliScen": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "LIfr12ZDENSd": "AMInsWliScen->LIfr12ZDENSd",
+        "AMDewptCalPl": "AMInsWliScen->AMDewptCalPl",
+        "InsSclInScen": "AMInsWliScen->InsSclInScen"
+      }
+    },
+    "ScenRel3_4": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 3,
+      "directions": {
+        "Dewpoints": "Dewpoints->ScenRel3_4",
+        "SynForcng": "SynForcng->ScenRel3_4",
+        "WindAloft": "WindAloft->ScenRel3_4"
+      }
+    },
+    "ScnRelPlFcst": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 3,
+      "directions": {
+        "ScenRelAMIns": "ScenRelAMIns->ScnRelPlFcst",
+        "SfcWndShfDis": "SfcWndShfDis->ScnRelPlFcst",
+        "WindAloft": "WindAloft->ScnRelPlFcst"
+      }
+    },
+    "Dewpoints": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "ScenRelAMIns": "Dewpoints->ScenRelAMIns",
+        "ScenRel3_4": "Dewpoints->ScenRel3_4",
+        "WindFieldPln": "Dewpoints->WindFieldPln"
+      }
+    },
+    "WindFieldPln": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "ScenRelAMCIN": "WindFieldPln->ScenRelAMCIN",
+        "ScenRelAMIns": "WindFieldPln->ScenRelAMIns",
+        "Dewpoints": "WindFieldPln->Dewpoints"
+      }
+    },
+    "N0_7muVerMo": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CombVerMo": "N0_7muVerMo->CombVerMo",
+        "AreaMeso_ALS": "N0_7muVerMo->AreaMeso_ALS"
+      }
+    },
+    "SubjVertMo": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "CombVerMo": "SubjVertMo->CombVerMo",
+        "AreaMeso_ALS": "AreaMeso_ALS->SubjVertMo"
+      }
+    },
+    "QGVertMotion": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "CombVerMo": "QGVertMotion->CombVerMo",
+        "AreaMeso_ALS": "QGVertMotion->AreaMeso_ALS"
+      }
+    },
+    "WndHodograph": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "OutflowFrMt": "WndHodograph->OutflowFrMt",
+        "CldShadeConv": "WndHodograph->CldShadeConv"
+      }
+    },
+    "Boundaries": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "OutflowFrMt": "OutflowFrMt->Boundaries",
+        "MorningBound": "MorningBound->Boundaries"
+      }
+    },
+    "CldShadeConv": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "InsInMt": "InsInMt->CldShadeConv",
+        "WndHodograph": "WndHodograph->CldShadeConv"
+      }
+    },
+    "MountainFcst": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "InsInMt": "InsInMt->MountainFcst",
+        "R5Fcst": "MountainFcst->R5Fcst"
+      }
+    },
+    "AMCINInScen": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "CapInScen",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "MorningCIN": "MorningCIN->AMCINInScen",
+        "CapInScen": "AMCINInScen->CapInScen"
+      }
+    },
+    "InsSclInScen": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "InsChange": "InsSclInScen->InsChange",
+        "AMInsWliScen": "AMInsWliScen->InsSclInScen"
+      }
+    },
+    "CurPropConv": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "LatestCIN": "LatestCIN->CurPropConv",
+        "LLIW": "LLIW->CurPropConv"
+      }
+    },
+    "N34StarFcst": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "PlainsFcst": "N34StarFcst->PlainsFcst",
+        "R5Fcst": "N34StarFcst->R5Fcst"
+      }
+    },
+    "R5Fcst": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 2,
+      "directions": {
+        "MountainFcst": "R5Fcst->MountainFcst",
+        "N34StarFcst": "R5Fcst->N34StarFcst"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 102,
+    "phase1_correct": 59,
+    "phase2_correct": 66,
+    "phase1_accuracy": 57.8,
+    "phase2_accuracy": 64.7,
+    "delta_pp": 6.9,
+    "hard_flips": 9,
+    "hard_flips_helped": 3,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/synthetic_er_20n_30d_g0/mve_results.json",
+    "network": "insurance",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "X_13": {
+      "degree": 6,
+      "n_feasible": 19,
+      "n_total": 64,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 6,
+      "directions": {
+        "X_1": "X_13->X_1",
+        "X_8": "X_13->X_8",
+        "X_9": "X_13->X_9",
+        "X_10": "X_13->X_10",
+        "X_15": "X_13->X_15",
+        "X_18": "X_13->X_18"
+      }
+    },
+    "X_12": {
+      "degree": 5,
+      "n_feasible": 32,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 5,
+      "directions": {
+        "X_0": "X_12->X_0",
+        "X_2": "X_12->X_2",
+        "X_14": "X_12->X_14",
+        "X_8": "X_12->X_8",
+        "X_19": "X_12->X_19"
+      }
+    },
+    "X_18": {
+      "degree": 5,
+      "n_feasible": 8,
+      "n_total": 32,
+      "hard_flips": [],
+      "p1_correct": 5,
+      "p2_correct": 5,
+      "n_edges": 5,
+      "directions": {
+        "X_0": "X_18->X_0",
+        "X_13": "X_18->X_13",
+        "X_11": "X_18->X_11",
+        "X_17": "X_18->X_17",
+        "X_6": "X_18->X_6"
+      }
+    },
+    "X_0": {
+      "degree": 4,
+      "n_feasible": 10,
+      "n_total": 16,
+      "hard_flips": [
+        [
+          "X_10",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 4,
+      "directions": {
+        "X_12": "X_0->X_12",
+        "X_10": "X_0->X_10",
+        "X_18": "X_0->X_18",
+        "X_19": "X_0->X_19"
+      }
+    },
+    "X_2": {
+      "degree": 4,
+      "n_feasible": 8,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 4,
+      "directions": {
+        "X_12": "X_2->X_12",
+        "X_14": "X_2->X_14",
+        "X_11": "X_2->X_11",
+        "X_19": "X_2->X_19"
+      }
+    },
+    "X_11": {
+      "degree": 4,
+      "n_feasible": 16,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 4,
+      "directions": {
+        "X_2": "X_11->X_2",
+        "X_5": "X_11->X_5",
+        "X_8": "X_11->X_8",
+        "X_18": "X_11->X_18"
+      }
+    },
+    "X_8": {
+      "degree": 4,
+      "n_feasible": 7,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 4,
+      "directions": {
+        "X_12": "X_8->X_12",
+        "X_13": "X_8->X_13",
+        "X_11": "X_8->X_11",
+        "X_19": "X_8->X_19"
+      }
+    },
+    "X_19": {
+      "degree": 4,
+      "n_feasible": 12,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 4,
+      "p2_correct": 4,
+      "n_edges": 4,
+      "directions": {
+        "X_0": "X_19->X_0",
+        "X_12": "X_19->X_12",
+        "X_2": "X_19->X_2",
+        "X_8": "X_19->X_8"
+      }
+    },
+    "X_14": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "X_12": "X_14->X_12",
+        "X_2": "X_14->X_2",
+        "X_16": "X_14->X_16"
+      }
+    },
+    "X_16": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 3,
+      "directions": {
+        "X_14": "X_16->X_14",
+        "X_7": "X_16->X_7",
+        "X_9": "X_16->X_9"
+      }
+    },
+    "X_9": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "X_13": "X_9->X_13",
+        "X_16": "X_9->X_16",
+        "X_10": "X_9->X_10"
+      }
+    },
+    "X_10": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 3,
+      "p2_correct": 3,
+      "n_edges": 3,
+      "directions": {
+        "X_0": "X_10->X_0",
+        "X_13": "X_10->X_13",
+        "X_9": "X_10->X_9"
+      }
+    },
+    "X_17": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "X_5": "X_17->X_5",
+        "X_4": "X_17->X_4",
+        "X_18": "X_17->X_18"
+      }
+    },
+    "X_1": {
+      "degree": 2,
+      "n_feasible": 4,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "X_13": "X_1->X_13",
+        "X_3": "X_1->X_3"
+      }
+    },
+    "X_5": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "X_11": "X_5->X_11",
+        "X_17": "X_5->X_17"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 55,
+    "phase1_correct": 29,
+    "phase2_correct": 29,
+    "phase1_accuracy": 52.7,
+    "phase2_accuracy": 52.7,
+    "delta_pp": 0.0,
+    "hard_flips": 1,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

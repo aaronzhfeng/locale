@@ -1,0 +1,12 @@
+{
+  "n_nodes": 50,
+  "avg_degree": 3.0,
+  "graph_seed": 1,
+  "n_gt_edges": 82,
+  "locale_f1": 0.44295302013422816,
+  "locale_precision": 0.4925373134328358,
+  "locale_recall": 0.4024390243902439,
+  "mosacd_f1": 0.4697986577181208,
+  "mosacd_precision": 0.5223880597014925,
+  "mosacd_recall": 0.4268292682926829
+}

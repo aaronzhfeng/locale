@@ -776,3 +776,54 @@ Results: LOCALE wins or ties on 9/10 networks. Only loss is Asia (8 nodes). Win9
 
 → DAG: E03
 → Evidence: XN-035, XN-031, XN-034
+
+---
+
+<a id="LOG-2026-03-27-41"></a>
+### 2026-03-27 — Full 11-network comparison: 8W/2T/1L, Wilcoxon p=0.027
+
+Expanded to all 11 BNLearn benchmarks (10 MosaCD + Sachs). Added Hailfinder at n=2000 (PC skeleton too slow at n=10000 for 56-node network).
+
+Final scorecard: LOCALE wins 8, ties 2, loses 1. Mean +7.6pp. Aggregate Wilcoxon signed-rank p=0.027 — statistically significant overall advantage. Largest wins on Sachs (+30.7pp), Hailfinder (+16.7pp), Hepar2 (+16.0pp), Win95pts (+12.2pp). Only loss: Asia (-6.7pp, degree-1 structural vulnerability).
+
+→ DAG: E03
+→ Evidence: XN-035 (updated to include Hailfinder)
+
+---
+
+<a id="LOG-2026-03-28-42"></a>
+### 2026-03-28 — Synthetic ER results: LOCALE wins 14/22, +14.3pp, p=0.006
+
+Synthetic ER experiment complete (27 LOCALE, 22 MosaCD configurations). LOCALE wins 14/22 matched pairs with mean +14.3pp (p=0.006). Both methods degrade without domain knowledge (LOCALE 0.53, MosaCD 0.39) but LOCALE preserves its relative advantage.
+
+This directly refutes the concern (raised in RN-003) that LOCALE's BNLearn advantage is purely domain-knowledge-driven. The ego-graph structural advantage carries over to novel graphs. LOCALE's advantage grows with graph density (5/6 wins at avg_degree=3.0).
+
+Note: RN-003 reviewer checked only 4 synthetic pairs and concluded MosaCD wins 3/4 — a sampling error. The full 22-pair dataset tells the opposite story.
+
+→ DAG: E03
+→ Evidence: XN-037
+
+---
+
+<a id="LOG-2026-03-28-43"></a>
+### 2026-03-28 — Alarm s0 outlier investigated: LLM gives systematically wrong orientations
+
+Alarm seed 0 has 13.5% ego-graph accuracy (vs 80-86% for all other 11 seeds). Per-edge accuracy is also low (58.1% vs ~82%). All other Alarm seeds are tightly clustered. This is a data-dependent LLM failure — the particular data realization at seed 0 triggers wrong orientations.
+
+This explains the disguised robustness outlier (XN-033, Alarm s0: real=0.637, disguised=0.901). With disguised names, the LLM can't apply its (incorrect for this data) domain priors, so accuracy improves.
+
+The outlier is 1/12 seeds — not a systematic problem. Paper options: exclude as outlier with justification, or include with explanation that LLM orientation quality varies by data realization.
+
+→ Evidence: XN-033, XN-031
+
+---
+
+<a id="LOG-2026-03-29-44"></a>
+### 2026-03-29 — Synthetic ER expanded to 10 seeds: LOCALE wins 8/10, per-seed Wilcoxon p=0.010
+
+Expanded from 3 to 10 graph seeds (g0-g9), totaling 89 paired configurations. LOCALE wins 8/10 graph seeds with per-seed Wilcoxon p=0.010 — fully addresses the pseudoreplication concern from RN-004. Mean per-seed delta +12.5pp.
+
+The synthetic advantage (+12.5pp) is actually larger than the BNLearn advantage (+7.6pp), refuting the hypothesis that LOCALE's advantage is primarily domain-knowledge-driven.
+
+→ DAG: E03
+→ Evidence: XN-037 (updated)

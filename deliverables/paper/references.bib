@@ -1,0 +1,369 @@
+% Bibliography for LOCALE paper.
+% Entries marked [DOI-VERIFIED] were fetched from doi.org via check_bib_hallucinations.py --doi2bib.
+% Entries marked [MANUAL-NEEDS-VERIFY] use known metadata but need human check.
+% Run: python brainstorm-00-core/scripts/check_bib_hallucinations.py references.bib --strict
+
+% ============================================================
+%  LLM-assisted causal discovery
+% ============================================================
+
+% [DOI-VERIFIED] MosaCD — arXiv:2509.23570
+@misc{chen2024mosacd,
+  author = {Lyu, Ruiqi and Turcan, Alistair and Zhang, Martin Jinye and Wilder, Bryan},
+  title = {Improving constraint-based discovery with robust propagation and reliable {LLM} priors},
+  year = {2025},
+  url = {https://arxiv.org/abs/2509.23570},
+  doi = {10.48550/arXiv.2509.23570}
+}
+
+% [DOI-VERIFIED] chatPC — arXiv:2406.07378
+@misc{ban2023chatpc,
+  author = {Cohrs, Kai-Hendrik and Varando, Gherardo and Diaz, Emiliano and Sitokonstantinou, Vasileios and Camps-Valls, Gustau},
+  title = {Large Language Models for Constrained-Based Causal Discovery},
+  year = {2024},
+  url = {https://arxiv.org/abs/2406.07378},
+  doi = {10.48550/arXiv.2406.07378}
+}
+
+% [DOI-VERIFIED] SCD+LLM / CausalFusion — arXiv:2402.01454
+% Note: brainstorm literature lists this as the SCD+LLM paper (Takayama et al.)
+% CausalFusion (same authors, AAAI 2026) may have a separate DOI — verify.
+@article{takayama2024causalfusion,
+  author = {Takayama, Masayuki and Okuda, Tadahisa and Pham, Thong and Ikenoue, Tatsuyoshi and Fukuma, Shingo and Shimizu, Shohei and Sannai, Akiyoshi},
+  title = {Integrating Large Language Models in Causal Discovery: A Statistical Causal Approach},
+  year = {2024},
+  url = {https://arxiv.org/abs/2402.01454},
+  doi = {10.48550/arXiv.2402.01454}
+}
+
+% [DOI-VERIFIED] CauScientist — arXiv:2601.13614
+@misc{chen2025causcientist,
+  author = {Peng, Bo and Chen, Sirui and Xu, Lei and Lu, Chaochao},
+  title = {{CauScientist}: Teaching {LLMs} to Respect Data for Causal Discovery},
+  year = {2026},
+  url = {https://arxiv.org/abs/2601.13614},
+  doi = {10.48550/arXiv.2601.13614}
+}
+
+% [DOI-VERIFIED] ILS-CSL — arXiv:2311.11689
+@misc{gao2024ilscsl,
+  author = {Ban, Taiyu and Chen, Lyuzhou and Lyu, Derui and Wang, Xiangyu and Chen, Huanhuan},
+  title = {Causal Structure Learning Supervised by Large Language Model},
+  year = {2023},
+  url = {https://arxiv.org/abs/2311.11689},
+  doi = {10.48550/arXiv.2311.11689}
+}
+
+% [DOI-VERIFIED] MAC — arXiv:2407.15073
+@misc{chen2024mac,
+  author = {Le, Hao Duong and Xia, Xin and Chen, Zhang},
+  title = {Multi-Agent Causal Discovery Using Large Language Models},
+  year = {2024},
+  url = {https://arxiv.org/abs/2407.15073},
+  doi = {10.48550/arXiv.2407.15073}
+}
+
+% [DOI-VERIFIED] Harmonized Prior / Mitigating Prior Errors — arXiv:2306.07032
+@misc{li2025harmonized,
+  author = {Chen, Lyuzhou and Ban, Taiyu and Wang, Xiangyu and Lyu, Derui and Chen, Huanhuan},
+  title = {Mitigating Prior Errors in Causal Structure Learning: A Resilient Approach via {Bayesian} Networks},
+  year = {2023},
+  url = {https://arxiv.org/abs/2306.07032},
+  doi = {10.48550/arXiv.2306.07032}
+}
+
+% wang2025scd removed — was duplicate of takayama2024causalfusion (same DOI)
+
+% [DOI-VERIFIED] COAT — arXiv:2402.03941
+@misc{jin2025coat,
+  author = {Liu, Chenxi and Chen, Yongqiang and Liu, Tongliang and Gong, Mingming and Cheng, James and Han, Bo and Zhang, Kun},
+  title = {Discovering and Reasoning of Causality in the Hidden World with Large Language Models},
+  year = {2024},
+  url = {https://arxiv.org/abs/2402.03941},
+  doi = {10.48550/arXiv.2402.03941}
+}
+
+
+% ============================================================
+%  Classical causal discovery
+% ============================================================
+
+% [DOI-VERIFIED] Spirtes, Glymour, Scheines — Causation, Prediction, and Search
+@book{spirtes2000causation,
+  author = {Spirtes, Peter and Glymour, Clark and Scheines, Richard},
+  title = {Causation, Prediction, and Search},
+  year = {1993},
+  publisher = {Springer New York},
+  series = {Lecture Notes in Statistics},
+  doi = {10.1007/978-1-4612-2748-9},
+  note = {2nd edition 2000, MIT Press}
+}
+
+% [MANUAL-NEEDS-VERIFY] Colombo & Maathuis 2014 — PC-stable (JMLR 15)
+@article{colombo2014order,
+  author = {Colombo, Diego and Maathuis, Marloes H.},
+  title = {Order-Independent Constraint-Based Causal Structure Learning},
+  journal = {Journal of Machine Learning Research},
+  year = {2014},
+  volume = {15},
+  number = {116},
+  pages = {3921--3962},
+  url = {https://jmlr.org/papers/v15/colombo14a.html}
+}
+
+% [MANUAL-NEEDS-VERIFY] Ramsey, Zhang, Spirtes 2006 — CPC (UAI)
+@inproceedings{ramsey2006cpc,
+  author = {Ramsey, Joseph and Zhang, Jiji and Spirtes, Peter L.},
+  title = {Adjacency-Faithfulness and Conservative Causal Inference},
+  booktitle = {Proceedings of the 22nd Conference on Uncertainty in Artificial Intelligence (UAI)},
+  year = {2006},
+  pages = {401--408}
+}
+
+% [MANUAL-NEEDS-VERIFY] Uhler et al. 2013 — Faithfulness geometry (Annals of Statistics)
+@article{uhler2013geometry,
+  author = {Uhler, Caroline and Raskutti, Garvesh and B{\"u}hlmann, Peter and Yu, Bin},
+  title = {Geometry of the Faithfulness Assumption in Causal Inference},
+  journal = {The Annals of Statistics},
+  year = {2013},
+  volume = {41},
+  number = {2},
+  pages = {436--463},
+  doi = {10.1214/12-AOS1080}
+}
+
+% [MANUAL-NEEDS-VERIFY] Meek 1995 — Orientation rules (UAI)
+@inproceedings{meek1995causal,
+  author = {Meek, Christopher},
+  title = {Causal Inference and Causal Explanation with Background Knowledge},
+  booktitle = {Proceedings of the 11th Conference on Uncertainty in Artificial Intelligence (UAI)},
+  year = {1995},
+  pages = {403--410},
+  publisher = {Morgan Kaufmann}
+}
+
+% [MANUAL-NEEDS-VERIFY] Dawid & Skene 1979 — Annotator aggregation (Applied Statistics)
+@article{dawid1979maximum,
+  author = {Dawid, A. P. and Skene, A. M.},
+  title = {Maximum Likelihood Estimation of Observer Error-Rates Using the {EM} Algorithm},
+  journal = {Journal of the Royal Statistical Society. Series C (Applied Statistics)},
+  year = {1979},
+  volume = {28},
+  number = {1},
+  pages = {20--28},
+  doi = {10.2307/2346806}
+}
+
+% [MANUAL-NEEDS-VERIFY] Margaritis & Thrun 2000 — GLL
+@inproceedings{margaritis2000gll,
+  author = {Margaritis, Dimitris and Thrun, Sebastian},
+  title = {Bayesian Network Induction via Local Neighborhoods},
+  booktitle = {Advances in Neural Information Processing Systems 12 (NeurIPS)},
+  year = {2000},
+  pages = {505--511},
+  publisher = {MIT Press}
+}
+
+% [DOI-VERIFIED] Tsamardinos et al. 2003 — IAMB / MMPC (KDD)
+@inproceedings{tsamardinos2003iamb,
+  author = {Tsamardinos, Ioannis and Aliferis, Constantin F. and Statnikov, Alexander},
+  title = {Time and Sample Efficient Discovery of {Markov} Blankets and Direct Causal Relations},
+  booktitle = {Proceedings of the 9th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  year = {2003},
+  pages = {673--678},
+  publisher = {ACM},
+  doi = {10.1145/956750.956838}
+}
+
+% [MANUAL-NEEDS-VERIFY] Tsamardinos, Brown, Aliferis 2006 — MMHC (Machine Learning)
+@article{tsamardinos2006mmpc,
+  author = {Tsamardinos, Ioannis and Brown, Laura E. and Aliferis, Constantin F.},
+  title = {The Max-Min Hill-Climbing {Bayesian} Network Structure Learning Algorithm},
+  journal = {Machine Learning},
+  year = {2006},
+  volume = {65},
+  number = {1},
+  pages = {31--78},
+  doi = {10.1007/s10994-006-6889-7}
+}
+
+% ============================================================
+%  Extended related work (Appendix J)
+% ============================================================
+
+@misc{jiralerspong2024efficient,
+  author = {Jiralerspong, Thomas and Chen, Xiaoyin and More, Yash and Shah, Vedant and Bengio, Yoshua},
+  title = {Efficient Causal Graph Discovery Using Large Language Models},
+  year = {2024},
+  url = {https://arxiv.org/abs/2402.01207},
+  doi = {10.48550/arXiv.2402.01207}
+}
+
+% abdulaal2024cma removed (LIKELY_MATCH, not cited)
+
+@misc{shen2025matmcd,
+  author = {Shen, ChengAo and Chen, Zhengzhang and Luo, Dongsheng and Xu, Dongkuan and Chen, Haifeng and Ni, Jingchao},
+  title = {Exploring Multi-Modal Data with Tool-Augmented {LLM} Agents for Precise Causal Discovery},
+  year = {2025},
+  url = {https://arxiv.org/abs/2412.13667},
+  doi = {10.48550/arXiv.2412.13667}
+}
+
+@inproceedings{whitehill2009glad,
+  author = {Whitehill, Jacob and Wu, Ting-fan and Bergsma, Jacob and Movellan, Javier R. and Ruvolo, Paul L.},
+  title = {Whose Vote Should Count More: Optimal Integration of Labels from Labelers of Unknown Expertise},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year = {2009}
+}
+
+@inproceedings{kim2012bcc,
+  author = {Kim, Hyun-Chul and Ghahramani, Zoubin},
+  title = {Bayesian Classifier Combination},
+  booktitle = {International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  year = {2012}
+}
+
+@inproceedings{venanzi2014communitybcc,
+  author = {Venanzi, Matteo and Guiver, John and Kazai, Gabriella and Kohli, Pushmeet and Shokouhi, Milad},
+  title = {Community-Based {Bayesian} Aggregation Models for Crowdsourcing},
+  booktitle = {Proceedings of the 23rd International Conference on World Wide Web (WWW)},
+  year = {2014}
+}
+
+@inproceedings{li2019ebcc,
+  author = {Li, Yuan and Rubinstein, Benjamin I. P. and Cohn, Trevor},
+  title = {Exploiting Worker Correlation for Label Aggregation in Crowdsourcing},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year = {2019}
+}
+
+@misc{balasubramanian2026ising,
+  author = {Balasubramanian, Krishnakumar and Podkopaev, Aleksandr and Kasiviswanathan, Shiva Prasad},
+  title = {Dependence-Aware Label Aggregation for {LLM}-as-a-Judge via Ising Models},
+  year = {2026},
+  url = {https://arxiv.org/abs/2601.22336}
+}
+
+@misc{zhao2026care,
+  author = {Zhao, Jitian and Shin, Changho and Huang, Tzu-Heng and Namburi, Satya Sai Srinath and Sala, Frederic},
+  title = {{CARE}: Confounder-Aware Aggregation for Reliable {LLM} Evaluation},
+  year = {2026},
+  url = {https://arxiv.org/abs/2603.00039}
+}
+
+% vovk2014venn removed (LIKELY_MATCH, not cited)
+
+@misc{vanderlaan2025gva,
+  author = {van der Laan, Lars and Alaa, Ahmed},
+  title = {Generalized {Venn} and {Venn}-{Abers} Calibration with Applications in Conformal Prediction},
+  year = {2025},
+  url = {https://arxiv.org/abs/2502.05676}
+}
+
+@inproceedings{zhang2025conformal,
+  author = {Zhang, Botong and Li, Shuo and Bastani, Osbert},
+  title = {Conformal Structured Prediction},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year = {2025},
+  url = {https://arxiv.org/abs/2410.06296},
+  doi = {10.48550/arXiv.2410.06296}
+}
+
+% angelopoulos2024conformal removed (LIKELY_MATCH, not cited)
+
+@inproceedings{zhao2024clp,
+  author = {Zhao, Tianyi and Kang, Jian and Cheng, Lu},
+  title = {Conformalized Link Prediction on Graph Neural Networks},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)},
+  year = {2024},
+  doi = {10.1145/3637528.3672061}
+}
+
+@article{ricctersenghi2009cavity,
+  author = {Ricci-Tersenghi, Federico and Semerjian, Guilhem},
+  title = {On the Cavity Method for Decimated Random Constraint Satisfaction Problems},
+  journal = {Journal of Statistical Mechanics: Theory and Experiment},
+  year = {2009},
+  pages = {P09001},
+  doi = {10.1088/1742-5468/2009/09/P09001}
+}
+
+@article{marino2016backtracking,
+  author = {Marino, Raffaele and Parisi, Giorgio and Ricci-Tersenghi, Federico},
+  title = {The Backtracking Survey Propagation Algorithm for Solving Random {K-SAT} Problems},
+  journal = {Nature Communications},
+  year = {2016},
+  volume = {7},
+  pages = {12996},
+  doi = {10.1038/ncomms12996}
+}
+
+@inproceedings{grover2018streamline,
+  author = {Grover, Aditya and Achim, Tudor and Ermon, Stefano},
+  title = {Streamlining Variational Inference for Constraint Satisfaction Problems},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year = {2018}
+}
+
+@article{zhou2016spinglass,
+  author = {Zhou, Hai-Jun},
+  title = {A Spin Glass Approach to the Directed Feedback Vertex Set Problem},
+  journal = {Journal of Statistical Mechanics: Theory and Experiment},
+  year = {2016},
+  volume = {2016},
+  number = {7},
+  pages = {073303},
+  doi = {10.1088/1742-5468/2016/07/073303}
+}
+
+@article{cantwell2022bpperm,
+  author = {Cantwell, George T. and Moore, Cristopher},
+  title = {Belief Propagation for Permutations, Rankings, and Partial Orders},
+  journal = {Physical Review E},
+  year = {2022},
+  volume = {105},
+  pages = {L052303},
+  doi = {10.1103/PhysRevE.105.L052303}
+}
+
+@inproceedings{aliferis2003hiton,
+  author = {Aliferis, Constantin F. and Tsamardinos, Ioannis and Statnikov, Alexander},
+  title = {{HITON}: A Novel {Markov} Blanket Algorithm for Optimal Variable Selection},
+  booktitle = {AMIA Annual Symposium Proceedings},
+  year = {2003}
+}
+
+@article{sondhi2019rpc,
+  author = {Sondhi, Arjun and Shojaie, Ali},
+  title = {The Reduced {PC}-Algorithm: Improved Causal Structure Learning in Large Random Networks},
+  journal = {Journal of Machine Learning Research},
+  year = {2019}
+}
+
+@article{chen2023lfci,
+  author = {Chen, Wenyu and Drton, Mathias and Shojaie, Ali},
+  title = {Causal Structural Learning Via Local Graphs},
+  journal = {SIAM Journal on Mathematics of Data Science},
+  year = {2023}
+}
+
+@inproceedings{gao2015cmb,
+  author = {Gao, Tian and Ji, Qiang},
+  title = {Local Causal Discovery of Direct Causes and Effects},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year = {2015}
+}
+
+@inproceedings{rohekar2021icd,
+  author = {Rohekar, Raanan Y. and Nisimov, Shami and Gurwicz, Yaniv and Novik, Gal},
+  title = {Iterative Causal Discovery in the Possible Presence of Latent Confounders and Selection Bias},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year = {2021}
+}
+
+@inproceedings{li2019consistent,
+  author = {Li, Honghao and Cabeli, Vincent and Sella, Nadir and Isambert, Herv{\'e}},
+  title = {Constraint-based Causal Structure Learning with Consistent Separating Sets},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year = {2019}
+}

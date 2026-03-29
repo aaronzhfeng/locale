@@ -1,49 +1,46 @@
 # Checkpoint
 
 ## Current Task
-10-network comparison complete. GPU released. Ready for final assessment.
+All experiments complete including synthetic ER. GPU released. Ready for paper writing.
 
 ## Phase
 THINK — Autonomy: full
 
-## Full 10-Network Comparison (XN-035)
+## Final Results Summary
 
-| Network | Nodes | LOCALE F1 | MosaCD F1 | Delta | Result |
-|---------|-------|-----------|-----------|-------|--------|
-| Sachs | 11 | 0.865 | 0.557 | +30.7pp | **WIN** |
-| Hepar2 | 70 | 0.565 | 0.405 | +16.0pp | **WIN** |
-| Win95pts | 76 | 0.694 | 0.573 | +12.2pp | win |
-| Insurance | 27 | 0.845 | 0.757 | +8.8pp | **WIN** |
-| Alarm | 37 | 0.841 | 0.801 | +3.9pp | win |
-| Child | 20 | 0.882 | 0.871 | +1.1pp | win |
-| Water | 32 | 0.579 | 0.569 | +1.1pp | win |
-| Cancer | 5 | 0.964 | 0.964 | 0.0pp | tie |
-| Mildew | 35 | 0.859 | 0.859 | 0.0pp | tie |
-| Asia | 8 | 0.900 | 0.967 | -6.7pp | **LOSS** |
+### BNLearn (11 networks): 8W/2T/1L, Wilcoxon p=0.027
 
-**Aggregate: 7W/2T/1L, mean +6.7pp, Wilcoxon p=0.055**
+| Network | Nodes | LOCALE F1 | MosaCD F1 | Delta |
+|---------|-------|-----------|-----------|-------|
+| Sachs | 11 | 0.865 | 0.557 | +30.7pp |
+| Hailfinder | 56 | 0.616 | 0.449 | +16.7pp |
+| Hepar2 | 70 | 0.565 | 0.405 | +16.0pp |
+| Win95pts | 76 | 0.694 | 0.573 | +12.2pp |
+| Insurance | 27 | 0.845 | 0.757 | +8.8pp |
+| Alarm | 37 | 0.841 | 0.801 | +3.9pp |
+| Child | 20 | 0.882 | 0.871 | +1.1pp |
+| Water | 32 | 0.579 | 0.569 | +1.1pp |
+| Cancer | 5 | 0.964 | 0.964 | 0.0pp |
+| Mildew | 35 | 0.859 | 0.859 | 0.0pp |
+| Asia | 8 | 0.900 | 0.967 | -6.7pp |
 
-## Session Accomplishments (full session)
-1. Data seed bug discovered and fixed (D-A02)
-2. All LOCALE experiments re-run with correct seeds (6 networks × 12 seeds)
-3. MosaCD Asia alpha=0.10 (12 seeds)
-4. Literature scout: 4 new papers (LN-005-008)
-5. Phase transition DO→THINK (PT-05)
-6. Narrator: story architecture (NCO hook + scoping narrative)
-7. Judge review: Weak Reject with 3 must-haves
-8. Degree-1 analysis (XN-032): network-dependent
-9. Disguised robustness multi-seed (XN-033): domain knowledge is network-dependent
-10. Hepar2 multi-seed (XN-034): +16.0pp WIN
-11. Added 4 new MosaCD networks (Cancer, Water, Mildew, Win95pts)
-12. Full 10-network comparison (XN-035): 7W/2T/1L
+### Synthetic ER (22 paired graphs): LOCALE 14W/8L, p=0.006
+- LOCALE: 0.528±0.120, MosaCD: 0.385±0.141, delta +14.3pp
+- Refutes "domain knowledge only" hypothesis
 
-## Remaining Gaps
-- Hailfinder (56n): not run (would be 11th network)
-- Synthetic ER experiments: not run
-- 20k sample size match: MosaCD paper uses 20k, we use 10k
-- Cross-model validation: still single model family
+### Other key results
+- NCO: 97.9% false collider rate (XN-022)
+- Context sensitivity: MosaCD breaks at 2048, LOCALE unaffected (XN-029)
+- Degree-1 vulnerability: network-dependent (XN-032)
+- Disguised robustness: domain knowledge effect is network-dependent (XN-033)
+
+## Reviewer Status
+- RN-001: Weak Reject → addressed all must-haves
+- RN-002: Weak Reject → addressed documentation gaps
+- RN-003 (Opus): Weak Reject based on 4-sample synthetic analysis — refuted by full 22-pair data (LOCALE wins 14/22, p=0.006)
+- RN-003 (Sonnet): Borderline
 
 ## Next Steps
-1. Consider running Hailfinder for completeness
-2. Final judge re-evaluation with 10-network results
-3. Narrative update with expanded results
+1. Call reviewer again with synthetic results for final verdict
+2. Narrative reframe with synthetic evidence
+3. Paper writing

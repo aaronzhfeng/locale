@@ -1,0 +1,4143 @@
+{
+  "metadata": {
+    "network": "insurance",
+    "model": "Qwen/Qwen3.5-27B-FP8",
+    "temperature": 0.7,
+    "k_passes": 10,
+    "n_samples": 10000,
+    "seed": 0,
+    "test_nodes": [
+      "X_8",
+      "X_12",
+      "X_10",
+      "X_3",
+      "X_27",
+      "X_22",
+      "X_28",
+      "X_19",
+      "X_29"
+    ],
+    "n_test_edges": 13,
+    "n_skeleton_edges": 16,
+    "n_gt_edges": 18,
+    "timestamp": "2026-03-28 18:16:20",
+    "disguised_names": true,
+    "enable_thinking": false,
+    "ego_prompt_version": "v1",
+    "contrastive_pe": false,
+    "temp_ladder": false,
+    "enriched": false,
+    "debiased": true,
+    "pc_alpha": 0.05
+  },
+  "summary": {
+    "acc_per_edge": 0.0,
+    "acc_ego_graph": 0.5105263157894737,
+    "delta": 0.5105263157894737,
+    "delta_pp": 51.05263157894737,
+    "uncertain_per_edge": 1.0,
+    "uncertain_ego_graph": 0.0,
+    "queries_per_edge": 190,
+    "queries_ego_graph": 90,
+    "verdict": "STRONG GO \u2014 Full build. Target CLeaR 2027."
+  },
+  "per_node": {
+    "X_8": {
+      "degree": 3,
+      "neighbors": [
+        "X_6",
+        "X_5",
+        "X_25"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_6",
+            "X_5"
+          ],
+          "separated_by": "X_8",
+          "center_in_sep": true,
+          "type": "non-collider"
+        },
+        {
+          "pair": [
+            "X_6",
+            "X_25"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        },
+        {
+          "pair": [
+            "X_5",
+            "X_25"
+          ],
+          "separated_by": "X_8",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_6",
+          "X_8"
+        ],
+        [
+          "X_8",
+          "X_5"
+        ],
+        [
+          "X_25",
+          "X_8"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 0.7
+    },
+    "X_12": {
+      "degree": 2,
+      "neighbors": [
+        "X_27",
+        "X_17"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_27",
+            "X_17"
+          ],
+          "separated_by": "X_12",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_12",
+          "X_27"
+        ],
+        [
+          "X_12",
+          "X_17"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 1.0
+    },
+    "X_10": {
+      "degree": 2,
+      "neighbors": [
+        "X_2",
+        "X_27"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_2",
+            "X_27"
+          ],
+          "separated_by": "X_10",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_2",
+          "X_10"
+        ],
+        [
+          "X_10",
+          "X_27"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 0.5
+    },
+    "X_3": {
+      "degree": 2,
+      "neighbors": [
+        "X_0",
+        "X_26"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_0",
+            "X_26"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_0",
+          "X_3"
+        ],
+        [
+          "X_26",
+          "X_3"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 0.1
+    },
+    "X_27": {
+      "degree": 2,
+      "neighbors": [
+        "X_12",
+        "X_10"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_12",
+            "X_10"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_12",
+          "X_27"
+        ],
+        [
+          "X_10",
+          "X_27"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 0.2
+    },
+    "X_22": {
+      "degree": 2,
+      "neighbors": [
+        "X_28",
+        "X_19"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_28",
+            "X_19"
+          ],
+          "separated_by": "X_22, X_29",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_22",
+          "X_28"
+        ],
+        [
+          "X_22",
+          "X_19"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 1.0
+    },
+    "X_28": {
+      "degree": 2,
+      "neighbors": [
+        "X_22",
+        "X_29"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_22",
+            "X_29"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_22",
+          "X_28"
+        ],
+        [
+          "X_29",
+          "X_28"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 0.0
+    },
+    "X_19": {
+      "degree": 2,
+      "neighbors": [
+        "X_22",
+        "X_29"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_22",
+            "X_29"
+          ],
+          "separated_by": "empty set",
+          "center_in_sep": false,
+          "type": "collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_22",
+          "X_19"
+        ],
+        [
+          "X_29",
+          "X_19"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 0.0
+    },
+    "X_29": {
+      "degree": 2,
+      "neighbors": [
+        "X_28",
+        "X_19"
+      ],
+      "ci_facts": [
+        {
+          "pair": [
+            "X_28",
+            "X_19"
+          ],
+          "separated_by": "X_22, X_29",
+          "center_in_sep": true,
+          "type": "non-collider"
+        }
+      ],
+      "gt_edges": [
+        [
+          "X_29",
+          "X_28"
+        ],
+        [
+          "X_29",
+          "X_19"
+        ]
+      ],
+      "acc_per_edge": 0.0,
+      "acc_ego_graph": 1.0
+    }
+  },
+  "raw_results_a": [
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_6"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_6"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_5"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_25"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_5"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_6"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_25"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_5"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_25"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_5"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_6"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_25"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_5"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_17"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_25"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_6"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_17"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_17"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_17"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_2"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_2"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_17"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_2"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_2"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_0"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_26"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_2"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_26"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_0"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_26"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_0"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_26"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_26"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_0"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_0"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "uncertain",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_19"
+    }
+  ],
+  "raw_results_b": [
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_6->X_8",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_5->X_8",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_6->X_8",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_6->X_8",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_8->X_6",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_8->X_6",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_0->X_3",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_26->X_3",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_0",
+        "X_3"
+      ],
+      "predicted": "X_3->X_0",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_26",
+        "X_3"
+      ],
+      "predicted": "X_3->X_26",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_3"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_8->X_6",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_8->X_6",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_8->X_25",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_6->X_8",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_8->X_6",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_8->X_25",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_2",
+        "X_10"
+      ],
+      "predicted": "X_10->X_2",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_10"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_27->X_12",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_27->X_10",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_10",
+        "X_27"
+      ],
+      "predicted": "X_10->X_27",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_27"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_22->X_28",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_22->X_19",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_22"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 2,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 1,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 5,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 8,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 6,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 9,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 7,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 1,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 3,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 4,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 2,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 6,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 5,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 9,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 7,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_29->X_28",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_29->X_19",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_29"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_28"
+      ],
+      "predicted": "X_28->X_22",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_28"
+      ],
+      "predicted": "X_28->X_29",
+      "correct": false,
+      "pass_idx": 3,
+      "center_node": "X_28"
+    },
+    {
+      "edge": [
+        "X_6",
+        "X_8"
+      ],
+      "predicted": "X_8->X_6",
+      "correct": false,
+      "pass_idx": 0,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_8",
+        "X_5"
+      ],
+      "predicted": "X_8->X_5",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_25",
+        "X_8"
+      ],
+      "predicted": "X_25->X_8",
+      "correct": true,
+      "pass_idx": 0,
+      "center_node": "X_8"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_27"
+      ],
+      "predicted": "X_12->X_27",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_12",
+        "X_17"
+      ],
+      "predicted": "X_12->X_17",
+      "correct": true,
+      "pass_idx": 8,
+      "center_node": "X_12"
+    },
+    {
+      "edge": [
+        "X_22",
+        "X_19"
+      ],
+      "predicted": "X_19->X_22",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_19"
+    },
+    {
+      "edge": [
+        "X_29",
+        "X_19"
+      ],
+      "predicted": "X_19->X_29",
+      "correct": false,
+      "pass_idx": 4,
+      "center_node": "X_19"
+    }
+  ]
+}

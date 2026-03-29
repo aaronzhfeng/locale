@@ -1,0 +1,403 @@
+{
+  "n_nodes": 30,
+  "avg_degree": 3.0,
+  "graph_seed": 0,
+  "n_edges": 46,
+  "edges": [
+    [
+      "X_28",
+      "X_12"
+    ],
+    [
+      "X_29",
+      "X_12"
+    ],
+    [
+      "X_4",
+      "X_3"
+    ],
+    [
+      "X_1",
+      "X_29"
+    ],
+    [
+      "X_1",
+      "X_4"
+    ],
+    [
+      "X_22",
+      "X_18"
+    ],
+    [
+      "X_8",
+      "X_19"
+    ],
+    [
+      "X_19",
+      "X_0"
+    ],
+    [
+      "X_28",
+      "X_19"
+    ],
+    [
+      "X_14",
+      "X_1"
+    ],
+    [
+      "X_24",
+      "X_16"
+    ],
+    [
+      "X_1",
+      "X_21"
+    ],
+    [
+      "X_29",
+      "X_6"
+    ],
+    [
+      "X_6",
+      "X_4"
+    ],
+    [
+      "X_26",
+      "X_22"
+    ],
+    [
+      "X_26",
+      "X_6"
+    ],
+    [
+      "X_28",
+      "X_24"
+    ],
+    [
+      "X_22",
+      "X_6"
+    ],
+    [
+      "X_9",
+      "X_21"
+    ],
+    [
+      "X_4",
+      "X_0"
+    ],
+    [
+      "X_13",
+      "X_1"
+    ],
+    [
+      "X_24",
+      "X_20"
+    ],
+    [
+      "X_26",
+      "X_14"
+    ],
+    [
+      "X_23",
+      "X_4"
+    ],
+    [
+      "X_27",
+      "X_21"
+    ],
+    [
+      "X_13",
+      "X_6"
+    ],
+    [
+      "X_18",
+      "X_0"
+    ],
+    [
+      "X_4",
+      "X_21"
+    ],
+    [
+      "X_11",
+      "X_15"
+    ],
+    [
+      "X_26",
+      "X_5"
+    ],
+    [
+      "X_26",
+      "X_7"
+    ],
+    [
+      "X_4",
+      "X_15"
+    ],
+    [
+      "X_27",
+      "X_15"
+    ],
+    [
+      "X_29",
+      "X_25"
+    ],
+    [
+      "X_5",
+      "X_16"
+    ],
+    [
+      "X_2",
+      "X_3"
+    ],
+    [
+      "X_28",
+      "X_21"
+    ],
+    [
+      "X_14",
+      "X_15"
+    ],
+    [
+      "X_27",
+      "X_16"
+    ],
+    [
+      "X_22",
+      "X_25"
+    ],
+    [
+      "X_26",
+      "X_15"
+    ],
+    [
+      "X_22",
+      "X_15"
+    ],
+    [
+      "X_24",
+      "X_29"
+    ],
+    [
+      "X_16",
+      "X_6"
+    ],
+    [
+      "X_23",
+      "X_18"
+    ],
+    [
+      "X_1",
+      "X_9"
+    ]
+  ],
+  "nodes": [
+    "X_0",
+    "X_1",
+    "X_2",
+    "X_3",
+    "X_4",
+    "X_5",
+    "X_6",
+    "X_7",
+    "X_8",
+    "X_9",
+    "X_10",
+    "X_11",
+    "X_12",
+    "X_13",
+    "X_14",
+    "X_15",
+    "X_16",
+    "X_17",
+    "X_18",
+    "X_19",
+    "X_20",
+    "X_21",
+    "X_22",
+    "X_23",
+    "X_24",
+    "X_25",
+    "X_26",
+    "X_27",
+    "X_28",
+    "X_29"
+  ],
+  "var_states": {
+    "X_0": [
+      "s0",
+      "s1"
+    ],
+    "X_1": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_2": [
+      "s0",
+      "s1"
+    ],
+    "X_3": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_4": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_5": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_6": [
+      "s0",
+      "s1"
+    ],
+    "X_7": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_8": [
+      "s0",
+      "s1"
+    ],
+    "X_9": [
+      "s0",
+      "s1"
+    ],
+    "X_10": [
+      "s0",
+      "s1"
+    ],
+    "X_11": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_12": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_13": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_14": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_15": [
+      "s0",
+      "s1"
+    ],
+    "X_16": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_17": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_18": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_19": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_20": [
+      "s0",
+      "s1"
+    ],
+    "X_21": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_22": [
+      "s0",
+      "s1"
+    ],
+    "X_23": [
+      "s0",
+      "s1"
+    ],
+    "X_24": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "X_25": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_26": [
+      "s0",
+      "s1"
+    ],
+    "X_27": [
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "X_28": [
+      "s0",
+      "s1"
+    ],
+    "X_29": [
+      "s0",
+      "s1",
+      "s2"
+    ]
+  },
+  "descriptions": {
+    "X_0": "Categorical variable with states {s0, s1}",
+    "X_1": "Categorical variable with states {s0, s1, s2}",
+    "X_2": "Categorical variable with states {s0, s1}",
+    "X_3": "Categorical variable with states {s0, s1, s2}",
+    "X_4": "Categorical variable with states {s0, s1, s2}",
+    "X_5": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_6": "Categorical variable with states {s0, s1}",
+    "X_7": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_8": "Categorical variable with states {s0, s1}",
+    "X_9": "Categorical variable with states {s0, s1}",
+    "X_10": "Categorical variable with states {s0, s1}",
+    "X_11": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_12": "Categorical variable with states {s0, s1, s2}",
+    "X_13": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_14": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_15": "Categorical variable with states {s0, s1}",
+    "X_16": "Categorical variable with states {s0, s1, s2}",
+    "X_17": "Categorical variable with states {s0, s1, s2}",
+    "X_18": "Categorical variable with states {s0, s1, s2}",
+    "X_19": "Categorical variable with states {s0, s1, s2}",
+    "X_20": "Categorical variable with states {s0, s1}",
+    "X_21": "Categorical variable with states {s0, s1, s2}",
+    "X_22": "Categorical variable with states {s0, s1}",
+    "X_23": "Categorical variable with states {s0, s1}",
+    "X_24": "Categorical variable with states {s0, s1, s2}",
+    "X_25": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_26": "Categorical variable with states {s0, s1}",
+    "X_27": "Categorical variable with states {s0, s1, s2, s3}",
+    "X_28": "Categorical variable with states {s0, s1}",
+    "X_29": "Categorical variable with states {s0, s1, s2}"
+  }
+}

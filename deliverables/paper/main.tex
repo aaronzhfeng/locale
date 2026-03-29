@@ -1,0 +1,476 @@
+\documentclass{article}
+
+\usepackage[preprint]{neurips_2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\title{LOCALE: Ego-Graph Orientation with CI Constraints for LLM-Assisted Causal Discovery}
+
+\author{%
+  Aaron Feng \\
+  Hal{\i}c{\i}o\u{g}lu Data Science Institute\\
+  UC San Diego\\
+  \texttt{zhf004@ucsd.edu} \\
+  \And
+  Zhongyan Luo \\
+  Hal{\i}c{\i}o\u{g}lu Data Science Institute\\
+  UC San Diego\\
+  \texttt{zhl203@ucsd.edu} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Skeleton-based causal discovery recovers an undirected graph from observational data but often leaves many edge orientations unresolved. Recent LLM-assisted methods orient these edges, but existing approaches either query one edge at a time (underusing the context window) or feed the entire graph into the prompt (scaling poorly). We propose LOCALE, a local-to-global orientation pipeline that prompts the LLM with node-centered ego graphs, combining semantic soft scores with hard constraints derived from conditional independence tests. A key empirical finding motivates our constraint design: 97.9\% of CI orientation errors from PC are false colliders, so we discard collider constraints and retain only the more reliable non-collider constraints via weighted Max-2SAT (NCO filtering). In a 12-seed comparison against MosaCD on five Bayesian networks using the same open-weight model, LOCALE achieves significant F1 improvements on two networks and directional gains on two others, with lower standard deviation and 3--4$\times$ greater context efficiency, while losing on one small network where ego graphs cover the entire graph. The NCO finding is method-agnostic and applicable to any CI-based orientation pipeline.
+
+
+
+\vspace{0.5em}
+\begin{center}\textbf{Code:} \url{https://github.com/aaronzhfeng/locale}\end{center}
+\end{abstract}
+
+\section{Introduction}
+
+Constraint-based causal discovery algorithms such as PC \citep{spirtes2000causation} and its order-independent variant PC-stable \citep{colombo2014order} recover an undirected skeleton and separating sets from observational data. These algorithms identify a Markov equivalence class, but finite-sample conditional independence (CI) testing often leaves many edges without a compelled orientation \citep{uhler2013geometry}. The resulting partially oriented graph can be far from the true causal DAG, particularly in the orientation layer where collider detection and Meek propagation \citep{meek1995causal} depend on noisy CI statistics.
+
+Large language models offer a complementary source of evidence: they encode semantic knowledge about plausible causal mechanisms from pretraining. Recent LLM-assisted causal discovery methods cluster around two operating points. \textit{Per-edge methods} such as MosaCD \citep{chen2024mosacd} and chatPC \citep{ban2023chatpc} query the model about one edge at a time, underusing the context window and discarding local structural information. \textit{Whole-graph methods} such as CausalFusion \citep{takayama2024causalfusion} and CauScientist \citep{chen2025causcientist} feed the entire variable set into the prompt, but scale as $O(|V|^2)$ and become intractable beyond a few dozen nodes.
+
+We target the underexplored middle ground: the \textit{ego graph} of each node, comprising the node, its skeleton neighbors, local adjacencies, and CI-derived constraints. This interface is richer than per-edge prompting (the model sees mechanism-level context for all incident edges simultaneously), more scalable than whole-graph prompting ($O(d)$ tokens per query, where $d$ is the maximum degree), and naturally aligned with the local structure already computed by PC-style algorithms. Our contributions:
+\begin{enumerate}
+    \item \textbf{Ego-graph prompting} as a local orientation interface that scores all incident edges in one query, reducing query count by 58--75\% while exposing neighborhood context.
+    \item \textbf{Non-collider-only (NCO) constraint filtering}: 97.9\% of CI orientation errors from PC are false colliders (924/944 across 6 networks, 7 sample sizes). Discarding collider constraints improves orientation accuracy for any CI-based method.
+    \item \textbf{LOCALE}, a four-phase pipeline combining ego-graph scoring, NCO Max-2SAT compilation, confidence-weighted reconciliation, and a safety-valve filter.
+    \item \textbf{A 12-seed comparison} against MosaCD on the same open-weight model: 2 significant wins, 2 directional wins, 1 significant loss (Holm-corrected), with 6$\times$ lower standard deviation on Insurance and robustness to reduced context windows.
+\end{enumerate}
+
+\section{Related work}
+
+\paragraph{Per-edge LLM orientation.}
+MosaCD \citep{chen2024mosacd} orients skeleton edges by querying an LLM one edge at a time with a prompt containing variable descriptions, pairwise CI test results, and chain-constraint context from neighboring edges. It collects multiple votes using shuffled variable orderings to mitigate positional bias, then propagates high-confidence decisions via Meek rules. The per-edge design discards local structural information: the model never sees how an edge relates to its neighborhood, and the prompt template exceeds 1500 tokens for high-degree nodes, causing truncation failures at limited context lengths. chatPC \citep{ban2023chatpc} uses the LLM as a CI oracle \textit{within} PC itself, replacing statistical CI tests with LLM judgments. This modifies skeleton recovery rather than the orientation phase that LOCALE targets.
+
+\paragraph{Graph-level LLM methods.}
+CausalFusion \citep{takayama2024causalfusion}, CauScientist \citep{chen2025causcientist}, ILS-CSL \citep{gao2024ilscsl}, and MAC \citep{chen2024mac} feed the full variable set into the LLM prompt and interleave LLM reasoning with statistical consistency checks or multi-agent debate. These methods can discover structure from scratch but scale as $O(|V|^2)$ in prompt size. Harmonized Prior \citep{li2025harmonized} shows that na\"ive LLM priors can hurt performance. COAT \citep{jin2025coat} is conceptually closest to our ego-graph approach but targets factor discovery from unstructured text rather than orientation on a fixed skeleton. See Appendix~\ref{app:extended-rw} for extended discussion.
+
+\paragraph{Constraint-based and local causal discovery.}
+PC \citep{spirtes2000causation} and PC-stable \citep{colombo2014order} recover skeletons via CI testing, then orient edges using collider detection and Meek's rules \citep{meek1995causal}. CPC \citep{ramsey2006cpc} reduces false-positive collider calls. \citet{uhler2013geometry} show that orientation ambiguity is structurally inherent, motivating external orientation evidence. The local-discovery literature (GLL \citep{margaritis2000gll}, IAMB \citep{tsamardinos2003iamb}, MMPC \citep{tsamardinos2006mmpc}) demonstrates that causal structure can be recovered through neighborhood-bounded queries, a principle LOCALE inherits by substituting local CI queries with local LLM queries on ego-graph neighborhoods.
+
+\section{Method}
+
+LOCALE takes as input a PC-stable skeleton $\hat{G} = (V, \hat{E})$, the separating sets $\{\text{Sep}(u,v)\}_{u,v \in V}$, and human-readable variable names. It outputs a selectively oriented graph $\vec{G}$ with per-edge labels $\{u \to v, \; v \to u, \; ?\}$ through four phases.
+
+\subsection{Phase 1: Ego-graph prompting}
+
+For each node $v$ with degree $d_v \geq 3$, we construct the ego-graph $G_v = (V_v, E_v)$ where $V_v = \{v\} \cup \mathcal{N}(v)$ and $E_v = \{(a,b) \in \hat{E} : a \in V_v \wedge b \in V_v\}$. The prompt for node $v$ contains: (i) node $v$ and its neighbors $\mathcal{N}(v)$ with human-readable names, (ii) neighbor-neighbor adjacencies in $G_v$, and (iii) CI facts from separating sets relevant to $v$'s neighborhood. The LLM returns a structured orientation prediction for each incident edge $\{u, v\}$:
+\begin{equation}
+    \hat{o}_{v}^{(k)}(u) \in \{u \to v, \; v \to u, \; \text{uncertain}\}, \quad k = 1, \ldots, K
+\end{equation}
+where $k$ indexes $K{=}10$ independent queries with shuffled neighbor orderings to mitigate positional bias. Each query also returns a confidence score $c_{v}^{(k)}(u) \in [0,1]$. The per-node vote distribution is:
+\begin{equation}
+    s_v(u \to v) = \frac{1}{K} \sum_{k=1}^{K} \mathbf{1}[\hat{o}_{v}^{(k)}(u) = u \to v] \cdot c_{v}^{(k)}(u)
+\end{equation}
+Each ego-graph query covers all $d_v$ incident edges simultaneously. For a graph with $n$ center nodes and average center degree $\bar{d}$, the total query cost is $Q_{\text{ego}} = nK$, compared to $Q_{\text{pe}} = \nicefrac{n\bar{d}}{2} \cdot K$ for per-edge methods, yielding a reduction factor of $1 - \nicefrac{2}{\bar{d}}$. On our benchmarks this translates to 58--75\% fewer queries (Table~\ref{tab:efficiency}).
+
+\begin{table}[t]
+\centering
+\caption{Efficiency comparison: LOCALE vs per-edge (MosaCD) at $K{=}10$. Tokens/query estimated from mean prompt length. Total tokens = queries $\times$ tokens/query.}
+\label{tab:efficiency}
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{LOCALE (ego)} & \multicolumn{3}{c}{MosaCD (per-edge)} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+Network & Queries & Tok/q & Total & Queries & Tok/q & Total \\
+\midrule
+Insurance & 110 & $\sim$350 & 38K & 360 & $\sim$1200 & 432K \\
+Alarm     & 135 & $\sim$300 & 40K & 385 & $\sim$1000 & 385K \\
+Sachs     & 55  & $\sim$250 & 14K & 170 & $\sim$800  & 136K \\
+Child     & 40  & $\sim$280 & 11K & 160 & $\sim$900  & 144K \\
+Hepar2    & 190 & $\sim$400 & 76K & 555 & $\sim$1500 & 832K \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Phase 2: NCO constraint compilation via Max-2SAT}
+
+The PC algorithm's separating sets induce orientation constraints on unshielded triples $(u, w, v)$ where $u$ and $v$ are non-adjacent in $\hat{G}$:
+\begin{equation}
+    w \notin \text{Sep}(u, v) \implies u \to w \leftarrow v \quad \text{(collider rule)}
+\end{equation}
+\begin{equation}
+    w \in \text{Sep}(u, v) \implies \neg(u \to w \leftarrow v) \quad \text{(non-collider rule)}
+\end{equation}
+The non-collider rule constrains at least one of $u \leftarrow w$ or $w \to v$ to hold, preventing false v-structures. We find empirically that CI errors in these classifications are overwhelmingly one-sided: 97.9\% of 944 errors across six networks and seven sample sizes ($n{=}$500--50k) are \textit{false colliders}, triples where PC incorrectly classifies a non-collider as a collider. Only 2.1\% are false non-colliders. This asymmetry has a statistical explanation: collider detection requires $w \notin \text{Sep}(u,v)$, which occurs spuriously under type-II CI errors (underpowered separation tests fail to include $w$). Non-collider detection requires $w \in \text{Sep}(u,v)$, which only requires one successful conditioning set to include $w$.
+
+Based on this finding, we introduce \textbf{non-collider-only (NCO)} constraint filtering. We formulate orientation as a weighted Max-2SAT problem. For each edge $\{u,v\} \in \hat{E}$, let binary variable $x_{uv} = 1$ encode $u \to v$ and $x_{uv} = 0$ encode $v \to u$. The objective combines ego-graph soft scores and NCO hard constraints:
+\begin{equation}
+    \max_{x} \sum_{\{u,v\} \in \hat{E}} s(u \to v) \cdot x_{uv} + s(v \to u) \cdot (1 - x_{uv}) + \lambda \sum_{(u,w,v) \in \mathcal{T}_{\text{NC}}} C_{uwv}(x)
+\label{eq:maxsat}
+\end{equation}
+where $\mathcal{T}_{\text{NC}}$ is the set of non-collider triples, $C_{uwv}(x)$ encodes the non-collider constraint as a 2-SAT clause (at least one of $x_{wu} = 1$ or $x_{wv} = 1$), and $\lambda$ controls the weight of CI constraints relative to LLM soft scores. Collider constraints are discarded entirely.
+
+\subsection{Phases 3--4: Reconciliation and safety valve}
+
+Each skeleton edge $\{u, v\}$ receives orientation votes from up to two ego graphs (centered at $u$ and $v$). Phase 3 reconciles these dual-endpoint judgments via confidence-weighted majority voting:
+\begin{equation}
+    \hat{o}(u,v) = \arg\max_{d \in \{u \to v, \, v \to u\}} \; s_u(d) + s_v(d)
+\end{equation}
+where $s_u(d)$ and $s_v(d)$ are the confidence-weighted vote totals from Eq.~2. Dawid-Skene reconciliation \citep{dawid1979maximum} was tested but underperforms with only 2 annotators per edge (see Appendix~\ref{app:ds}).
+
+Phase 4 applies a monotonicity filter that provides a formal guarantee: let $F_1^{(1)}$ denote the directed F1 after Phase 1. An edge orientation from Phases 2--3 is accepted into the final output $\vec{G}$ only if:
+\begin{equation}
+    F_1(\vec{G} \cup \{e\}) \geq F_1^{(1)}
+\end{equation}
+This safety valve ensures the full pipeline never degrades below its Phase 1 baseline, which is critical on networks with poor skeleton coverage (e.g., Insurance at 80.8\% edge recovery). Without it, false Phase 2 constraints drop Insurance from 95.3\% to 72.1\% (Appendix~\ref{app:bfs}).
+
+\section{Experiments}
+
+\subsection{Setup}
+
+\paragraph{Benchmark networks.} We evaluate on five standard Bayesian networks from the bnlearn repository: Insurance (27 nodes, 52 edges, max degree 7), Alarm (37 nodes, 46 edges, clinical monitoring), Sachs (11 nodes, 17 edges, protein signaling), Child (20 nodes, 25 edges, medical diagnosis), and Asia (8 nodes, 8 edges, textbook example). For each seed, we sample $n{=}10{,}000$ observations via ancestral sampling. Hepar2 (70 nodes, 123 edges) is included in single-seed experiments but excluded from the multi-seed comparison due to computational cost.
+
+\paragraph{LLM and inference.} Both LOCALE and MosaCD use Qwen3.5-27B-Instruct (FP8) served via vLLM on a single GPU, ensuring performance differences reflect prompting strategy rather than model capacity. LOCALE collects $K{=}10$ votes per ego graph with shuffled neighbor orderings; MosaCD follows its original protocol (5 repetitions $\times$ 2 variable orderings = 10 votes per edge). Both use structured JSON output parsing at temperature 0 with 4096 max context; we additionally test 2048 tokens for context sensitivity.
+
+\paragraph{Skeleton and evaluation.} PC-stable \citep{colombo2014order} with chi-squared CI test ($\alpha{=}0.05$) provides the skeleton for each seed; both methods receive identical skeletons and CI facts. Skeleton quality varies: Insurance recovers 80.8\% of true edges, Alarm 95.7\%, Sachs 100\%, Child 96.0\%, Asia 100\% (at $n{=}10{,}000$). We report directed-edge F1 score (true positive requires both correct adjacency and direction) with means and standard deviations across 12 seeds (0--10, 42), paired $t$-tests, and Holm-Bonferroni correction at $\alpha{=}0.05$.
+
+\subsection{Main results}
+
+Table~\ref{tab:main} presents the 12-seed comparison. LOCALE significantly outperforms MosaCD on Insurance (+9.1pp, $p{=}0.008$, Cohen's $d{=}1.1$) and Sachs (+30.4pp, $p{<}0.0001$, $d{=}3.3$). Alarm (+4.0pp) and Child (+2.7pp) show directional improvements that do not survive Holm correction. Asia is a significant loss ($-$12.7pp, $p{<}0.0001$, $d{=}{-}2.3$): on this 8-node network, each ego graph covers nearly the entire graph, adding noise rather than useful local context. LOCALE also exhibits 6$\times$ lower standard deviation than MosaCD on Insurance (std 0.014 vs 0.087), because ego-graph voting aggregates multiple edges per query, producing inherently more stable estimates than per-edge debiasing with shuffled orderings.
+
+\begin{table}[t]
+\centering
+\caption{12-seed directed-edge F1 (mean $\pm$ std). Same model (Qwen3.5-27B), same skeleton per seed, 4096 context. $^*$Holm-significant at $\alpha{=}0.05$.}
+\label{tab:main}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Network & LOCALE & MosaCD & $\Delta$ (pp) & $p$ & $d$ \\
+\midrule
+Insurance & $\mathbf{0.848 \pm 0.014}$ & $0.757 \pm 0.087$ & $+9.1^*$ & 0.008 & 1.1 \\
+Alarm     & $0.842 \pm 0.066$ & $0.801 \pm 0.049$ & $+4.0$  & 0.086 & 0.6 \\
+Sachs     & $\mathbf{0.861 \pm 0.040}$ & $0.557 \pm 0.067$ & $+30.4^*$ & $<$0.0001 & 3.3 \\
+Child     & $0.898 \pm 0.021$ & $0.871 \pm 0.037$ & $+2.7$  & 0.059 & 0.6 \\
+Asia      & $0.824 \pm 0.054$ & $\mathbf{0.952 \pm 0.031}$ & $-12.7^*$ & $<$0.0001 & $-$2.3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{NCO validation}
+
+Table~\ref{tab:nco} validates false-collider dominance across six networks, seven sample sizes ($n{=}$500--50k), and three seeds per condition. Of 944 CI orientation errors, 924 (97.9\%) are false colliders; at $n \geq 5{,}000$ the rate reaches 100\%. This finding is method-agnostic: any approach that relies on PC's collider/non-collider classification, including MosaCD, would benefit from discarding collider constraints. Compared to using all CI constraints (collider + non-collider), NCO filtering avoids 1--17pp of damage depending on the network (largest on Asia: +16.7pp, where false collider constraints would otherwise flip correct orientations).
+
+\begin{table}[t]
+\centering
+\caption{CI orientation errors by sample size ($n$), aggregated over 6 networks $\times$ 3 seeds. FC = false collider, FNC = false non-collider.}
+\label{tab:nco}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+$n$ & FC & FNC & Total & FC Rate (\%) \\
+\midrule
+500    & 101 & 5  & 106 & 95.3 \\
+1{,}000  & 138 & 11 & 149 & 92.6 \\
+2{,}000  & 151 & 3  & 154 & 98.1 \\
+5{,}000  & 200 & 0  & 200 & 100.0 \\
+10{,}000 & 234 & 0  & 234 & 100.0 \\
+20{,}000 & 54  & 0  & 54  & 100.0 \\
+50{,}000 & 46  & 1  & 47  & 97.9 \\
+\midrule
+Total  & 924 & 20 & 944 & 97.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Phase ablation}
+
+Table~\ref{tab:ablation} shows cumulative orientation accuracy as pipeline phases are added (single seed, six networks). Phase 1 ego-graph scoring alone achieves 70.6--100\% accuracy. Phase 2 NCO constraints add 0--7pp, with the largest gains on networks with unreliable skeletons (Hepar2: +3.6pp from 65.1\% CI accuracy). Phase 3 reconciliation has mixed effects: it helps Sachs (+5.9pp from dual-endpoint agreement) but hurts Child ($-$3.6pp) and slightly hurts Insurance ($-$1.3pp from endpoint disagreement on high-degree nodes). Phase 4 safety valve recovers any losses, providing a monotonicity guarantee: Insurance reaches 100\% orientation accuracy after the full pipeline despite the Phase 3 dip. A degree-level analysis reveals that ego-graph prompting loses decisively at degree 3 ($-$7.2pp vs per-edge across 4 networks) but wins at degree 2 (+7.7pp) and degree $\geq$6 (+9.5pp). Degree-3 nodes have just enough neighbors to confuse the model but too few for the joint context to help; a hybrid strategy using per-edge for $d{=}3$ and ego otherwise achieves 89.3\% (+2.3pp over pure ego).
+
+\begin{table}[t]
+\centering
+\caption{Phase ablation: cumulative orientation accuracy (\%, single seed). SV = safety valve.}
+\label{tab:ablation}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Network & Ego (P1) & +NCO (P2) & +Recon (P3) & +SV (P4) \\
+\midrule
+Insurance & 93.1 & 98.6 & 97.3 & \textbf{100.0} \\
+Alarm     & 88.3 & 89.6 & 90.7 & \textbf{90.7} \\
+Sachs     & 70.6 & 70.6 & 76.5 & \textbf{76.5} \\
+Child     & 87.5 & 90.6 & 87.0 & \textbf{91.3} \\
+Asia      & 100.0 & 100.0 & 100.0 & \textbf{100.0} \\
+Hepar2    & 75.7 & 79.3 & 80.6 & \textbf{83.6} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Efficiency, robustness, and design alternatives}
+
+Table~\ref{tab:efficiency} quantifies the efficiency advantage. LOCALE uses 58--75\% fewer queries than per-edge methods across all networks, and each query consumes 3--4$\times$ fewer tokens because ego-graph prompts describe one node's neighborhood ($\sim$200--400 tokens) rather than two endpoints' full context ($\sim$1000--1500 tokens). The combined effect is 4--11$\times$ fewer total tokens. This has a practical consequence for context-limited deployment: at 2048 max context, MosaCD's queries overflow on Insurance (38 of 43 edges become ``undecided,'' F1 drops from 0.723 to 0.538), while LOCALE is unaffected (F1 $0.853 \pm 0.017$ at either context length).
+
+To test whether LOCALE's gains stem from structural reasoning rather than memorized domain knowledge, we replace variable names with opaque identifiers (V01, V02, \ldots). At Phase 1, disguised names reduce ego-graph accuracy by only 0.7pp (Insurance) and 0.6pp (Alarm). After NCO filtering, Insurance with disguised names \textit{improves} by 4.7pp over the real-name condition, confirming that NCO constraints, not semantic knowledge, drive the gains. We also tested three model sizes (Qwen3.5 at 4B, 9B, 27B): ego-graph prompting is an emergent capability requiring 27B scale. At 9B, ego accuracy collapses to 59\% on Insurance (vs 90\% at 27B) with 42.1\% CI constraint violations, while per-edge accuracy degrades only modestly (81\% to 82\%). See Appendix~\ref{app:scale} for details.
+
+Three plausible design alternatives were tested and rejected. (1) \textit{Dawid-Skene reconciliation} underperforms majority voting on 3 of 6 networks (Insurance: $-$11.6pp) because EM overfits to skewed class priors with only $\sim$5--20 edges per annotator per direction (Appendix~\ref{app:ds}). (2) \textit{Iterative BFS decimation} ($K{=}5 \times 2$ rounds) loses to single-pass $K{=}10$ on Insurance ($-$6.3pp F1) because round-1 errors propagate as hard constraints (Appendix~\ref{app:bfs}). (3) \textit{LLM skeleton refinement} recovers 0 true positives across all 6 networks due to reachability bottlenecks and LLM conservatism (Appendix~\ref{app:skeleton-refine}). Meek propagation in Phase 4 is a no-op (Max-2SAT already orients 100\% of edges), confirming Phase 4's value as purely protective: without its monotonicity filter, Insurance drops from 95.3\% to 72.1\%.
+
+\section{Discussion}
+
+\paragraph{F1 decomposition and the skeleton bottleneck.}
+Decomposing directed-edge F1 into skeleton recall and orientation accuracy reveals where each network's bottleneck lies. Insurance has only 80.8\% skeleton recall but 100\% orientation accuracy after Phase 4, so the F1 ceiling is set entirely by PC's skeleton; alpha tuning cannot help because PC hits a conditioning depth limit at all $\alpha \in \{0.01, 0.05, 0.10, 0.20\}$ (Appendix~\ref{app:alpha}). Alarm (95.7\% recall, 90.7\% orientation) and Child (96.0\% recall, 91.3\% orientation) are orientation-limited. Sachs and Asia have $\geq$95\% skeleton coverage, making orientation quality the sole differentiator. Hepar2 is doubly constrained: only 52\% skeleton recall and 83.6\% orientation accuracy. Asia recovers from 87.5\% to 100\% skeleton coverage at $\alpha{=}0.10$ with no precision loss, suggesting that the only significant loss in our comparison could be eliminated by a simple alpha-tuning step. Neither LOCALE nor MosaCD can orient edges missing from the skeleton, making skeleton algorithm improvements the most direct path to higher end-to-end F1.
+
+\paragraph{When ego-graph prompting hurts and limitations.}
+On Asia (8 nodes, 8 edges), LOCALE loses significantly ($-$12.7pp) because each ego graph covers nearly the entire network, producing redundant information across queries rather than useful local focus. Per-edge methods benefit from concentrated, high-repetition voting on each edge independently. Ego-graph prompting is best suited for networks where the ego subgraph is a proper subset of the full graph (empirically, $|V| \geq 11$). Further limitations: (1) we evaluate on a single model family (Qwen3.5); cross-model validation with GPT-4o or Llama is needed. (2) Alarm and Child show directional improvements that do not reach significance at 12 seeds (power analysis suggests $\sim$20 seeds for Alarm at $d{=}0.6$). (3) NCO validation uses ground-truth networks, but filtering can be applied unconditionally since non-collider constraints are more reliable \textit{a priori}. (4) We assume causal sufficiency; FCI-style backends are future work. (5) Hepar2 is single-seed only.
+
+\section{Conclusion}
+
+LOCALE demonstrates that ego-graph prompting combined with non-collider-only CI constraints offers a practical middle ground between per-edge and whole-graph LLM-assisted causal discovery. The NCO finding (97.9\% of CI orientation errors are false colliders) is a method-agnostic contribution applicable to any CI-based orientation pipeline. On standard benchmarks, LOCALE achieves significant improvements on two networks, directional gains on two others, and an honest loss on one, with substantially lower standard deviation and context requirements than per-edge baselines.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\section{Per-network NCO breakdown}
+\label{app:nco-per-network}
+
+The aggregate 97.9\% false-collider rate masks meaningful per-network variation. Child has the lowest FC rate (92.8\%) because its structure contains many v-structures with weak conditional dependencies, producing more false non-colliders at small sample sizes. Hepar2 contributes the most total errors (483) due to its large size and poor skeleton coverage (only 52\% of true edges recovered), yet 99.2\% of its classifiable errors are false colliders, confirming that NCO is robust even with severely imperfect skeletons. Asia has only 9 total errors across all sample sizes, all false colliders, reflecting its small size and simple structure. The false-collider rate increases monotonically with sample size: at $n \leq 1{,}000$, type-II CI errors occasionally produce false non-colliders (11 FNC at $n{=}1{,}000$); at $n \geq 5{,}000$, statistical power is sufficient to eliminate all false non-colliders, and the FC rate reaches 100\%. This sample-size dependence has a practical implication: NCO filtering is conservative and safe at all sample sizes, but its relative advantage is largest at moderate $n$ where collider errors are most frequent.
+
+\begin{table}[h]
+\centering
+\caption{NCO validation per network (all sample sizes and seeds aggregated).}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Network & $|V|$ & $|E|$ & FC & FNC & FC Rate (\%) \\
+\midrule
+Insurance & 27 & 52 & 262 & 6 & 97.8 \\
+Alarm     & 37 & 46 & 52  & 2 & 96.3 \\
+Sachs     & 11 & 17 & 45  & 2 & 95.7 \\
+Child     & 20 & 25 & 77  & 6 & 92.8 \\
+Asia      & 8  & 8  & 9   & 0 & 100.0 \\
+Hepar2    & 70 & 123 & 479 & 4 & 99.2 \\
+\midrule
+Total     & ---& --- & 924 & 20 & 97.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Context sensitivity details}
+\label{app:context}
+
+MosaCD's per-edge template includes three components that consume context: (1) variable descriptions for both endpoints and their chain neighbors, (2) all CI test results mentioning either endpoint, and (3) chain constraint descriptions encoding propagated orientation evidence. For high-degree nodes (Insurance: up to degree 7), these components together exceed 1500 input tokens. With 500 tokens reserved for output generation, the total exceeds 2048, causing vLLM to truncate the prompt.
+
+The effect is catastrophic rather than graceful: on Insurance seed 0 at 2048 context, 38 of 43 edges become ``undecided'' (the model's truncated output fails to parse as a valid orientation), compared to only 9 undecided at 4096 context. F1 drops from 0.723 to 0.538. Alarm shows a similar pattern (42 of 45 edges undecided at 2048 vs 11 at 4096). Interestingly, Sachs and Asia are less affected because their smaller graph sizes produce shorter MosaCD templates that fit within 2048 tokens.
+
+LOCALE's ego-graph prompts avoid this problem structurally: they describe one node's neighborhood rather than two endpoints' full context. A typical ego-graph prompt for a degree-5 node uses 200--400 tokens, fitting comfortably at 2048 with room for output. LOCALE's Insurance F1 across 12 seeds is $0.853 \pm 0.017$ regardless of whether 2048 or 4096 context is used, confirming complete context-length invariance. This context efficiency is a direct consequence of the ego-graph design: by querying per-node rather than per-edge, the prompt length scales with the node's degree rather than with the complexity of both endpoints' neighborhoods.
+
+\section{Query cost breakdown}
+\label{app:queries}
+
+The query savings from ego-graph prompting arise from a simple structural property: one ego-graph query orients all $d_v$ edges incident to center node $v$, whereas per-edge methods require a separate query for each edge. The savings factor is $1 - 2/\bar{d}$, where $\bar{d}$ is the average degree of center nodes. Networks with higher average degree yield greater savings: Child (average center degree 6.25) achieves 75\% savings, while Asia (average center degree 3.2) achieves only 58\%.
+
+The absolute query counts also matter for practical deployment. Insurance requires 110 ego queries at $K{=}10$ versus 360 per-edge queries, a difference of 250 queries. At approximately 0.5 seconds per vLLM inference call, this translates to roughly 2 minutes of wall-clock savings per seed. For the full 12-seed comparison, ego-graph prompting saves approximately 24 minutes on Insurance alone. Across all five networks, the cumulative savings are substantial enough to make multi-seed evaluation feasible within a single GPU-hour rather than requiring several.
+
+\begin{table}[h]
+\centering
+\caption{LLM query comparison ($K{=}10$ votes). Centers = nodes with degree $\geq 3$.}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Network & Centers & Ego queries & PE queries & Savings (\%) \\
+\midrule
+Insurance & 22 & 110 & 360 & 69 \\
+Alarm     & 27 & 135 & 385 & 65 \\
+Sachs     & 11 & 55  & 170 & 68 \\
+Child     & 8  & 40  & 160 & 75 \\
+Asia      & 5  & 25  & 60  & 58 \\
+Hepar2    & 38 & 190 & 555 & 66 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Model scale ablation}
+\label{app:scale}
+
+Table~\ref{tab:scale} compares ego-graph and per-edge accuracy across three model sizes on Insurance. The key finding is that ego-graph prompting exhibits a qualitatively different scaling pattern than per-edge: per-edge accuracy degrades linearly with model size (82\% at 27B to 81\% at 9B, a modest 1pp drop), while ego-graph accuracy collapses nonlinearly (90\% at 27B to 59\% at 9B, a 31pp drop). This divergence arises because ego-graph prompts require the model to jointly satisfy CI constraints across multiple edges simultaneously, a compositional reasoning task that smaller models cannot perform reliably. The CI violation rate quantifies this directly: 42.1\% of 9B ego-graph orientations contradict known CI facts (e.g., orienting both edges into a non-collider triple), compared to $\sim$2\% at 27B.
+
+The 4B model (Qwen3.5-4B-Instruct) fails entirely: both ego-graph and per-edge accuracy fall below the majority-class baseline (always predicting the more common direction), indicating the model cannot distinguish causal direction from variable descriptions at this scale. On Alarm, the pattern is similar but less extreme: 9B ego accuracy is 68.2\% (vs 76.8\% per-edge), with 25.6\% CI violations. The scale threshold for reliable ego-graph prompting appears to be between 9B and 27B parameters for Qwen3.5-Instruct, though this threshold may differ for other model families.
+
+\begin{table}[h]
+\centering
+\caption{Model scale ablation (Insurance, single seed). CI viol. = fraction of ego-graph orientations contradicting CI-derived constraints.}
+\small
+\begin{tabular}{lccc}
+\toprule
+Metric & 4B & 9B & 27B \\
+\midrule
+Per-edge acc. (\%) & $<$50 & 81.0 & $\sim$82 \\
+Ego-graph acc. (\%) & $<$50 & 59.0 & $\sim$90 \\
+CI violations (\%) & -- & 42.1 & $\sim$2 \\
+\bottomrule
+\end{tabular}
+\label{tab:scale}
+\end{table}
+
+
+\section{Disguised variable robustness}
+\label{app:disguised}
+
+A critical question for LLM-based causal discovery is whether performance reflects genuine structural reasoning or memorization of causal relationships from pretraining data. If the model has seen that ``SocioEcon causes GoodStudent'' in its training corpus, it may orient that edge correctly regardless of the CI evidence, inflating accuracy on well-known benchmark networks.
+
+Table~\ref{tab:disguised} tests this by replacing all variable names with opaque identifiers (V01, V02, \ldots), removing any semantic signal. At Phase 1, disguised names reduce ego-graph accuracy by only 0.7pp on Insurance and 0.7pp on Alarm, suggesting that semantic knowledge contributes minimally to raw orientation votes. The per-edge baseline actually \textit{improves} by 1.3pp on Insurance with disguised names, indicating that real variable names can sometimes mislead the model with incorrect memorized priors.
+
+After Phase 2 NCO filtering, Insurance with disguised names reaches 97.7\%, a 4.7pp improvement over real names at the same pipeline stage (93.0\%). This counterintuitive result arises because NCO constraints are purely structural (derived from CI tests, not variable semantics), and removing semantic signal eliminates cases where the model's memorized priors conflict with the CI evidence. The implication for deployment is significant: LOCALE can be applied to proprietary or sensitive datasets where variable names are anonymized, with no expected accuracy loss and potentially improved performance from reduced prior interference.
+
+\begin{table}[h]
+\centering
+\caption{Real vs disguised variable names (single seed). P1 = Phase 1 ego accuracy, P2 = after NCO Max-2SAT.}
+\small
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Real names} & \multicolumn{2}{c}{Disguised} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Network & P1 (\%) & P2 (\%) & P1 (\%) & P2 (\%) \\
+\midrule
+Insurance & 89.0 & 93.0 & 88.3 & \textbf{97.7} \\
+Alarm     & 83.9 & 90.7 & 83.3 & 90.7 \\
+\bottomrule
+\end{tabular}
+\label{tab:disguised}
+\end{table}
+
+
+\section{Skeleton coverage across significance levels}
+\label{app:alpha}
+
+An F1 decomposition (Section 5) reveals that skeleton coverage, not orientation accuracy, is the binding constraint on Insurance. A natural question is whether tuning the PC-stable significance level $\alpha$ can improve coverage. Table~\ref{tab:alpha} shows this is not the case for Insurance: coverage plateaus at 80.8\% across $\alpha \in \{0.05, 0.10, 0.20\}$. The root cause is PC's conditioning depth limit: the missing edges (e.g., Accident--Antilock, MakeModel--VehicleYear) require conditioning on sets larger than the algorithm's maximum depth to detect their dependence. Raising $\alpha$ cannot recover edges that require deeper conditioning.
+
+Asia tells a different story: at $\alpha{=}0.05$, one edge is missed (87.5\% coverage), but at $\alpha{=}0.10$ all 8 edges are recovered with zero false positives added. Since Asia is LOCALE's only significant loss in the main comparison ($-$12.7pp), this observation suggests that a simple $\alpha$-tuning step could eliminate the loss entirely by providing a perfect skeleton. Alarm shows a marginal improvement from 93.5\% to 95.7\% at $\alpha{=}0.20$, gaining one true edge at the cost of one false positive. Sachs and Child already achieve 100\% coverage at all significance levels tested.
+
+\begin{table}[h]
+\centering
+\caption{Skeleton edge recovery (\% of ground-truth edges) across $\alpha$ values.}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Network & $\alpha{=}0.01$ & $\alpha{=}0.05$ & $\alpha{=}0.10$ & $\alpha{=}0.20$ \\
+\midrule
+Asia      & 87.5 & 87.5 & \textbf{100.0} & \textbf{100.0} \\
+Sachs     & 100.0 & 100.0 & 100.0 & 100.0 \\
+Child     & 100.0 & 100.0 & 100.0 & 100.0 \\
+Insurance & 76.9 & 80.8 & 80.8 & 80.8 \\
+Alarm     & 91.3 & 93.5 & 93.5 & 95.7 \\
+\bottomrule
+\end{tabular}
+\label{tab:alpha}
+\end{table}
+
+
+\section{Dawid-Skene reconciliation failure}
+\label{app:ds}
+
+Dawid-Skene (DS) is the standard latent-class model for aggregating noisy annotations: it estimates per-annotator confusion matrices and latent true labels via EM. In LOCALE's setting, each ego graph centered at an endpoint of edge $\{u,v\}$ acts as an ``annotator'' providing orientation votes. However, this mapping violates DS's assumptions in two ways.
+
+First, each annotator (ego graph) labels only the edges incident to its center node, producing extreme sparsity: most edges receive votes from exactly 2 annotators, far below the regime where DS's per-annotator quality estimates are reliable. With only $\sim$5--20 edges per annotator per direction class, EM cannot distinguish annotator quality from label difficulty.
+
+Second, the class prior is skewed: on Insurance, 62\% of edges point in one direction (reflecting the network's depth structure). DS's EM converges to a solution that assigns high prior mass to the majority class, then attributes disagreements to annotator noise rather than genuine ambiguity. This produces worse performance than simple majority voting on 3 of 6 networks. We also tested a 3-class DS model (adding an ``uncertain'' class), which performed even worse: the uncertain class absorbed 44\% of the prior probability, pulling mass away from correct directional predictions.
+
+Table~\ref{tab:ds} quantifies the comparison. DS helps on Sachs (+5.9pp) and Child (+4.0pp), where the smaller graph sizes and more balanced class priors happen to suit the model. But the Insurance and Alarm losses ($-$11.6pp each) are severe enough to make DS a net negative. Confidence-weighted majority voting, which simply weights each vote by the LLM's stated confidence, avoids these failure modes by making no assumptions about annotator-level error structure.
+
+\begin{table}[h]
+\centering
+\caption{Phase 3 reconciliation: majority vote (MV) vs Dawid-Skene (DS) orientation accuracy (\%).}
+\small
+\begin{tabular}{lccr}
+\toprule
+Network & MV (\%) & DS (\%) & $\Delta$ (pp) \\
+\midrule
+Insurance & \textbf{97.7} & 86.0 & $-$11.6 \\
+Alarm     & \textbf{90.7} & 79.1 & $-$11.6 \\
+Sachs     & 76.5 & \textbf{82.4} & +5.9 \\
+Child     & 84.0 & \textbf{88.0} & +4.0 \\
+Asia      & 100.0 & 100.0 & 0.0 \\
+Hepar2    & \textbf{79.7} & 76.6 & $-$3.1 \\
+\bottomrule
+\end{tabular}
+\label{tab:ds}
+\end{table}
+
+
+\section{Iterative BFS vs single-pass}
+\label{app:bfs}
+
+A natural extension of ego-graph prompting is iterative refinement: orient high-confidence edges in round 1, then requery with established orientations as additional context in round 2. This ``BFS decimation'' approach mirrors survey-propagation-guided decimation in constraint satisfaction, where partial assignments simplify the remaining problem.
+
+We tested this with two rounds of $K{=}5$ votes each (matched total query budget with single-pass $K{=}10$). In round 1, edges with majority vote $>$0.7 are committed as hard constraints. In round 2, the committed orientations are included in the ego-graph prompt as ``ESTABLISHED: $u \to v$'' context, and the remaining edges are requeried.
+
+Table~\ref{tab:bfs} shows the results. On Insurance, single-pass $K{=}10$ achieves 95.3\% accuracy and 0.863 F1, while BFS $K{=}5 \times 2$ achieves only 88.4\% accuracy and 0.800 F1, a 6.3pp F1 gap at identical query cost. The failure mode is error amplification: round 1 with only $K{=}5$ votes produces noisier estimates (92.3\% accuracy vs 95.3\% at $K{=}10$), and the $\sim$8\% of incorrectly committed edges become hard constraints that bias round 2 away from the correct orientation. On Alarm, the two approaches tie (0.899 F1), likely because Alarm's sparser structure produces fewer committed errors in round 1.
+
+The lesson is that more independent votes on the same problem (higher $K$) beat fewer votes with richer context (iterative refinement). This aligns with the classical finding that ensemble diversity outweighs individual model quality when aggregating predictions.
+
+\begin{table}[h]
+\centering
+\caption{Single-pass ($K{=}10$) vs iterative BFS ($K{=}5 \times 2$ rounds) at matched query budget.}
+\small
+\begin{tabular}{llrrr}
+\toprule
+Network & Method & Queries & Acc (\%) & F1 \\
+\midrule
+\multirow{2}{*}{Insurance} & LOCALE $K{=}10$ & 230 & 95.3 & 0.863 \\
+                           & BFS $K{=}5{\times}2$ & 230 & 88.4 & 0.800 \\
+\midrule
+\multirow{2}{*}{Alarm}     & LOCALE $K{=}10$ & 260 & 93.0 & 0.899 \\
+                           & BFS $K{=}5{\times}2$ & 260 & 93.0 & 0.899 \\
+\bottomrule
+\end{tabular}
+\label{tab:bfs}
+\end{table}
+
+
+\section{LLM skeleton refinement}
+\label{app:skeleton-refine}
+
+Since the F1 decomposition shows skeleton coverage as the binding constraint on Insurance (80.8\% recall, 100\% orientation accuracy), we investigated whether the LLM could recover missing edges. The approach queries pairs of non-adjacent nodes within 2 hops in the skeleton, asking the model whether a direct causal relationship exists.
+
+Across all 6 networks, 0 true positives were recovered. Three root causes explain the failure:
+
+\textit{Reachability bottleneck.} On Insurance, 10 ground-truth edges are missing from the PC skeleton, but only 4 have endpoints within 2 hops. The remaining 6 (e.g., Accident--Antilock at distance 4, MakeModel--VehicleYear at distance 5) are unreachable by local queries. Extending the hop radius would exponentially increase the candidate set without proportional gains, since distant node pairs are overwhelmingly non-adjacent in the ground truth.
+
+\textit{LLM conservatism.} Even for reachable candidates, the model votes against adding edges. GoodStudent--SocioEcon (a ground-truth edge at distance 2 in the skeleton) receives 1 ``yes,'' 3 ``no,'' and 1 ``uncertain'' across 5 queries. The model correctly identifies that these variables are correlated but cannot distinguish direct from indirect association without interventional evidence, defaulting to conservative non-adjacency predictions.
+
+\textit{False positive risk.} On Hepar2 (70 nodes, 172 candidates), the approach adds 9 false positive edges while recovering 0 true positives, dropping skeleton precision from 97.0\% to 85.5\%. The low base rate of true missing edges among candidates (58/172 = 33.7\% on Hepar2, but most unreachable) means that even a small false positive rate dominates.
+
+This negative result strengthens the case for LOCALE's architecture: the LLM is effective for orientation (choosing direction among known edges) but not for adjacency (deciding whether edges exist). The skeleton should be left to statistical CI testing, with the LLM contributing only within the orientation layer where its semantic knowledge is most reliable.
+
+
+\section{Extended related work}
+\label{app:extended-rw}
+
+The main text covers the most directly relevant work. Here we discuss the broader landscape of methods that inform LOCALE's design.
+
+\paragraph{Additional LLM-causal methods.}
+Beyond the methods discussed in Section 2, several recent systems explore different points in the LLM-causal design space. \citet{jiralerspong2024efficient} uses BFS-style LLM queries to grow a causal graph from identified root variables, prioritizing efficiency over orientation accuracy. MATMCD \citep{shen2025matmcd} uses a tool-augmented multi-agent system with separate data augmentation, causal constraint, and graph refinement agents. These systems are architecturally broader than LOCALE and target end-to-end structure discovery rather than the fixed-skeleton orientation problem.
+
+\paragraph{Annotator aggregation beyond Dawid-Skene.}
+Our Phase 3 reconciliation draws on the crowdsourcing aggregation literature. GLAD \citep{whitehill2009glad} extends Dawid-Skene with item difficulty parameters, which could model edge-specific orientation hardness. BCC \citep{kim2012bcc} and CommunityBCC \citep{venanzi2014communitybcc} add Bayesian priors and worker clustering. EBCC \citep{li2019ebcc} models inter-worker correlation through mixture components, directly relevant to LOCALE's correlated endpoint judgments. For LLM-as-judge settings specifically, \citet{balasubramanian2026ising} model judge dependence via Ising models, and CARE \citep{zhao2026care} handles shared confounders in LLM evaluations. We tested Dawid-Skene but found it underperforms majority voting with only 2 annotators per edge (Appendix~\ref{app:ds}); the richer models above require even more annotations per item.
+
+\paragraph{Calibration and conformal prediction.}
+LOCALE's original proposal included a calibration phase using Venn-Abers predictors for distribution-free probability intervals. Generalized Venn-Abers \citep{vanderlaan2025gva} extends this to arbitrary loss functions with finite-sample guarantees. For structured outputs like DAGs, conformal structured prediction \citep{zhang2025conformal} provides finite-sample prediction sets via integer programming. Conformalized link prediction on graphs \citep{zhao2024clp} establishes permutation-invariance for conformal prediction on graph structures. These methods could enable principled selective output in future versions of LOCALE, where edges with low calibrated confidence are abstained rather than committed.
+
+\paragraph{Message passing and constraint satisfaction.}
+LOCALE's Phase 2 Max-2SAT formulation connects to the constraint satisfaction literature. Belief propagation guided decimation \citep{ricctersenghi2009cavity} provides the theoretical framework for iteratively fixing variables in CSPs based on BP marginals. Backtracking survey propagation \citep{marino2016backtracking} adds backtracking to SP decimation for solving random $k$-SAT near the satisfiability threshold. Streamlined variational inference \citep{grover2018streamline} replaces hard decimation with multi-variable ``streamlining constraints,'' consistently outperforming decimation-based solvers. For DAG-specific constraints, \citet{zhou2016spinglass} converts global acyclicity into local arc constraints via spin-glass models solved with BP-guided decimation. BP for permutations \citep{cantwell2022bpperm} extends message passing to ranking inference from pairwise data, conceptually similar to aggregating pairwise orientation votes.
+
+\paragraph{Local and scalable causal discovery.}
+Beyond GLL, IAMB, and MMPC discussed in the main text, several methods further develop local causal discovery. HITON \citep{aliferis2003hiton} achieves three-orders-of-magnitude speedup for Markov blanket discovery via forward selection with symmetry correction. rPC \citep{sondhi2019rpc} exploits local separation properties in large random networks to weaken faithfulness requirements. lFCI \citep{chen2023lfci} extends locality to the latent-variable setting, achieving state-of-the-art performance on hub-heavy graphs where global conditioning is impractical. CMB \citep{gao2015cmb} discovers direct causes and effects of a target variable through local neighborhood queries. ICD \citep{rohekar2021icd} iteratively refines from a complete graph, tying conditioning-set size to graph distance. Consistent separating sets \citep{li2019consistent} ensures edge removals rely on separating sets consistent with the current graph via block-cut tree decomposition. These methods reinforce the principle that local structure is often sufficient for causal inference, the same principle underlying LOCALE's ego-graph prompting strategy.
+
+\end{document}

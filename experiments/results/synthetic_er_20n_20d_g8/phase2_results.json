@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "phase": 2,
+    "source": "/Users/aaronzhfeng/workspace/workstation_27_locale/research-copilot/projects/locale/experiments/results/synthetic_er_20n_20d_g8/mve_results.json",
+    "network": "insurance",
+    "soft_score_source": "ego",
+    "collider_mode": "non-collider-only"
+  },
+  "per_node": {
+    "X_17": {
+      "degree": 4,
+      "n_feasible": 16,
+      "n_total": 16,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 4,
+      "directions": {
+        "X_13": "X_17->X_13",
+        "X_6": "X_17->X_6",
+        "X_10": "X_17->X_10",
+        "X_14": "X_17->X_14"
+      }
+    },
+    "X_3": {
+      "degree": 3,
+      "n_feasible": 8,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 0,
+      "p2_correct": 0,
+      "n_edges": 3,
+      "directions": {
+        "X_2": "X_3->X_2",
+        "X_6": "X_3->X_6",
+        "X_10": "X_3->X_10"
+      }
+    },
+    "X_13": {
+      "degree": 3,
+      "n_feasible": 4,
+      "n_total": 8,
+      "hard_flips": [],
+      "p1_correct": 2,
+      "p2_correct": 2,
+      "n_edges": 3,
+      "directions": {
+        "X_4": "X_13->X_4",
+        "X_17": "X_13->X_17",
+        "X_19": "X_13->X_19"
+      }
+    },
+    "X_8": {
+      "degree": 3,
+      "n_feasible": 5,
+      "n_total": 8,
+      "hard_flips": [
+        [
+          "X_15",
+          1,
+          0
+        ],
+        [
+          "X_11",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 1,
+      "p2_correct": 1,
+      "n_edges": 3,
+      "directions": {
+        "X_15": "X_8->X_15",
+        "X_5": "X_8->X_5",
+        "X_11": "X_8->X_11"
+      }
+    },
+    "X_2": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "X_3",
+          1,
+          0
+        ],
+        [
+          "X_7",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "X_3": "X_2->X_3",
+        "X_7": "X_2->X_7"
+      }
+    },
+    "X_6": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "X_3",
+          1,
+          0
+        ],
+        [
+          "X_17",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "X_3": "X_6->X_3",
+        "X_17": "X_6->X_17"
+      }
+    },
+    "X_7": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "X_2",
+          1,
+          0
+        ],
+        [
+          "X_15",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "X_2": "X_7->X_2",
+        "X_15": "X_7->X_15"
+      }
+    },
+    "X_15": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "X_7",
+          1,
+          0
+        ],
+        [
+          "X_8",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 1,
+      "n_edges": 2,
+      "directions": {
+        "X_7": "X_15->X_7",
+        "X_8": "X_15->X_8"
+      }
+    },
+    "X_10": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "X_3",
+          1,
+          0
+        ],
+        [
+          "X_17",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "X_3": "X_10->X_3",
+        "X_17": "X_10->X_17"
+      }
+    },
+    "X_11": {
+      "degree": 2,
+      "n_feasible": 3,
+      "n_total": 4,
+      "hard_flips": [
+        [
+          "X_8",
+          1,
+          0
+        ],
+        [
+          "X_1",
+          1,
+          0
+        ]
+      ],
+      "p1_correct": 0,
+      "p2_correct": 2,
+      "n_edges": 2,
+      "directions": {
+        "X_8": "X_11->X_8",
+        "X_1": "X_11->X_1"
+      }
+    }
+  },
+  "summary": {
+    "total_edges": 25,
+    "phase1_correct": 3,
+    "phase2_correct": 13,
+    "phase1_accuracy": 12.0,
+    "phase2_accuracy": 52.0,
+    "delta_pp": 40.0,
+    "hard_flips": 14,
+    "hard_flips_helped": 0,
+    "hard_flips_hurt": 0,
+    "infeasible_nodes": 0
+  }
+}

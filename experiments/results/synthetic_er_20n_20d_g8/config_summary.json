@@ -1,0 +1,9 @@
+{
+  "n_nodes": 20,
+  "avg_degree": 2.0,
+  "graph_seed": 8,
+  "n_gt_edges": 16,
+  "locale_f1": 0.2580645161290323,
+  "locale_precision": 0.26666666666666666,
+  "locale_recall": 0.25
+}

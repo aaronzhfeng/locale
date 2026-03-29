@@ -1,0 +1,85 @@
+\section*{NeurIPS Paper Checklist}
+
+\begin{enumerate}
+
+\item {\bf Claims}
+    \item[] Question: Do the main claims made in the abstract and introduction accurately reflect the paper's contributions and scope?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The abstract and introduction state four contributions (ego-graph prompting, NCO filtering, pipeline, comparison) with specific numbers. All claims are supported by Tables 1--3 and Sections 4.2--4.5. The Asia loss is disclosed upfront.
+
+\item {\bf Limitations}
+    \item[] Question: Does the paper discuss the limitations of the work performed by the authors?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section 5 lists six limitations including single model family, insufficient power on Alarm/Child, reliance on ground-truth for NCO validation, causal sufficiency assumption, untested synthetic experiments, and single-seed Hepar2.
+
+\item {\bf Theory Assumptions and Proofs}
+    \item[] Question: For each theoretical result, does the paper provide the full set of assumptions and a complete (and correct) proof?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: The paper does not include theoretical results or proofs. The NCO finding is empirical, and the mechanistic explanation in Section 3.2 is an informal argument, not a formal theorem.
+
+\item {\bf Experimental Result Reproducibility}
+    \item[] Question: Does the paper fully disclose all the information needed to reproduce the main experimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section 4.1 specifies the model (Qwen2.5-27B-Instruct FP8), serving framework (vLLM), skeleton algorithm (PC-stable, chi-squared, $\alpha$=0.05), number of seeds and seed values, $K$=10 votes, and evaluation metric (directed-edge F1). Benchmark networks are standard and publicly available.
+
+\item {\bf Open access to data and code}
+    \item[] Question: Does the paper provide open access to the data and code, with sufficient instructions to faithfully reproduce the main experimental results, as described in supplemental material?
+    \item[] Answer: \answerNo{}
+    \item[] Justification: Code and data are not yet released. The benchmark networks (Insurance, Alarm, Sachs, Child, Asia) are publicly available through the bnlearn repository. We plan to release code upon acceptance.
+
+\item {\bf Experimental Setting/Details}
+    \item[] Question: Does the paper specify all the training and test details (e.g., data splits, hyperparameters, how they were chosen, type of optimizer) necessary to understand the results?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section 4.1 specifies all key parameters. There is no training; the method uses LLM inference only. Hyperparameters ($K$=10, $\alpha$=0.05, max context=4096) are stated in the main text.
+
+\item {\bf Experiment Statistical Significance}
+    \item[] Question: Does the paper report error bars suitably and correctly defined or other appropriate information about the statistical significance of the experiments?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Table 1 reports mean $\pm$ standard deviation across 12 seeds, paired $t$-tests with Holm--Bonferroni correction, $p$-values, and Cohen's $d$ effect sizes. Significant results are marked.
+
+\item {\bf Experiments Compute Resources}
+    \item[] Question: For each experiment, does the paper provide sufficient information on the computer resources (type of compute workers, memory, time of execution) needed to reproduce the experiments?
+    \item[] Answer: \answerNo{}
+    \item[] Justification: The paper specifies the model and serving framework (vLLM) but does not report GPU type, wall-clock time, or total compute cost. Each 12-seed comparison run uses a single GPU for vLLM inference.
+
+\item {\bf Code Of Ethics}
+    \item[] Question: Does the research conducted in the paper conform, in every respect, with the NeurIPS Code of Ethics \url{https://neurips.cc/public/EthicsGuidelines}?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The research uses publicly available benchmark networks and open-weight models. No human subjects, private data, or dual-use concerns are involved.
+
+\item {\bf Broader Impacts}
+    \item[] Question: Does the paper discuss both potential positive societal impacts and negative societal impacts of the work performed?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: This is foundational methodology research on causal discovery from observational data. We do not foresee direct negative societal impacts from improved edge orientation in Bayesian networks.
+
+\item {\bf Safeguards}
+    \item[] Question: Does the paper describe safeguards that have been put in place for responsible release of data or models that have a high risk for misuse (e.g., pretrained language models, image generators, or scraped datasets)?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: The paper does not release models or datasets. It uses an existing open-weight LLM (Qwen2.5) for inference only.
+
+\item {\bf Licenses for existing assets}
+    \item[] Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Benchmark networks are cited via their original publications. Qwen2.5 is used under its Apache 2.0 license. The PC-stable implementation uses pgmpy (MIT license).
+
+\item {\bf New Assets}
+    \item[] Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: No new datasets or pretrained models are released in this paper.
+
+\item {\bf Crowdsourcing and Research with Human Subjects}
+    \item[] Question: For crowdsourcing experiments and research with human subjects, does the paper include the full text of instructions given to participants and screenshots, if applicable, as well as details about compensation (if any)?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: No crowdsourcing or human subjects research is involved.
+
+\item {\bf Institutional Review Board (IRB) Approvals or Equivalent for Research with Human Subjects}
+    \item[] Question: Does the paper describe potential risks incurred by study participants, whether such risks were disclosed to the subjects, and whether Institutional Review Board (IRB) approvals (or an equivalent approval/review based on the requirements of your country or institution) were obtained?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: No human subjects research is involved.
+
+\item {\bf Declaration of LLM usage}
+    \item[] Question: Does the paper describe the usage of LLMs if it is an important, original, or non-standard component of the core methods in this research? Note that if the LLM is used only for writing, editing, or formatting purposes and does not impact the core methodology, scientific rigor, or originality of the research, declaration is not required.
+    \item[] Answer: \answerYes{}
+    \item[] Justification: LLM usage is a core component of the method. Section 3.1 describes how the LLM (Qwen2.5-27B-Instruct) is prompted for ego-graph orientation scoring. Section 4.1 specifies the model, serving framework, and inference parameters.
+
+\end{enumerate}

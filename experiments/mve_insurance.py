@@ -23,7 +23,7 @@ from openai import OpenAI
 
 # ── Configuration ──────────────────────────────────────────────────
 
-BASE_URL = "https://vxzw0ht4g3y2ov-8000.proxy.runpod.net/v1"
+BASE_URL = "https://spymrrgsaneehk-8000.proxy.runpod.net/v1"
 MODEL = os.environ.get("LOCALE_MODEL", "Qwen/Qwen3.5-27B-FP8")
 API_KEY = "unused"
 TEMPERATURE = 0.7

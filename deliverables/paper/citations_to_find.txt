@@ -1,0 +1,21 @@
+Citation verification log
+=========================================================================
+
+Verified with: brainstorm-00-core/scripts/check_bib_hallucinations.py --strict
+Date: 2026-03-20
+
+Result: 17 VERIFIED, 1 LIKELY_MATCH (ramsey2006cpc — year mismatch flag, title 100% match)
+
+All entries fetched via doi.org content negotiation (--doi2bib mode) or
+verified against CrossRef, Semantic Scholar, OpenAlex, and arXiv APIs.
+
+--- Remaining human action ---
+1. [ramsey2006cpc] — LIKELY_MATCH. Title confirmed. Year may differ from
+   OpenAlex record vs UAI proceedings. Check if year should be 2006 or 2012.
+2. [wang2025scd] — duplicate of takayama2024causalfusion (same DOI). If
+   these are genuinely different papers (SCD vs CausalFusion), find the
+   CausalFusion AAAI 2026 DOI separately.
+3. Review citation keys: some keys use author names from the brainstorm
+   literature (e.g., chen2024mosacd) but the DOI-verified authors differ
+   (e.g., Lyu et al.). Keys are stable for compilation but cosmetically
+   mismatched.

@@ -70,11 +70,11 @@
 | A02 | good | XN-031, D-A02 | decisions/A02_data_seed_bug_fix.md |
 | E01 | good | XN-024, XN-027, XN-029, XN-030, LN-001, LN-006, LN-008 |  |
 | E02 | negative | XN-025 |  |
-| E03 | good | XN-029, XN-030, XN-031, XN-032, XN-033, XN-034, XN-035, D-A02 |  |
+| E03 | good | XN-029, XN-030, XN-031, XN-032, XN-033, XN-034, XN-035, XN-036, XN-037, D-A02 |  |
 | I00 | Assumed | LN-002, LN-004, LN-008 |  |
 | I01 | Assumed | XN-028 |  |
-| I02 | Assumed | XN-001, XN-002, XN-003, XN-004, XN-005, XN-006, XN-007, XN-008, XN-009, XN-010, XN-011, XN-012, XN-013, XN-016, XN-021, XN-023, XN-024, XN-025, XN-026, XN-027, XN-030, XN-032, XN-033, XN-034, XN-035, LN-001, LN-002, LN-004, LN-005, LN-006 |  |
-| I03 | Assumed | XN-005, XN-006, XN-008, XN-010, XN-011, XN-012, XN-013, XN-014, XN-015, XN-016, XN-017, XN-022, XN-024, XN-025, XN-026, XN-027, XN-030, XN-035, LN-001, LN-003, LN-005, LN-007 |  |
+| I02 | Assumed | XN-001, XN-002, XN-003, XN-004, XN-005, XN-006, XN-007, XN-008, XN-009, XN-010, XN-011, XN-012, XN-013, XN-016, XN-021, XN-023, XN-024, XN-025, XN-026, XN-027, XN-030, XN-032, XN-033, XN-034, XN-035, XN-036, XN-037, LN-001, LN-002, LN-004, LN-005, LN-006 |  |
+| I03 | Assumed | XN-005, XN-006, XN-008, XN-010, XN-011, XN-012, XN-013, XN-014, XN-015, XN-016, XN-017, XN-022, XN-024, XN-025, XN-026, XN-027, XN-030, XN-035, XN-037, LN-001, LN-003, LN-005, LN-007 |  |
 | I04 | Assumed | XN-010, XN-011, XN-012, XN-013, XN-018 |  |
 | I05 | Assumed | XN-011, XN-012, XN-013, XN-015, XN-019, XN-020, XN-025, LN-005 |  |
 | I07 | Assumed | XN-020 |  |
@@ -106,7 +106,7 @@
 | XN-018 | Phase 4 conservative propagation: Meek rules are a no-op on fully-oriented graphs | 2026-03-11 | I04 |  |
 | XN-019 | Phase 5 PE fallback: mixed results, tiebreaking helps small networks | 2026-03-11 | I05 |  |
 | XN-020 | Phase 6 calibration: selective output improves precision from 89.4% to 92.9% | 2026-03-11 | I05, I07 |  |
-| ... | *15 more* | | | |
+| ... | *17 more* | | | |
 
 ## Literature Notes
 
@@ -134,8 +134,8 @@
 
 ## Recent Log
 
-- [LOG-2026-03-19-36](research_log.md#LOG-2026-03-19-36) — 2026-03-19 — 12-seed fair comparison complete: LOCALE 2 sig wins + 1 sig loss (Holm-corrected)
-- [LOG-2026-03-26-37](research_log.md#LOG-2026-03-26-37) — 2026-03-26 — Data seed bug: LOCALE used fixed seed=42 for all multi-seed runs
-- [LOG-2026-03-26-38](research_log.md#LOG-2026-03-26-38) — 2026-03-26 — Corrected 12-seed comparison complete: headline robust to bug fix
-- [LOG-2026-03-26-39](research_log.md#LOG-2026-03-26-39) — 2026-03-26 — Phase transition DO→THINK: corrected comparison validates headline
 - [LOG-2026-03-26-40](research_log.md#LOG-2026-03-26-40) — 2026-03-26 — Full 10-network comparison: LOCALE 7W/2T/1L across all MosaCD benchmarks
+- [LOG-2026-03-27-41](research_log.md#LOG-2026-03-27-41) — 2026-03-27 — Full 11-network comparison: 8W/2T/1L, Wilcoxon p=0.027
+- [LOG-2026-03-28-42](research_log.md#LOG-2026-03-28-42) — 2026-03-28 — Synthetic ER results: LOCALE wins 14/22, +14.3pp, p=0.006
+- [LOG-2026-03-28-43](research_log.md#LOG-2026-03-28-43) — 2026-03-28 — Alarm s0 outlier investigated: LLM gives systematically wrong orientations
+- [LOG-2026-03-29-44](research_log.md#LOG-2026-03-29-44) — 2026-03-29 — Synthetic ER expanded to 10 seeds: LOCALE wins 8/10, per-seed Wilcoxon p=0.010
