@@ -1,0 +1,295 @@
+\begin{thebibliography}{41}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aliferis et~al.(2003)Aliferis, Tsamardinos, and
+  Statnikov]{aliferis2003hiton}
+Constantin~F. Aliferis, Ioannis Tsamardinos, and Alexander Statnikov.
+\newblock {HITON}: A novel {Markov} blanket algorithm for optimal variable
+  selection.
+\newblock In \emph{AMIA Annual Symposium Proceedings}, 2003.
+
+\bibitem[Balasubramanian et~al.(2026)Balasubramanian, Podkopaev, and
+  Kasiviswanathan]{balasubramanian2026ising}
+Krishnakumar Balasubramanian, Aleksandr Podkopaev, and Shiva~Prasad
+  Kasiviswanathan.
+\newblock Dependence-aware label aggregation for {LLM}-as-a-judge via ising
+  models, 2026.
+\newblock URL \url{https://arxiv.org/abs/2601.22336}.
+
+\bibitem[Ban et~al.(2023)Ban, Chen, Lyu, Wang, and Chen]{gao2024ilscsl}
+Taiyu Ban, Lyuzhou Chen, Derui Lyu, Xiangyu Wang, and Huanhuan Chen.
+\newblock Causal structure learning supervised by large language model, 2023.
+\newblock URL \url{https://arxiv.org/abs/2311.11689}.
+
+\bibitem[Cantwell and Moore(2022)]{cantwell2022bpperm}
+George~T. Cantwell and Cristopher Moore.
+\newblock Belief propagation for permutations, rankings, and partial orders.
+\newblock \emph{Physical Review E}, 105:\penalty0 L052303, 2022.
+\newblock \doi{10.1103/PhysRevE.105.L052303}.
+
+\bibitem[Chen et~al.(2023{\natexlab{a}})Chen, Ban, Wang, Lyu, and
+  Chen]{li2025harmonized}
+Lyuzhou Chen, Taiyu Ban, Xiangyu Wang, Derui Lyu, and Huanhuan Chen.
+\newblock Mitigating prior errors in causal structure learning: A resilient
+  approach via {Bayesian} networks, 2023{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2306.07032}.
+
+\bibitem[Chen et~al.(2023{\natexlab{b}})Chen, Drton, and Shojaie]{chen2023lfci}
+Wenyu Chen, Mathias Drton, and Ali Shojaie.
+\newblock Causal structural learning via local graphs.
+\newblock \emph{SIAM Journal on Mathematics of Data Science},
+  2023{\natexlab{b}}.
+
+\bibitem[Cohrs et~al.(2024)Cohrs, Varando, Diaz, Sitokonstantinou, and
+  Camps-Valls]{ban2023chatpc}
+Kai-Hendrik Cohrs, Gherardo Varando, Emiliano Diaz, Vasileios Sitokonstantinou,
+  and Gustau Camps-Valls.
+\newblock Large language models for constrained-based causal discovery, 2024.
+\newblock URL \url{https://arxiv.org/abs/2406.07378}.
+
+\bibitem[Colombo and Maathuis(2014)]{colombo2014order}
+Diego Colombo and Marloes~H. Maathuis.
+\newblock Order-independent constraint-based causal structure learning.
+\newblock \emph{Journal of Machine Learning Research}, 15\penalty0
+  (116):\penalty0 3921--3962, 2014.
+\newblock URL \url{https://jmlr.org/papers/v15/colombo14a.html}.
+
+\bibitem[Dawid and Skene(1979)]{dawid1979maximum}
+A.~P. Dawid and A.~M. Skene.
+\newblock Maximum likelihood estimation of observer error-rates using the {EM}
+  algorithm.
+\newblock \emph{Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)}, 28\penalty0 (1):\penalty0 20--28, 1979.
+\newblock \doi{10.2307/2346806}.
+
+\bibitem[Gao and Ji(2015)]{gao2015cmb}
+Tian Gao and Qiang Ji.
+\newblock Local causal discovery of direct causes and effects.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2015.
+
+\bibitem[Grover et~al.(2018)Grover, Achim, and Ermon]{grover2018streamline}
+Aditya Grover, Tudor Achim, and Stefano Ermon.
+\newblock Streamlining variational inference for constraint satisfaction
+  problems.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2018.
+
+\bibitem[Hurlbert(1984)]{hurlbert1984pseudoreplication}
+Stuart~H. Hurlbert.
+\newblock Pseudoreplication and the design of ecological field experiments.
+\newblock \emph{Ecological Monographs}, 54\penalty0 (2):\penalty0 187--211,
+  1984.
+\newblock \doi{10.2307/1942661}.
+
+\bibitem[Jiralerspong et~al.(2024)Jiralerspong, Chen, More, Shah, and
+  Bengio]{jiralerspong2024efficient}
+Thomas Jiralerspong, Xiaoyin Chen, Yash More, Vedant Shah, and Yoshua Bengio.
+\newblock Efficient causal graph discovery using large language models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.01207}.
+
+\bibitem[Kim and Ghahramani(2012)]{kim2012bcc}
+Hyun-Chul Kim and Zoubin Ghahramani.
+\newblock Bayesian classifier combination.
+\newblock In \emph{International Conference on Artificial Intelligence and
+  Statistics (AISTATS)}, 2012.
+
+\bibitem[Le et~al.(2024)Le, Xia, and Chen]{chen2024mac}
+Hao~Duong Le, Xin Xia, and Zhang Chen.
+\newblock Multi-agent causal discovery using large language models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2407.15073}.
+
+\bibitem[Li et~al.(2019{\natexlab{a}})Li, Cabeli, Sella, and
+  Isambert]{li2019consistent}
+Honghao Li, Vincent Cabeli, Nadir Sella, and Herv{\'e} Isambert.
+\newblock Constraint-based causal structure learning with consistent separating
+  sets.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2019{\natexlab{a}}.
+
+\bibitem[Li et~al.(2019{\natexlab{b}})Li, Rubinstein, and Cohn]{li2019ebcc}
+Yuan Li, Benjamin I.~P. Rubinstein, and Trevor Cohn.
+\newblock Exploiting worker correlation for label aggregation in crowdsourcing.
+\newblock In \emph{International Conference on Machine Learning (ICML)},
+  2019{\natexlab{b}}.
+
+\bibitem[Liu et~al.(2024)Liu, Chen, Liu, Gong, Cheng, Han, and
+  Zhang]{jin2025coat}
+Chenxi Liu, Yongqiang Chen, Tongliang Liu, Mingming Gong, James Cheng, Bo~Han,
+  and Kun Zhang.
+\newblock Discovering and reasoning of causality in the hidden world with large
+  language models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.03941}.
+
+\bibitem[Lyu et~al.(2025)Lyu, Turcan, Zhang, and Wilder]{chen2024mosacd}
+Ruiqi Lyu, Alistair Turcan, Martin~Jinye Zhang, and Bryan Wilder.
+\newblock Improving constraint-based discovery with robust propagation and
+  reliable {LLM} priors, 2025.
+\newblock URL \url{https://arxiv.org/abs/2509.23570}.
+
+\bibitem[Margaritis and Thrun(2000)]{margaritis2000gll}
+Dimitris Margaritis and Sebastian Thrun.
+\newblock Bayesian network induction via local neighborhoods.
+\newblock In \emph{Advances in Neural Information Processing Systems 12
+  (NeurIPS)}, pages 505--511. MIT Press, 2000.
+
+\bibitem[Marino et~al.(2016)Marino, Parisi, and
+  Ricci-Tersenghi]{marino2016backtracking}
+Raffaele Marino, Giorgio Parisi, and Federico Ricci-Tersenghi.
+\newblock The backtracking survey propagation algorithm for solving random
+  {K-SAT} problems.
+\newblock \emph{Nature Communications}, 7:\penalty0 12996, 2016.
+\newblock \doi{10.1038/ncomms12996}.
+
+\bibitem[Meek(1995)]{meek1995causal}
+Christopher Meek.
+\newblock Causal inference and causal explanation with background knowledge.
+\newblock In \emph{Proceedings of the 11th Conference on Uncertainty in
+  Artificial Intelligence (UAI)}, pages 403--410. Morgan Kaufmann, 1995.
+
+\bibitem[Mian and Shah(2025)]{snoe2025}
+Osman Mian and Rajen~D. Shah.
+\newblock Sequential nonlinear orientation of edges, 2025.
+\newblock URL \url{https://arxiv.org/abs/2506.05590}.
+
+\bibitem[Peng et~al.(2026)Peng, Chen, Xu, and Lu]{chen2025causcientist}
+Bo~Peng, Sirui Chen, Lei Xu, and Chaochao Lu.
+\newblock {CauScientist}: Teaching {LLMs} to respect data for causal discovery,
+  2026.
+\newblock URL \url{https://arxiv.org/abs/2601.13614}.
+
+\bibitem[Ramsey et~al.(2006)Ramsey, Zhang, and Spirtes]{ramsey2006cpc}
+Joseph Ramsey, Jiji Zhang, and Peter~L. Spirtes.
+\newblock Adjacency-faithfulness and conservative causal inference.
+\newblock In \emph{Proceedings of the 22nd Conference on Uncertainty in
+  Artificial Intelligence (UAI)}, pages 401--408, 2006.
+
+\bibitem[Ricci-Tersenghi and Semerjian(2009)]{ricctersenghi2009cavity}
+Federico Ricci-Tersenghi and Guilhem Semerjian.
+\newblock On the cavity method for decimated random constraint satisfaction
+  problems.
+\newblock \emph{Journal of Statistical Mechanics: Theory and Experiment}, page
+  P09001, 2009.
+\newblock \doi{10.1088/1742-5468/2009/09/P09001}.
+
+\bibitem[Rohekar et~al.(2021)Rohekar, Nisimov, Gurwicz, and
+  Novik]{rohekar2021icd}
+Raanan~Y. Rohekar, Shami Nisimov, Yaniv Gurwicz, and Gal Novik.
+\newblock Iterative causal discovery in the possible presence of latent
+  confounders and selection bias.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2021.
+
+\bibitem[Shen et~al.(2025)Shen, Chen, Luo, Xu, Chen, and Ni]{shen2025matmcd}
+ChengAo Shen, Zhengzhang Chen, Dongsheng Luo, Dongkuan Xu, Haifeng Chen, and
+  Jingchao Ni.
+\newblock Exploring multi-modal data with tool-augmented {LLM} agents for
+  precise causal discovery, 2025.
+\newblock URL \url{https://arxiv.org/abs/2412.13667}.
+
+\bibitem[Sondhi and Shojaie(2019)]{sondhi2019rpc}
+Arjun Sondhi and Ali Shojaie.
+\newblock The reduced {PC}-algorithm: Improved causal structure learning in
+  large random networks.
+\newblock \emph{Journal of Machine Learning Research}, 2019.
+
+\bibitem[Spirtes et~al.(1993)Spirtes, Glymour, and
+  Scheines]{spirtes2000causation}
+Peter Spirtes, Clark Glymour, and Richard Scheines.
+\newblock \emph{Causation, Prediction, and Search}.
+\newblock Lecture Notes in Statistics. Springer New York, 1993.
+\newblock \doi{10.1007/978-1-4612-2748-9}.
+\newblock 2nd edition 2000, MIT Press.
+
+\bibitem[Takayama et~al.(2024)Takayama, Okuda, Pham, Ikenoue, Fukuma, Shimizu,
+  and Sannai]{takayama2024causalfusion}
+Masayuki Takayama, Tadahisa Okuda, Thong Pham, Tatsuyoshi Ikenoue, Shingo
+  Fukuma, Shohei Shimizu, and Akiyoshi Sannai.
+\newblock Integrating large language models in causal discovery: A statistical
+  causal approach.
+\newblock 2024.
+\newblock \doi{10.48550/arXiv.2402.01454}.
+\newblock URL \url{https://arxiv.org/abs/2402.01454}.
+
+\bibitem[Tsamardinos et~al.(2003)Tsamardinos, Aliferis, and
+  Statnikov]{tsamardinos2003iamb}
+Ioannis Tsamardinos, Constantin~F. Aliferis, and Alexander Statnikov.
+\newblock Time and sample efficient discovery of {Markov} blankets and direct
+  causal relations.
+\newblock In \emph{Proceedings of the 9th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pages 673--678. ACM, 2003.
+\newblock \doi{10.1145/956750.956838}.
+
+\bibitem[Tsamardinos et~al.(2006)Tsamardinos, Brown, and
+  Aliferis]{tsamardinos2006mmpc}
+Ioannis Tsamardinos, Laura~E. Brown, and Constantin~F. Aliferis.
+\newblock The max-min hill-climbing {Bayesian} network structure learning
+  algorithm.
+\newblock \emph{Machine Learning}, 65\penalty0 (1):\penalty0 31--78, 2006.
+\newblock \doi{10.1007/s10994-006-6889-7}.
+
+\bibitem[Uhler et~al.(2013)Uhler, Raskutti, B{\"u}hlmann, and
+  Yu]{uhler2013geometry}
+Caroline Uhler, Garvesh Raskutti, Peter B{\"u}hlmann, and Bin Yu.
+\newblock Geometry of the faithfulness assumption in causal inference.
+\newblock \emph{The Annals of Statistics}, 41\penalty0 (2):\penalty0 436--463,
+  2013.
+\newblock \doi{10.1214/12-AOS1080}.
+
+\bibitem[van~der Laan and Alaa(2025)]{vanderlaan2025gva}
+Lars van~der Laan and Ahmed Alaa.
+\newblock Generalized {Venn} and {Venn}-{Abers} calibration with applications
+  in conformal prediction, 2025.
+\newblock URL \url{https://arxiv.org/abs/2502.05676}.
+
+\bibitem[Venanzi et~al.(2014)Venanzi, Guiver, Kazai, Kohli, and
+  Shokouhi]{venanzi2014communitybcc}
+Matteo Venanzi, John Guiver, Gabriella Kazai, Pushmeet Kohli, and Milad
+  Shokouhi.
+\newblock Community-based {Bayesian} aggregation models for crowdsourcing.
+\newblock In \emph{Proceedings of the 23rd International Conference on World
+  Wide Web (WWW)}, 2014.
+
+\bibitem[Whitehill et~al.(2009)Whitehill, Wu, Bergsma, Movellan, and
+  Ruvolo]{whitehill2009glad}
+Jacob Whitehill, Ting-fan Wu, Jacob Bergsma, Javier~R. Movellan, and Paul~L.
+  Ruvolo.
+\newblock Whose vote should count more: Optimal integration of labels from
+  labelers of unknown expertise.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2009.
+
+\bibitem[Zhang et~al.(2025)Zhang, Li, and Bastani]{zhang2025conformal}
+Botong Zhang, Shuo Li, and Osbert Bastani.
+\newblock Conformal structured prediction.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025.
+\newblock \doi{10.48550/arXiv.2410.06296}.
+\newblock URL \url{https://arxiv.org/abs/2410.06296}.
+
+\bibitem[Zhao et~al.(2026)Zhao, Shin, Huang, Namburi, and Sala]{zhao2026care}
+Jitian Zhao, Changho Shin, Tzu-Heng Huang, Satya Sai~Srinath Namburi, and
+  Frederic Sala.
+\newblock {CARE}: Confounder-aware aggregation for reliable {LLM} evaluation,
+  2026.
+\newblock URL \url{https://arxiv.org/abs/2603.00039}.
+
+\bibitem[Zhao et~al.(2024)Zhao, Kang, and Cheng]{zhao2024clp}
+Tianyi Zhao, Jian Kang, and Lu~Cheng.
+\newblock Conformalized link prediction on graph neural networks.
+\newblock In \emph{Proceedings of the 30th ACM SIGKDD Conference on Knowledge
+  Discovery and Data Mining (KDD)}, 2024.
+\newblock \doi{10.1145/3637528.3672061}.
+
+\bibitem[Zhou(2016)]{zhou2016spinglass}
+Hai-Jun Zhou.
+\newblock A spin glass approach to the directed feedback vertex set problem.
+\newblock \emph{Journal of Statistical Mechanics: Theory and Experiment},
+  2016\penalty0 (7):\penalty0 073303, 2016.
+\newblock \doi{10.1088/1742-5468/2016/07/073303}.
+
+\end{thebibliography}

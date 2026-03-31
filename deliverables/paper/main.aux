@@ -1,0 +1,182 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{spirtes2000causation}
+\citation{colombo2014order}
+\citation{uhler2013geometry}
+\citation{meek1995causal}
+\citation{chen2024mosacd}
+\citation{ban2023chatpc}
+\citation{takayama2024causalfusion}
+\citation{chen2025causcientist}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{chen2024mosacd}
+\citation{ban2023chatpc}
+\citation{snoe2025}
+\citation{takayama2024causalfusion}
+\citation{chen2025causcientist}
+\citation{gao2024ilscsl}
+\citation{chen2024mac}
+\citation{li2025harmonized}
+\citation{jin2025coat}
+\citation{spirtes2000causation}
+\citation{colombo2014order}
+\citation{meek1995causal}
+\citation{ramsey2006cpc}
+\citation{uhler2013geometry}
+\citation{margaritis2000gll}
+\citation{tsamardinos2003iamb}
+\citation{tsamardinos2006mmpc}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Per-edge LLM orientation.}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Graph-level LLM methods.}{2}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Constraint-based and local causal discovery.}{2}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{2}{section.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Efficiency comparison: LOCALE vs per-edge (MosaCD) at $K{=}10$. Tokens/query estimated from mean prompt length. Total tokens = queries $\times $ tokens/query.}}{3}{table.1}\protected@file@percent }
+\newlabel{tab:efficiency}{{1}{3}{Efficiency comparison: LOCALE vs per-edge (MosaCD) at $K{=}10$. Tokens/query estimated from mean prompt length. Total tokens = queries $\times $ tokens/query}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Phase 1: Ego-graph prompting}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Phase 2: NCO constraint compilation via Max-2SAT}{3}{subsection.3.2}\protected@file@percent }
+\newlabel{eq:maxsat}{{5}{3}{Phase 2: NCO constraint compilation via Max-2SAT}{equation.5}{}}
+\citation{dawid1979maximum}
+\citation{chen2024mosacd}
+\citation{colombo2014order}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Phases 3--4: Reconciliation and safety valve}{4}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{4}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Setup}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Benchmark networks.}{4}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Synthetic graphs.}{4}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{LLM and inference.}{4}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Skeleton and evaluation.}{4}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Main results}{4}{subsection.4.2}\protected@file@percent }
+\citation{hurlbert1984pseudoreplication}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Directed-edge F1 (mean $\pm $ std) across 11 BNLearn networks. Same model (Qwen3.5-27B-FP8), same skeleton per seed, 4096 context. Seeds: 12 for original networks, 3--4 for new networks. Significance: Wilcoxon signed-rank over 9 non-tied networks, $p{=}0.027$.}}{5}{table.2}\protected@file@percent }
+\newlabel{tab:main}{{2}{5}{Directed-edge F1 (mean $\pm $ std) across 11 BNLearn networks. Same model (Qwen3.5-27B-FP8), same skeleton per seed, 4096 context. Seeds: 12 for original networks, 3--4 for new networks. Significance: Wilcoxon signed-rank over 9 non-tied networks, $p{=}0.027$}{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Synthetic ER evaluation: per-graph-seed means (10 seeds $\times $ 9 configs each, 89 paired comparisons). Both methods use disguised variable names. Significance: Wilcoxon $p{=}0.010$.}}{5}{table.3}\protected@file@percent }
+\newlabel{tab:synthetic}{{3}{5}{Synthetic ER evaluation: per-graph-seed means (10 seeds $\times $ 9 configs each, 89 paired comparisons). Both methods use disguised variable names. Significance: Wilcoxon $p{=}0.010$}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Synthetic Erd\H {o}s-R\'{e}nyi evaluation}{5}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:synthetic}{{4.3}{5}{Synthetic Erd\H {o}s-R\'{e}nyi evaluation}{subsection.4.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces MosaCD fidelity gap: published results (GPT-4o-mini, 128K context, $n{=}20{,}000$) vs our re-implementation (Qwen3.5-27B, 4096 context, $n{=}10{,}000$). Gap = Published $-$ Ours.}}{6}{table.4}\protected@file@percent }
+\newlabel{tab:fidelity}{{4}{6}{MosaCD fidelity gap: published results (GPT-4o-mini, 128K context, $n{=}20{,}000$) vs our re-implementation (Qwen3.5-27B, 4096 context, $n{=}10{,}000$). Gap = Published $-$ Ours}{table.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces CI orientation errors by sample size ($n$), aggregated over 6 networks $\times $ 3 seeds. FC = false collider, FNC = false non-collider.}}{6}{table.5}\protected@file@percent }
+\newlabel{tab:nco}{{5}{6}{CI orientation errors by sample size ($n$), aggregated over 6 networks $\times $ 3 seeds. FC = false collider, FNC = false non-collider}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}MosaCD fidelity gap}{6}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:fidelity}{{4.4}{6}{MosaCD fidelity gap}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}NCO validation}{6}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Degree-1 vulnerability analysis}{6}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:degree1}{{4.6}{6}{Degree-1 vulnerability analysis}{subsection.4.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Degree-1 vulnerability: orientation accuracy (\%) by edge coverage type. Single-EP = covered by one ego graph only. Multi-EP = covered by two or more. Gap = Single $-$ Multi.}}{7}{table.6}\protected@file@percent }
+\newlabel{tab:degree1}{{6}{7}{Degree-1 vulnerability: orientation accuracy (\%) by edge coverage type. Single-EP = covered by one ego graph only. Multi-EP = covered by two or more. Gap = Single $-$ Multi}{table.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Phase ablation: cumulative orientation accuracy (\%, single seed). SV = safety valve.}}{7}{table.7}\protected@file@percent }
+\newlabel{tab:ablation}{{7}{7}{Phase ablation: cumulative orientation accuracy (\%, single seed). SV = safety valve}{table.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Phase ablation}{7}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Efficiency, robustness, and design alternatives}{7}{subsection.4.8}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{aliferis2003hiton}{{1}{2003}{{Aliferis et~al.}}{{Aliferis, Tsamardinos, and Statnikov}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{8}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Summary of evidence.}{8}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{F1 decomposition and the skeleton bottleneck.}{8}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The fidelity gap caveat.}{8}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{8}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}\protected@file@percent }
+\bibcite{balasubramanian2026ising}{{2}{2026}{{Balasubramanian et~al.}}{{Balasubramanian, Podkopaev, and Kasiviswanathan}}}
+\bibcite{gao2024ilscsl}{{3}{2023}{{Ban et~al.}}{{Ban, Chen, Lyu, Wang, and Chen}}}
+\bibcite{cantwell2022bpperm}{{4}{2022}{{Cantwell and Moore}}{{}}}
+\bibcite{li2025harmonized}{{5}{2023{a}}{{Chen et~al.}}{{Chen, Ban, Wang, Lyu, and Chen}}}
+\bibcite{chen2023lfci}{{6}{2023{b}}{{Chen et~al.}}{{Chen, Drton, and Shojaie}}}
+\bibcite{ban2023chatpc}{{7}{2024}{{Cohrs et~al.}}{{Cohrs, Varando, Diaz, Sitokonstantinou, and Camps-Valls}}}
+\bibcite{colombo2014order}{{8}{2014}{{Colombo and Maathuis}}{{}}}
+\bibcite{dawid1979maximum}{{9}{1979}{{Dawid and Skene}}{{}}}
+\bibcite{gao2015cmb}{{10}{2015}{{Gao and Ji}}{{}}}
+\bibcite{grover2018streamline}{{11}{2018}{{Grover et~al.}}{{Grover, Achim, and Ermon}}}
+\bibcite{hurlbert1984pseudoreplication}{{12}{1984}{{Hurlbert}}{{}}}
+\bibcite{jiralerspong2024efficient}{{13}{2024}{{Jiralerspong et~al.}}{{Jiralerspong, Chen, More, Shah, and Bengio}}}
+\bibcite{kim2012bcc}{{14}{2012}{{Kim and Ghahramani}}{{}}}
+\bibcite{chen2024mac}{{15}{2024}{{Le et~al.}}{{Le, Xia, and Chen}}}
+\bibcite{li2019consistent}{{16}{2019{a}}{{Li et~al.}}{{Li, Cabeli, Sella, and Isambert}}}
+\bibcite{li2019ebcc}{{17}{2019{b}}{{Li et~al.}}{{Li, Rubinstein, and Cohn}}}
+\bibcite{jin2025coat}{{18}{2024}{{Liu et~al.}}{{Liu, Chen, Liu, Gong, Cheng, Han, and Zhang}}}
+\bibcite{chen2024mosacd}{{19}{2025}{{Lyu et~al.}}{{Lyu, Turcan, Zhang, and Wilder}}}
+\bibcite{margaritis2000gll}{{20}{2000}{{Margaritis and Thrun}}{{}}}
+\bibcite{marino2016backtracking}{{21}{2016}{{Marino et~al.}}{{Marino, Parisi, and Ricci-Tersenghi}}}
+\bibcite{meek1995causal}{{22}{1995}{{Meek}}{{}}}
+\bibcite{snoe2025}{{23}{2025}{{Mian and Shah}}{{}}}
+\bibcite{chen2025causcientist}{{24}{2026}{{Peng et~al.}}{{Peng, Chen, Xu, and Lu}}}
+\bibcite{ramsey2006cpc}{{25}{2006}{{Ramsey et~al.}}{{Ramsey, Zhang, and Spirtes}}}
+\bibcite{ricctersenghi2009cavity}{{26}{2009}{{Ricci-Tersenghi and Semerjian}}{{}}}
+\bibcite{rohekar2021icd}{{27}{2021}{{Rohekar et~al.}}{{Rohekar, Nisimov, Gurwicz, and Novik}}}
+\bibcite{shen2025matmcd}{{28}{2025}{{Shen et~al.}}{{Shen, Chen, Luo, Xu, Chen, and Ni}}}
+\bibcite{sondhi2019rpc}{{29}{2019}{{Sondhi and Shojaie}}{{}}}
+\bibcite{spirtes2000causation}{{30}{1993}{{Spirtes et~al.}}{{Spirtes, Glymour, and Scheines}}}
+\bibcite{takayama2024causalfusion}{{31}{2024}{{Takayama et~al.}}{{Takayama, Okuda, Pham, Ikenoue, Fukuma, Shimizu, and Sannai}}}
+\bibcite{tsamardinos2003iamb}{{32}{2003}{{Tsamardinos et~al.}}{{Tsamardinos, Aliferis, and Statnikov}}}
+\bibcite{tsamardinos2006mmpc}{{33}{2006}{{Tsamardinos et~al.}}{{Tsamardinos, Brown, and Aliferis}}}
+\bibcite{uhler2013geometry}{{34}{2013}{{Uhler et~al.}}{{Uhler, Raskutti, B{\"u}hlmann, and Yu}}}
+\bibcite{vanderlaan2025gva}{{35}{2025}{{van~der Laan and Alaa}}{{}}}
+\bibcite{venanzi2014communitybcc}{{36}{2014}{{Venanzi et~al.}}{{Venanzi, Guiver, Kazai, Kohli, and Shokouhi}}}
+\bibcite{whitehill2009glad}{{37}{2009}{{Whitehill et~al.}}{{Whitehill, Wu, Bergsma, Movellan, and Ruvolo}}}
+\bibcite{zhang2025conformal}{{38}{2025}{{Zhang et~al.}}{{Zhang, Li, and Bastani}}}
+\bibcite{zhao2026care}{{39}{2026}{{Zhao et~al.}}{{Zhao, Shin, Huang, Namburi, and Sala}}}
+\bibcite{zhao2024clp}{{40}{2024}{{Zhao et~al.}}{{Zhao, Kang, and Cheng}}}
+\bibcite{zhou2016spinglass}{{41}{2016}{{Zhou}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Per-network NCO breakdown}{11}{appendix.A}\protected@file@percent }
+\newlabel{app:nco-per-network}{{A}{11}{Per-network NCO breakdown}{appendix.A}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces NCO validation per network (all sample sizes and seeds aggregated).}}{11}{table.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}Context sensitivity details}{11}{appendix.B}\protected@file@percent }
+\newlabel{app:context}{{B}{11}{Context sensitivity details}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Query cost breakdown}{12}{appendix.C}\protected@file@percent }
+\newlabel{app:queries}{{C}{12}{Query cost breakdown}{appendix.C}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces LLM query comparison ($K{=}10$ votes). Centers = nodes with degree $\geq 3$.}}{12}{table.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {D}Model scale ablation}{12}{appendix.D}\protected@file@percent }
+\newlabel{app:scale}{{D}{12}{Model scale ablation}{appendix.D}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Model scale ablation (Insurance, single seed). CI viol. = fraction of ego-graph orientations contradicting CI-derived constraints.}}{13}{table.10}\protected@file@percent }
+\newlabel{tab:scale}{{10}{13}{Model scale ablation (Insurance, single seed). CI viol. = fraction of ego-graph orientations contradicting CI-derived constraints}{table.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {E}Disguised variable robustness}{13}{appendix.E}\protected@file@percent }
+\newlabel{app:disguised}{{E}{13}{Disguised variable robustness}{appendix.E}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Real vs disguised variable names (3 seeds each). F1 mean $\pm $ std.}}{13}{table.11}\protected@file@percent }
+\newlabel{tab:disguised}{{11}{13}{Real vs disguised variable names (3 seeds each). F1 mean $\pm $ std}{table.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Skeleton coverage across significance levels}{13}{appendix.F}\protected@file@percent }
+\newlabel{app:alpha}{{F}{13}{Skeleton coverage across significance levels}{appendix.F}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Skeleton edge recovery (\% of ground-truth edges) across $\alpha $ values.}}{13}{table.12}\protected@file@percent }
+\newlabel{tab:alpha}{{12}{13}{Skeleton edge recovery (\% of ground-truth edges) across $\alpha $ values}{table.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {G}Dawid-Skene reconciliation failure}{14}{appendix.G}\protected@file@percent }
+\newlabel{app:ds}{{G}{14}{Dawid-Skene reconciliation failure}{appendix.G}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Phase 3 reconciliation: majority vote (MV) vs Dawid-Skene (DS) orientation accuracy (\%).}}{14}{table.13}\protected@file@percent }
+\newlabel{tab:ds}{{13}{14}{Phase 3 reconciliation: majority vote (MV) vs Dawid-Skene (DS) orientation accuracy (\%)}{table.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {H}Iterative BFS vs single-pass}{14}{appendix.H}\protected@file@percent }
+\newlabel{app:bfs}{{H}{14}{Iterative BFS vs single-pass}{appendix.H}{}}
+\citation{jiralerspong2024efficient}
+\citation{shen2025matmcd}
+\citation{whitehill2009glad}
+\citation{kim2012bcc}
+\citation{venanzi2014communitybcc}
+\citation{li2019ebcc}
+\citation{balasubramanian2026ising}
+\citation{zhao2026care}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Single-pass ($K{=}10$) vs iterative BFS ($K{=}5 \times 2$ rounds) at matched query budget.}}{15}{table.14}\protected@file@percent }
+\newlabel{tab:bfs}{{14}{15}{Single-pass ($K{=}10$) vs iterative BFS ($K{=}5 \times 2$ rounds) at matched query budget}{table.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {I}LLM skeleton refinement}{15}{appendix.I}\protected@file@percent }
+\newlabel{app:skeleton-refine}{{I}{15}{LLM skeleton refinement}{appendix.I}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {J}Extended related work}{15}{appendix.J}\protected@file@percent }
+\newlabel{app:extended-rw}{{J}{15}{Extended related work}{appendix.J}{}}
+\@writefile{toc}{\contentsline {paragraph}{Additional LLM-causal methods.}{15}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Annotator aggregation beyond Dawid-Skene.}{15}{section*.14}\protected@file@percent }
+\citation{vanderlaan2025gva}
+\citation{zhang2025conformal}
+\citation{zhao2024clp}
+\citation{ricctersenghi2009cavity}
+\citation{marino2016backtracking}
+\citation{grover2018streamline}
+\citation{zhou2016spinglass}
+\citation{cantwell2022bpperm}
+\citation{aliferis2003hiton}
+\citation{sondhi2019rpc}
+\citation{chen2023lfci}
+\citation{gao2015cmb}
+\citation{rohekar2021icd}
+\citation{li2019consistent}
+\@writefile{toc}{\contentsline {paragraph}{Calibration and conformal prediction.}{16}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Message passing and constraint satisfaction.}{16}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Local and scalable causal discovery.}{16}{section*.17}\protected@file@percent }
+\gdef \@abspage@last{16}
