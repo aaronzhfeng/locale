@@ -1,4 +1,4 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -45,7 +45,7 @@ Wenyu Chen, Mathias Drton, and Ali Shojaie.
   2023{\natexlab{b}}.
 
 \bibitem[Cohrs et~al.(2024)Cohrs, Varando, Diaz, Sitokonstantinou, and
-  Camps-Valls]{ban2023chatpc}
+  Camps-Valls]{cohrs2024scp}
 Kai-Hendrik Cohrs, Gherardo Varando, Emiliano Diaz, Vasileios Sitokonstantinou,
   and Gustau Camps-Valls.
 \newblock Large language models for constrained-based causal discovery, 2024.
@@ -150,11 +150,6 @@ Christopher Meek.
 \newblock Causal inference and causal explanation with background knowledge.
 \newblock In \emph{Proceedings of the 11th Conference on Uncertainty in
   Artificial Intelligence (UAI)}, pp.\  403--410. Morgan Kaufmann, 1995.
-
-\bibitem[Mian \& Shah(2025)Mian and Shah]{snoe2025}
-Osman Mian and Rajen~D. Shah.
-\newblock Sequential nonlinear orientation of edges, 2025.
-\newblock URL \url{https://arxiv.org/abs/2506.05590}.
 
 \bibitem[Peng et~al.(2026)Peng, Chen, Xu, and Lu]{chen2025causcientist}
 Bo~Peng, Sirui Chen, Lei Xu, and Chaochao Lu.

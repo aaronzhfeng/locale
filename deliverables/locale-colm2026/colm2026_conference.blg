@@ -1,48 +1,50 @@
-This is BibTeX, Version 0.99e (TeX Live 2026)
+This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: colm2026_conference.aux
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'name_of_file' (item size: 1) to 20 items.
 The style file: colm2026_conference.bst
 Database file #1: references.bib
 Warning--empty journal in takayama2024causalfusion
-You've used 41 entries,
+You've used 40 entries,
             2773 wiz_defined-function locations,
-            822 strings with 13226 characters,
-and the built_in function-call counts, 19857 in all, are:
-= -- 1698
-> -- 1350
-< -- 18
-+ -- 454
-- -- 411
-* -- 1623
-:= -- 3036
-add.period$ -- 144
-call.type$ -- 41
-change.case$ -- 259
-chr.to.int$ -- 39
-cite$ -- 83
-duplicate$ -- 874
-empty$ -- 1571
-format.name$ -- 472
-if$ -- 4186
+            817 strings with 13089 characters,
+and the built_in function-call counts, 19495 in all, are:
+= -- 1666
+> -- 1329
+< -- 17
++ -- 447
+- -- 405
+* -- 1599
+:= -- 2982
+add.period$ -- 141
+call.type$ -- 40
+change.case$ -- 254
+chr.to.int$ -- 38
+cite$ -- 81
+duplicate$ -- 859
+empty$ -- 1539
+format.name$ -- 463
+if$ -- 4108
 int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 29
-newline$ -- 230
-num.names$ -- 164
-pop$ -- 576
+newline$ -- 225
+num.names$ -- 160
+pop$ -- 564
 preamble$ -- 1
-purify$ -- 219
+purify$ -- 215
 quote$ -- 0
-skip$ -- 722
+skip$ -- 705
 stack$ -- 0
-substring$ -- 395
-swap$ -- 108
+substring$ -- 393
+swap$ -- 107
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 446
+type$ -- 435
 warning$ -- 1
-while$ -- 149
+while$ -- 146
 width$ -- 0
-write$ -- 549
+write$ -- 537
 (There was 1 warning)
