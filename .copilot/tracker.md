@@ -4,7 +4,7 @@ Living document. Tracks what the proposal specified vs what has been built, what
 
 **Baseline**: `baseline.md` (proposal v2: 04_ego-causal_v2.md)
 
-Last updated: 2026-03-11 (multi-seed validation in progress)
+Last updated: 2026-04-10 (all experiments complete, 6-method 11-network comparison)
 
 ---
 
@@ -35,7 +35,7 @@ Last updated: 2026-03-11 (multi-seed validation in progress)
 | ID | Experiment | Proposal Spec | Status | Notes |
 |----|-----------|---------------|--------|-------|
 | E1 | Ego vs per-edge on oracle skeleton | Matched-budget comparison | Done | 6 networks, 194 edges. Ego ~ties or wins depending on domain. |
-| E2 | Full pipeline vs MosaCD/chatPC | End-to-end directed F1 | Done (5 networks, 12 seeds) | **Corrected** 12-seed comparison (XN-031, supersedes XN-030 after data seed bug fix D-A02): Sachs +30.7pp (SIG), Insurance +8.8pp (SIG), Alarm +3.9pp (ns), Child +1.1pp (ns), Asia -6.7pp (SIG LOSS). Holm-corrected. Context sensitivity found (XN-029): MosaCD breaks at 2048 tokens. |
+| E2 | Full pipeline vs MosaCD/chatPC | End-to-end directed F1 | Done (11 networks, 6 methods) | **6-method, 11-network comparison** (XN-035/038/039): LOCALE best or tied on 9/11 networks. 5 baselines: PC-orig, PC+Meek, Shapley-PC, ILS-CSL, MosaCD. Synthetic ER validation: 8/10 seeds, p=0.010 (XN-037). |
 | E3 | Reconciliation variants | DS vs majority vs shuffled | Partially done | DS rejected. Confidence-weighted tested. EBCC not tested. |
 | E4 | Propagation ablation | With/without Meek + rollback | Done | Meek is no-op. Safety valve prevents damage. |
 | E5 | Calibration | Selective SHD, coverage-accuracy | Not done | Phase 6 not built. |
@@ -45,16 +45,23 @@ Last updated: 2026-03-11 (multi-seed validation in progress)
 | ID | Experiment | Status | Notes |
 |----|-----------|--------|-------|
 | E-BFS | Iterative BFS decimation | Negative result (XN-025) | Single-pass K=10 beats multi-round K=5×2. More votes > more context. |
-| E-DIS | Disguised variable robustness | Done (XN-026) | Names → V01, V02: -0.7pp ego, +4.7pp/0.0pp after NCO. LOCALE doesn't rely on memorized domain knowledge. |
+| E-DIS | Disguised variable robustness | Done (XN-033, supersedes XN-026) | 3 networks × 3 seeds. Domain knowledge effect is network-dependent: Insurance -5pp, Alarm +10.3pp, Sachs -9.7pp. |
 | E-ABL | 9B model ablation | Done (XN-023) | 27B required for ego accuracy. 9B too weak. |
 | E-NCO | NCO validation | Done (XN-022) | 97.9% false collider rate across 6 networks. |
+| E-D1 | Degree-1 vulnerability analysis | Done (XN-032) | Network-dependent: Asia/Alarm vulnerable, Insurance/Child fine. |
+| E-HP2 | Hepar2 multi-seed | Done (XN-034) | +16.0pp over MosaCD, p=0.013. |
+| E-HF | Hailfinder multi-seed (n=2000) | Done (XN-036) | +16.7pp over MosaCD, p=0.017. PC too slow at n=10k. |
+| E-NEW | 5 new MosaCD networks | Done (XN-035) | Cancer, Water, Mildew, Hailfinder, Win95pts added. |
+| E-SYN | Synthetic ER graphs | Done (XN-037) | 90 configs, 10 seeds. LOCALE 8/10 seeds, p=0.010. |
+| E-BL | Statistical baselines | Done (XN-038) | PC-orig, PC+Meek, Shapley-PC across 10 networks. |
+| E-ILS | ILS-CSL baseline | Done (XN-039) | HC variant, 7 networks. LOCALE wins 5/7. |
 
 ## What Remains from Proposal
 
 1. **Skeleton refinement** — proposal doesn't cover this, but F1 decomposition shows skeleton is the bottleneck. VETOED (I10) — 0 true positives across 5/6 networks.
 2. **EBCC sensitivity analysis** (Section 4.5) — dependence-aware reconciliation not tested. DS already rejected, EBCC unlikely to help with 2 annotators.
 3. **Cross-model validation** — proposal specifies testing with different LLMs. 9B ablation done (XN-023), other model families not tested.
-4. **Robustness** (disguised variables) — Done (XN-026). Insurance +4.7pp, Alarm 0.0pp after NCO. Structural constraints are the primary value driver.
+4. ~~**Robustness**~~ (disguised variables) — DONE (XN-033, 3 networks × 3 seeds). Domain knowledge effect is network-dependent. NCO constraints work regardless of naming.
 5. **Formal evaluation matrix** (Section 5) — proposal specifies exact comparison rules not yet followed.
 6. ~~**Multi-seed validation**~~ — DONE (XN-031, corrected). 12 seeds × 5 networks × 2 methods. LOCALE 2 SIG wins + 2 directional + 1 SIG loss. Holm-corrected. Data seed bug (D-A02) found and fixed — results robust.
 7. ~~**Asia alpha=0.10**~~ — DONE (XN-031). Asia loss halved (-12.7pp → -6.7pp) but remains significant. Structural limitation: degree-1 nodes get single-endpoint coverage.
@@ -75,3 +82,6 @@ Last updated: 2026-03-11 (multi-seed validation in progress)
 | 2026-03-26 | Data seed bug found (D-A02) | LOCALE used fixed seed=42 for all seeds | LOG-2026-03-26-37 |
 | 2026-03-26 | Corrected comparison (XN-031) | Headline unchanged: 2W/2D/1L. LOCALE re-run with correct seeds | LOG-2026-03-26-38 |
 | 2026-03-26 | Phase transition DO→THINK (PT-05) | Corrected results validated, research-reflect approved | LOG-2026-03-26-39 |
+| 2026-03-27 | Expanded to 11 BNLearn networks | Match all MosaCD benchmarks | LOG-2026-03-27-41 |
+| 2026-03-29 | Synthetic ER expanded to 10 seeds | Address pseudoreplication concern | LOG-2026-03-29-44 |
+| 2026-04-05 | 5 baselines added (PC-orig, PC+Meek, Shapley-PC, ILS-CSL) | Match MosaCD comparison breadth | LOG-2026-04-05-45, LOG-2026-04-05-46 |

@@ -827,3 +827,27 @@ The synthetic advantage (+12.5pp) is actually larger than the BNLearn advantage 
 
 → DAG: E03
 → Evidence: XN-037 (updated)
+
+---
+
+<a id="LOG-2026-04-05-45"></a>
+### 2026-04-05 — Statistical baselines added: PC-orig and PC+Meek across 10 networks
+
+Added two non-LLM baselines (PC-orig, PC-stable+Meek) across all 10 networks to address reviewer feedback on insufficient baseline coverage. Both LLM methods massively outperform statistical baselines (LOCALE +33.6pp, MosaCD +22.0pp over PC+Meek on average). LOCALE is best on 8/10 networks.
+
+Still need LLM baselines (ILS-CSL, SCP) and Shapley-PC to fully match MosaCD's 5-baseline comparison. ILS-CSL code cloned, needs GPU for LLM calls.
+
+→ DAG: E03
+→ Evidence: XN-038
+
+---
+
+<a id="LOG-2026-04-05-46"></a>
+### 2026-04-05 — ILS-CSL baseline complete: LOCALE wins 5/7 networks
+
+Added ILS-CSL (Ban et al., 2023) as an LLM-based baseline using HC variant (MINOBSx unavailable on macOS). Tested on 7 networks × 4 seeds using same Qwen3.5-27B via vLLM. LOCALE beats ILS-CSL on 5/7 networks; ILS-CSL wins only Alarm. Combined with PC-orig, PC+Meek, and Shapley-PC (XN-038), we now have 5 baselines matching MosaCD's comparison breadth.
+
+Full 6-method comparison: LOCALE is best or tied on 5/7 networks where all methods are available. On the full 10-network set, LOCALE leads on 8/10.
+
+→ DAG: E03
+→ Evidence: XN-039, XN-038

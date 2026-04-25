@@ -9,39 +9,39 @@
 <!-- STATE-OF-KNOWLEDGE-START -->
 
 ### What we know
-- **Corrected 12-seed comparison (XN-031)**: LOCALE significantly beats MosaCD on Sachs (+30.7pp, p<0.0001, d=5.61) and Insurance (+8.8pp, p=0.0125, d=1.04). Significantly loses on Asia (-6.7pp, p=0.0069, d=-1.00). Alarm (+3.9pp) and Child (+1.1pp) are directional wins but not Holm-significant. All at 4096 context, same model. Supersedes XN-030 (data seed bug fixed, D-A02).
-- **Stability is network-dependent**: LOCALE is 4.4x more stable on Insurance (std 0.019 vs 0.083) but 3x less stable on Asia (std 0.100 vs 0.033). Alarm: MosaCD more stable (0.047 vs 0.070). Not a universal advantage.
-- **Context sensitivity (XN-029)**: MosaCD breaks at 2048 tokens. LOCALE is unaffected. Ego-graph prompts are 2-3x more context-efficient. Still valid finding.
-- **NCO** remains the strongest finding: 97.9% false collider rate across 944 errors, 6 networks, 7 sample sizes (XN-022).
-- **Skeleton analysis (XN-028)**: alpha=0.10 helps Asia (87.5%→100% coverage). Insurance stuck at 80.8% (PC depth limit). Larger samples help: 86.5% at n=50k, 92.3% at n=100k.
-- **Asia loss is structural**: on 7-edge seeds, LOCALE gets 6/7 (1 systematic error: `either→tub` reversed, 100% consistent). Root cause: `tub` has degree 1 → single-endpoint coverage → no reconciliation. MosaCD gets 7/7 (per-edge queries don't depend on degree).
-- **New literature (LN-005-008)**: SNOE solves same abstract problem with statistical tests (has theoretical guarantees LOCALE lacks). BFS prompting (Susanti & Farber) independently validates ego-graph superiority. CauScientist is a new competitor. MosaCD confirmed ICLR 2026.
+- **6-method, 11-network comparison**: LOCALE is best or tied on 9/11 BNLearn networks against 5 baselines (PC-orig, PC+Meek, Shapley-PC, ILS-CSL, MosaCD). Loses only Asia (MosaCD) and Alarm (ILS-CSL). Full table in XN-035/XN-038/XN-039.
+- **11-network LOCALE vs MosaCD (XN-035)**: 8W/2T/1L, Wilcoxon p=0.027, mean +7.6pp. Sachs +30.7pp, Hailfinder +16.7pp, Hepar2 +16.0pp, Win95pts +12.2pp, Insurance +8.8pp strongest wins.
+- **Synthetic ER (XN-037)**: 90 configs, 10 graph seeds. LOCALE wins 8/10 seeds, per-seed Wilcoxon p=0.010, mean +12.5pp. Confirms structural advantage is NOT purely domain-knowledge-driven.
+- **NCO**: 97.9% false collider rate across 944 errors, 6 networks, 7 sample sizes (XN-022). Method-agnostic finding.
+- **Context sensitivity (XN-029)**: MosaCD breaks at 2048 tokens. LOCALE unaffected. Ego-graph prompts are 2-3x more context-efficient.
+- **Degree-1 vulnerability (XN-032)**: Network-dependent. Asia/Alarm: single-endpoint edges weaker. Insurance/Child: single-endpoint edges equal or better. Not a universal flaw.
+- **Disguised robustness (XN-033)**: Domain knowledge effect is network-dependent. Insurance -5pp, Alarm +10.3pp, Sachs -9.7pp. LLM priors can help or hurt depending on domain.
+- **Stability is network-dependent**: Not a universal advantage (was artifact of fixed data seed, D-A02).
+- **MosaCD fidelity gap (XN-035)**: Our re-implementation uses Qwen-27B (4096 ctx) vs published GPT-4o-mini (128K ctx). Gap scales with network size: Hepar2 +31.5pp, Win95pts +23.7pp. Disclosed per-network.
 
 ### What's working
-- Ego-graph batching: ~50% fewer queries, universal.
+- Ego-graph batching: ~50% fewer queries, universal across 11 networks.
 - NCO constraint filtering: eliminates Phase 2 damage.
 - Max-2SAT + confidence reconciliation pipeline.
 - Context efficiency: works at 2048 tokens where MosaCD fails.
-- Results robust to data seed bug fix — headline unchanged.
+- Structural advantage validated on synthetic ER graphs (no domain knowledge).
+- 5-baseline comparison matches MosaCD's paper breadth.
 
 ### What failed
 - LLM skeleton refinement (I10): 0 TP across 6 networks.
 - Iterative BFS decimation (E02): single-pass beats multi-round.
 - Dawid-Skene reconciliation: too sparse.
 - Alpha-based skeleton improvement for Insurance: PC depth-limited.
-- Universal stability claim: LOCALE is not universally more stable (was artifact of fixed data seed).
+- Universal stability claim: was artifact of data seed bug.
 
 ### What's unresolved
-- **Asia loss**: structural, -6.7pp (SIG). Would require per-edge fallback for degree-1 nodes to fix.
-- **Alarm/Child significance**: directional but not significant. Alarm d=0.51 (would need ~30 seeds). Child d=0.18 (would need ~250 seeds). Diminishing returns.
-- **Published MosaCD gap**: our re-implementation vs published GPT-4o-mini numbers still differ. Model gap remains a confound.
-- **Hepar2**: not in multi-seed comparison.
-- **Synthetic experiments**: proposal Section 5.5 untouched.
-- **Disguised robustness**: only 2 networks, 1 seed.
-- **SNOE comparison**: same problem, theoretical guarantees — need to position in related work.
-- **CauScientist comparison**: new 2026 competitor, no direct comparison.
+- **Asia loss**: structural, -6.7pp (SIG). Per-edge fallback for degree-1 nodes not implemented.
+- **Published MosaCD gap**: same-model comparison is defensible, but LOCALE loses to published MosaCD on large networks (Hepar2, Win95pts, Alarm). Disclosed in XN-035.
+- **SCP baseline**: not implemented (5th MosaCD baseline). Have PC-orig, PC+Meek, Shapley-PC, ILS-CSL instead.
+- **Cross-model validation**: single model family (Qwen-27B). ILS-CSL uses same model for fairness.
+- **ILS-CSL caveat**: uses HC variant (MINOBSx unavailable on macOS). Weaker than their paper's primary algorithm.
 
-*Last updated: 2026-03-26*
+*Last updated: 2026-04-10*
 
 <!-- STATE-OF-KNOWLEDGE-END -->
 
@@ -70,7 +70,7 @@
 | A02 | good | XN-031, D-A02 | decisions/A02_data_seed_bug_fix.md |
 | E01 | good | XN-024, XN-027, XN-029, XN-030, LN-001, LN-006, LN-008 |  |
 | E02 | negative | XN-025 |  |
-| E03 | good | XN-029, XN-030, XN-031, XN-032, XN-033, XN-034, XN-035, XN-036, XN-037, D-A02 |  |
+| E03 | good | XN-029, XN-030, XN-031, XN-032, XN-033, XN-034, XN-035, XN-036, XN-037, XN-038, XN-039, D-A02 |  |
 | I00 | Assumed | LN-002, LN-004, LN-008 |  |
 | I01 | Assumed | XN-028 |  |
 | I02 | Assumed | XN-001, XN-002, XN-003, XN-004, XN-005, XN-006, XN-007, XN-008, XN-009, XN-010, XN-011, XN-012, XN-013, XN-016, XN-021, XN-023, XN-024, XN-025, XN-026, XN-027, XN-030, XN-032, XN-033, XN-034, XN-035, XN-036, XN-037, LN-001, LN-002, LN-004, LN-005, LN-006 |  |
@@ -106,7 +106,7 @@
 | XN-018 | Phase 4 conservative propagation: Meek rules are a no-op on fully-oriented graphs | 2026-03-11 | I04 |  |
 | XN-019 | Phase 5 PE fallback: mixed results, tiebreaking helps small networks | 2026-03-11 | I05 |  |
 | XN-020 | Phase 6 calibration: selective output improves precision from 89.4% to 92.9% | 2026-03-11 | I05, I07 |  |
-| ... | *17 more* | | | |
+| ... | *19 more* | | | |
 
 ## Literature Notes
 
@@ -134,8 +134,8 @@
 
 ## Recent Log
 
-- [LOG-2026-03-26-40](research_log.md#LOG-2026-03-26-40) — 2026-03-26 — Full 10-network comparison: LOCALE 7W/2T/1L across all MosaCD benchmarks
-- [LOG-2026-03-27-41](research_log.md#LOG-2026-03-27-41) — 2026-03-27 — Full 11-network comparison: 8W/2T/1L, Wilcoxon p=0.027
 - [LOG-2026-03-28-42](research_log.md#LOG-2026-03-28-42) — 2026-03-28 — Synthetic ER results: LOCALE wins 14/22, +14.3pp, p=0.006
 - [LOG-2026-03-28-43](research_log.md#LOG-2026-03-28-43) — 2026-03-28 — Alarm s0 outlier investigated: LLM gives systematically wrong orientations
 - [LOG-2026-03-29-44](research_log.md#LOG-2026-03-29-44) — 2026-03-29 — Synthetic ER expanded to 10 seeds: LOCALE wins 8/10, per-seed Wilcoxon p=0.010
+- [LOG-2026-04-05-45](research_log.md#LOG-2026-04-05-45) — 2026-04-05 — Statistical baselines added: PC-orig and PC+Meek across 10 networks
+- [LOG-2026-04-05-46](research_log.md#LOG-2026-04-05-46) — 2026-04-05 — ILS-CSL baseline complete: LOCALE wins 5/7 networks
